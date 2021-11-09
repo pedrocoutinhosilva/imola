@@ -10,6 +10,8 @@
 
 Bridging the gap between R/shiny and CSS layouts (grid and Flexbox)!
 
+Demo (and example layouts): https://sparktuga.shinyapps.io/imolatemplates/
+
 If you're familiar with CSS, you might have felt by now that layouts in shiny can be very awkward to set up.
 
 While R/shiny does give you access to bootstrap's row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI. As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.
