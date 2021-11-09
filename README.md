@@ -10,13 +10,15 @@
 
 Bridging the gap between R/shiny and CSS layouts (grid and Flexbox)!
 
-If you're familiar with CSS, you might have noticed by now that layouts in shiny can be very awkward to set up.
+If you're familiar with CSS, you might have felt by now that layouts in shiny can be very awkward to set up.
 
-While R/shiny does give you access to bootstrap's row and column system, these do have some limitation and changing the layout usually involves having to rebuild a large portion of the UI. This system is also not always the most flexible, specially when trying to replicate a design or mockup not build using this column system, it can be challenging to make it without a lot of additional custom styling.
+While R/shiny does give you access to bootstrap's row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI. As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.
 
-Imola (named after the first city ever to receive a technical blueprint by Leonardo da Vinci) aims at giving you more layout creation options directly in R/shiny without the hassle of having to create custom CSS every time. With imola you can easily leverage CSS layouts (grid and Flexbox) directly in your UI functions, including media breakpoints to fit different screen sizes and devices.
+Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving you more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.
 
-You can also save layouts to later usage via a templating system that allows you to define a layout, name it, and simply use it in as many elements as you need. For convenience imola also comes with built in templates of traditionally used web layouts, making it even easier to spice up your dashboards!
+With imola you can easily leverage typical CSS layouts (grid and Flexbox) directly in your UI functions, including media breakpoints to fit different screen sizes and devices.
+
+You can also save your favorite layouts to use later via a templating system that allows you to define a layout, name it, and simply use it in as many elements as you need. If creating isn't your thing, imola also comes with a built in collection of templates traditionally used web layouts, making it even easier to spice up your dashboards!
 
 # installation
 1 - Install the package:
