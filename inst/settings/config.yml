@@ -1,0 +1,66 @@
+# Active media rule system active by default
+default_system: bootstrap3
+
+# css strings
+css:
+  grid:
+    fill_page: "
+      html, body {
+        min-height: 100vh; width: 100%; margin: 0; padding: 0; display: flex;
+      }"
+  flexbox:
+    fill_page: "
+      html, body {
+        min-height: 100vh; width: 100%; margin: 0; padding: 0;
+      }"
+
+# Templates to be used with strinTemplate()
+string_templates:
+  # General templates
+  generated_id: "grid_{{id}}"
+  media_rule: "
+    @media all {{min}} {{max}} {
+      {{rules}}
+    }"
+
+  # CSS templates
+  grid_base: "#{{id}} {width: 100%; display: grid;}"
+  grid_auto_fill: "#{{id}} {height: 100%;}"
+  grid_parent: "
+    #{{id}} {
+      {{attribute}}: {{value}};
+    }"
+  grid_cell: "
+    .{{id}} > .{{child_id}} {
+      {{attribute}}: {{value}};
+    }"
+
+  flex_base: "#{{id}} {height: 100%; width: 100%; display: flex;}"
+  flex_cell: "
+    .{{id}} > *:nth-child({{child_index}}) {
+      {{attribute}}: {{value}};
+    }"
+
+  # Messages
+  messages:
+    missing_template: "
+      The grid template {{template}} for {{type}} does not exist.
+      Check listTemplates() to see available templates.
+    "
+
+# argument name to css property equivalents
+property_mapping:
+  areas: grid-template-areas
+  rows: grid-template-rows
+  columns: grid-template-columns
+  justify_items: justify-items
+  align_items: align-items
+  gap: gap
+  direction: flex-direction
+  wrap: flex-wrap
+  justify_content: justify-content
+  align_content: align-content
+  flex: flex
+  grow: flex-grow
+  shrink: flex-shrink
+  basis: flex-basis

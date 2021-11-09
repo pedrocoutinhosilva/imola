@@ -1,0 +1,17 @@
+wrap: wrap
+basis:
+- 33%
+- 33%
+- 33%
+- 100%
+breakpoint_system:
+  xs:
+    max: 575
+  sm:
+    max: 767
+  md:
+    max: 991
+  lg:
+    max: 1199
+  xl:
+    max: 1200

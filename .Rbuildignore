@@ -1,0 +1,13 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+images
+.Rhistory
+.gitignore
+^.Rproj.user
+^.git
+^README.md$
+examples
+tests
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

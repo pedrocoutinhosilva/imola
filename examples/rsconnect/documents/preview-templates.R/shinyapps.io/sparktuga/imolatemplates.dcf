@@ -1,0 +1,14 @@
+name: imolatemplates
+title: imolatemplates
+username:
+account: sparktuga
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5079846
+bundleId: 5232312
+url: https://sparktuga.shinyapps.io/imolatemplates/
+when: 1636472233.30364
+lastSyncTime: 1636472233.30364
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: example_1.R|example_2.R|example_3.R|example_4.R|example_5.R|example_6.R|example_7.R|flex-templates.R|grid-templates.R

@@ -1,0 +1,43 @@
+bootstrap3:
+  xs:
+    max: 575
+  sm:
+    max: 767
+  md:
+    max: 991
+  lg:
+    max: 1199
+  xl:
+    max: 1200
+
+bootstrap5:
+  sm:
+    min: 576
+  md:
+    min: 768
+  lg:
+    min: 992
+  xl:
+    min: 1200
+  xxl:
+    min: 1400
+
+bulma:
+  tablet:
+    min: 769
+  desktop:
+    min: 1024
+  widescreen:
+    min: 1216
+  fullhd:
+    min: 1408
+
+foundation:
+  tablet:
+    min: 769
+  desktop:
+    min: 1024
+  widescreen:
+    min: 1216
+  fullhd:
+    min: 1408

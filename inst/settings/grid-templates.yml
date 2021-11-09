@@ -1,0 +1,146 @@
+holygrail:
+  areas:
+    default:
+    - - header
+      - header
+      - header
+    - - left
+      - content
+      - right
+    - - footer
+      - footer
+      - footer
+    md:
+    - - header
+      - header
+    - - left
+      - content
+    - - right
+      - right
+    - - footer
+      - footer
+    sm:
+    - header
+    - left
+    - content
+    - right
+    - footer
+  columns:
+    default:
+    - minmax(250px, 25%)
+    - 1fr
+    - minmax(250px, 25%)
+    md:
+    - minmax(250px, 25%)
+    - 1fr
+    sm: 100%
+  rows:
+    default:
+    - minmax(100px, auto)
+    - 1fr
+    - minmax(100px, auto)
+    md:
+    - minmax(100px, auto)
+    - 1fr
+    - auto
+    - minmax(100px, auto)
+    sm:
+    - minmax(100px, auto)
+    - auto
+    - 1fr
+    - auto
+    - minmax(100px, auto)
+leftgrail:
+  areas:
+    default:
+    - - header
+      - header
+      - header
+    - - sidebar
+      - content
+      - content
+    - - footer
+      - footer
+      - footer
+    md:
+    - - header
+      - header
+    - - sidebar
+      - content
+    - - footer
+      - footer
+    sm:
+    - header
+    - sidebar
+    - content
+    - footer
+  columns:
+    default:
+    - minmax(250px, 25%)
+    - 1fr
+    - minmax(250px, 25%)
+    md:
+    - minmax(250px, 25%)
+    - 1fr
+    sm: 100%
+  rows:
+    default:
+    - minmax(100px, auto)
+    - 1fr
+    - minmax(100px, auto)
+    md:
+    - minmax(100px, auto)
+    - 1fr
+    - minmax(100px, auto)
+    sm:
+    - minmax(100px, auto)
+    - auto
+    - 1fr
+    - minmax(100px, auto)
+rightgrail:
+  areas:
+    default:
+    - - header
+      - header
+      - header
+    - - content
+      - content
+      - sidebar
+    - - footer
+      - footer
+      - footer
+    md:
+    - - header
+      - header
+    - - content
+      - sidebar
+    - - footer
+      - footer
+    sm:
+    - header
+    - sidebar
+    - content
+    - footer
+  columns:
+    default:
+    - minmax(250px, 25%)
+    - 1fr
+    - minmax(250px, 25%)
+    md:
+    - 1fr
+    - minmax(250px, 25%)
+    sm: 100%
+  rows:
+    default:
+    - minmax(100px, auto)
+    - 1fr
+    - minmax(100px, auto)
+    md:
+    - minmax(100px, auto)
+    - 1fr
+    - minmax(100px, auto)
+    sm:
+    - minmax(100px, auto)
+    - auto
+    - 1fr
+    - minmax(100px, auto)
