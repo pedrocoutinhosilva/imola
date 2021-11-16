@@ -13,6 +13,9 @@ registerBreakpoint(name, min = NULL, max = NULL)
 
 \item{max}{The maximum screen width (in pixels) when the rule is active}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Adds a new breakpoint entry to the currelty active media breakpoints.
 }

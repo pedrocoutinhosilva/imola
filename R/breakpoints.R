@@ -27,6 +27,7 @@ activeBreakpoints <- function() {
 #' @param min The minimum screen width (in pixels) when the rule is active
 #' @param max The maximum screen width (in pixels) when the rule is active
 #'
+#' @return No return value, called for side effects
 #' @export
 registerBreakpoint <- function(name, min = NULL, max = NULL) {
   rules <- getOption("imola.mediarules")
@@ -39,6 +40,7 @@ registerBreakpoint <- function(name, min = NULL, max = NULL) {
 #'
 #' @param name The name of the entry to remove
 #'
+#' @return No return value, called for side effects
 #' @export
 unregisterBreakpoint <- function(name) {
   rules <- getOption("imola.mediarules")

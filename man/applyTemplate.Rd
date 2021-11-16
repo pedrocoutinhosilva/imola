@@ -19,6 +19,10 @@ during the merge.}
 
 \item{type}{The type of css grid of the template.}
 }
+\value{
+A named list of css attributes that can be used to generate a html
+  element style rules of the given type.
+}
 \description{
 Merges a set of attributes with a given template. To avoid redundanct
   attributes being added to the final list, a list of default values (based

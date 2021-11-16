@@ -1,11 +1,11 @@
 Package: imola
 Type: Package
-Title: CSS layouts (Grid and Flexbox) implementation for R/shiny
-Version: 0.3.0
+Title: CSS Layouts (Grid and Flexbox) Implementation for R/Shiny
+Version: 0.3.2
 Authors@R: person("Pedro", "Silva", email = "pedrocoutinhosilva@gmail.com",
   role = c("aut", "cre"))
-Description: Allows easy creation of CSS layouts (grid and Flexbox)
-  directly from R without added css.
+Description: Allows easy creation of CSS layouts (grid and flexbox)
+  directly from R without added CSS.
 License: MIT + file LICENSE
 URL: https://github.com/pedrocoutinhosilva/imola
 Encoding: UTF-8

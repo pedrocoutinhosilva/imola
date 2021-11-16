@@ -14,6 +14,9 @@ unregisterTemplate(type, name)
 
 \item{name}{The name of the tempalte to remove.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Deletes an existing css template from the available list of templates for the
   given grid type. Templates are collections of arguments

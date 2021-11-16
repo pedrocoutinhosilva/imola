@@ -38,6 +38,7 @@ listTemplates <- function(type = NULL) {
 #' @importFrom utils modifyList
 #' @importFrom yaml write_yaml
 #'
+#' @return No return value, called for side effects
 #' @export
 registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
   listTemplates <- listTemplates()
@@ -61,6 +62,7 @@ registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoi
 #' @param type The type of css grid of the template to remove.
 #' @param name The name of the tempalte to remove.
 #'
+#' @return No return value, called for side effects
 #' @export
 unregisterTemplate <- function(type, name) {
   listTemplates <- listTemplates()
@@ -80,6 +82,8 @@ unregisterTemplate <- function(type, name) {
 #' @param defaults The default values of the grid callback.
 #' @param type The type of css grid of the template.
 #'
+#' @return A named list of css attributes that can be used to generate a html
+#'   element style rules of the given type.
 #' @export
 applyTemplate <- function(attributes, template, defaults, type) {
   if (is.null(template)) {

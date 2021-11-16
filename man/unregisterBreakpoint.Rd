@@ -9,6 +9,9 @@ unregisterBreakpoint(name)
 \arguments{
 \item{name}{The name of the entry to remove}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Allows removing an entry from the current activeBreakpoints.
 }

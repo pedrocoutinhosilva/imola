@@ -33,6 +33,9 @@ systems under getOption("imola.breakpoints")}
 \item{export}{A file name to export the template to. Allows exporting
 templates as a yaml file for future usage.}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Registers a new css template for future use. Depending on the given type,
   the template will then be available to be passed as an argument to a panel
