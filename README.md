@@ -8,7 +8,7 @@
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/imola)](https://CRAN.R-project.org/package=imola)
 <!-- badges: end -->
 
-Bridging the gap between R/shiny and CSS layouts (grid and Flexbox)!
+Bridging the gap between R/shiny and CSS layouts (grid and flexbox)!
 
 Demo (and example layouts): https://sparktuga.shinyapps.io/imolatemplates/
 
@@ -24,11 +24,11 @@ You can also save your favorite layouts to use later via a templating system tha
 
 # installation
 1 - Install the package:
-<!--
+
 from CRAN:
 ```R
 install.packages('imola')
-``` -->
+```
 
 from github:
 ```R
