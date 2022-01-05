@@ -24,8 +24,9 @@ named arguments using the grid area name will be added to that grid area.
 If no named arguments or areas are used, non attribute elements will be
 added to existing grid cells based on their order.}
 
-\item{template}{The name of the template to use as a base for the grid.
-See listTemplates() and registerTemplate() for more information.}
+\item{template}{The name of the template to use as a base for the grid, or
+the resulting value from using makeTemplate() to generate a template
+object. See listTemplates() and registerTemplate() for more information.}
 
 \item{areas}{A list of vectors with area names, or a vector or strings
 representing each row of the grid. Each element should contain

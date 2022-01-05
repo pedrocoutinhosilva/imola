@@ -1,8 +1,9 @@
 #' Create a panel with a CSS flexbox layout
 #'
 #' @param ... Elements to include within the panel
-#' @param template The name of the template to use as a base for the grid.
-#'   See listTemplates() and registerTemplate() for more information.
+#' @param template The name of the template to use as a base for the grid, or
+#'   the resulting value from using makeTemplate() to generate a template
+#'   object. See listTemplates() and registerTemplate() for more information.
 #' @param direction Direction of the flow of elements in the panel. Accepts a
 #'   valid css 'flex-direction' value (row | row-reverse | column |
 #'   column-reverse) By default the 'row' value is used.

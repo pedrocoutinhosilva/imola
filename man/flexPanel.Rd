@@ -24,8 +24,9 @@ flexPanel(
 \arguments{
 \item{...}{Elements to include within the panel}
 
-\item{template}{The name of the template to use as a base for the grid.
-See listTemplates() and registerTemplate() for more information.}
+\item{template}{The name of the template to use as a base for the grid, or
+the resulting value from using makeTemplate() to generate a template
+object. See listTemplates() and registerTemplate() for more information.}
 
 \item{direction}{Direction of the flow of elements in the panel. Accepts a
 valid css 'flex-direction' value (row | row-reverse | column |

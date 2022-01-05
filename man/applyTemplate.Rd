@@ -13,7 +13,8 @@ applyTemplate(attributes, template, defaults, type)
 \item{attributes}{The manually given attribute values that will take priority
 during the merge.}
 
-\item{template}{The name of the template to merge.}
+\item{template}{The name of the template to merge, or the resulting value
+from using makeTemplate() to generate a template object.}
 
 \item{defaults}{The default values of the grid callback.}
 

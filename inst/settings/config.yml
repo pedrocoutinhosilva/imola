@@ -43,9 +43,15 @@ string_templates:
 
   # Messages
   messages:
+    wrong_template_type: "
+      Given template has the wrong type for the panel.
+      Expected {{type}} but provided template is {{template_type}}.
+      (Have you used makeTemplate() to create your template?)
+    "
     missing_template: "
       The grid template {{template}} for {{type}} does not exist.
       Check listTemplates() to see available templates.
+      (Is the template you're looking for registered for {{type}} panels?)
     "
 
 # argument name to css property equivalents
