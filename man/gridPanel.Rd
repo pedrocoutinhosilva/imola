@@ -123,3 +123,5 @@ Other grid functions:
 \code{\link{gridPage}()}
 }
 \concept{grid functions}
+\keyword{grid}
+\keyword{panel}

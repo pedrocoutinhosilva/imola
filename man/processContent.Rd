@@ -23,3 +23,5 @@ Adds a css class to any HTML elements from the content that are named and
   assigned to the grid areas via named argument while still allowing other
   generic HTML tag attributes to be used.
 }
+\keyword{internal}
+\keyword{utils}

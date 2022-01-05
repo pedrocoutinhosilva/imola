@@ -85,6 +85,7 @@
 #' @importFrom shiny tagAppendAttributes tagAppendChild
 #'
 #' @return An HTML tagList.
+#' @keywords grid panel
 #' @export
 gridPanel <- function(...,
                       template = NULL,
@@ -163,6 +164,7 @@ gridPanel <- function(...,
 #' @importFrom magrittr "%>%"
 #'
 #' @return A UI definition that can be passed to the [shinyUI] function.
+#' @keywords grid page
 #' @export
 gridPage <- function(...,
                      title = NULL,

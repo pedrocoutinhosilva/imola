@@ -49,3 +49,5 @@ Other grid functions:
 \code{\link{gridPanel}()}
 }
 \concept{grid functions}
+\keyword{grid}
+\keyword{page}

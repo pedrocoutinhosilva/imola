@@ -20,3 +20,5 @@ A named list.
 Converts non named list attributes into a named list.
 Does nothing if the attribute is already a list in the correct format.
 }
+\keyword{internal}
+\keyword{normalizer}

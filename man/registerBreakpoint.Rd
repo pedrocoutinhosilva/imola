@@ -19,3 +19,4 @@ No return value, called for side effects
 \description{
 Adds a new breakpoint entry to the currelty active media breakpoints.
 }
+\keyword{breakpoints}

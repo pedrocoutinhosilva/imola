@@ -24,3 +24,5 @@ Processes a string template in the htmlTemplate format into a valid string
   with no placeholders. The string must use the htmlTemplate format, meaning
   placeholders are marked using the {{placeholder}} convention.
 }
+\keyword{internal}
+\keyword{utils}

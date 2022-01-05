@@ -8,6 +8,7 @@
 #'   of all types are returned,
 #'
 #' @return A named list of css templates and specific values.
+#' @keywords templates
 #' @export
 listTemplates <- function(type = NULL) {
   if (is.null(type)) {
@@ -39,6 +40,7 @@ listTemplates <- function(type = NULL) {
 #' @importFrom yaml write_yaml
 #'
 #' @return No return value, called for side effects
+#' @keywords templates
 #' @export
 registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
   listTemplates <- listTemplates()
@@ -63,6 +65,7 @@ registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoi
 #' @param name The name of the tempalte to remove.
 #'
 #' @return No return value, called for side effects
+#' @keywords templates
 #' @export
 unregisterTemplate <- function(type, name) {
   listTemplates <- listTemplates()
@@ -84,6 +87,7 @@ unregisterTemplate <- function(type, name) {
 #'
 #' @return A named list of css attributes that can be used to generate a html
 #'   element style rules of the given type.
+#' @keywords templates
 #' @export
 applyTemplate <- function(attributes, template, defaults, type) {
   if (is.null(template)) {

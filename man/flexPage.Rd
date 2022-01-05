@@ -39,9 +39,10 @@ flexPage(
   div(class = "area-3")
 )
 }
-
 }
 \seealso{
 [flexPanel()]
 }
 \concept{flex functions}
+\keyword{flex}
+\keyword{page}

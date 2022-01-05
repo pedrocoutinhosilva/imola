@@ -2,6 +2,7 @@
 #'
 #' @param attributes The values to process
 #'
+#' @keywords internal normalizer
 #' @return A named list.
 normalizeAttributes <- function(attributes) {
   for (attribute in names(attributes)) {
@@ -18,6 +19,7 @@ normalizeAttributes <- function(attributes) {
 #' @param simplify Boolean flag if the attribute should be simplified into
 #'   single strings.
 #'
+#' @keywords internal normalizer
 #' @return A named list.
 normalizeAttribute <- function(attribute, simplify = TRUE) {
   if (is.null(attribute)) {

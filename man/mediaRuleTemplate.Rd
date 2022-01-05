@@ -18,3 +18,5 @@ A valid glue::glue template string to be processed later.
 Generates a valid glue::glue string template for a css media query.
   Used internally to generate a breakpoint specific wrapper.
 }
+\keyword{internal}
+\keyword{utils}

@@ -1,0 +1,34 @@
+home:
+  title: Imola - CSS layouts for R/Shiny
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#50014E"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+
+authors:
+  Pedro Silva:
+    href: https://pedrocsilva.com
+
+code:
+  width: 72
+
+reference:
+- title: Flex
+  desc:  Flex.
+  contents:
+  - has_keyword("flex")
+- title: Grid
+  desc:  Grid.
+  contents:
+  - has_keyword("grid")
+- title: Templates
+  desc:  Templates.
+  contents:
+  - has_keyword("templates")
+- title: Breakpoints
+  desc:  Breakpoints.
+  contents:
+  - has_keyword("breakpoints")

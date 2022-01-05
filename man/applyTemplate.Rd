@@ -29,3 +29,4 @@ Merges a set of attributes with a given template. To avoid redundanct
   of the specific panel creation callback formals) is used to validate the
   need of the argument value in the final list.
 }
+\keyword{templates}

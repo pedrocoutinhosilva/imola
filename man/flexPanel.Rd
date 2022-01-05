@@ -146,3 +146,5 @@ flexPanel(
 [flexPage()]
 }
 \concept{flexbox functions}
+\keyword{flex}
+\keyword{panel}

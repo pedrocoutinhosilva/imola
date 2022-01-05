@@ -24,3 +24,5 @@ A string with all placeholders replaced.
 Generates all required css for a set of children attributes,
   for a flex wrapper.
 }
+\keyword{generators}
+\keyword{internal}

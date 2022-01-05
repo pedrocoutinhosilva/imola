@@ -43,3 +43,4 @@ Registers a new css template for future use. Depending on the given type,
   arguments that can be grouped and stored for later usage via the "template"
   argument of panel and page functions.
 }
+\keyword{templates}

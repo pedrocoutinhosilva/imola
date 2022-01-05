@@ -23,3 +23,4 @@ Lists all available grid and flex templates. If type is given, returns only
   arguments that can be grouped and stored for later usage via the "template"
   argument of panel and page functions.
 }
+\keyword{templates}

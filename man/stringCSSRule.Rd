@@ -31,3 +31,5 @@ Applies a CSS statement template stored in the package settings. These
   as a name.
   Used primarily as a shorthand to stringTemplate() for stored templates.
 }
+\keyword{internal}
+\keyword{utils}

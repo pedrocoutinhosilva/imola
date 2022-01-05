@@ -23,3 +23,4 @@ Deletes an existing css template from the available list of templates for the
   that can be grouped and stored for later usage via the "template"
   argument of panel and page functions.
 }
+\keyword{templates}

@@ -15,3 +15,4 @@ No return value, called for side effects
 \description{
 Allows removing an entry from the current activeBreakpoints.
 }
+\keyword{breakpoints}

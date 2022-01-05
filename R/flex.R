@@ -105,6 +105,7 @@
 #' @importFrom htmltools HTML
 #'
 #' @return An HTML tagList.
+#' @keywords flex panel
 #' @export
 flexPanel <- function(...,
                       template = NULL,
@@ -183,11 +184,11 @@ flexPanel <- function(...,
 #'   div(class = "area-3")
 #' )
 #' }
-#'
 #' @importFrom shiny tagList tags bootstrapLib
 #' @importFrom magrittr "%>%"
 #'
 #' @return A UI definition that can be passed to the [shinyUI] function.
+#' @keywords flex page
 #' @export
 flexPage <- function(...,
                      title = NULL,
