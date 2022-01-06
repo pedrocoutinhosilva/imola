@@ -1,0 +1,19 @@
+---
+title: "Tutorial: CSS grid and imola"
+output: rmarkdown::html_vignette
+description: >
+  Getting started with CSS grid and imola.
+vignette: >
+  %\VignetteIndexEntry{Tutorial: CSS grid and imola}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# flex

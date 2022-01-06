@@ -1,0 +1,19 @@
+---
+title: "Tutorial: CSS Flexbox and imola"
+output: rmarkdown::html_vignette
+description: >
+  Getting started with CSS Flexbox and imola.
+vignette: >
+  %\VignetteIndexEntry{Tutorial: CSS Flexbox and imola}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# flex

@@ -1,0 +1,19 @@
+---
+title: "Tutorial: Templates"
+output: rmarkdown::html_vignette
+description: >
+  Getting started with imola layout templates.
+vignette: >
+  %\VignetteIndexEntry{Tutorial: Templates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# flex

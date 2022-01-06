@@ -1,0 +1,19 @@
+---
+title: "Tutorial: Using breakpoint systems"
+output: rmarkdown::html_vignette
+description: >
+  Getting started with imola breakpoint systems.
+vignette: >
+  %\VignetteIndexEntry{Tutorial: Using breakpoint systems}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# flex

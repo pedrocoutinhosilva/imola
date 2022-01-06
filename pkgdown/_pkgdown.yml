@@ -3,8 +3,10 @@ home:
 
 template:
   bootstrap: 5
+  bootswatch: superhero
+  theme: arrow-dark
   bslib:
-    primary: "#50014E"
+    # primary: "#50014E"
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
 
@@ -12,8 +14,29 @@ authors:
   Pedro Silva:
     href: https://pedrocsilva.com
 
+navbar:
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/pedrocoutinhosilva/imola
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/sparktuga
+
 code:
   width: 72
+
+articles:
+- title: Quick start guides
+  navbar: ~
+  contents:
+  - imola
+  - imola-flexbox
+  - imola-grid
+- title: Templates
+  contents:
+  - imola-templates
+- title: Breakpoint systems
+  contents:
+  - imola-breakpoints
 
 reference:
 - title: Flex

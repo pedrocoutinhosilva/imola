@@ -1,45 +1,25 @@
-# imola
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/pedrocoutinhosilva/imola/workflows/R-CMD-check/badge.svg)](https://CRAN.R-project.org/package=imola)
-[![cranlogs](https://www.r-pkg.org/badges/version/imola)](https://CRAN.R-project.org/package=imola)
-[![cranlogs](https://cranlogs.r-pkg.org/badges/imola)](https://CRAN.R-project.org/package=imola)
-[![total](https://cranlogs.r-pkg.org/badges/grand-total/imola)](https://CRAN.R-project.org/package=imola)
-<!-- badges: end -->
+---
+title: "Tutorial: Getting started with imola"
+output: rmarkdown::html_vignette
+description: >
+  Learn how to get started with imola.
+vignette: >
+  %\VignetteIndexEntry{Tutorial: Getting started with imola}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
 
-Bridging the gap between R/shiny and CSS layouts (grid and flexbox)!
-
-Demo (and example layouts): https://sparktuga.shinyapps.io/imolatemplates/
-
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 If you're familiar with CSS, you might have felt by now that layouts in shiny can be very awkward to set up.
 
-While R/shiny does give you access to bootstrap's row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI. As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.
+While R/shiny does give you direct access to bootstrap's row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI.
 
-Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving you more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.
-
-With imola you can easily leverage typical CSS layouts (grid and Flexbox) directly in your UI functions, including media breakpoints to fit different screen sizes and devices.
-
-You can also save your favorite layouts to use later via a templating system that allows you to define a layout, name it, and simply use it in as many elements as you need. If creating isn't your thing, imola also comes with a built in collection of templates traditionally used web layouts, making it even easier to spice up your dashboards!
-
-# installation
-1 - Install the package:
-
-from CRAN:
-```R
-install.packages('imola')
-```
-
-from github:
-```R
-devtools::install_github('pedrocoutinhosilva/imola')
-```
-
-2 - Include the library into your project:
-```R
-# global.R
-library(imola)
-```
-
-You are now ready to go! Check the usage section for some examples and more information on how to use the diferent grid and flex functions to get started!
+As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.
 
 # Usage
 
@@ -88,7 +68,7 @@ This grid contains 3 areas (`area1`, `area2`, `area3`), with `area2` clearly ser
 
 As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint system, that contains a few different breakpoints:
 
-![Screenshot](man/figures/bootstrap3-breakpoints.png)
+![Screenshot](../reference/figures/bootstrap3-breakpoints.png)
 
 We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap`
 
