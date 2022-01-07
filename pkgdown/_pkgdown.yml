@@ -3,8 +3,8 @@ home:
 
 template:
   bootstrap: 5
-  bootswatch: superhero
-  theme: arrow-dark
+  # bootswatch: superhero
+  # theme: arrow-dark
   bslib:
     # primary: "#50014E"
     border-radius: 0.5rem
@@ -16,6 +16,8 @@ authors:
 
 navbar:
   right:
+    - text: Demos
+      href: articles/demos.html
     - icon: fa-github fa-lg
       href: https://github.com/pedrocoutinhosilva/imola
     - icon: fa-twitter fa-lg
@@ -29,6 +31,7 @@ articles:
   navbar: ~
   contents:
   - imola
+  - imola-why-flex-and-grid
   - imola-flexbox
   - imola-grid
 - title: Templates

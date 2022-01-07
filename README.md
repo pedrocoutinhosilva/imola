@@ -10,16 +10,16 @@ An interface to create grid and flexbox CSS layouts for your R/Shiny dashboards 
 
 Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving you more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.
 
-###### CSS Layouts in shiny made easy
+##### CSS Layouts in shiny made easy
 You can now easily leverage typical CSS layouts (grid and Flexbox) directly in your UI functions, including support for media breakpoints to fit different screen sizes and devices.
 
-###### Use built in templates, or create your own
+##### Use built in templates, or create your own
 Save your favorite layouts for later use via the existing templating system and simply use it in as many elements as you need.
 
 If layout creation isn't your thing, imola also comes with a built in collection of templates for traditionally used web layouts, making it even easier to spice up your dashboards!
 
-###### Live Demo
-See it in action (and browse the built in template layouts) at: https://sparktuga.shinyapps.io/imolatemplates/
+##### Demos
+-   Built in template layouts: https://sparktuga.shinyapps.io/imolatemplates/
 
 # installation
 ###### 1 - Install the package:
