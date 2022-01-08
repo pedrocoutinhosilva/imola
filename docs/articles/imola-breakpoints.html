@@ -99,10 +99,46 @@
 
     
     
-<div class="section level1">
-<h1 id="flex">flex<a class="anchor" aria-label="anchor" href="#flex"></a>
-</h1>
+<p>Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things dont appear broken or out of place.</p>
+<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code>fluidRow()</code> function. <code>fluidRow()</code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
+<p>While the <code>fluidRow()</code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. If complex enough layouts, you might even be required to write additional CSS to add new behavior or specific elements or screen sizes.</p>
+<p>Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each function named attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.</p>
+<p>As a practical example, lets say we have the following grid areas in a gridPanel():</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># as a gridPanel() argument</span>
+<span class="va">areas</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+  <span class="st">"area1 area1 area1"</span>,
+  <span class="st">"area2 area3 area3"</span>,
+  <span class="st">"area2 area3 area3"</span>
+<span class="op">)</span>
+<span class="co"># or</span>
+<span class="va">areas</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"area1"</span>, <span class="st">"area1"</span>, <span class="st">"area1"</span><span class="op">)</span>,
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"area2"</span>, <span class="st">"area3"</span>, <span class="st">"area3"</span><span class="op">)</span>,
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"area2"</span>, <span class="st">"area3"</span>, <span class="st">"area3"</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<p>This grid contains 3 areas (<code>area1</code>, <code>area2</code>, <code>area3</code>), with <code>area2</code> clearly serving a sidebar. Viewing this grid on a small screen could lead to a very small sidebar, so one solution is to modify this grid specifically for a breakpoint that targets mobile.</p>
+<p>As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint system, that contains a few different breakpoints:</p>
+<div class="figure">
+<img src="../reference/figures/bootstrap3-breakpoints.png" alt=""><p class="caption">Screenshot</p>
 </div>
+<p>We can see what names imola expects for each of these using either <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code> or checking the option directly with <code>getOption("imola.breakpoints")$bootstrap</code></p>
+<p>In out case, we want to target small devices, so we target these via <code>xs</code>, and build our grid argument as a named list instead.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># as a gridPanel() argument</span>
+<span class="va">areas</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
+  default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+    <span class="st">"area1 area1 area1"</span>,
+    <span class="st">"area2 area3 area3"</span>,
+    <span class="st">"area2 area3 area3"</span>
+  <span class="op">)</span>,
+  xs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+    <span class="st">"area1"</span>,
+    <span class="st">"area2"</span>,
+    <span class="st">"area3"</span>
+  <span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<p>NOTE: Imola reserves the special <code>default</code> name for values that are used by default, outside of any given breakpoint boundaries (<code>default</code> is the rule, breakpoints overwrite <code>default</code> for specific screen sizes).</p>
   </main>
 </div>
 

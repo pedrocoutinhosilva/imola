@@ -16,4 +16,55 @@ knitr::opts_chunk$set(
 )
 ```
 
-# flex
+Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things dont appear broken or out of place.
+
+Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the `fluidRow()` function. `fluidRow()` will trigger layout changes to your `columns` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
+
+While the `fluidRow()` solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. If complex enough layouts, you might even be required to write additional CSS to add new behavior or specific elements or screen sizes.
+
+Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each function named attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.
+
+As a practical example, lets say we have the following grid areas in a gridPanel():
+
+``` r
+# as a gridPanel() argument
+areas = c(
+  "area1 area1 area1",
+  "area2 area3 area3",
+  "area2 area3 area3"
+)
+# or
+areas = list(
+  c("area1", "area1", "area1"),
+  c("area2", "area3", "area3"),
+  c("area2", "area3", "area3")
+)
+```
+
+This grid contains 3 areas (`area1`, `area2`, `area3`), with `area2` clearly serving a sidebar. Viewing this grid on a small screen could lead to a very small sidebar, so one solution is to modify this grid specifically for a breakpoint that targets mobile.
+
+As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint system, that contains a few different breakpoints:
+
+![Screenshot](../reference/figures/bootstrap3-breakpoints.png)
+
+We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap`
+
+In out case, we want to target small devices, so we target these via `xs`, and build our grid argument as a named list instead.
+
+``` r
+# as a gridPanel() argument
+areas = list(
+  default = c(
+    "area1 area1 area1",
+    "area2 area3 area3",
+    "area2 area3 area3"
+  ),
+  xs = c(
+    "area1",
+    "area2",
+    "area3"
+  )
+)
+```
+
+NOTE: Imola reserves the special `default` name for values that are used by default, outside of any given breakpoint boundaries (`default` is the rule, breakpoints overwrite `default` for specific screen sizes).

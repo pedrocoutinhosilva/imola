@@ -17,7 +17,7 @@ authors:
 navbar:
   right:
     - text: Demos
-      href: articles/demos.html
+      href: articles/imola-demos.html
     - icon: fa-github fa-lg
       href: https://github.com/pedrocoutinhosilva/imola
     - icon: fa-twitter fa-lg
@@ -34,6 +34,9 @@ articles:
   - imola-why-flex-and-grid
   - imola-flexbox
   - imola-grid
+- title: Demos
+  contents:
+  - imola-demos
 - title: Templates
   contents:
   - imola-templates

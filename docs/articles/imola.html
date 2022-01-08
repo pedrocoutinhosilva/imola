@@ -99,7 +99,7 @@
 
     
     
-<p>If you’re familiar with CSS, you might have felt by now that layouts in shiny can be very awkward to set up.</p>
+<p>If you’re familiar with CSS, you might have felt by now that layouts in shiny can be awkward to set up.</p>
 <p>While R/shiny does give you direct access to bootstrap’s row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI.</p>
 <p>As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.</p>
 <div class="section level2">
@@ -108,17 +108,30 @@
 <p>The bread and butter of imola are the <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/flexPanel.html">flexPanel()</a></code> functions. These allow you to replace any HTML tag that serves as a container (<code>div</code>, <code>section</code>, <code>main</code>, <code>nav</code>, …) with a tag that uses one of the specific css layout systems (grid or flexbox).</p>
 <p>If you are not familiar with these layout systems, I definitely recommend <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout" class="external-link">this article</a> to get you up to speed.</p>
 <p>The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. This means if you want fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.</p>
+<p>If you are looking for more information on a specific system of imola, make sure to check the following:</p>
+<ul>
+<li>
+<code><a href="../articles/imola-flexbox.html">vignette("imola-flexbox")</a></code> for details on <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>.</li>
+<li>
+<code><a href="../articles/imola-grid.html">vignette("imola-grid")</a></code> for details on <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/gridPage.html">gridPage()</a></code>.</li>
+<li>
+<code><a href="../articles/imola-templates.html">vignette("imola-templates")</a></code> for information on using imola’s templating engine.</li>
+<li>
+<code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for information on using imola’s breakpoint systems.</li>
+</ul>
 <div class="section level3">
 <h3 id="grid">Grid<a class="anchor" aria-label="anchor" href="#grid"></a>
 </h3>
 <p>The grid family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/gridPage.html">gridPage()</a></code>. <code><a href="../reference/gridPage.html">gridPage()</a></code> is simply a wrapper for <code><a href="../reference/gridPanel.html">gridPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
 <p>If you’re interested in more information about the full array of options in the CSS grid standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="external-link">this article</a> to get you started.</p>
+<p>For more on grid with imola, check <code><a href="../articles/imola-grid.html">vignette("imola-grid")</a></code>.</p>
 </div>
 <div class="section level3">
 <h3 id="flex">Flex<a class="anchor" aria-label="anchor" href="#flex"></a>
 </h3>
 <p>The flex family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>. Similar to what happens in the grid family, <code><a href="../reference/flexPage.html">flexPage()</a></code> is simply a wrapper for <code><a href="../reference/flexPanel.html">flexPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
 <p>If you’re interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="external-link">this article</a> to get you started.</p>
+<p>For more on flex with imola, check <code>vignette("imola-flex")</code>.</p>
 </div>
 </div>
 <div class="section level2">
@@ -164,6 +177,7 @@
   <span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>NOTE: Imola reserves the special <code>default</code> name for values that are used by default, outside of any given breakpoint boundaries (<code>default</code> is the rule, breakpoints overwrite <code>default</code> for specific screen sizes).</p>
+<p>For more breakpoints systems with imola, check <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code>.</p>
 </div>
 <div class="section level2">
 <h2 id="templates">Templates<a class="anchor" aria-label="anchor" href="#templates"></a>
@@ -207,6 +221,7 @@
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>You can register as many templates as you want, but keep in mind that each type + name combo must be unique. You can also remove templates using <code><a href="../reference/unregisterTemplate.html">unregisterTemplate()</a></code> if needed. For a full list of registered templates, you can use <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
 <p>By default imola also includes some ready to use templates these will also be listed under <code><a href="../reference/listTemplates.html">listTemplates()</a></code></p>
+<p>For more on templates with imola, check <code><a href="../articles/imola-templates.html">vignette("imola-templates")</a></code>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
