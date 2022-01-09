@@ -23,7 +23,7 @@ activeBreakpoints <- function() {
   getOption("imola.mediarules")
 }
 
-#' Adds a new breakpoint entry to the currelty active media breakpoints.
+#' Adds a new breakpoint entry to the current active media breakpoints.
 #'
 #' @param name The name of the entry to remove
 #' @param min The minimum screen width (in pixels) when the rule is active

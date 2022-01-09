@@ -54,7 +54,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">Tutorial: CSS Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
     <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
@@ -67,7 +67,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="../articles/demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -100,8 +100,8 @@
     
     
 <p>Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things dont appear broken or out of place.</p>
-<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code>fluidRow()</code> function. <code>fluidRow()</code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
-<p>While the <code>fluidRow()</code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. If complex enough layouts, you might even be required to write additional CSS to add new behavior or specific elements or screen sizes.</p>
+<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> function. <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
+<p>While the <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. If complex enough layouts, you might even be required to write additional CSS to add new behavior or specific elements or screen sizes.</p>
 <p>Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each function named attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.</p>
 <p>As a practical example, lets say we have the following grid areas in a gridPanel():</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -138,6 +138,37 @@
     <span class="st">"area3"</span>
   <span class="op">)</span>
 <span class="op">)</span></code></pre></div>
+<p>By default, the bootstrap 3 breakpoint system is active and returned when <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code> is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be (“xs” “sm” “md” “lg” “xl”):</p>
+<p><img src="../reference/figures/bootstrap3-breakpoints.png"></p>
+<p>You can list available breakpoints, in the active breakpoint system using:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">activeBreakpoints</span>())</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"xs"</span> <span class="st">"sm"</span> <span class="st">"md"</span> <span class="st">"lg"</span> <span class="st">"xl"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or explore the full details with</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">activeBreakpoints</span>()</span></code></pre></div>
+<p>If you would like to switch to a diferent breakpoint system, out of the box imola comes with 4 diferent built in systems:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">getOption</span>(<span class="st">"imola.breakpoints"</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"bootstrap3"</span> <span class="st">"bootstrap5"</span> <span class="st">"bulma"</span>      <span class="st">"foundation"</span></span></code></pre></div>
+<p>Each system has its own breakpoints, based on the framework they originate in:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap 5 system</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">getOption</span>(<span class="st">"imola.breakpoints"</span>)[[<span class="st">"bootstrap5"</span>]])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"sm"</span>  <span class="st">"md"</span>  <span class="st">"lg"</span>  <span class="st">"xl"</span>  <span class="st">"xxl"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap 5 system</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">getOption</span>(<span class="st">"imola.breakpoints"</span>)[[<span class="st">"bulma"</span>]])</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"tablet"</span>     <span class="st">"desktop"</span>    <span class="st">"widescreen"</span> <span class="st">"fullhd"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap 5 system</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">getOption</span>(<span class="st">"imola.breakpoints"</span>)[[<span class="st">"foundation"</span>]])</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"tablet"</span>     <span class="st">"desktop"</span>    <span class="st">"widescreen"</span> <span class="st">"fullhd"</span></span></code></pre></div>
+<p>The active system can be changed using <code><a href="../reference/setBreakpointSystem.html">setBreakpointSystem()</a></code>.</p>
+<p>In a similar fashion, it is possible to edit the current <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code> with the <code><a href="../reference/registerBreakpoint.html">registerBreakpoint()</a></code> and <code><a href="../reference/unregisterBreakpoint.html">unregisterBreakpoint()</a></code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a new breakpoint</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">registerBreakpoint</span>(<span class="st">"mycustombreakpoint"</span>, <span class="dv">300</span>, <span class="dv">500</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">activeBreakpoints</span>())</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"xs"</span> <span class="st">"sm"</span> <span class="st">"md"</span> <span class="st">"lg"</span> <span class="st">"xl"</span> <span class="st">"mycustombreakpoint"</span></span></code></pre></div>
+<p>It is recomended to define the breakpoint system for the application globally before UI definitions, but the <code>breakpoint_system</code> argument in panel functions allows for more flexibility when it comes to reuse components from other projects.</p>
 <p>NOTE: Imola reserves the special <code>default</code> name for values that are used by default, outside of any given breakpoint boundaries (<code>default</code> is the rule, breakpoints overwrite <code>default</code> for specific screen sizes).</p>
   </main>
 </div>

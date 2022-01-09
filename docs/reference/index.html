@@ -28,7 +28,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">Tutorial: CSS Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
     <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
@@ -38,7 +38,7 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="nav-link" href="../articles/demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -77,12 +77,12 @@
           
           <code><a href="flexPage.html">flexPage()</a></code> 
         </dt>
-        <dd>Create a page a with CSS flexbox layout</dd>
+        <dd>Create a flexbox based page</dd>
       </dl><dl><dt>
           
           <code><a href="flexPanel.html">flexPanel()</a></code> 
         </dt>
-        <dd>Create a panel with a CSS flexbox layout</dd>
+        <dd>Create a flexbox based panel</dd>
       </dl></div><div class="section level2">
       <h2 id="grid">Grid<a class="anchor" aria-label="anchor" href="#grid"></a></h2>
       
@@ -120,43 +120,43 @@
           <code><a href="applyTemplate.html">applyTemplate()</a></code> 
         </dt>
         <dd>Merges a set of attributes with a given template. To avoid redundanct
-  attributes being added to the final list, a list of default values (based
-  of the specific panel creation callback formals) is used to validate the
-  need of the argument value in the final list.</dd>
+attributes being added to the final list, a list of default values (based
+of the specific panel creation callback formals) is used to validate the
+need of the argument value in the final list.</dd>
       </dl><dl><dt>
           
           <code><a href="listTemplates.html">listTemplates()</a></code> 
         </dt>
         <dd>Lists all available grid and flex templates. If type is given, returns only
-  templates for the given grid type. Templates are collections of
-  arguments that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.</dd>
+templates for the given grid type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.</dd>
       </dl><dl><dt>
           
           <code><a href="makeTemplate.html">makeTemplate()</a></code> 
         </dt>
         <dd>Returns a imola template as an object for future use. Depending on the
-  given type, the template will then be available to be passed as an
-  argument to a panel or page function of that specific type. Templates are
-  collections of arguments that can be grouped and stored for later usage
-  via the "template" argument of panel and page functions.</dd>
+given type, the template will then be available to be passed as an
+argument to a panel or page function of that specific type. Templates are
+collections of arguments that can be grouped and stored for later usage
+via the "template" argument of panel and page functions.</dd>
       </dl><dl><dt>
           
           <code><a href="registerTemplate.html">registerTemplate()</a></code> 
         </dt>
         <dd>Registers a new css template for future use. Depending on the given type,
-  the template will then be available to be passed as an argument to a panel
-  or page function of that specific type. Templates are collections of
-  arguments that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.</dd>
+the template will then be available to be passed as an argument to a panel
+or page function of that specific type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.</dd>
       </dl><dl><dt>
           
           <code><a href="unregisterTemplate.html">unregisterTemplate()</a></code> 
         </dt>
         <dd>Deletes an existing css template from the available list of templates for the
-  given grid type. Templates are collections of arguments
-  that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.</dd>
+given grid type. Templates are collections of arguments
+that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.</dd>
       </dl></div><div class="section level2">
       <h2 id="breakpoints">Breakpoints<a class="anchor" aria-label="anchor" href="#breakpoints"></a></h2>
       
@@ -173,20 +173,20 @@
           <code><a href="activeBreakpoints.html">activeBreakpoints()</a></code> 
         </dt>
         <dd>Current active media breakpoints. By default the default_system
-  setting values are used, but the list can be customized by using the
-  registerBreakpoint() and unregisterBreakpoint() functions.</dd>
+setting values are used, but the list can be customized by using the
+registerBreakpoint() and unregisterBreakpoint() functions.</dd>
       </dl><dl><dt>
           
           <code><a href="registerBreakpoint.html">registerBreakpoint()</a></code> 
         </dt>
-        <dd>Adds a new breakpoint entry to the currelty active media breakpoints.</dd>
+        <dd>Adds a new breakpoint entry to the current active media breakpoints.</dd>
       </dl><dl><dt>
           
           <code><a href="setBreakpointSystem.html">setBreakpointSystem()</a></code> 
         </dt>
         <dd>Sets the current active media breakpoints. By default the default_system
-  setting values are used, but the list can be customized by using the
-  registerBreakpoint() and unregisterBreakpoint() functions.</dd>
+setting values are used, but the list can be customized by using the
+registerBreakpoint() and unregisterBreakpoint() functions.</dd>
       </dl><dl><dt>
           
           <code><a href="unregisterBreakpoint.html">unregisterBreakpoint()</a></code> 

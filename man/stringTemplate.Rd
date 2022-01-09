@@ -3,8 +3,8 @@
 \name{stringTemplate}
 \alias{stringTemplate}
 \title{Processes a string template in the htmlTemplate format into a valid string
-  with no placeholders. The string must use the htmlTemplate format, meaning
-  placeholders are marked using the {{placeholder}} convention.}
+with no placeholders. The string must use the htmlTemplate format, meaning
+placeholders are marked using the {{placeholder}} convention.}
 \usage{
 stringTemplate(string, ...)
 }
@@ -21,8 +21,8 @@ A string with all placeholders replaced.
 }
 \description{
 Processes a string template in the htmlTemplate format into a valid string
-  with no placeholders. The string must use the htmlTemplate format, meaning
-  placeholders are marked using the {{placeholder}} convention.
+with no placeholders. The string must use the htmlTemplate format, meaning
+placeholders are marked using the {{placeholder}} convention.
 }
 \keyword{internal}
 \keyword{utils}

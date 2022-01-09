@@ -2,7 +2,7 @@
 % Please edit documentation in R/flex.R
 \name{flexPanel}
 \alias{flexPanel}
-\title{Create a panel with a CSS flexbox layout}
+\title{Create a flexbox based panel}
 \usage{
 flexPanel(
   ...,
@@ -22,118 +22,187 @@ flexPanel(
 )
 }
 \arguments{
-\item{...}{Elements to include within the panel}
+\item{...}{Tag attributes (named arguments) and children (unnamed arguments).
+A named argument with an \code{NA} value is rendered as a boolean attributes.
+Named arguments can be used to provide additional values to the container
+of the grid.
+
+For a full list of valid HTML attributes check visit
+\url{https://www.w3schools.com/tags/ref_attributes.asp}.
+
+Children may include any combination of:
+\itemize{
+\item Other tags objects
+\item \code{\link[=HTML]{HTML()}} strings
+\item \code{\link[=htmlDependency]{htmlDependency()}}s
+\item Single-element atomic vectors
+}}
 
 \item{template}{The name of the template to use as a base for the grid, or
 the resulting value from using makeTemplate() to generate a template
-object. See listTemplates() and registerTemplate() for more information.}
+object.
 
-\item{direction}{Direction of the flow of elements in the panel. Accepts a
-valid css 'flex-direction' value (row | row-reverse | column |
-column-reverse) By default the 'row' value is used.
-Supports named list for breakpoints.}
+See \code{listTemplates()} and \code{registerTemplate()} for more information.}
 
-\item{wrap}{Should elements be allowed to wrap into multiple lines. Accepts
-a valid css 'flex-wrap' value (nowrap | wrap | wrap-reverse). By default
-the value 'wrap' is used.
-Supports named list for breakpoints.}
+\item{direction}{Direction of the flow of elements in the panel.
+
+Accepts a valid css \code{flex-direction} value (\code{row} | \code{row-reverse} |
+\code{column} | \code{column-reverse}).
+
+By default the \code{row} value is used. Supports breakpoints.}
+
+\item{wrap}{Should elements be allowed to wrap into multiple lines.
+
+Accepts a valid css \code{flex-wrap} value (\code{nowrap} | \code{wrap} | \code{wrap-reverse}).
+
+By default the value \code{wrap} is used. Supports breakpoints.}
 
 \item{justify_content}{Defines the alignment along the main axis. Accepts a
-valid css 'justify-content' value (flex-start | flex-end | center |
-space-between | space-around | space-evenly | start | end | left | right).
-By default the value 'flex-start' is used.
-Supports named list for breakpoints.}
+valid css \code{justify-content} value (\code{flex-start} | \code{flex-end} | \code{center} |
+\code{space-between} | \code{space-around} | \code{space-evenly} | \code{start} |
+\code{end} | \code{left} | \code{right}).
+
+By default the value \code{flex-start} is used. Supports breakpoints.}
 
 \item{align_items}{Defines the default behavior for how flex items are laid
-out along the cross axis on the current line. Accepts a valid css
-'align-items' value (stretch | flex-start | flex-end | center | baseline |
-first baseline | last baseline | start | end | self-start | self-end).
-By default the value 'stretch' is used.
-Supports named list for breakpoints.}
+out along the cross axis on the current line.
+
+Accepts a valid css \code{align-items} value (\code{stretch} | \code{flex-start} |
+\code{flex-end} | \code{center} | \code{baseline} | \verb{first baseline} | \verb{last baseline} |
+\code{start} | \code{end} | \code{self-start} | \code{self-end}).
+
+By default the value \code{stretch} is used. Supports breakpoints.}
 
 \item{align_content}{Aligns a flex container’s lines within when there is
-extra space in the cross-axis. Accepts a valid css align-content' value
+extra space in the cross-axis.
+
+Accepts a valid css \code{align-content} value
 (flex-start | flex-end | center | space-between | space-around |
 space-evenly | stretch | start | end | baseline | first baseline |
-last baseline). By default the value 'flex-start' is used.
-Supports named list for breakpoints.}
+last baseline).
 
-\item{gap}{Defines the space between elements in the panel. Defaults to 0.
-Supports named list for breakpoints.}
+By default the value 'flex-start' is used. Supports breakpoints.}
 
-\item{flex}{A vector of valid css 'flex' values. Defines how elements in the
-panel can grow and shrink. Each entry of the vector will afect the nth
-child of the panel, meaning that it can be at maximum the lenght of the
-elements in the panel. If smaller the vector will be repeated until the
-pattern affects all elements in the panel. NA can also be used as a entry
-of the vector to skip adding a rule to specific elements. By default c(1)
-is used, meaning all elements can grow and shrink as required, at the same
-rate. See notes for more information.
-Supports named list for breakpoints.}
+\item{gap}{Defines the space between elements in the panel. Controls both the
+space between rows and columns.
+
+Accepts a css valid value, or 2 values separated by a space (if using
+diferent values for row and column spacing).
+
+By default the value \code{0} is used. Supports breakpoints.}
+
+\item{flex}{A vector of valid css 'flex' values for the child elements.
+Defines how elements in the panel can grow, shrink and their initial size.
+
+Arguments that target child elements individually require a vector of
+values instead of a single value, with each entry of the vector affecting
+the nth child element.
+
+If the given vector has less entries that the number
+of child elements, the values will be repeated until the pattern affects
+all elements in the panel. If the number of entries given is more that the
+number of child elements, exceeding entries will be ignored. NA can also be
+used as a entry to skip adding a rule to a specific nth element.
+
+Accepts a valid css \code{flex} value.
+
+By default c(1) is used, meaning all elements can grow and shrink as
+required, at the same rate. Supports breakpoints.}
 
 \item{grow}{A vector of valid css 'flex-grow' values. Defines the rate of
-how elements can grow. Entries will overwrite the 'flex' values, and can
-be used make more targeted rules. Each entry of the vector will afect the
-nth child of the panel, meaning that it can be at maximum the lenght of
-the elements in the panel. If smaller the vector will be repeated until
-the pattern affects all elements in the panel. NA can also be used as a
-entry of the vector to skip adding a rule to specific elements. By default
-c() is used, meaning values from the flex argument will be used. See notes
-for more information.
-Supports named list for breakpoints.}
+how elements can grow. Entries will overwrite the nth 'flex' value,
+and can be used make more targeted rules.
+
+Entries will overwrite the 'flex' values, and can
+be used make more targeted rules.
+
+Arguments that target child elements individually require a vector of
+values instead of a single value, with each entry of the vector affecting
+the nth child element.
+
+If the given vector has less entries that the number
+of child elements, the values will be repeated until the pattern affects
+all elements in the panel. If the number of entries given is more that the
+number of child elements, exceeding entries will be ignored. NA can also be
+used as a entry to skip adding a rule to a specific nth element.
+
+By default NULL is used, meaning values from the flex argument will be
+used instead. Supports breakpoints.}
 
 \item{shrink}{A vector of valid css 'flex-shrink' values. Defines the rate
-of how elements can shrink. Entries will overwrite the 'flex' values, and
-can be used make more targeted rules. Each entry of the vector will afect
-the nth child of the panel, meaning that it can be at maximum the lenght
-of the elements in the panel. If smaller the vector will be repeated until
-the pattern affects all elements in the panel. NA can also be used as a
-entry of the vector to skip adding a rule to specific elements. By default
-c() is used, meaning values from the flex argument will be used. See notes
-for more information.
-Supports named list for breakpoints.}
+of how elements can shrink. Entries will overwrite the nth 'flex' value,
+and can be used make more targeted rules.
+
+Arguments that target child elements individually require a vector of
+values instead of a single value, with each entry of the vector affecting
+the nth child element.
+
+If the given vector has less entries that the number
+of child elements, the values will be repeated until the pattern affects
+all elements in the panel. If the number of entries given is more that the
+number of child elements, exceeding entries will be ignored. NA can also be
+used as a entry to skip adding a rule to a specific nth element.
+
+By default NULL is used, meaning values from the flex argument will be
+used instead. Supports breakpoints.}
 
 \item{basis}{A vector of valid css 'flex-basis' values. Defines the base
-size of elements. Entries will overwrite the 'flex' values, and can be
-used make more targeted rules. Each entry of the vector will afect the nth
-child of the panel, meaning that it can be at maximum the lenght of the
-elements in the panel. If smaller the vector will be repeated until the
-pattern affects all elements in the panel. NA can also be used as a entry
-of the vector to skip adding a rule to specific elements. By default c()
-is used, meaning values from the flex argument will be used. See notes for
-more information.
-Supports named list for breakpoints.}
+size of elements. Entries will overwrite the nth 'flex' value,
+and can be used make more targeted rules.
+
+Arguments that target child elements individually require a vector of
+values instead of a single value, with each entry of the vector affecting
+the nth child element.
+
+If the given vector has less entries that the number
+of child elements, the values will be repeated until the pattern affects
+all elements in the panel. If the number of entries given is more that the
+number of child elements, exceeding entries will be ignored. NA can also be
+used as a entry to skip adding a rule to a specific nth element.
+
+By default NULL is used, meaning values from the flex argument will be
+used instead. Supports breakpoints.}
 
 \item{breakpoint_system}{Optional Media breakpoints to use. Will default to
 the current active breakpoint system.}
 
-\item{id}{The panel id. A randomly generated one is used by default.}
+\item{id}{The panel id. A randomly generated one is used by default.
+You cannot have more than one element with the same id in an HTML document.}
 }
 \value{
 An HTML tagList.
 }
 \description{
-Create a panel with a CSS flexbox layout
+Create a flexbox based panel
 }
 \details{
-Behaves similar to normal HTML div tags, but simplifies
-  the way css flexbox can be used from shiny.
+Behaves similar to a normal HTML tag, but provides helping
+arguments that simplify the way flexbox css can be created from shiny.
 }
 \note{
-When creating responsive layouts based on media rules, for most
-  arguments a named list can be passed instead of a single value. The names
-  in the list can be any of the registered breakpoints available in
-  activeBreakpoints(). Breakpoints can also be modified with the
-  registerBreakpoint() and unregisterBreakpoint() functions. Arguments that
-  allow this are: direction | wrap | justify_content | align_items |
-  align_content | gap | flex | grow | shrink | basis.
+When creating responsive layouts based on media rules, for most css
+arguments a named list can be passed instead of a single value.
+
+The names in the list can be any of the registered breakpoints available in
+\code{activeBreakpoints()}, of on the provided \code{breakpoint_system} argument.
+Current global \code{activeBreakpoints()} can be changed using
+\code{setBreakpointSystem()}.
+
+In a similar fashion, the current \code{activeBreakpoints()} can also be
+modified with the \code{registerBreakpoint()} and \code{unregisterBreakpoint()}.
+
+It is recomended to define the breakpoint system for the application
+globally before UI definitions, but the \code{breakpoint_system} in panel
+functions allows for more flexibility when it comes to reuse components
+from other projects.
 
 See
-  \url{https://css-tricks.com/snippets/css/a-guide-to-flexbox/}
-  for additional details on using css flexbox
+\url{https://css-tricks.com/snippets/css/a-guide-to-flexbox/}
+for additional details on using css flexbox
 }
 \examples{
 if (interactive()) {
+library(shiny)
 library(imola)
 flexPanel(
   div("example content"),
@@ -144,7 +213,7 @@ flexPanel(
 
 }
 \seealso{
-[flexPage()]
+\code{\link[=flexPage]{flexPage()}}
 }
 \concept{flexbox functions}
 \keyword{flex}

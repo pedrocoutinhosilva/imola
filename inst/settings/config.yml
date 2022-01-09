@@ -12,6 +12,9 @@ css:
     fill_page: "
       html, body {
         min-height: 100vh; width: 100%; margin: 0; padding: 0;
+      }
+      #grid-page-wrapper {
+        min-height: 100vh;
       }"
 
 # Templates to be used with strinTemplate()

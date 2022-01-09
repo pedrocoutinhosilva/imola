@@ -3,8 +3,8 @@
 \name{generateGridAreaCSS}
 \alias{generateGridAreaCSS}
 \title{Generates the requires css statements for a specific set of grid areas. This
-  includes the css required to position each child element into each of the
-  named grid area.}
+includes the css required to position each child element into each of the
+named grid area.}
 \usage{
 generateGridAreaCSS(areas, id)
 }
@@ -18,8 +18,8 @@ A vector of valid css strings.
 }
 \description{
 Generates the requires css statements for a specific set of grid areas. This
-  includes the css required to position each child element into each of the
-  named grid area.
+includes the css required to position each child element into each of the
+named grid area.
 }
 \keyword{generators}
 \keyword{internal}

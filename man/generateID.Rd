@@ -4,10 +4,12 @@
 \alias{generateID}
 \title{Generates a HTML valid ID.
 HTML IDs should follow specific standards:
-  - The ID must start with a letter (a-z or A-Z).
-  - All subsequent characters can be letters, numbers (0-9), hyphens (-),
-    underscores (_), colons (:), and periods (.).
-  - Each ID must be unique within the document.}
+\itemize{
+\item The ID must start with a letter (a-z or A-Z).
+\item All subsequent characters can be letters, numbers (0-9), hyphens (-),
+underscores (_), colons (:), and periods (.).
+\item Each ID must be unique within the document.
+}}
 \usage{
 generateID()
 }
@@ -17,10 +19,12 @@ A valid CSS id.
 \description{
 Generates a HTML valid ID.
 HTML IDs should follow specific standards:
-  - The ID must start with a letter (a-z or A-Z).
-  - All subsequent characters can be letters, numbers (0-9), hyphens (-),
-    underscores (_), colons (:), and periods (.).
-  - Each ID must be unique within the document.
+\itemize{
+\item The ID must start with a letter (a-z or A-Z).
+\item All subsequent characters can be letters, numbers (0-9), hyphens (-),
+underscores (_), colons (:), and periods (.).
+\item Each ID must be unique within the document.
+}
 }
 \keyword{internal}
 \keyword{utils}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/breakpoints.R
 \name{registerBreakpoint}
 \alias{registerBreakpoint}
-\title{Adds a new breakpoint entry to the currelty active media breakpoints.}
+\title{Adds a new breakpoint entry to the current active media breakpoints.}
 \usage{
 registerBreakpoint(name, min = NULL, max = NULL)
 }
@@ -17,6 +17,6 @@ registerBreakpoint(name, min = NULL, max = NULL)
 No return value, called for side effects
 }
 \description{
-Adds a new breakpoint entry to the currelty active media breakpoints.
+Adds a new breakpoint entry to the current active media breakpoints.
 }
 \keyword{breakpoints}

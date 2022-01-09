@@ -3,8 +3,8 @@
 \name{generateCSSPropertyStyles}
 \alias{generateCSSPropertyStyles}
 \title{Generates the requires css statements for a specific css property. It will
-  iterated over all breakpoints in the given value and return all statements
-  for all breakpoints in a vector format.}
+iterated over all breakpoints in the given value and return all statements
+for all breakpoints in a vector format.}
 \usage{
 generateCSSPropertyStyles(value, property, id, breakpoint_system)
 }
@@ -22,8 +22,8 @@ A vector of valid css strings.
 }
 \description{
 Generates the requires css statements for a specific css property. It will
-  iterated over all breakpoints in the given value and return all statements
-  for all breakpoints in a vector format.
+iterated over all breakpoints in the given value and return all statements
+for all breakpoints in a vector format.
 }
 \keyword{generators}
 \keyword{internal}

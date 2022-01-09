@@ -3,10 +3,10 @@
 \name{registerTemplate}
 \alias{registerTemplate}
 \title{Registers a new css template for future use. Depending on the given type,
-  the template will then be available to be passed as an argument to a panel
-  or page function of that specific type. Templates are collections of
-  arguments that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.}
+the template will then be available to be passed as an argument to a panel
+or page function of that specific type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.}
 \usage{
 registerTemplate(
   type,
@@ -38,9 +38,9 @@ No return value, called for side effects
 }
 \description{
 Registers a new css template for future use. Depending on the given type,
-  the template will then be available to be passed as an argument to a panel
-  or page function of that specific type. Templates are collections of
-  arguments that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.
+the template will then be available to be passed as an argument to a panel
+or page function of that specific type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.
 }
 \keyword{templates}

@@ -3,9 +3,9 @@
 \name{listTemplates}
 \alias{listTemplates}
 \title{Lists all available grid and flex templates. If type is given, returns only
-  templates for the given grid type. Templates are collections of
-  arguments that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.}
+templates for the given grid type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.}
 \usage{
 listTemplates(type = NULL)
 }
@@ -19,8 +19,8 @@ A named list of css templates and specific values.
 }
 \description{
 Lists all available grid and flex templates. If type is given, returns only
-  templates for the given grid type. Templates are collections of
-  arguments that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.
+templates for the given grid type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.
 }
 \keyword{templates}

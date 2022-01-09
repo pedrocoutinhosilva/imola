@@ -3,7 +3,7 @@
 \name{valueToCSS}
 \alias{valueToCSS}
 \title{Converts a R List or vector object into a valid css string. Used primarily
-  to convert normalized attribute values into css values during processing.}
+to convert normalized attribute values into css values during processing.}
 \usage{
 valueToCSS(value, property)
 }
@@ -17,7 +17,7 @@ string containing a valid css value.
 }
 \description{
 Converts a R List or vector object into a valid css string. Used primarily
-  to convert normalized attribute values into css values during processing.
+to convert normalized attribute values into css values during processing.
 }
 \keyword{internal}
 \keyword{utils}

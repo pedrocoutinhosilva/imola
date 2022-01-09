@@ -3,10 +3,10 @@
 \name{makeTemplate}
 \alias{makeTemplate}
 \title{Returns a imola template as an object for future use. Depending on the
-  given type, the template will then be available to be passed as an
-  argument to a panel or page function of that specific type. Templates are
-  collections of arguments that can be grouped and stored for later usage
-  via the "template" argument of panel and page functions.}
+given type, the template will then be available to be passed as an
+argument to a panel or page function of that specific type. Templates are
+collections of arguments that can be grouped and stored for later usage
+via the "template" argument of panel and page functions.}
 \usage{
 makeTemplate(type, ..., breakpoint_system = activeBreakpoints())
 }
@@ -29,9 +29,9 @@ No return value, called for side effects
 }
 \description{
 Returns a imola template as an object for future use. Depending on the
-  given type, the template will then be available to be passed as an
-  argument to a panel or page function of that specific type. Templates are
-  collections of arguments that can be grouped and stored for later usage
-  via the "template" argument of panel and page functions.
+given type, the template will then be available to be passed as an
+argument to a panel or page function of that specific type. Templates are
+collections of arguments that can be grouped and stored for later usage
+via the "template" argument of panel and page functions.
 }
 \keyword{templates}

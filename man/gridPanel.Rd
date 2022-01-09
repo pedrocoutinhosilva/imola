@@ -84,24 +84,24 @@ Create a panel with a CSS grid layout
 }
 \details{
 Behaves similar to normal HTML div tags, but simplifies
-  the way css grid can be used via the arguments area, rows and columns.
-  Only areas is required, when not used rows and columns will simply split
-  the existing space equaly between each row / column.
-  Internally the function creates the styles for the grid positions by
-  generating the rules for positioning the children via their classes.
-  To position a child element simply make sure that it includes a class
-  with the same name as the named area.
+the way css grid can be used via the arguments area, rows and columns.
+Only areas is required, when not used rows and columns will simply split
+the existing space equaly between each row / column.
+Internally the function creates the styles for the grid positions by
+generating the rules for positioning the children via their classes.
+To position a child element simply make sure that it includes a class
+with the same name as the named area.
 }
 \note{
 When creating responsive layouts based on media rules, for arguments
-  a named list can be passed instead of a single value. The names in the list
-  can be any of the registered breakpoints available in activeBreakpoints().
-  Breakpoints can also be modified with the registerBreakpoint() and
-  unregisterBreakpoint() functions. Arguments that allow this are: areas |
-  rows | columns | gap.
+a named list can be passed instead of a single value. The names in the list
+can be any of the registered breakpoints available in activeBreakpoints().
+Breakpoints can also be modified with the registerBreakpoint() and
+unregisterBreakpoint() functions. Arguments that allow this are: areas |
+rows | columns | gap.
 
 See \url{https://css-tricks.com/snippets/css/complete-guide-grid/}
-  for additional details on using css grids
+for additional details on using css grids
 }
 \examples{
 if (interactive()) {
@@ -118,7 +118,7 @@ gridPanel(
 
 }
 \seealso{
-[gridPage()]
+\code{\link[=gridPage]{gridPage()}}
 
 Other grid functions: 
 \code{\link{gridPage}()}

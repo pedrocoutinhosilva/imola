@@ -2,12 +2,26 @@
 % Please edit documentation in R/flex.R
 \name{flexPage}
 \alias{flexPage}
-\title{Create a page a with CSS flexbox layout}
+\title{Create a flexbox based page}
 \usage{
 flexPage(..., title = NULL, fill_page = TRUE, dependency = bootstrapLib())
 }
 \arguments{
-\item{...}{Elements to include within the page}
+\item{...}{Tag attributes (named arguments) and children (unnamed arguments).
+A named argument with an \code{NA} value is rendered as a boolean attributes.
+Named arguments can be used to provide additional values to the container
+of the grid.
+
+For a full list of valid HTML attributes check visit
+\url{https://www.w3schools.com/tags/ref_attributes.asp}.
+
+Children may include any combination of:
+\itemize{
+\item Other tags objects
+\item \code{\link[=HTML]{HTML()}} strings
+\item \code{\link[=htmlDependency]{htmlDependency()}}s
+\item Single-element atomic vectors
+}}
 
 \item{title}{The browser window title (defaults to the host URL of the page)}
 
@@ -19,29 +33,33 @@ htmlDependency, for example the shiny bootstrap one (the default)
 or a tagList with diferent dependencies}
 }
 \value{
-A UI definition that can be passed to the [shinyUI] function.
+A UI definition that can be passed to the \link{shinyUI} function.
 }
 \description{
-Create a page a with CSS flexbox layout
+Create a flexbox based page
 }
 \note{
 See
-  \url{https://css-tricks.com/snippets/css/a-guide-to-flexbox/}
-  for additional details on using css flexbox
+\url{https://css-tricks.com/snippets/css/a-guide-to-flexbox/}
+for additional details on using css flexbox
 }
 \examples{
 if (interactive()) {
+library(shiny)
 library(imola)
-flexPage(
+ui <- flexPage(
   title = "A flex page",
-  div(class = "area-1"),
-  div(class = "area-2"),
-  div(class = "area-3")
+  div(class = "area-1", "Area 1 content"),
+  div(class = "area-2", "Area 2 content"),
+  div(class = "area-3", "Area 3 content")
 )
+
+server <- function(input, output) {}
+shinyApp(ui, server)
 }
 }
 \seealso{
-[flexPanel()]
+\code{\link[=flexPanel]{flexPanel()}}
 }
 \concept{flex functions}
 \keyword{flex}

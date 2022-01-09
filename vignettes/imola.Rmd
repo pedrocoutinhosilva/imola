@@ -59,9 +59,9 @@ Breakpoints are a way to adjust your layouts to different screen sizes. As the s
 
 Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the `fluidRow()` function. `fluidRow()` will trigger layout changes to your `columns` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
 
-While the `fluidRow()` solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. If complex enough layouts, you might even be required to write additional CSS to add new behavior or specific elements or screen sizes.
+While the `fluidRow()` solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. For complex enough layouts, you might even be required to write additional CSS to add new behavior for specific elements or screen sizes.
 
-Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each function named attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.
+Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.
 
 As a practical example, lets say we have the following grid areas in a gridPanel():
 
@@ -108,7 +108,7 @@ areas = list(
 
 NOTE: Imola reserves the special `default` name for values that are used by default, outside of any given breakpoint boundaries (`default` is the rule, breakpoints overwrite `default` for specific screen sizes).
 
-For more breakpoints systems with imola, check `vignette("imola-breakpoints")`.
+For more about breakpoints systems with imola, check `vignette("imola-breakpoints")`.
 
 ## Templates
 

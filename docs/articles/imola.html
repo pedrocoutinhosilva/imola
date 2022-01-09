@@ -54,7 +54,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">Tutorial: CSS Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
     <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
@@ -67,7 +67,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="../articles/demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -138,9 +138,9 @@
 <h2 id="breakpoints">Breakpoints<a class="anchor" aria-label="anchor" href="#breakpoints"></a>
 </h2>
 <p>Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things dont appear broken or out of place.</p>
-<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code>fluidRow()</code> function. <code>fluidRow()</code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
-<p>While the <code>fluidRow()</code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. If complex enough layouts, you might even be required to write additional CSS to add new behavior or specific elements or screen sizes.</p>
-<p>Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each function named attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.</p>
+<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> function. <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
+<p>While the <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. For complex enough layouts, you might even be required to write additional CSS to add new behavior for specific elements or screen sizes.</p>
+<p>Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.</p>
 <p>As a practical example, lets say we have the following grid areas in a gridPanel():</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># as a gridPanel() argument</span>
@@ -177,7 +177,7 @@
   <span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>NOTE: Imola reserves the special <code>default</code> name for values that are used by default, outside of any given breakpoint boundaries (<code>default</code> is the rule, breakpoints overwrite <code>default</code> for specific screen sizes).</p>
-<p>For more breakpoints systems with imola, check <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code>.</p>
+<p>For more about breakpoints systems with imola, check <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code>.</p>
 </div>
 <div class="section level2">
 <h2 id="templates">Templates<a class="anchor" aria-label="anchor" href="#templates"></a>

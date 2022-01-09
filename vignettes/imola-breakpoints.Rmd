@@ -67,4 +67,51 @@ areas = list(
 )
 ```
 
+By default, the bootstrap 3 breakpoint system is active and returned when `activeBreakpoints()` is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be ("xs" "sm" "md" "lg" "xl"):
+
+![](../reference/figures/bootstrap3-breakpoints.png)
+
+You can list available breakpoints, in the active breakpoint system using:
+
+```R
+names(activeBreakpoints())
+[1] "xs" "sm" "md" "lg" "xl"
+
+# or explore the full details with
+activeBreakpoints()
+```
+
+If you would like to switch to a diferent breakpoint system, out of the box imola comes with 4 diferent built in systems:
+```R
+names(getOption("imola.breakpoints"))
+[1] "bootstrap3" "bootstrap5" "bulma"      "foundation"
+```
+
+Each system has its own breakpoints, based on the framework they originate in:
+```R
+# Bootstrap 5 system
+names(getOption("imola.breakpoints")[["bootstrap5"]])
+[1] "sm"  "md"  "lg"  "xl"  "xxl"
+
+# Bootstrap 5 system
+names(getOption("imola.breakpoints")[["bulma"]])
+[1] "tablet"     "desktop"    "widescreen" "fullhd"
+
+# Bootstrap 5 system
+names(getOption("imola.breakpoints")[["foundation"]])
+[1] "tablet"     "desktop"    "widescreen" "fullhd"
+```
+The active system can be changed using `setBreakpointSystem()`.
+
+In a similar fashion, it is possible to edit the current `activeBreakpoints()` with the `registerBreakpoint()` and `unregisterBreakpoint()`.
+```R
+# add a new breakpoint
+registerBreakpoint("mycustombreakpoint", 300, 500)
+
+names(activeBreakpoints())
+[1] "xs" "sm" "md" "lg" "xl" "mycustombreakpoint"
+```
+
+It is recomended to define the breakpoint system for the application globally before UI definitions, but the `breakpoint_system` argument in panel functions allows for more flexibility when it comes to reuse components from other projects.
+
 NOTE: Imola reserves the special `default` name for values that are used by default, outside of any given breakpoint boundaries (`default` is the rule, breakpoints overwrite `default` for specific screen sizes).
