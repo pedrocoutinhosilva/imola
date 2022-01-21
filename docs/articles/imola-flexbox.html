@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Getting started with CSS Flexbox and imola.
 ">
-<title>CSS Flexbox and imola • imola</title>
+<title>Flexbox and imola • imola</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -18,7 +18,8 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="CSS Flexbox and imola">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Flexbox and imola">
 <meta property="og:description" content="Getting started with CSS Flexbox and imola.
 ">
 <meta property="og:image" content="/logo.svg">
@@ -31,7 +32,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">imola</a>
 
@@ -53,9 +54,9 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
-    <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
+    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-grid.html">Grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
   </div>
@@ -67,7 +68,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -90,7 +91,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.svg" class="logo" alt=""><h1>CSS Flexbox and imola</h1>
+      <img src="../logo.svg" class="logo" alt=""><h1>Flexbox and imola</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola-flexbox.Rmd" class="external-link"><code>vignettes/imola-flexbox.Rmd</code></a></small>
@@ -99,13 +100,15 @@
 
     
     
-<p>The flex family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>.</p>
+<p><script src="static/flexbox.js"></script><link rel="stylesheet" type="text/css" href="static/flexbox.css"></p>
+<p>The imola flex functions family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>.</p>
 <p>Similar to what happens in the grid family, <code><a href="../reference/flexPage.html">flexPage()</a></code> is simply a wrapper for <code><a href="../reference/flexPanel.html">flexPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
 <p>If you’re interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="external-link">this article</a> to get you started.</p>
-<div class="section level1">
-<h1 id="available-arguments">Available arguments<a class="anchor" aria-label="anchor" href="#available-arguments"></a>
-</h1>
-<p>The main function used to generate flex containers is <code><a href="../reference/flexPanel.html">flexPanel()</a></code>. There’s a lot of arguments going on here, so lets go over what each option can do:</p>
+<hr>
+<div class="section level2">
+<h2 id="available-arguments">Available arguments<a class="anchor" aria-label="anchor" href="#available-arguments"></a>
+</h2>
+<p>In imola, the main functions used to generate flex containers are <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>. There’s a lot of arguments going on here, so lets go over what each option can do:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/flexPanel.html">flexPanel</a></span><span class="op">(</span>
   <span class="va">...</span>,
@@ -123,22 +126,36 @@
   breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/activeBreakpoints.html">activeBreakpoints</a></span><span class="op">(</span><span class="op">)</span>,
   id <span class="op">=</span> <span class="fu"><a href="../reference/generateID.html">generateID</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/flexPage.html">flexPage</a></span><span class="op">(</span>
+  <span class="va">...</span>, <span class="co"># Any argument that can be passed to flexPanel()</span>
+  title <span class="op">=</span> <span class="cn">NULL</span>,
+  fill_page <span class="op">=</span> <span class="cn">TRUE</span>,
+  dependency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/bootstrapLib.html" class="external-link">bootstrapLib</a></span><span class="op">(</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
 <hr>
+</div>
 <div class="section level2">
 <h2 id="section">…<a class="anchor" aria-label="anchor" href="#section"></a>
 </h2>
 <p>Tag attributes (named arguments) and children (unnamed arguments). A named argument with an <code>NA</code> value is rendered as a boolean attribute.</p>
 <p>Named arguments can be used to provide additional values to the container of the grid.</p>
-<p>For a full list of valid HTML attributes check visit <a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link uri">https://www.w3schools.com/tags/ref_attributes.asp</a>.</p>
-<p>Children may include any combination of: - Other tags objects - [HTML()] strings - [htmlDependency()]s - Single-element atomic vectors</p>
+<p>Visit <a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link uri">https://www.w3schools.com/tags/ref_attributes.asp</a> for a list of valid HTML attributes.</p>
+<p>Children may include any combination of:</p>
+<ul>
+<li>Other tags objects</li>
+<li>[HTML()] strings</li>
+<li>[htmlDependency()]s</li>
+<li>Single-element atomic vectors</li>
+</ul>
 <p><code>...</code> main purpose is to add content to your panel, but it can also be used to tweak your HTML generation, allowing a very similar behavior to traditional HTML tag functions provided by <code>htmltools</code>, and letting you customize your HTML tag. By default using these functions behaves similar to using <code><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div()</a></code>, with additional styles being added to meet our layout expectations.</p>
 <p>This means if we ignore the extra styling created by imola, the following call:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/flexPanel.html">flexPanel</a></span><span class="op">(</span>attribute <span class="op">=</span> <span class="st">"foo"</span>, bar <span class="op">=</span> <span class="cn">NA</span>, <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">p</a></span><span class="op">(</span><span class="st">"some content"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>will generate the following HTML:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">attribute</span><span class="ot">=</span><span class="st">"foo"</span> <span class="er">bar</span><span class="kw">&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>some content<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">attribute</span><span class="ot">=</span><span class="st">"foo"</span> <span class="er">bar</span><span class="kw">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>some content<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 <hr>
 </div>
 <div class="section level2">
@@ -147,27 +164,25 @@
 <p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> to generate a template object.</p>
 <p>When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>.</p>
 <p>A quick way to see all registered templates (for flex functions) is to use <code>names(listTemplates("flex"))</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("flex"))</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Default built in flex templates</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"one-three-alternate"</span> <span class="st">"one-two-alternate"</span>   <span class="st">"small-large-small"</span>   <span class="st">"three-one-alternate"</span> <span class="st">"three-row"</span>           <span class="st">"three-two-alternate"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">7</span>] <span class="st">"two-one-alternate"</span>   <span class="st">"two-row"</span>             <span class="st">"two-three-alternate"</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("flex"))</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Default built in flex templates</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"one-three-alternate"</span> <span class="st">"one-two-alternate"</span>   <span class="st">"small-large-small"</span>   <span class="st">"three-one-alternate"</span> <span class="st">"three-row"</span>           <span class="st">"three-two-alternate"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">7</span>] <span class="st">"two-one-alternate"</span>   <span class="st">"two-row"</span>             <span class="st">"two-three-alternate"</span></span></code></pre></div>
 <p>Templates that you register also become valid values for the template argument, and will also be displayed when listing available template names:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">registerTemplate</span>(<span class="st">"flex"</span>, <span class="st">"mycustomtemplate"</span>,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">direction =</span> <span class="st">"column"</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("flex"))</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"one-three-alternate"</span> <span class="st">"one-two-alternate"</span>   <span class="st">"small-large-small"</span>   <span class="st">"three-one-alternate"</span> <span class="st">"three-row"</span>           <span class="st">"three-two-alternate"</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">7</span>] <span class="st">"two-one-alternate"</span>   <span class="st">"two-row"</span>             <span class="st">"two-three-alternate"</span> <span class="st">"mycustomtemplate"</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">registerTemplate</span>(<span class="st">"flex"</span>, <span class="st">"mycustomtemplate"</span>,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">direction =</span> <span class="st">"column"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("flex"))</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"one-three-alternate"</span> <span class="st">"one-two-alternate"</span>   <span class="st">"small-large-small"</span>   <span class="st">"three-one-alternate"</span> <span class="st">"three-row"</span>           <span class="st">"three-two-alternate"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">7</span>] <span class="st">"two-one-alternate"</span>   <span class="st">"two-row"</span>             <span class="st">"two-three-alternate"</span> <span class="st">"mycustomtemplate"</span></span></code></pre></div>
 <p>Any listed template name can then be used as a value, regardless if built in or custom:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/flexPanel.html">flexPanel</a></span><span class="op">(</span>template <span class="op">=</span> <span class="st">"two-three-alternate"</span><span class="op">)</span></code></pre></div>
-<div class="figure">
-<img src="../reference/figures/two-three-alternate-preview.png" alt=""><p class="caption">two-three-alternate layout</p>
-</div>
-<p>For a full list of imola’s built in template layouts visit <a href="https://sparktuga.shinyapps.io/imolatemplates/" class="external-link uri">https://sparktuga.shinyapps.io/imolatemplates/</a></p>
-<p>See <code><a href="../reference/listTemplates.html">listTemplates()</a></code> and <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> documentation for more information on those functions, or <code><a href="../articles/imola-templates.html">vignette("imola-templates")</a></code> for a full breakdown regarding templates in imola.</p>
+<p><img src="../reference/figures/two-three-alternate-preview.png"></p>
+<p>Visit <a href="https://sparktuga.shinyapps.io/imolatemplates/" class="external-link uri">https://sparktuga.shinyapps.io/imolatemplates/</a> for a full list of imola’s built in templates.</p>
+<p>Note: See <code><a href="../reference/listTemplates.html">listTemplates()</a></code> and <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> documentation for more information on those functions, or <code><a href="../articles/imola-templates.html">vignette("imola-templates")</a></code> for a full breakdown regarding templates in imola.</p>
 <hr>
 </div>
 <div class="section level2">
@@ -175,6 +190,34 @@
 </h2>
 <p>Direction of the flow of elements in the panel.</p>
 <p>Accepts a valid css <code>flex-direction</code> value (row | row-reverse | column | column-reverse).</p>
+<div class="flex-example">
+  <div class="control">
+     <!--flex-direction: row | row-reverse | column | column-reverse;-->
+     <div class="radio">
+        <input name="flex-direction" type="radio" class="flex-direction" id="R11" value="row" checked><label for="R11">row</label>
+        <input name="flex-direction" type="radio" class="flex-direction" id="R12" value="row-reverse"><label for="R12">row-reverse</label>
+        <input name="flex-direction" type="radio" class="flex-direction" id="R13" value="column"><label for="R13">column</label>
+        <input name="flex-direction" type="radio" class="flex-direction" id="R14" value="column-reverse"><label for="R14">column-reverse</label>
+     </div>
+  </div>
+  <div class="flex-container" id="direction-example">
+     <div class="item" data-color="CA17C5">
+        <p>1</p>
+     </div>
+     <div class="item" data-color="6C5DF8">
+        <p>2</p>
+     </div>
+     <div class="item" data-color="007DFF">
+        <p>3</p>
+     </div>
+     <div class="item" data-color="008DFD">
+        <p>4</p>
+     </div>
+     <div class="item" data-color="0095D3">
+        <p>5</p>
+     </div>
+  </div>
+</div>
 <p><img src="../reference/figures/flex-direction.svg"></p>
 <p>By default the <code>row</code> value is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
@@ -184,6 +227,32 @@
 </h2>
 <p>Should elements be allowed to wrap into multiple lines.</p>
 <p>Accepts a valid css <code>flex-wrap</code> value (nowrap | wrap | wrap-reverse).</p>
+<div class="flex-example">
+  <div class="control">
+     <div class="radio">
+        <input name="flex-wrap" type="radio" class="flex-wrap" id="R21" value="nowrap" checked><label for="R21">nowrap</label>
+        <input name="flex-wrap" type="radio" class="flex-wrap" id="R22" value="wrap"><label for="R22">wrap</label>
+        <input name="flex-wrap" type="radio" class="flex-wrap" id="R23" value="wrap-reverse"><label for="R23">wrap-reverse</label>
+     </div>
+  </div>
+  <div class="flex-container" id="wrap-example">
+    <div class="item" data-color="CA17C5">
+       <p>1</p>
+    </div>
+    <div class="item" data-color="6C5DF8">
+       <p>2</p>
+    </div>
+    <div class="item" data-color="007DFF">
+       <p>3</p>
+    </div>
+    <div class="item" data-color="008DFD">
+       <p>4</p>
+    </div>
+    <div class="item" data-color="0095D3">
+      <p>5</p>
+    </div>
+  </div>
+</div>
 <p><img src="../reference/figures/flex-wrap.svg"></p>
 <p>By default the value <code>wrap</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
@@ -193,8 +262,39 @@
 </h2>
 <p>Defines the alignment along the main axis.</p>
 <p>Accepts a valid css <code>justify-content</code> value (flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right).</p>
+<div class="flex-example">
+  <div class="control">
+     <div class="radio">
+       <input name="justify-content" type="radio" class="justify-content" id="R41" value="justify-start" checked><label for="R41">flex-start</label>
+       <input name="justify-content" type="radio" class="justify-content" id="R42" value="justify-end"><label for="R42">flex-end</label>
+     </div>
+     <div class="radio">
+       <input name="justify-content" type="radio" class="justify-content" id="R43" value="justify-space-between"><label for="R43">space-between</label>
+       <input name="justify-content" type="radio" class="justify-content" id="R44" value="justify-center"><label for="R44">center</label>
+       <input name="justify-content" type="radio" class="justify-content" id="R45" value="justify-space-around"><label for="R45">space-around</label>
+     </div>
+  </div>
+  <div class="flex-container" id="justify-example">
+    <div class="item" data-color="CA17C5">
+       <p>1</p>
+    </div>
+    <div class="item" data-color="6C5DF8">
+       <p>2</p>
+    </div>
+    <div class="item" data-color="007DFF">
+       <p>3</p>
+    </div>
+    <div class="item" data-color="008DFD">
+       <p>4</p>
+    </div>
+    <div class="item" data-color="0095D3">
+      <p>5</p>
+    </div>
+  </div>
+</div>
 <p><img src="../reference/figures/justify-content.svg"></p>
 <p>By default the value <code>flex-start</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
+<p>NOTE: Since <code>imola</code> uses <code>flex = c("1")</code> as a default value for flex, you might not see any changes setting a custom value for <code>justify_content</code> out of the box. You can set <code>flex = c("0 1 auto")</code> to allow children elements to control their own size on the main axis.</p>
 <hr>
 </div>
 <div class="section level2">
@@ -202,6 +302,36 @@
 </h2>
 <p>Defines the default behavior for how flex items are laid out along the cross axis on the current line.</p>
 <p>Accepts a valid css <code>align-items</code> value (stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end).</p>
+<div class="flex-example">
+  <div class="control">
+     <div class="radio">
+       <input name="flex-align-items" type="radio" class="flex-align-items" id="R31" value="align-items-start"><label for="R31">flex-start</label>
+       <input name="flex-align-items" type="radio" class="flex-align-items" id="R32" value="align-items-end"><label for="R32">flex-end</label>
+     </div>
+     <div class="radio">
+       <input name="flex-align-items" type="radio" class="flex-align-items" id="R33" value="align-items-center"><label for="R33">center</label>
+       <input name="flex-align-items" type="radio" class="flex-align-items" id="R34" value="align-items-baseline"><label for="R34">baseline</label>
+       <input name="flex-align-items" type="radio" class="flex-align-items" id="R35" value="align-items-stretch" checked><label for="R35">stretch</label>
+     </div>
+  </div>
+  <div class="flex-container" id="align-example">
+    <div class="item" data-color="CA17C5">
+       <p>1</p>
+    </div>
+    <div class="item" data-color="6C5DF8">
+       <p>2</p>
+    </div>
+    <div class="item" data-color="007DFF">
+       <p style="font-size:50px;">3</p>
+    </div>
+    <div class="item" data-color="008DFD">
+       <p>4</p>
+    </div>
+    <div class="item" data-color="0095D3">
+      <p>5</p>
+    </div>
+  </div>
+</div>
 <p><img src="../reference/figures/align-items.svg"></p>
 <p>By default the value <code>stretch</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
@@ -211,8 +341,79 @@
 </h2>
 <p>Aligns a flex container’s lines within when there is extra space in the cross-axis.</p>
 <p>Accepts a valid css <code>align-content</code> value (flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline).</p>
+<div class="flex-example">
+  <div class="control">
+     <div class="radio">
+       <input name="align-content" type="radio" class="align-content" id="R51" value="align-content-start" checked><label for="R51">flex-start</label>
+       <input name="align-content" type="radio" class="align-content" id="R52" value="align-content-end"><label for="R52">flex-end</label>
+       <input name="align-content" type="radio" class="align-content" id="R53" value="align-content-center"><label for="R53">center</label>
+     </div>
+     <div class="radio">
+       <input name="align-content" type="radio" class="align-content" id="R54" value="align-content-space-between"><label for="R54">space-between</label>
+       <input name="align-content" type="radio" class="align-content" id="R55" value="align-content-space-around"><label for="R55">space-around</label>
+       <input name="align-content" type="radio" class="align-content" id="R56" value="align-content-stretch"><label for="R56">stretch</label>
+     </div>
+  </div>
+  <div class="flex-container align-content-start" id="alignContent-example">
+    <div class="item" data-color="1bbc9d">
+       <p>1</p>
+    </div>
+    <div class="item" data-color="2fcc71">
+       <p>2</p>
+    </div>
+    <div class="item" data-color="3598dc">
+       <p>3</p>
+    </div>
+    <div class="item" data-color="9c59b8">
+       <p>4</p>
+    </div>
+    <div class="item" data-color="34495e">
+       <p>5</p>
+    </div>
+    <div class="item" data-color="16a086">
+       <p>6</p>
+    </div>
+    <div class="item" data-color="27ae61">
+       <p>7</p>
+    </div>
+    <div class="item" data-color="2a80b9">
+       <p>8</p>
+    </div>
+    <div class="item" data-color="8f44ad">
+       <p>9</p>
+    </div>
+    <div class="item" data-color="2d3e50">
+       <p>10</p>
+    </div>
+    <div class="item" data-color="f1c40f">
+       <p>11</p>
+    </div>
+    <div class="item" data-color="e77e23">
+       <p>12</p>
+    </div>
+    <div class="item" data-color="e84c3d">
+       <p>13</p>
+    </div>
+    <div class="item" data-color="ecf0f1">
+       <p>14</p>
+    </div>
+    <div class="item" data-color="96a6a6">
+       <p>15</p>
+    </div>
+    <div class="item" data-color="f49c14">
+       <p>16</p>
+    </div>
+    <div class="item" data-color="d55401">
+       <p>17</p>
+    </div>
+    <div class="item" data-color="c1392b">
+       <p>18</p>
+    </div>
+  </div>
+</div>
 <p><img src="../reference/figures/align-content.svg"></p>
 <p>By default the value <code>flex-start</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
+<p>NOTE: Since <code>imola</code> uses <code>flex = c("1")</code> as a default value for flex, you might not see any changes setting a custom value for <code>align_content</code> out of the box. You can set <code>flex = c("0 1 auto")</code> to allow children elements to control their own size on the main axis. You might also be interested in using <code>wrap = wrap</code> to allow elements to spawn multiple lines to take full advantage of <code>align_content</code>.</p>
 <hr>
 </div>
 <div class="section level2">
@@ -233,6 +434,48 @@
 <p>If the given vector has less entries that the number of child elements, the values will be repeated until the pattern affects all elements in the panel. If the number of entries given is more that the number of child elements, exceeding entries will be ignored. NA can also be used as a entry to skip adding a rule to a specific nth element.</p>
 <p>It is usually recomended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.</p>
 <p>An example of this is using a flex value of <code>1</code> is actually equivalent to <code>1 1 0%</code> (<code>grow = 1</code>, <code>shrink = 1</code>, <code>basis = 0%</code>).</p>
+<div class="flex-example">
+  <div class="control">
+    <table id="flexBasis" class="table">
+<tr>
+<td>element 1</td>
+          <td>element 2</td>
+       </tr>
+<tr>
+<td>
+<input type="number" class="flex-basis-grow" id="G1" min="0" value="1"><label for="G1">flex-grow</label>
+</td>
+          <td>
+<input type="number" class="flex-basis-grow" id="G2" min="0" value="1"><label for="G2">flex-grow</label>
+</td>
+       </tr>
+<tr>
+<td>
+<input type="number" class="flex-basis-shrink" id="S1" min="0" value="1"><label for="S1">flex-shrink</label>
+</td>
+          <td>
+<input type="number" class="flex-basis-shrink" id="S2" min="0" value="1"><label for="S2">flex-shrink</label>
+</td>
+       </tr>
+<tr>
+<td>
+<input type="number" class="flex-basis" id="B1" min="0" value="0"><label for="B1">flex-basis %</label>
+</td>
+          <td>
+<input type="number" class="flex-basis" id="B2" min="0" value="0"><label for="B2">flex-basis %</label>
+</td>
+       </tr>
+</table>
+</div>
+  <div class="flex-container align-items-center" id="FCI4">
+     <div class="item" id="item1" data-color="CA17C5">
+        <p>1</p>
+     </div>
+     <div class="item" id="item2" data-color="0095D3">
+        <p>2</p>
+     </div>
+  </div>
+</div>
 <p>By default the value <code>c(1)</code> is used, meaning a value of <code>1</code> for every child. You might notice that this is diferent from the pure css default, but makes more sense in the context of shiny dashboards. To recover the default css behavior, use <code>c("0 1 auto")</code> as a value.</p>
 <p>Check the following sections for <code>grow</code>, <code>shrink</code> and <code>basis</code> for more details. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
@@ -242,6 +485,36 @@
 </h2>
 <p>Defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
 <p>If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, that child would take up twice as much of the space either one of the others (or it will try, at least).</p>
+<div class="flex-example">
+  <div class="control">
+    <div class="radio">
+       <span class="nbsp"><label for="R71">element 1 </label><input type="number" class="flex-grow" id="R71" min="0"></span>
+       <span class="nbsp"><label for="R72">element 2 </label><input type="number" class="flex-grow" id="R72" min="0"></span>
+    </div>
+    <div class="radio">
+       <span class="nbsp"><label for="R73">element 3 </label><input type="number" class="flex-grow" id="R73" min="0"></span>
+       <span class="nbsp"><label for="R74">element 4 </label><input type="number" class="flex-grow" id="R74" min="0"></span>
+       <span class="nbsp"><label for="R75">element 5 </label><input type="number" class="flex-grow" id="R75" min="0"></span>
+    </div>
+  </div>
+  <div class="flex-container align-items-center flex-default" id="FCI2">
+     <div class="item" id="itemR71" data-color="CA17C5">
+        <p>1</p>
+     </div>
+     <div class="item" id="itemR72" data-color="6C5DF8">
+        <p>2</p>
+     </div>
+     <div class="item" id="itemR73" data-color="007DFF">
+        <p>3</p>
+     </div>
+     <div class="item" id="itemR74" data-color="008DFD">
+        <p>4</p>
+     </div>
+     <div class="item" id="itemR75" data-color="0095D3">
+        <p>5</p>
+     </div>
+  </div>
+</div>
 <p><img src="../reference/figures/flex-grow.svg"></p>
 <p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>1</code> for each element.</p>
 <hr>
@@ -251,8 +524,39 @@
 </h2>
 <p>This defines the ability for a flex item to shrink if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
 <p>If all items have flex-shrink set to 1, all elements will shrink at an equal rate. If one element has a larged shrink value, it will shrink at a faster rate that the other elements (depending on the diference between the given values).</p>
+<div class="flex-example">
+  <div class="control">
+    <div class="radio">
+      <span class="nbsp"><label for="R81">element 1 </label><input type="number" class="flex-shrink" id="R81" min="0"></span>
+      <span class="nbsp"><label for="R82">element 2 </label><input type="number" class="flex-shrink" id="R82" min="0"></span>
+    </div>
+    <div class="radio">
+      <span class="nbsp"><label for="R83">element 3 </label><input type="number" class="flex-shrink" id="R83" min="0"></span>
+      <span class="nbsp"><label for="R84">element 4 </label><input type="number" class="flex-shrink" id="R84" min="0"></span>
+      <span class="nbsp"><label for="R85">element 5 </label><input type="number" class="flex-shrink" id="R85" min="0"></span>
+    </div>
+  </div>
+  <div class="flex-container align-items-center flex-default" id="FCI3">
+     <div class="item" id="itemR81" data-color="CA17C5">
+        <p>1</p>
+     </div>
+     <div class="item" id="itemR82" data-color="6C5DF8">
+        <p>2</p>
+     </div>
+     <div class="item" id="itemR83" data-color="007DFF">
+        <p>3</p>
+     </div>
+     <div class="item" id="itemR84" data-color="008DFD">
+        <p>4</p>
+     </div>
+     <div class="item" id="itemR85" data-color="0095D3">
+        <p>5</p>
+     </div>
+  </div>
+</div>
 <p><img src="../reference/figures/flex-shrink.svg"></p>
 <p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>1</code> for each element.</p>
+<p>Note: For <code>shrink</code> to have any effect, it requires some size (either <code>width</code> or <code>basis</code>) to be set on the children elements.</p>
 <hr>
 </div>
 <div class="section level2">
@@ -261,14 +565,14 @@
 <p>Defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword.</p>
 <p>The <code>auto</code> keyword means “look at my width or height property to use as a basis value for calculations”</p>
 <p><img src="../reference/figures/flex-basis.svg"></p>
-<p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>0%</code> for each element.</p>
+<p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, meaning <code>0%</code> for each element.</p>
 <hr>
 </div>
 <div class="section level2">
 <h2 id="breakpoint_system">breakpoint_system<a class="anchor" aria-label="anchor" href="#breakpoint_system"></a>
 </h2>
 <p>Optional Media breakpoints to use. Will default to the current active breakpoint system.</p>
-<p>For arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.</p>
+<p>For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.</p>
 <p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code>), as well as the reserved keyord <code>default</code>.</p>
 <p>See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more details on breakpoints.</p>
 <hr>
@@ -278,11 +582,27 @@
 </h2>
 <p>The panel ID. A randomly generated one is used by default. Providing your own ID will allow you to target the generated HTML tag via CSS or JavaScript if needed.</p>
 <p>General rules regarding HTML Ids apply, including the fact that duplicated Ids are not allowed.</p>
+<p>For a full list of details on the HTML ID attribute, check <a href="https://www.w3schools.com/html/html_id.asp" class="external-link uri">https://www.w3schools.com/html/html_id.asp</a></p>
+<hr>
 </div>
 <div class="section level2">
-<h2 id="for-a-full-list-of-details-on-the-html-id-attribute-check-httpswww-w3schools-comhtmlhtml_id-asp">For a full list of details on the HTML ID attribute, check <a href="https://www.w3schools.com/html/html_id.asp" class="external-link uri">https://www.w3schools.com/html/html_id.asp</a><a class="anchor" aria-label="anchor" href="#for-a-full-list-of-details-on-the-html-id-attribute-check-httpswww-w3schools-comhtmlhtml_id-asp"></a>
+<h2 id="title">title<a class="anchor" aria-label="anchor" href="#title"></a>
 </h2>
+<p>The browser window title (defaults to the host URL of the page). This is the name that appears on the browser tab.</p>
+<hr>
 </div>
+<div class="section level2">
+<h2 id="fill_page">fill_page<a class="anchor" aria-label="anchor" href="#fill_page"></a>
+</h2>
+<p>Flag to tell the page if it should adjust the page to adjust and fill the browser window size.</p>
+<p>When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow behond the height of the viewport if necessary.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="dependency">dependency<a class="anchor" aria-label="anchor" href="#dependency"></a>
+</h2>
+<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)</p>
+<hr>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

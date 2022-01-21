@@ -37,6 +37,45 @@
     <loc>/articles/index.html</loc>
   </url>
   <url>
+    <loc>/articles/static/flex-example-page.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flex.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-align-content.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-align.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-direction.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-grow.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-justify-content.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-shrink.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox-wrap.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/flexbox.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/float.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/grid-example-page.html</loc>
+  </url>
+  <url>
+    <loc>/articles/static/table.html</loc>
+  </url>
+  <url>
     <loc>/authors.html</loc>
   </url>
   <url>

@@ -18,7 +18,8 @@
 <link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Imola - CSS layouts for R/Shiny">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
+<meta property="og:title" content="Imola - CSS layouts for R/Shiny">
 <meta property="og:description" content="Allows easy creation of CSS layouts (grid and flexbox)
   directly from R without added CSS.">
 <meta property="og:image" content="/logo.svg">
@@ -31,7 +32,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
     
     <a class="navbar-brand me-2" href="index.html">imola</a>
 
@@ -53,9 +54,9 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="articles/imola-flexbox.html">CSS Flexbox and imola</a>
-    <a class="dropdown-item" href="articles/imola-grid.html">Tutorial: CSS grid and imola</a>
+    <a class="dropdown-item" href="articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
+    <a class="dropdown-item" href="articles/imola-flexbox.html">Flexbox and imola</a>
+    <a class="dropdown-item" href="articles/imola-grid.html">Grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="articles/index.html">More articles...</a>
   </div>
@@ -67,7 +68,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="articles/imola-demos.html">Demos</a>
+  <a class="nav-link" href="articles/imola-demos.html">demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -95,31 +96,32 @@
 </div>
 <!-- badges: start -->
 
-<p>An interface to create grid and flexbox CSS layouts for your R/Shiny dashboards directly in R.</p>
+<p>An interface to create grid and flexbox CSS layouts for your R/Shiny dashboards, directly from R.</p>
 <p>Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving you more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.</p>
 <div class="section level5">
-<h5 id="css-layouts-in-shiny-made-easy">CSS Layouts in shiny made easy<a class="anchor" aria-label="anchor" href="#css-layouts-in-shiny-made-easy"></a>
+<h5 id="css-layouts-in-shiny-made-simple">CSS Layouts in shiny, made simple<a class="anchor" aria-label="anchor" href="#css-layouts-in-shiny-made-simple"></a>
 </h5>
 <p>You can now easily leverage typical CSS layouts (grid and Flexbox) directly in your UI functions, including support for media breakpoints to fit different screen sizes and devices.</p>
 </div>
 <div class="section level5">
-<h5 id="use-built-in-templates-or-create-your-own">Use built in templates, or create your own<a class="anchor" aria-label="anchor" href="#use-built-in-templates-or-create-your-own"></a>
+<h5 id="built-in-templates-or-create-your-own">Built in templates, or create your own<a class="anchor" aria-label="anchor" href="#built-in-templates-or-create-your-own"></a>
 </h5>
 <p>Save your favorite layouts for later use via the existing templating system and simply use it in as many elements as you need.</p>
 <p>If layout creation isn’t your thing, imola also comes with a built in collection of templates for traditionally used web layouts, making it even easier to spice up your dashboards!</p>
 </div>
 <div class="section level5">
-<h5 id="demos">Demos<a class="anchor" aria-label="anchor" href="#demos"></a>
+<h5 id="demos-to-get-you-started">Demos to get you started<a class="anchor" aria-label="anchor" href="#demos-to-get-you-started"></a>
 </h5>
+<p>You can find a few deployed demos showcasing some of the power of imola:</p>
 <ul>
 <li>Built in template layouts: <a href="https://sparktuga.shinyapps.io/imolatemplates/" class="external-link uri">https://sparktuga.shinyapps.io/imolatemplates/</a>
 </li>
 </ul>
+<hr>
 </div>
-</div>
-<div class="section level1">
-<h1 id="installation">installation<a class="anchor" aria-label="anchor" href="#installation"></a>
-</h1>
+<div class="section level2">
+<h2 id="installation">installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <div class="section level6">
 <h6 id="1---install-the-package">1 - Install the package:<a class="anchor" aria-label="anchor" href="#1---install-the-package"></a>
 </h6>
@@ -131,20 +133,21 @@
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'pedrocoutinhosilva/imola'</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level6">
-<h6 id="2---include-the-library-into-your-project">2 - Include the library into your project:<a class="anchor" aria-label="anchor" href="#2---include-the-library-into-your-project"></a>
+<h6 id="2---include-the-library-in-your-project">2 - Include the library in your project:<a class="anchor" aria-label="anchor" href="#2---include-the-library-in-your-project"></a>
 </h6>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># global.R</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/pedrocoutinhosilva/imola" class="external-link">imola</a></span><span class="op">)</span></code></pre></div>
 <p>You are now ready to go!</p>
 <p>Looking for help on how to start? Make sure to check the built in examples and vignettes for help and usage examples.</p>
+<hr>
 </div>
 </div>
-<div class="section level1">
-<h1 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h1>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <p>Check <code><a href="articles/imola.html">vignette("imola")</a></code> on how to get started, and other follow up vignettes for even more information regarding css flexbox and grid and their imola counterparts.</p>
-<p>Looking for a specific topic to jump into? You can use the following vignettes for a quick start:</p>
+<p>Looking for a specific topic to jump into? Use the following vignettes for a quick start:</p>
 <ul>
 <li>
 <code><a href="articles/imola-flexbox.html">vignette("imola-flexbox")</a></code> for details on <code><a href="reference/flexPanel.html">flexPanel()</a></code> and <code><a href="reference/flexPage.html">flexPage()</a></code>.</li>
@@ -156,7 +159,7 @@
 <code><a href="articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for information on using imola’s breakpoint systems.</li>
 </ul>
 </div>
-
+</div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">

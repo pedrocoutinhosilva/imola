@@ -1,10 +1,10 @@
 ---
-title: "CSS Flexbox and imola"
+title: "Flexbox and imola"
 output: rmarkdown::html_vignette
 description: >
   Getting started with CSS Flexbox and imola.
 vignette: >
-  %\VignetteIndexEntry{CSS Flexbox and imola}
+  %\VignetteIndexEntry{Flexbox and imola}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,14 +16,21 @@ knitr::opts_chunk$set(
 )
 ```
 
-The flex family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. `flexPanel()` and `flexPage()`.
+```{r echo = FALSE}
+htmltools::tags$script(src = "static/flexbox.js")
+htmltools::tags$link(rel = "stylesheet", type = "text/css", href = "static/flexbox.css")
+```
+
+The imola flex functions family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. `flexPanel()` and `flexPage()`.
 
 Similar to what happens in the grid family, `flexPage()` is simply a wrapper for `flexPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
 
 If you're interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to get you started.
 
-# Available arguments
-The main functions used to generate flex containers are `flexPanel()` and `flexPage()`. There's a lot of arguments going on here, so lets go over what each option can do:
+---
+
+## Available arguments
+In imola, the main functions used to generate flex containers are `flexPanel()` and `flexPage()`. There's a lot of arguments going on here, so lets go over what each option can do:
 
 ```R
 flexPanel(
@@ -62,13 +69,14 @@ A named argument with an `NA` value is rendered as a boolean attribute.
 Named arguments can be used to provide additional values to the container
 of the grid.
 
-For a full list of valid HTML attributes check visit https://www.w3schools.com/tags/ref_attributes.asp.
+Visit https://www.w3schools.com/tags/ref_attributes.asp for a list of valid HTML attributes.
 
 Children may include any combination of:
--   Other tags objects
--   [HTML()] strings
--   [htmlDependency()]s
--   Single-element atomic vectors
+
+- Other tags objects
+- [HTML()] strings
+- [htmlDependency()]s
+- Single-element atomic vectors
 
 `...` main purpose is to add content to your panel, but it can also be used to tweak your HTML generation, allowing a very similar behavior to traditional HTML tag functions provided by `htmltools`, and letting you customize your HTML tag. By default using these functions behaves similar to using `div()`, with additional styles being added to meet our layout expectations.
 
@@ -115,11 +123,11 @@ Any listed template name can then be used as a value, regardless if built in or 
 ```R
 flexPanel(template = "two-three-alternate")
 ```
-![two-three-alternate layout](../reference/figures/two-three-alternate-preview.png)
+![](../reference/figures/two-three-alternate-preview.png)
 
-For a full list of imola's built in template layouts visit https://sparktuga.shinyapps.io/imolatemplates/
+Visit https://sparktuga.shinyapps.io/imolatemplates/ for a full list of imola's built in templates.
 
-See `listTemplates()` and `registerTemplate()` documentation for more information on those functions, or `vignette("imola-templates")` for a full breakdown regarding templates in imola.
+Note: See `listTemplates()` and `registerTemplate()` documentation for more information on those functions, or `vignette("imola-templates")` for a full breakdown regarding templates in imola.
 
 ---
 
@@ -127,6 +135,10 @@ See `listTemplates()` and `registerTemplate()` documentation for more informatio
 Direction of the flow of elements in the panel.
 
 Accepts a valid css `flex-direction` value (row | row-reverse | column | column-reverse).
+
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-direction.html")
+```
 
 ![](../reference/figures/flex-direction.svg)
 
@@ -139,6 +151,10 @@ Should elements be allowed to wrap into multiple lines.
 
 Accepts a valid css `flex-wrap` value (nowrap | wrap | wrap-reverse).
 
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-wrap.html")
+```
+
 ![](../reference/figures/flex-wrap.svg)
 
 By default the value `wrap` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
@@ -150,9 +166,15 @@ Defines the alignment along the main axis.
 
 Accepts a valid css `justify-content` value (flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right).
 
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-justify-content.html")
+```
+
 ![](../reference/figures/justify-content.svg)
 
 By default the value `flex-start` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
+
+NOTE: Since `imola` uses `flex = c("1")` as a default value for flex, you might not see any changes setting a custom value for `justify_content` out of the box. You can set `flex = c("0 1 auto")` to allow children elements to control their own size on the main axis.
 
 ---
 
@@ -160,6 +182,10 @@ By default the value `flex-start` is used. Supports named list for breakpoints. 
 Defines the default behavior for how flex items are laid out along the cross axis on the current line.
 
 Accepts a valid css `align-items` value (stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end).
+
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-align.html")
+```
 
 ![](../reference/figures/align-items.svg)
 
@@ -172,9 +198,15 @@ Aligns a flex container’s lines within when there is extra space in the cross-
 
 Accepts a valid css `align-content` value (flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline).
 
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-align-content.html")
+```
+
 ![](../reference/figures/align-content.svg)
 
 By default the value `flex-start` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
+
+NOTE: Since `imola` uses `flex = c("1")` as a default value for flex, you might not see any changes setting a custom value for `align_content` out of the box. You can set `flex = c("0 1 auto")` to allow children elements to control their own size on the main axis. You might also be interested in using `wrap = wrap` to allow elements to spawn multiple lines to take full advantage of `align_content`.
 
 ---
 
@@ -202,6 +234,10 @@ It is usually recomended to use flex instead of the individual parameters, this 
 
 An example of this is using a flex value of `1` is actually equivalent to `1 1 0%` (`grow = 1`, `shrink = 1`, `basis = 0%`).
 
+```{r echo = FALSE}
+htmltools::includeHTML("static/flex.html")
+```
+
 By default the value `c(1)` is used, meaning a value of `1` for every child. You might notice that this is diferent from the pure css default, but makes more sense in the context of shiny dashboards.
 To recover the default css behavior, use `c("0 1 auto")` as a value.
 
@@ -214,6 +250,10 @@ Defines the ability for a flex item to grow if necessary. It accepts a unitless 
 
 If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, that child would take up twice as much of the space either one of the others (or it will try, at least).
 
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-grow.html")
+```
+
 ![](../reference/figures/flex-grow.svg)
 
 By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `1` for each element.
@@ -225,9 +265,15 @@ This defines the ability for a flex item to shrink if necessary. It accepts a un
 
 If all items have flex-shrink set to 1, all elements will shrink at an equal rate. If one element has a larged shrink value, it will shrink at a faster rate that the other elements (depending on the diference between the given values).
 
+```{r echo = FALSE}
+htmltools::includeHTML("static/flexbox-shrink.html")
+```
+
 ![](../reference/figures/flex-shrink.svg)
 
 By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `1` for each element.
+
+Note: For `shrink` to have any effect, it requires some size (either `width` or `basis`) to be set on the children elements.
 
 ---
 
@@ -238,14 +284,14 @@ The `auto` keyword means “look at my width or height property to use as a basi
 
 ![](../reference/figures/flex-basis.svg)
 
-By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `0%` for each element.
+By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, meaning `0%` for each element.
 
 ---
 
 ## breakpoint_system
 Optional Media breakpoints to use. Will default to the current active breakpoint system.
 
-For arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.
+For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.
 
 The names used in that list can be any of the registered breakpoints available in the provided `breakpoint_system` argument (defaults to `activeBreakpoints()`), as well as the reserved keyord `default`.
 
@@ -259,16 +305,23 @@ The panel ID. A randomly generated one is used by default. Providing your own ID
 General rules regarding HTML Ids apply, including the fact that duplicated Ids are not allowed.
 
 For a full list of details on the HTML ID attribute, check https://www.w3schools.com/html/html_id.asp
+
 ---
 
 ## title
 The browser window title (defaults to the host URL of the page). This is the name that appears on the browser tab.
 
+---
+
 ## fill_page
+
 Flag to tell the page if it should adjust the page to adjust and fill the browser window size.
 
-When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch in the content is smaller, while still allowing it to grow behond the height of the viewport if necessary.
+When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow behond the height of the viewport if necessary.
+
+---
 
 ## dependency
 The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)
+
 ---

@@ -18,7 +18,8 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Tutorial: Getting started with imola">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Tutorial: Getting started with imola">
 <meta property="og:description" content="Learn how to get started with imola.
 ">
 <meta property="og:image" content="/logo.svg">
@@ -31,7 +32,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">imola</a>
 
@@ -53,9 +54,9 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
-    <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
+    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-grid.html">Grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
   </div>
@@ -67,7 +68,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -102,13 +103,15 @@
 <p>If you’re familiar with CSS, you might have felt by now that layouts in shiny can be awkward to set up.</p>
 <p>While R/shiny does give you direct access to bootstrap’s row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI.</p>
 <p>As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.</p>
+<hr>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <p>The bread and butter of imola are the <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/flexPanel.html">flexPanel()</a></code> functions. These allow you to replace any HTML tag that serves as a container (<code>div</code>, <code>section</code>, <code>main</code>, <code>nav</code>, …) with a tag that uses one of the specific css layout systems (grid or flexbox).</p>
 <p>If you are not familiar with these layout systems, I definitely recommend <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout" class="external-link">this article</a> to get you up to speed.</p>
-<p>The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. This means if you want fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.</p>
-<p>If you are looking for more information on a specific system of imola, make sure to check the following:</p>
+<p>The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.</p>
+<p>This means if you want fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.</p>
+<p>If you are looking for more information on a specific system in imola, make sure to check the following for an in depth view:</p>
 <ul>
 <li>
 <code><a href="../articles/imola-flexbox.html">vignette("imola-flexbox")</a></code> for details on <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>.</li>
@@ -119,20 +122,23 @@
 <li>
 <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for information on using imola’s breakpoint systems.</li>
 </ul>
-<div class="section level3">
-<h3 id="grid">Grid<a class="anchor" aria-label="anchor" href="#grid"></a>
-</h3>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="grid">Grid<a class="anchor" aria-label="anchor" href="#grid"></a>
+</h2>
 <p>The grid family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/gridPage.html">gridPage()</a></code>. <code><a href="../reference/gridPage.html">gridPage()</a></code> is simply a wrapper for <code><a href="../reference/gridPanel.html">gridPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
 <p>If you’re interested in more information about the full array of options in the CSS grid standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="external-link">this article</a> to get you started.</p>
 <p>For more on grid with imola, check <code><a href="../articles/imola-grid.html">vignette("imola-grid")</a></code>.</p>
+<hr>
 </div>
-<div class="section level3">
-<h3 id="flex">Flex<a class="anchor" aria-label="anchor" href="#flex"></a>
-</h3>
+<div class="section level2">
+<h2 id="flex">Flex<a class="anchor" aria-label="anchor" href="#flex"></a>
+</h2>
 <p>The flex family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>. Similar to what happens in the grid family, <code><a href="../reference/flexPage.html">flexPage()</a></code> is simply a wrapper for <code><a href="../reference/flexPanel.html">flexPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
 <p>If you’re interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="external-link">this article</a> to get you started.</p>
 <p>For more on flex with imola, check <code>vignette("imola-flex")</code>.</p>
-</div>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="breakpoints">Breakpoints<a class="anchor" aria-label="anchor" href="#breakpoints"></a>

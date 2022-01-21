@@ -36,12 +36,21 @@
 #' @param gap The space (in a valid css size) between each grid cell.
 #'   Supports named list for breakpoints.
 #' @param align_items The cell behavior according to the align-items css
-#'   property. Defaults to stretch.
-#'   Supports named list for breakpoints.
+#'   property. Aligns grid items along the block (column) axis.
+#'
+#'   Accepts a valid css `align-items` value
+#'   (`start` | `end` | `center` | `stretch`)
+#'
+#'   By default the `stretch` value is used. Supports breakpoints.
+#' @param justify_items The cell behavior according to the justify-items css
+#'   property. Aligns grid items along the inline (row) axis.
+#'
+#'   Accepts a valid css `justify-items` value
+#'   (`start` | `end` | `center` | `stretch`)
+#'
+#'   By default the `stretch` value is used. Supports breakpoints.
 #' @param auto_fill Should the panel stretch to fit its parent size (TRUE), or
 #'    should its size be based on its children element sizes (FALSE).
-#' @param justify_items The cell behavior according to the justify-items css
-#'   property. Defaults to stretch.
 #'   Supports named list for breakpoints.
 #' @param breakpoint_system Optional Media breakpoints to use. Will default to
 #'   the current active breakpoint system.

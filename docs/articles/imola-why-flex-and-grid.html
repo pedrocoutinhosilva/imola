@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="As the web evolved, so did its layout solutions. This article explores what came before and why flexbox and grid became the current defacto solutions for layout generation.
 ">
-<title>Why CSS grid and flexbox matter • imola</title>
+<title>A short history on web layouts • imola</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -18,7 +18,8 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Why CSS grid and flexbox matter">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="A short history on web layouts">
 <meta property="og:description" content="As the web evolved, so did its layout solutions. This article explores what came before and why flexbox and grid became the current defacto solutions for layout generation.
 ">
 <meta property="og:image" content="/logo.svg">
@@ -31,7 +32,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">imola</a>
 
@@ -53,9 +54,9 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
-    <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
+    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-grid.html">Grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
   </div>
@@ -67,7 +68,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -90,7 +91,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.svg" class="logo" alt=""><h1>Why CSS grid and flexbox matter</h1>
+      <img src="../logo.svg" class="logo" alt=""><h1>A short history on web layouts</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola-why-flex-and-grid.Rmd" class="external-link"><code>vignettes/imola-why-flex-and-grid.Rmd</code></a></small>
@@ -102,27 +103,138 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p>If you’re been around web development since the 90s, you might remember how different web design used to look. Solutions were often complicated, hacky and unintuitive work arounds were common place, and often considered best practices. As the web evolved, so did the layout (and styling) options available, maturing and changing to make what used to be convoluted solutions into simpler and more straightforward approaches.</p>
+<p>If you’re been around web development since the 90s, you might remember how different web design used to look.</p>
+<p>Solutions were often complicated, hacky and unintuitive work arounds were common place, and often considered best practices.</p>
+<p>As the web evolved, so did the layout (and styling) options available, maturing and changing to make what used to be convoluted solutions into simpler and more straightforward approaches.</p>
 <p>So how was life before CSS we know now came to be? How were page layouts setup? Why is grid and flexbox considered so much better than the previous solutions, and why are both currently used side by side instead of one over the other?</p>
-<p>Join me for a trip though time as we look into how web layouts evolved since the beginning of the web into the current state of the art solutions we now use.</p>
+<p>Join me for a trip though memory lane as we look into how web layouts evolved since the beginning of the web into the current solutions we now use.</p>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="the-early-days-of-html">The early days of HTML<a class="anchor" aria-label="anchor" href="#the-early-days-of-html"></a>
 </h2>
-<p>The original proposals for HTML started in 1989, and lasted until about February 1997, the practical realisation of HTML was about presentation on screens. This included published recommendations, browsers &amp; development tools, and actual web sites. At this point web developers where mostly focused on document sharing, so elements focused much more on document requirements such as headers, fonts and paragraphs. In 1993, some style sheet control of layout was proposed, but it would still take some time for it to become mainstream.</p>
-<p>Around this time (as well as during the reign of tables for layout purposes) the HTML document structure dictated the page layout, and the though that you would need more that sequencial content, was barely even considered. Early HTML specs state that “The elements within the BODY element are in the order in which they should be presented to the reader”.</p>
+<p>The original proposals for HTML started in 1989, and lasted until about February 1997, the practical realisation of HTML was about presentation on screens. This included published recommendations, browsers &amp; development tools, and actual web sites.</p>
+<p>At this point web developers where mostly focused on document sharing, so elements focused much more on document requirements such as headers, fonts and paragraphs. In 1993, some style sheet control of layout was proposed, but it would still take some time for it to become mainstream.</p>
+<p>Around this time (as well as during the reign of tables for layout purposes) the HTML document structure dictated the page layout, and the though that you would need more that sequencial content, was barely even considered.</p>
+<p>Early HTML specs state that “The elements within the BODY element are in the order in which they should be presented to the reader”.</p>
+<p><img src="../reference/figures/nostalgia.jpg"></p>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="html-tables">HTML Tables<a class="anchor" aria-label="anchor" href="#html-tables"></a>
 </h2>
 <p>In 1991 ViolaWWW grew into the most sophisticated of the early Web browsers. It is claimed to have been the first browser with support for style sheets, tables, and nest-able HTML elements. Followed in 1993 a proposal was made for “columns” in a presentation language for the web. This proposal did not directly turn into CSS. “The styles defined specify the recommended behaviour of HTML objects in terms of: …. page layout … column ….”.</p>
 <p>These were the initial works of tables in HMTL, and finally in 1997, HTML 3.2 was finally released as a W3C Recommendation. It stated that tables “can be used to markup tabular material or for layout purposes”… And oh boy did people took it literally. Tables became the base for most web pages and considered the go to when structuring content. It was a wild time of invisible gifs used for spacing, convoluted markup and many more terrifying things.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;td</span> <span class="er">colspan</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;h1&gt;</span>header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;td&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;ul&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;li&gt;&lt;a&gt;</span>Home<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;li&gt;&lt;a&gt;</span>About<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;li&gt;&lt;a&gt;</span>Contact<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;td&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;h2&gt;</span>Title<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>content<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;td</span> <span class="er">colspan</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>footer<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<table style="width:100%; border-collapse:collapse; display: table;" class="table">
+<tr>
+<td colspan="2" style="padding:10px 20px; background-color:#acb3b9;">
+        <h1 style="font-size:24px;">header</h1>
+    </td>
+  </tr>
+<tr style="height:270px;">
+<td style="width:20%; padding:20px; background-color:#d4d7dc; vertical-align: top;">
+        <ul style="list-style:none; padding:0px;">
+<li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+</td>
+    <td style="padding:20px; background-color:#f2f2f2; vertical-align:top;">
+        <h2>Title</h2>
+        <p>content</p>
+    </td>
+  </tr>
+<tr>
+<td colspan="2" style="padding:5px; background-color:#acb3b9; text-align:center;">
+        <p>footer</p>
+    </td>
+  </tr>
+</table>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="floats-and-the-first-layout-frameworks">Floats and the first layout frameworks<a class="anchor" aria-label="anchor" href="#floats-and-the-first-layout-frameworks"></a>
 </h2>
 <p>Eventually a new CSS property made its way to the top, <code>float</code>. The idea of float was simply, you have an element and need text to wrap around it, float that element and you get exactly that! Simple right? Well…</p>
 <p>If you couple this with fixed size for each floated element, a large dose of space clearing techniques, and the CSS position property one could achieve A LOT. This was the conclusion that some clever developers reached in the early 2000’s, allowing multi-column layouts to be created and becoming the go to for these times. Eventually even frameworks started poping out that would hide these hacks behind a css classes and HTML structures, making life even easier. Bootstrap 3 is a great example of such framework that, even now, can be found in millions of websites (even though its newest iteration, bootstrap 4, no longer uses this approach and instead relies on flexbox for its layout system).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;main&gt;</span>Main article<span class="kw">&lt;/main&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;aside&gt;</span>List of links and news<span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;footer&gt;</span>Copyright information<span class="kw">&lt;/footer&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* css */</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>main {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">60</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">5</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>aside {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">25</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">70</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>footer {</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="float-demo">
+  <header>Header</header><main>Main article</main><aside>List of links and news</aside><footer>Copyright information</footer>
+</div>
+
+<style>
+  .float-demo {
+    background-color: #f2f2f2;
+  }
+  .float-demo main {
+    float: left;
+    width: 60%;
+    margin: 0 5%;
+    height: 270px;
+    padding: 20px;
+  }
+  .float-demo aside {
+    width: 30%;
+    margin-left: 70%;
+    height: 270px;
+    padding: 20px;
+    background-color: #d4d7dc;
+  }
+  .float-demo footer {
+    clear: left;
+    background: #acb3b9;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  .float-demo header {
+    background: #acb3b9;
+    padding: 10px 20px;
+  }
+</style>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="css-flex-flexbox">CSS Flex (flexbox)<a class="anchor" aria-label="anchor" href="#css-flex-flexbox"></a>
@@ -131,12 +243,208 @@
 <p>This was the true first CSS property to be 100% developed to be focused on layouts, making its way into modern web development quite fast.</p>
 <p>It is specially powerful for page layouts that can defined primarily in terms of either columns or rows. for instance, if we want to align a few elements in a single row, display: flex; provide us with a modern and easy way to do so.</p>
 <p>Not only that, flex has built in control of other properties such as alignment and viual order of the elements without having to change the HTML markup directly. As HTML becomes more and more semantic based, specially with the release of HTML 5, this becomes even more important since it allows us to fully decomple the presentation layer from the content.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"main"</span><span class="kw">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;article&gt;</span>Article<span class="kw">&lt;/article&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;nav&gt;</span>Nav<span class="kw">&lt;/nav&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;aside&gt;</span>Aside<span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;footer&gt;</span>Footer<span class="kw">&lt;/footer&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* css */</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: flex<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> <span class="op">&gt;</span> nav<span class="op">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> <span class="op">&gt;</span> aside {</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">flex</span>: <span class="dv">0</span> <span class="dv">0</span> <span class="dv">20</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> <span class="op">&gt;</span> article {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">flex</span>: <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">order</span>: <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> <span class="op">&gt;</span> nav {</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">order</span>: <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> <span class="op">&gt;</span> aside {</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">order</span>: <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<style>
+  .flex-layout-example-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .flex-layout-example-wrapper #main {
+    display: flex;
+    flex: 1;
+    min-height: 270px;
+  }
+  .flex-layout-example-wrapper #main > article {
+    flex: 1;
+    order: 1;
+  }
+  .flex-layout-example-wrapper #main > nav,
+  .flex-layout-example-wrapper #main > aside {
+    flex: 0 0 20%;
+  }
+  .flex-layout-example-wrapper #main > nav {
+    background: #f2f2f2;
+    order: 3;
+  }
+  .flex-layout-example-wrapper #main > aside {
+    background: #d4d7dc;
+    order: 2;
+  }
+  .flex-layout-example-wrapper header, .flex-layout-example-wrapper footer {
+    background: #acb3b9;
+    height: 60px;
+  }
+  .flex-layout-example-wrapper header,
+  .flex-layout-example-wrapper footer,
+  .flex-layout-example-wrapper article,
+  .flex-layout-example-wrapper nav,
+  .flex-layout-example-wrapper aside {
+    padding: 1em;
+    margin: 0;
+  }
+</style>
+<div class="flex-layout-example-wrapper">
+  <header>Header</header><div id="main">
+    <article>Article</article><nav>Nav</nav><aside>Aside</aside>
+</div>
+  <footer>Footer</footer>
+</div>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="css-grid">CSS Grid<a class="anchor" aria-label="anchor" href="#css-grid"></a>
 </h2>
 <p>At this moment in time <code>display: grid;</code> is the only CSS property intended for building flexible responsive grid layouts. This sort of layout requires a layout area which can be manipulated in two dimensions – both horizontally and vertically – and this is exactly what CSS Grid does.</p>
 <p>While <code>display: flex;</code> gives you full control over either columns or rows, Grid goes one step forward and can handle both rows and columns, meaning that it will always align items to the horizontal and vertical tracks you have set up. Grid is mostly defined on the container, not the children as it is with flexbox.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"page-wrap"</span><span class="kw">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;header</span> <span class="er">class</span><span class="ot">=</span><span class="st">"page-header"</span><span class="kw">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    Header</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/header&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;nav</span> <span class="er">class</span><span class="ot">=</span><span class="st">"page-nav"</span><span class="kw">&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    Nav</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/nav&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;main</span> <span class="er">class</span><span class="ot">=</span><span class="st">"page-main"</span><span class="kw">&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>Article<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/article&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/main&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;aside</span> <span class="er">class</span><span class="ot">=</span><span class="st">"page-sidebar"</span><span class="kw">&gt;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    Aside</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;footer</span> <span class="er">class</span><span class="ot">=</span><span class="st">"page-footer"</span><span class="kw">&gt;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    Footer</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/footer&gt;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* css */</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.page-wrap</span> {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: grid<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">minmax(</span><span class="dv">10</span><span class="dt">px</span><span class="op">,</span> <span class="dv">1</span>fr<span class="fu">)</span> <span class="fu">minmax(</span><span class="dv">10</span><span class="dt">px</span><span class="op">,</span> <span class="dv">3</span>fr<span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-rows</span>: min-content min-content <span class="dv">1</span>fr min-content<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">.page-header</span> {</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">-1</span><span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.page-sidebar</span> {</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">2</span><span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span>/<span class="dv">4</span><span class="op">;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">.page-nav</span> {</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">3</span><span class="op">;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">.page-main</span> {</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">3</span><span class="op">;</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu">.page-footer</span> {</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">-1</span><span class="op">;</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="grid-layout-example">
+  <div class="page-wrap">
+    <header class="page-header">
+      Header
+    </header><nav class="page-nav">
+      Nav
+    </nav><main class="page-main"><article><p>Article</p>
+      </article></main><aside class="page-sidebar">
+      Aside
+    </aside><footer class="page-footer">
+      Footer
+    </footer>
+</div>
+</div>
+
+<style>
+  .grid-layout-example * {
+    box-sizing: border-box;
+  }
+
+  .grid-layout-example .page-wrap {
+    background: white;
+    height: calc(300px - 10px);
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+    grid-template-rows: min-content min-content 1fr min-content;
+    gap: 1px;
+  }
+  .grid-layout-example .page-wrap > * {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+  @media (max-width: 600px) {
+    .grid-layout-example .page-wrap {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+    }
+    .grid-layout-example .page-wrap > * {
+      grid-column: 1/-1 !important;
+      grid-row: auto !important;
+    }
+  }
+
+  .grid-layout-example .page-header {
+    grid-column: 1/-1;
+    background: #acb3b9;
+  }
+
+  .grid-layout-example .page-sidebar {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    background: #d4d7dc;
+  }
+
+  .grid-layout-example .page-nav {
+    grid-column: 2/3;
+    background: #f2f2f2;
+  }
+
+  .grid-layout-example .page-main {
+    grid-column: 2/3;
+    background: white;
+  }
+
+  .grid-layout-example .page-footer {
+    grid-column: 1/-1;
+    background: #acb3b9;
+  }
+
+  .grid-layout-example details p {
+    text-transform: none;
+    text-align: left;
+  }
+</style>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="new-is-always-better-right">New is always better… Right?<a class="anchor" aria-label="anchor" href="#new-is-always-better-right"></a>
@@ -172,6 +480,7 @@
 <li>
 <code><a href="../articles/imola-grid.html">vignette("imola-grid")</a></code> for details on Grid.</li>
 </ul>
+<hr>
 </div>
 </div>
 <div class="section level2">
@@ -182,6 +491,7 @@
 <li><a href="http://www.barrypearson.co.uk/articles/layout_tables/history.htm" class="external-link uri">http://www.barrypearson.co.uk/articles/layout_tables/history.htm</a></li>
 <li><a href="https://joom.team/en/a-brief-history-of-html-css-layouting" class="external-link uri">https://joom.team/en/a-brief-history-of-html-css-layouting</a></li>
 <li><a href="https://code-literacy.medium.com/css-layout-evolution-detailed-by-example-579b31475392" class="external-link uri">https://code-literacy.medium.com/css-layout-evolution-detailed-by-example-579b31475392</a></li>
+<li><a href="https://learningwebdesign.com/articles/LWD5_FloatLayout.pdf" class="external-link uri">https://learningwebdesign.com/articles/LWD5_FloatLayout.pdf</a></li>
 </ul>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

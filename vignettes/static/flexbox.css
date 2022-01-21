@@ -1,0 +1,305 @@
+/*flex-direction: row | row-reverse | column | column-reverse;*/
+
+.flex-container.row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-container.row-reverse {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.flex-container.column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-container.column-reverse {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+
+/*flex-wrap: nowrap | wrap | wrap-reverse;*/
+
+.flex-container.nowrap {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.flex-container.wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-container.wrap-reverse {
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+
+/*align-items: flex-start | flex-end | center | baseline | stretch;*/
+
+.flex-container.align-items-start {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.flex-container.align-items-end {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.flex-container.align-items-center {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-container.align-items-baseline {
+  webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.flex-container.align-items-stretch {
+  webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+
+/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
+
+.flex-container.justify-start {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.flex-container.justify-end {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.flex-container.justify-center {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-container.justify-space-between {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flex-container.justify-space-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
+}
+
+
+/*align-content: flex-start | flex-end | center | space-between | space-around | stretch;*/
+
+.flex-container.align-content-start {
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.flex-container.align-content-end {
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.flex-container.align-content-center {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.flex-container.align-content-space-between {
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+}
+
+.flex-container.align-content-space-around {
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: justify;
+  /*distribute;*/
+  align-content: space-around;
+}
+
+.flex-container.align-content-stretch {
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+
+/*align-self: auto | flex-start | flex-end | center | baseline | stretch;*/
+
+.item.align-self-auto {
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.item.align-self-start {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.item.align-self-end {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.item.align-self-center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.item.align-self-baseline {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.item.align-self-stretch {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.item.flex-grow1 {
+  flex-grow: 1;
+}
+
+.item.flex-grow2 {
+  flex-grow: 2;
+}
+
+.item.flex-grow3 {
+  flex-grow: 3;
+}
+
+.item.flex-grow4 {
+  flex-grow: 4;
+}
+*{
+	box-sizing : border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.radio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label{ line-height:100%; margin-right: 20px;}
+input[type=radio] { color:white; margin: 10px 5px 10px 0;}
+input[type=radio]:checked + label { color:#ca17c5; }
+input[type=number]{ width:40px; margin-right:.5em;}
+
+.flex-container {
+ border: 1px solid #555;
+ display : -webkit-flex;
+ display : -ms-flexbox;
+ display : flex;
+ padding:20px;
+ width:100%;
+ }
+.item{
+	margin:0;
+    display : inherit;
+	padding:10px;
+	width:100px;
+	height:100px;
+	-webkit-align-items: center;
+	-ms-flex-align:center;
+	align-items: center;
+	}
+.item p{width:100%; text-align:center; color:#fff;}
+#direction-example .item{flex-wrap:wrap;}
+
+#wrap-example .item { width:40%;}
+#align-example .item{height:auto; height:auto;flex-wrap:wrap; flex: 1;}
+#align-example { height:300px;}
+#justify-example { margin:20px 0; padding:20px 0;}
+#alignContent-example {flex-wrap:wrap; height:600px;}
+#alignContent-example  .item{ height:auto; width: 20%;}
+#FCI1{ height:300px;}
+#FCI1 .item{ height:auto;}
+#FCI3 .item{ flex-basis:25%;}
+#FCI4 .item{ width:50%;}
+#FCI5 .item{ width:20%;}
+.nbsp{white-space: nowrap;}
+
+.flex-example {
+  background: #f8f9fa;
+  padding: 20px;
+  border: 2px solid #e9e9ea;
+  border-radius: 10px;
+}
+.flex-example p {
+  margin: 0;
+  padding: 0;
+}
+.flex-example label {
+  font-weight: bold;
+}
+.flex-example .flex-container {
+  margin: 0;
+  margin-top: 10px;
+}
+.flex-example table {
+  width:100%; margin-bottom:1em;
+}
+.flex-example table td {
+  width:50%; padding:3px;
+}
+.flex-example tbody {
+  display: block;
+}
+.flex-example tbody tr {
+  display: flex;
+}
+.flex-example tbody tr input {
+  width: 100px;
+}
+
+.flex-default .item {
+  flex: 1;
+}
+
+p img {
+  padding: 20px;
+  background: #f8f9fa;
+  margin-top: 20px;
+  border: 2px solid #e9e9ea;
+  border-radius: 10px;
+}
+
+/* main p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+} */

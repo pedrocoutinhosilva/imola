@@ -2,11 +2,12 @@ home:
   title: Imola - CSS layouts for R/Shiny
 
 template:
+  assets: vignettes/assets
   bootstrap: 5
-  # bootswatch: superhero
-  # theme: arrow-dark
+  bootswatch: superhero
+  theme: arrow-dark
   bslib:
-    # primary: "#50014E"
+    primary: "#a56e3d"
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
 
@@ -16,7 +17,7 @@ authors:
 
 navbar:
   right:
-    - text: Demos
+    - text: demos
       href: articles/imola-demos.html
     - icon: fa-github fa-lg
       href: https://github.com/pedrocoutinhosilva/imola

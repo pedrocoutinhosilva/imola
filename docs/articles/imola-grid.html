@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Getting started with CSS grid and imola.
 ">
-<title>Tutorial: CSS grid and imola • imola</title>
+<title>Grid and imola • imola</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -18,7 +18,8 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Tutorial: CSS grid and imola">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Grid and imola">
 <meta property="og:description" content="Getting started with CSS grid and imola.
 ">
 <meta property="og:image" content="/logo.svg">
@@ -31,7 +32,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">imola</a>
 
@@ -53,9 +54,9 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">Why CSS grid and flexbox matter</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">CSS Flexbox and imola</a>
-    <a class="dropdown-item" href="../articles/imola-grid.html">Tutorial: CSS grid and imola</a>
+    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flexbox and imola</a>
+    <a class="dropdown-item" href="../articles/imola-grid.html">Grid and imola</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
   </div>
@@ -67,7 +68,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="../articles/imola-demos.html">Demos</a>
+  <a class="nav-link" href="../articles/imola-demos.html">demos</a>
 </li>
 <li class="nav-item">
   <a class="external-link nav-link" href="https://github.com/pedrocoutinhosilva/imola">
@@ -90,7 +91,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.svg" class="logo" alt=""><h1>Tutorial: CSS grid and imola</h1>
+      <img src="../logo.svg" class="logo" alt=""><h1>Grid and imola</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola-grid.Rmd" class="external-link"><code>vignettes/imola-grid.Rmd</code></a></small>
@@ -99,9 +100,293 @@
 
     
     
-<p>The grid family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/gridPage.html">gridPage()</a></code>. <code><a href="../reference/gridPage.html">gridPage()</a></code> is simply a wrapper for <code><a href="../reference/gridPanel.html">gridPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
+<p><link rel="stylesheet" type="text/css" href="static/flexbox.css"></p>
+<p>The imola grid functions family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/gridPage.html">gridPage()</a></code>.</p>
+<p>Similar to what happens in the flex family, <code><a href="../reference/gridPage.html">gridPage()</a></code> is simply a wrapper for <code><a href="../reference/gridPanel.html">gridPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
+<p>Grid is a powerful spec that, when combined with other parts of CSS such as flexbox, can help you create layouts that were previously impossible to build in CSS.</p>
 <p>If you’re interested in more information about the full array of options in the CSS grid standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="external-link">this article</a> to get you started.</p>
-  </main>
+<hr>
+<div class="section level2">
+<h2 id="available-arguments">Available arguments<a class="anchor" aria-label="anchor" href="#available-arguments"></a>
+</h2>
+<p>In imola, the main functions used to generate flex containers are <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/gridPage.html">gridPage()</a></code>. There’s a lot of arguments going on here, so lets go over what each option can do:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
+  <span class="va">...</span>,
+  template <span class="op">=</span> <span class="cn">NULL</span>,
+  areas <span class="op">=</span> <span class="cn">NULL</span>,
+  rows <span class="op">=</span> <span class="cn">NULL</span>,
+  columns <span class="op">=</span> <span class="cn">NULL</span>,
+  gap <span class="op">=</span> <span class="cn">NULL</span>,
+  align_items <span class="op">=</span> <span class="st">"stretch"</span>,
+  justify_items <span class="op">=</span> <span class="st">"stretch"</span>,
+  auto_fill <span class="op">=</span> <span class="cn">TRUE</span>,
+  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/activeBreakpoints.html">activeBreakpoints</a></span><span class="op">(</span><span class="op">)</span>,
+  id <span class="op">=</span> <span class="fu"><a href="../reference/generateID.html">generateID</a></span><span class="op">(</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/gridPage.html">gridPage</a></span><span class="op">(</span>
+  <span class="va">...</span>, <span class="co"># Any argument that can be passed to gridPanel()</span>
+  title <span class="op">=</span> <span class="cn">NULL</span>,
+  fill_page <span class="op">=</span> <span class="cn">TRUE</span>,
+  dependency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/bootstrapLib.html" class="external-link">bootstrapLib</a></span><span class="op">(</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="concepts-and-terminology">Concepts and Terminology<a class="anchor" aria-label="anchor" href="#concepts-and-terminology"></a>
+</h2>
+<p>CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements.</p>
+<p>A <code>grid</code> can be compared to a set of horizontal and vertical lines defining columns and rows. Elements can be placed onto the grid within these column and row lines. You can think of it as a table where each cell can be identified via its row and column position, with elements being able to span any adjacent number of cells.</p>
+<div class="section level5">
+<h5 id="grid-line">Grid Line<a class="anchor" aria-label="anchor" href="#grid-line"></a>
+</h5>
+<p>The dividing lines that make up the structure of the grid. They can be either vertical (“column grid lines”) or horizontal (“row grid lines”) and reside on either side of a row or column. <img src="../reference/figures/grid-line.svg"></p>
+</div>
+<div class="section level5">
+<h5 id="grid-track">Grid Track<a class="anchor" aria-label="anchor" href="#grid-track"></a>
+</h5>
+<p>The space between two adjacent grid lines. You can think of them as the columns or rows of the grid.</p>
+<p>The size of these tracks can be either fixed (using a fixed size unit like pixels) or flexible (using percentages or the new fr unit). <img src="../reference/figures/grid-track.svg"></p>
+</div>
+<div class="section level5">
+<h5 id="grid-cell">Grid Cell<a class="anchor" aria-label="anchor" href="#grid-cell"></a>
+</h5>
+<p>The space between two adjacent row and two adjacent column grid lines. It’s a single “unit” of the grid. <img src="../reference/figures/grid-cell.svg"></p>
+</div>
+<div class="section level5">
+<h5 id="grid-area">Grid Area<a class="anchor" aria-label="anchor" href="#grid-area"></a>
+</h5>
+<p>The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells, and depending on how the grid is configured, identified by its bonding lines indexes or its name. For a grid area to be valid, its cells MUST create a rectangular area. Single cell areas are also valid.</p>
+<p><img src="../reference/figures/grid-area.svg"></p>
+</div>
+<div class="section level5">
+<h5 id="item-placement">Item placement<a class="anchor" aria-label="anchor" href="#item-placement"></a>
+</h5>
+<p>You can place items into a precise location on the grid using line numbers, names or by targeting an area of the grid. Grid also contains an algorithm to control the placement of items not given an explicit position on the grid. <img src="../reference/figures/grid-placement.svg"></p>
+<p>NOTE: By default <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines" class="external-link">named grid lines</a> are not officially supported with <code>imola</code>.</p>
+<p>However, if you are interested in using named lines, you could use the css string syntax for the <code>rows</code> and <code>columns</code> and manually add the child elements css for <code>grid-column-start</code>, <code>grid-column-end</code>, <code>grid-row-start</code>, <code>grid-row-end</code>, instead of using named arguments with <code>areas</code>.</p>
+<p>The same applies to positioning child elements using cell indexes. While there are no specific argument to add row and column indexes to a child element, you can always add these manually via css or the <code>styles</code> argument of HTML tag functions in R.</p>
+</div>
+<div class="section level5">
+<h5 id="overlapping-content">Overlapping content<a class="anchor" aria-label="anchor" href="#overlapping-content"></a>
+</h5>
+<p>More than one item can be placed into a grid cell or area, meaning they can partially overlap each other. This layering may then be controlled with the z-index property of each item. <img src="../reference/figures/grid-overlap.svg"></p>
+<!-- ##### Alignment control
+Grid contains alignment features so we can control how the items align once placed into a grid area, and how the entire grid is aligned.
+![](../reference/figures/grid-control.svg) -->
+<!-- ##### Automatic track generation
+You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding “as many columns that will fit into a container” are included. -->
+<hr>
+</div>
+</div>
+<div class="section level2">
+<h2 id="section">…<a class="anchor" aria-label="anchor" href="#section"></a>
+</h2>
+<p>Tag attributes (named arguments) and children (unnamed arguments). A named argument with an <code>NA</code> value is rendered as a boolean attribute.</p>
+<p>Named arguments can be used to provide additional values to the container of the grid.</p>
+<p>Visit <a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link uri">https://www.w3schools.com/tags/ref_attributes.asp</a> for a list of valid HTML attributes.</p>
+<p>Children may include any combination of:</p>
+<ul>
+<li>Other tags objects</li>
+<li>[HTML()] strings</li>
+<li>[htmlDependency()]s</li>
+<li>Single-element atomic vectors</li>
+</ul>
+<p><code>...</code> main purpose is to add content to your panel, but it can also be used to tweak your HTML generation, allowing a very similar behavior to traditional HTML tag functions provided by <code>htmltools</code>, and letting you customize your HTML tag. By default using these functions behaves similar to using <code><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div()</a></code>, with additional styles being added to meet our layout expectations.</p>
+<p>If you defined named areas in the <code>areas</code> argument, you can also pass named arguments here using those area names to specify which area that child element will be added into.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="template">template<a class="anchor" aria-label="anchor" href="#template"></a>
+</h2>
+<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> to generate a template object.</p>
+<p>When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>.</p>
+<p>A quick way to see all registered templates (for flex functions) is to use <code>names(listTemplates("flex"))</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("grid"))</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Default built in grid templates</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"grail-left-sidebar"</span>   <span class="st">"grail-right-sidebar"</span>  <span class="st">"header-left-sidebar"</span>  <span class="st">"header-sidebar-right"</span> <span class="st">"holy-grail"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">6</span>] <span class="st">"sidebar-left"</span>         <span class="st">"sidebar-right"</span></span></code></pre></div>
+<p>Templates that you register also become valid values for the template argument, and will also be displayed when listing available template names:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">registerTemplate</span>(<span class="st">"grid"</span>, <span class="st">"mycustomtemplate"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">areas =</span> <span class="fu">c</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"area-1"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"area-2"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"area-3"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("grid"))</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"grail-left-sidebar"</span>   <span class="st">"grail-right-sidebar"</span>  <span class="st">"header-left-sidebar"</span>  <span class="st">"header-sidebar-right"</span> <span class="st">"holy-grail"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">6</span>] <span class="st">"sidebar-left"</span>         <span class="st">"sidebar-right"</span>        <span class="st">"mycustomtemplate"</span></span></code></pre></div>
+<p>Any listed template name can then be used as a value, regardless if built in or custom:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>template <span class="op">=</span> <span class="st">"grail-left-sidebar"</span><span class="op">)</span></code></pre></div>
+<p><img src="../reference/figures/grail-left-sidebar-preview.png"></p>
+<p>Visit <a href="https://sparktuga.shinyapps.io/imolatemplates/" class="external-link uri">https://sparktuga.shinyapps.io/imolatemplates/</a> for a full list of imola’s built in templates.</p>
+<p>Note: See <code><a href="../reference/listTemplates.html">listTemplates()</a></code> and <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> documentation for more information on those functions, or <code><a href="../articles/imola-templates.html">vignette("imola-templates")</a></code> for a full breakdown regarding templates in imola.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="areas">areas<a class="anchor" aria-label="anchor" href="#areas"></a>
+</h2>
+<p>Defines a grid template by referencing the names of the grid areas which are specified with the css grid-area property (in imola this is done with named arguments as part of <code>...</code>).</p>
+<p>Repeating the name of a grid area causes the content to span those cells. For a grid area to be valid, its cells MUST create a rectangular area (Single cell areas are also valid). A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
+  areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"header"</span>, <span class="st">"header"</span>, <span class="st">"header"</span>, <span class="st">"header"</span><span class="op">)</span>,
+    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"main"</span>, <span class="st">"main"</span>, <span class="st">"."</span>, <span class="st">"sidebar"</span><span class="op">)</span>,
+    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"footer"</span>, <span class="st">"footer"</span>, <span class="st">"footer"</span>, <span class="st">"footer"</span><span class="op">)</span>
+  <span class="op">)</span>,
+  header <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-a "</span><span class="op">)</span>,
+  main <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-b "</span><span class="op">)</span>,
+  sidebar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-c "</span><span class="op">)</span>,
+  footer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-d "</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<p>As with other arguments, a string variant is also available if you prefer to stay closer to the css syntax.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
+  areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+    <span class="st">"header header header header"</span>,
+    <span class="st">"main main . sidebar"</span>,
+    <span class="st">"footer footer footer footer"</span>
+  <span class="op">)</span>,
+  header <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-a "</span><span class="op">)</span>,
+  main <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-b "</span><span class="op">)</span>,
+  sidebar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-c "</span><span class="op">)</span>,
+  footer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">".item-d "</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<p>In either case, the size of the grid will be determined by the given value for <code>areas</code>. The number of <code>columns</code> will be the length of each value (in the string syntax, this will be the number of names separated by spaces), and the number of <code>rows</code> the number of values given. This means the above example will generate a grid with 4 columns and 3 rows.</p>
+<p>It is also important to note that for the <code>areas</code> argument to be valid, the lenght of each value given should be equal (number of elements in each vector for the <code>R</code> syntax, number of names between each space on the <code>string</code> syntax).</p>
+<p>Both of the above example will generate the following css rules:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.item-a</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-area</span>: header<span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.item-b</span> {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-area</span>: main<span class="op">;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.item-c</span> {</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-area</span>: sidebar<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.item-d</span> {</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-area</span>: footer<span class="op">;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">.panel</span> {</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-areas</span>:</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"header header header header"</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"main main . sidebar"</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"footer footer footer footer"</span><span class="op">;</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="../reference/figures/grid-areas.svg"></p>
+<p>When used together with <code>rows</code> and <code>columns</code>, <code>areas</code> provides the names of the areas for grid items, while <code>rows</code> and <code>columns</code> provide the sizes. If either <code>rows</code> and <code>columns</code> are not provided, sizes will be automatically defined based on the dimensions of the <code>areas</code> argument.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="rows">rows<a class="anchor" aria-label="anchor" href="#rows"></a>
+</h2>
+<p>Defines the rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.</p>
+<p>In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as <code>repeat()</code>, the single string css notation is recomended.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># both notations produce the same results</span>
+<span class="co"># css notation</span>
+<span class="va">rows</span> <span class="op">=</span> <span class="st">"50px 50px 2fr 1fr"</span>
+
+<span class="co"># R vector notation</span>
+<span class="va">rows</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"50px"</span>, <span class="st">"50px"</span>, <span class="st">"2fr"</span>, <span class="st">"1fr"</span><span class="op">)</span></code></pre></div>
+<p><img src="../reference/figures/grid-rows.svg"></p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="columns">columns<a class="anchor" aria-label="anchor" href="#columns"></a>
+</h2>
+<p>Defines the columns of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.</p>
+<p>In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as <code>repeat()</code>, the single string css notation is recomended.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># both notations produce the same results</span>
+<span class="co"># css notation</span>
+<span class="va">columns</span> <span class="op">=</span> <span class="st">"50px 50px 2fr 1fr"</span>
+
+<span class="co"># R vector notation</span>
+<span class="va">columns</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"50px"</span>, <span class="st">"50px"</span>, <span class="st">"2fr"</span>, <span class="st">"1fr"</span><span class="op">)</span></code></pre></div>
+<p><img src="../reference/figures/grid-columns.svg"></p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="gap">gap<a class="anchor" aria-label="anchor" href="#gap"></a>
+</h2>
+<p>Controls the space between items. It applies that spacing only between items not on the outer edges. The behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow (because of something like justify-content: space-between;) then the gap will only take effect if that space would end up smaller.</p>
+<p>The gap argument controls both the row gap and the column gap at the same time, making its css equivalent <code>gap</code>, <code>row-gap</code> and <code>column-gap</code>. If a single value is given it is used for both row and column gap, but a pair of values separated by a space can also be used for controling these independently.</p>
+<p>Accepts a valid value in css values (<code>"0"</code>, <code>"10px"</code>, <code>"20%"</code>, <code>"0.5rem"</code>), or a pair of values separated by space (<code>"10px 20px"</code>, <code>"5% 10%"</code>, <code>"10px 5%"</code>).</p>
+<p><img src="../reference/figures/gap.svg"></p>
+<p>By default the value <code>0</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="align_items">align_items<a class="anchor" aria-label="anchor" href="#align_items"></a>
+</h2>
+<p>Aligns grid items along the inline (row) axis (as opposed to <code>justify_items</code> which aligns along the block (column) axis). This value applies to all grid items inside the container.</p>
+<p>Possible values for this property include: - stretch – fills the whole height of the cell (this is the default) - start – aligns items to be flush with the start edge of their cell - end – aligns items to be flush with the end edge of their cell - center – aligns items in the center of their cell</p>
+<p><img src="../reference/figures/grid-align-items.svg"></p>
+<p>Note: Together, <code>align_items</code> and <code>justify_items</code> completely cover the <code>place-items</code> css property, making direct coverage from imola for <code>place-items</code> redundact and therefore not provided in the <code>grid</code> functions.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="justify_items">justify_items<a class="anchor" aria-label="anchor" href="#justify_items"></a>
+</h2>
+<p>Aligns grid items along the inline (row) axis (as opposed to <code>align_items</code> which aligns along the inline (row) axis). This value applies to all grid items inside the container.</p>
+<p>Possible values for this property include: - stretch – fills the whole width of the cell (this is the default) - start – aligns items to be flush with the start edge of their cell - end – aligns items to be flush with the end edge of their cell - center – aligns items in the center of their cell</p>
+<p><img src="../reference/figures/justify-items.svg"></p>
+<p>Note: Together, <code>align_items</code> and <code>justify_items</code> completely cover the <code>place-items</code> css property, making direct coverage from imola for <code>place-items</code> redundact and therefore not provided in the <code>grid</code> functions.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="auto_fill">auto_fill<a class="anchor" aria-label="anchor" href="#auto_fill"></a>
+</h2>
+<p>Flag to tell the grid container should automatically. By default if using grid specific fractionary units (<code>fr</code>) if can happen that sometimes the grid does not behave as expected when it comes to its size.</p>
+<p>When set to true this will force the panel to be stretched to fit the size of the parent element where it is being added. Defaults to <code>TRUE</code>. If content is being stretched in unexpected ways, set it to <code>FALSE</code> to allow the content (or <code>rows</code> and <code>columns</code> defined sizes) to control the grid size instead.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="breakpoint_system">breakpoint_system<a class="anchor" aria-label="anchor" href="#breakpoint_system"></a>
+</h2>
+<p>Optional Media breakpoints to use. Will default to the current active breakpoint system.</p>
+<p>For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.</p>
+<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code>), as well as the reserved keyord <code>default</code>.</p>
+<p>See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more details on breakpoints.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="id">id<a class="anchor" aria-label="anchor" href="#id"></a>
+</h2>
+<p>The panel ID. A randomly generated one is used by default. Providing your own ID will allow you to target the generated HTML tag via CSS or JavaScript if needed.</p>
+<p>General rules regarding HTML Ids apply, including the fact that duplicated Ids are not allowed.</p>
+<p>For a full list of details on the HTML ID attribute, check <a href="https://www.w3schools.com/html/html_id.asp" class="external-link uri">https://www.w3schools.com/html/html_id.asp</a></p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="title">title<a class="anchor" aria-label="anchor" href="#title"></a>
+</h2>
+<p>The browser window title (defaults to the host URL of the page). This is the name that appears on the browser tab.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="fill_page">fill_page<a class="anchor" aria-label="anchor" href="#fill_page"></a>
+</h2>
+<p>Flag to tell the page if it should adjust the page to adjust and fill the browser window size.</p>
+<p>When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow behond the height of the viewport if necessary.</p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="dependency">dependency<a class="anchor" aria-label="anchor" href="#dependency"></a>
+</h2>
+<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)</p>
+<hr>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 

@@ -61,15 +61,24 @@ Supports named list for breakpoints.}
 Supports named list for breakpoints.}
 
 \item{align_items}{The cell behavior according to the align-items css
-property. Defaults to stretch.
-Supports named list for breakpoints.}
+property. Aligns grid items along the block (column) axis.
+
+Accepts a valid css \code{align-items} value
+(\code{start} | \code{end} | \code{center} | \code{stretch})
+
+By default the \code{stretch} value is used. Supports breakpoints.}
 
 \item{justify_items}{The cell behavior according to the justify-items css
-property. Defaults to stretch.
-Supports named list for breakpoints.}
+property. Aligns grid items along the inline (row) axis.
+
+Accepts a valid css \code{justify-items} value
+(\code{start} | \code{end} | \code{center} | \code{stretch})
+
+By default the \code{stretch} value is used. Supports breakpoints.}
 
 \item{auto_fill}{Should the panel stretch to fit its parent size (TRUE), or
-should its size be based on its children element sizes (FALSE).}
+should its size be based on its children element sizes (FALSE).
+Supports named list for breakpoints.}
 
 \item{breakpoint_system}{Optional Media breakpoints to use. Will default to
 the current active breakpoint system.}

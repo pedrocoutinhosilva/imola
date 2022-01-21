@@ -22,22 +22,28 @@ While R/shiny does give you direct access to bootstrap's row and column system, 
 
 As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.
 
+---
+
 ## Usage
 
 The bread and butter of imola are the `gridPanel()` and `flexPanel()` functions. These allow you to replace any HTML tag that serves as a container (`div`, `section`, `main`, `nav`, ...) with a tag that uses one of the specific css layout systems (grid or flexbox).
 
 If you are not familiar with these layout systems, I definitely recommend [this article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to get you up to speed.
 
-The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. This means if you want fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.
+The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
 
-If you are looking for more information on a specific system of imola, make sure to check the following:
+This means if you want fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.
+
+If you are looking for more information on a specific system in imola, make sure to check the following for an in depth view:
 
 -   `vignette("imola-flexbox")` for details on `flexPanel()` and `flexPage()`.
 -   `vignette("imola-grid")` for details on `gridPanel()` and `gridPage()`.
 -   `vignette("imola-templates")` for information on using imola's templating engine.
 -   `vignette("imola-breakpoints")` for information on using imola's breakpoint systems.
 
-### Grid
+---
+
+## Grid
 
 The grid family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. `gridPanel()` and `gridPage()`. `gridPage()` is simply a wrapper for `gridPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
 
@@ -45,13 +51,17 @@ If you're interested in more information about the full array of options in the 
 
 For more on grid with imola, check `vignette("imola-grid")`.
 
-### Flex
+---
+
+## Flex
 
 The flex family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. `flexPanel()` and `flexPage()`. Similar to what happens in the grid family, `flexPage()` is simply a wrapper for `flexPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
 
 If you're interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to get you started.
 
 For more on flex with imola, check `vignette("imola-flex")`.
+
+---
 
 ## Breakpoints
 
