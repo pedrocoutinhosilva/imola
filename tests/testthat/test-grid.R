@@ -10,6 +10,21 @@ test_that("Test ...", {
   # html is generated with child html
   expect_match(gridPanel(div(id = "test-child")) %>% toString(), "<div id=\"test-child\"></div>")
   expect_match(gridPanel(div(id = "test-child"), div(id = "test-child2")) %>% toString(), "<div id=\"test-child\"></div>\n  <div id=\"test-child2\">")
+
+
+    # html attributes get added using ...
+    expect_match(gridPanel(`data-attribute` = "test-value") %>% toString(), "data-attribute=\"test-value\"")  
+})
+
+# Tests for the title argument
+test_that("Test title", {
+  # title is added
+  expect_length(gridPage(title = "test title") %>% htmltools::doRenderTags() %>% find_html_node("title"), 1)
+  expect_match(gridPage(title = "test title") %>% htmltools::doRenderTags() %>% toString(), "<title>test title</title>")
+
+  # no title is added if none provided
+  expect_length(gridPage() %>% htmltools::doRenderTags() %>% find_html_node("title"), 0)
+  expect_no_match(gridPage() %>% htmltools::doRenderTags() %>% toString(), "<title></title>")
 })
 
 # Tests for the areas argument
@@ -95,7 +110,7 @@ test_that("Test auto_fill", {
 # Tests for the id argument
 test_that("Test Ids", {
   # Test if default ids are used
-  expect_length(gridPage() %>% find_html_node("#grid-page-wrapper"),1)
+  expect_length(gridPage() %>% find_html_node("#grid-page-wrapper"), 1)
   expect_match(
     gridPanel() %>% find_html_node("div") %>% rvest::html_attr("id"),
     "grid_"
