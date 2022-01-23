@@ -21,7 +21,8 @@ Imports:
     yaml
 Suggests:
     testthat (>= 3.0.0),
-    rvest
+    rvest,
+    covr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Config/testthat/edition: 3

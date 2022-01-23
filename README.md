@@ -1,6 +1,7 @@
 # imola <img src="man/figures/logo.svg" align="right" alt="" width="130" />
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/pedrocoutinhosilva/imola/workflows/R-CMD-check/badge.svg)](https://CRAN.R-project.org/package=imola)
+[![Codecov test coverage](https://codecov.io/gh/pedrocoutinhosilva/imola/branch/main/graph/badge.svg)](https://codecov.io/gh/pedrocoutinhosilva/imola?branch=main)
 [![cranlogs](https://www.r-pkg.org/badges/version/imola)](https://CRAN.R-project.org/package=imola)
 [![cranlogs](https://cranlogs.r-pkg.org/badges/imola)](https://CRAN.R-project.org/package=imola)
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/imola)](https://CRAN.R-project.org/package=imola)

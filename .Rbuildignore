@@ -13,3 +13,6 @@ tests
 ^pkgdown$
 ^doc$
 ^Meta$
+^codecov\.yml$
+.covrignore
+^\.github$

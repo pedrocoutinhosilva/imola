@@ -125,6 +125,9 @@ test_that("Test positionings", {
 
 # UI tests for multiple arguments
 test_that("UI generation tests", {
+  skip_on_ci()
+  skip_on_covr()
+
   # Tests empty grids
   test_snapshots("flexPanel-empty", flexPanel, min_items = 0, max_items = 0)
   test_snapshots("flexPage-empty", flexPage, min_items = 0, max_items = 0)

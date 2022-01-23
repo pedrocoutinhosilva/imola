@@ -13,7 +13,7 @@ test_that("Test ...", {
 
 
     # html attributes get added using ...
-    expect_match(gridPanel(`data-attribute` = "test-value") %>% toString(), "data-attribute=\"test-value\"")  
+    expect_match(gridPanel(`data-attribute` = "test-value") %>% toString(), "data-attribute=\"test-value\"")
 })
 
 # Tests for the title argument
@@ -123,6 +123,9 @@ test_that("Test Ids", {
 
 # UI tests for multiple arguments
 test_that("UI generation tests", {
+  skip_on_ci()
+  skip_on_covr()
+  
   # Values for test cases to be reused in multiple tests
   test_cases <- list(
     columns = list(
