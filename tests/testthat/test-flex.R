@@ -127,6 +127,7 @@ test_that("Test positionings", {
 test_that("UI generation tests", {
   skip_on_ci()
   skip_on_covr()
+  skip_if(getOption("skip_ui_tests"), message = "Skip UI tests")
 
   # Tests empty grids
   test_snapshots("flexPanel-empty", flexPanel, min_items = 0, max_items = 0)

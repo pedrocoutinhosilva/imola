@@ -125,7 +125,8 @@ test_that("Test Ids", {
 test_that("UI generation tests", {
   skip_on_ci()
   skip_on_covr()
-  
+  skip_if(getOption("skip_ui_tests"), message = "Skip UI tests")
+
   # Values for test cases to be reused in multiple tests
   test_cases <- list(
     columns = list(

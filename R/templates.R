@@ -33,8 +33,6 @@ listTemplates <- function(type = NULL) {
 #'   by default it will simply use the current active system but a built in
 #'   or custom system can also be passed. You ca find built in breakpoint
 #'   systems under getOption("imola.breakpoints")
-#' @param export A file name to export the template to. Allows exporting
-#'   templates as a yaml file for future usage.
 #'
 #' @importFrom utils modifyList
 #' @importFrom yaml write_yaml
@@ -42,16 +40,12 @@ listTemplates <- function(type = NULL) {
 #' @return No return value, called for side effects
 #' @keywords templates
 #' @export
-registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
+registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints()) {
   listTemplates <- listTemplates()
   listTemplates[[type]][[name]] <- modifyList(
     list(...),
     list(breakpoint_system = breakpoint_system)
   )
-
-  if (!is.null(export)) {
-    yaml::write_yaml(listTemplates[[type]][[name]], paste0(export, ".yaml"))
-  }
 
   options(imola.templates = listTemplates)
 }
@@ -69,22 +63,29 @@ registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoi
 #'   by default it will simply use the current active system but a built in
 #'   or custom system can also be passed. You ca find built in breakpoint
 #'   systems under getOption("imola.breakpoints")
-#' @param export A file name to export the template to. Allows exporting
-#'   templates as a yaml file for future usage.
+#' @param export A path ending in a file name with a .yaml extension to export
+#'   the template to. Allows exporting templates as a yaml file for
+#'   future usage.
 #'
 #' @importFrom utils modifyList
 #'
 #' @return No return value, called for side effects
 #' @keywords templates
 #' @export
-makeTemplate <- function(type, ..., breakpoint_system = activeBreakpoints()) {
-  modifyList(
+makeTemplate <- function(type, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
+  template <- modifyList(
     list(...),
     list(
       type = type,
       breakpoint_system = breakpoint_system
     )
   )
+
+  if (!is.null(export)) {
+    yaml::write_yaml(template, export)
+  }
+
+  template
 }
 
 #' Deletes an existing css template from the available list of templates for the

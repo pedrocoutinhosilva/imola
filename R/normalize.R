@@ -21,7 +21,7 @@ normalizeAttributes <- function(attributes) {
 #'
 #' @keywords internal normalizer
 #' @return A named list.
-normalizeAttribute <- function(attribute, simplify = TRUE) {
+normalizeAttribute <- function(attribute, simplify = FALSE) {
   if (is.null(attribute)) {
     return(attribute)
   }
@@ -42,5 +42,5 @@ normalizeAttribute <- function(attribute, simplify = TRUE) {
     } else {
         breakpoint
     }
-  }, simplify = FALSE)
+  }, simplify = simplify)
 }
