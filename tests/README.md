@@ -1,6 +1,5 @@
 # Requirements
 The test battery includes unit, snapshot and UI testing. To run all tests make sure to include all packages in the `suggests` section of the DESCRIPTION file:
-
 ```
 testthat (>= 3.0.0),
 rvest,

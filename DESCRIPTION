@@ -23,7 +23,6 @@ Suggests:
     testthat (>= 3.0.0),
     rvest,
     devtools,
-    webshot2,
     covr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
