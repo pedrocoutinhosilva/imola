@@ -22,7 +22,6 @@
 <meta property="og:title" content="Flexbox and imola">
 <meta property="og:description" content="Getting started with CSS Flexbox and imola.
 ">
-<meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -91,7 +90,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.svg" class="logo" alt=""><h1>Flexbox and imola</h1>
+      <img src="" class="logo" alt=""><h1>Flexbox and imola</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola-flexbox.Rmd" class="external-link"><code>vignettes/imola-flexbox.Rmd</code></a></small>
@@ -180,7 +179,7 @@
 <p>Any listed template name can then be used as a value, regardless if built in or custom:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/flexPanel.html">flexPanel</a></span><span class="op">(</span>template <span class="op">=</span> <span class="st">"two-three-alternate"</span><span class="op">)</span></code></pre></div>
-<p><img src="../reference/figures/two-three-alternate-preview.png"></p>
+<p><img src="figures/two-three-alternate-preview.png"></p>
 <p>Visit <a href="https://sparktuga.shinyapps.io/imolatemplates/" class="external-link uri">https://sparktuga.shinyapps.io/imolatemplates/</a> for a full list of imola’s built in templates.</p>
 <p>Note: See <code><a href="../reference/listTemplates.html">listTemplates()</a></code> and <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> documentation for more information on those functions, or <code><a href="../articles/imola-templates.html">vignette("imola-templates")</a></code> for a full breakdown regarding templates in imola.</p>
 <hr>
@@ -218,7 +217,7 @@
      </div>
   </div>
 </div>
-<p><img src="../reference/figures/flex-direction.svg"></p>
+<p><img src="figures/flex-direction.svg"></p>
 <p>By default the <code>row</code> value is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
 </div>
@@ -253,7 +252,7 @@
     </div>
   </div>
 </div>
-<p><img src="../reference/figures/flex-wrap.svg"></p>
+<p><img src="figures/flex-wrap.svg"></p>
 <p>By default the value <code>wrap</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
 </div>
@@ -292,7 +291,7 @@
     </div>
   </div>
 </div>
-<p><img src="../reference/figures/justify-content.svg"></p>
+<p><img src="figures/justify-content.svg"></p>
 <p>By default the value <code>flex-start</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <p>NOTE: Since <code>imola</code> uses <code>flex = c("1")</code> as a default value for flex, you might not see any changes setting a custom value for <code>justify_content</code> out of the box. You can set <code>flex = c("0 1 auto")</code> to allow children elements to control their own size on the main axis.</p>
 <hr>
@@ -332,7 +331,7 @@
     </div>
   </div>
 </div>
-<p><img src="../reference/figures/align-items.svg"></p>
+<p><img src="figures/align-items.svg"></p>
 <p>By default the value <code>stretch</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
 </div>
@@ -411,7 +410,7 @@
     </div>
   </div>
 </div>
-<p><img src="../reference/figures/align-content.svg"></p>
+<p><img src="figures/align-content.svg"></p>
 <p>By default the value <code>flex-start</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <p>NOTE: Since <code>imola</code> uses <code>flex = c("1")</code> as a default value for flex, you might not see any changes setting a custom value for <code>align_content</code> out of the box. You can set <code>flex = c("0 1 auto")</code> to allow children elements to control their own size on the main axis. You might also be interested in using <code>wrap = wrap</code> to allow elements to spawn multiple lines to take full advantage of <code>align_content</code>.</p>
 <hr>
@@ -422,7 +421,7 @@
 <p>Controls the space between items. It applies that spacing only between items not on the outer edges. The behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow (because of something like justify-content: space-between;) then the gap will only take effect if that space would end up smaller.</p>
 <p>The gap argument controls both the row gap and the column gap at the same time, making its css equivalent <code>gap</code>, <code>row-gap</code> and <code>column-gap</code>. If a single value is given it is used for both row and column gap, but a pair of values separated by a space can also be used for controling these independently.</p>
 <p>Accepts a valid value in css values (<code>"0"</code>, <code>"10px"</code>, <code>"20%"</code>, <code>"0.5rem"</code>), or a pair of values separated by space (<code>"10px 20px"</code>, <code>"5% 10%"</code>, <code>"10px 5%"</code>).</p>
-<p><img src="../reference/figures/gap.svg"></p>
+<p><img src="figures/gap.svg"></p>
 <p>By default the value <code>0</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
 </div>
@@ -515,7 +514,7 @@
      </div>
   </div>
 </div>
-<p><img src="../reference/figures/flex-grow.svg"></p>
+<p><img src="figures/flex-grow.svg"></p>
 <p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>1</code> for each element.</p>
 <hr>
 </div>
@@ -554,7 +553,7 @@
      </div>
   </div>
 </div>
-<p><img src="../reference/figures/flex-shrink.svg"></p>
+<p><img src="figures/flex-shrink.svg"></p>
 <p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>1</code> for each element.</p>
 <p>Note: For <code>shrink</code> to have any effect, it requires some size (either <code>width</code> or <code>basis</code>) to be set on the children elements.</p>
 <hr>
@@ -564,7 +563,7 @@
 </h2>
 <p>Defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword.</p>
 <p>The <code>auto</code> keyword means “look at my width or height property to use as a basis value for calculations”</p>
-<p><img src="../reference/figures/flex-basis.svg"></p>
+<p><img src="figures/flex-basis.svg"></p>
 <p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, meaning <code>0%</code> for each element.</p>
 <hr>
 </div>

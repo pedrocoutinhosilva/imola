@@ -67,26 +67,26 @@ A `grid` can be compared to a set of horizontal and vertical lines defining colu
 
 ##### Grid Line
 The dividing lines that make up the structure of the grid. They can be either vertical (“column grid lines”) or horizontal (“row grid lines”) and reside on either side of a row or column.
-![](../reference/figures/grid-line.svg)
+![](figures/grid-line.svg)
 
 ##### Grid Track
 The space between two adjacent grid lines. You can think of them as the columns or rows of the grid.
 
 The size of these tracks can be either fixed (using a fixed size unit like pixels) or flexible (using percentages or the new fr unit).
-![](../reference/figures/grid-track.svg)
+![](figures/grid-track.svg)
 
 ##### Grid Cell
 The space between two adjacent row and two adjacent column grid lines. It’s a single “unit” of the grid.
-![](../reference/figures/grid-cell.svg)
+![](figures/grid-cell.svg)
 
 ##### Grid Area
 The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells, and depending on how the grid is configured, identified by its bonding lines indexes or its name. For a grid area to be valid, its cells MUST create a rectangular area. Single cell areas are also valid.
 
-![](../reference/figures/grid-area.svg)
+![](figures/grid-area.svg)
 
 ##### Item placement
 You can place items into a precise location on the grid using line numbers, names or by targeting an area of the grid. Grid also contains an algorithm to control the placement of items not given an explicit position on the grid.
-![](../reference/figures/grid-placement.svg)
+![](figures/grid-placement.svg)
 
 NOTE: By default [named grid lines](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines) are not officially supported with `imola`.
 
@@ -96,11 +96,11 @@ The same applies to positioning child elements using cell indexes. While there a
 
 ##### Overlapping content
 More than one item can be placed into a grid cell or area, meaning they can partially overlap each other. This layering may then be controlled with the z-index property of each item.
-![](../reference/figures/grid-overlap.svg)
+![](figures/grid-overlap.svg)
 
 <!-- ##### Alignment control
 Grid contains alignment features so we can control how the items align once placed into a grid area, and how the entire grid is aligned.
-![](../reference/figures/grid-control.svg) -->
+![](figures/grid-control.svg) -->
 
 <!-- ##### Automatic track generation
 You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding “as many columns that will fit into a container” are included. -->
@@ -163,7 +163,7 @@ Any listed template name can then be used as a value, regardless if built in or 
 ```R
 gridPanel(template = "grail-left-sidebar")
 ```
-![](../reference/figures/grail-left-sidebar-preview.png)
+![](figures/grail-left-sidebar-preview.png)
 
 Visit https://sparktuga.shinyapps.io/imolatemplates/ for a full list of imola's built in templates.
 
@@ -230,7 +230,7 @@ Both of the above example will generate the following css rules:
 }
 ```
 
-![](../reference/figures/grid-areas.svg)
+![](figures/grid-areas.svg)
 
 When used together with `rows` and `columns`, `areas` provides the names of the areas for grid items, while `rows` and `columns` provide the sizes. If either `rows` and `columns` are not provided, sizes will be automatically defined based on the dimensions of the `areas` argument.
 
@@ -250,7 +250,7 @@ rows = "50px 50px 2fr 1fr"
 rows = c("50px", "50px", "2fr", "1fr")
 ```
 
-![](../reference/figures/grid-rows.svg)
+![](figures/grid-rows.svg)
 
 ---
 
@@ -268,7 +268,7 @@ columns = "50px 50px 2fr 1fr"
 columns = c("50px", "50px", "2fr", "1fr")
 ```
 
-![](../reference/figures/grid-columns.svg)
+![](figures/grid-columns.svg)
 
 ---
 
@@ -279,7 +279,7 @@ The gap argument controls both the row gap and the column gap at the same time, 
 
 Accepts a valid value in css values (`"0"`, `"10px"`, `"20%"`, `"0.5rem"`), or a pair of values separated by space (`"10px 20px"`, `"5% 10%"`, `"10px 5%"`).
 
-![](../reference/figures/gap.svg)
+![](figures/gap.svg)
 
 By default the value `0` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -294,7 +294,7 @@ Possible values for this property include:
 - end – aligns items to be flush with the end edge of their cell
 - center – aligns items in the center of their cell
 
-![](../reference/figures/grid-align-items.svg)
+![](figures/grid-align-items.svg)
 
 Note: Together, `align_items` and `justify_items` completely cover the `place-items` css property, making direct coverage from imola for `place-items` redundact and therefore not provided in the `grid` functions.
 
@@ -309,7 +309,7 @@ Possible values for this property include:
 - end – aligns items to be flush with the end edge of their cell
 - center – aligns items in the center of their cell
 
-![](../reference/figures/justify-items.svg)
+![](figures/justify-items.svg)
 
 Note: Together, `align_items` and `justify_items` completely cover the `place-items` css property, making direct coverage from imola for `place-items` redundact and therefore not provided in the `grid` functions.
 

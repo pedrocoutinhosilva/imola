@@ -22,7 +22,6 @@
 <meta property="og:title" content="Tutorial: Getting started with imola">
 <meta property="og:description" content="Learn how to get started with imola.
 ">
-<meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -91,7 +90,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.svg" class="logo" alt=""><h1>Tutorial: Getting started with imola</h1>
+      <img src="" class="logo" alt=""><h1>Tutorial: Getting started with imola</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola.Rmd" class="external-link"><code>vignettes/imola.Rmd</code></a></small>
@@ -164,7 +163,7 @@
 <p>This grid contains 3 areas (<code>area1</code>, <code>area2</code>, <code>area3</code>), with <code>area2</code> clearly serving a sidebar. Viewing this grid on a small screen could lead to a very small sidebar, so one solution is to modify this grid specifically for a breakpoint that targets mobile.</p>
 <p>As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint system, that contains a few different breakpoints:</p>
 <div class="figure">
-<img src="../reference/figures/bootstrap3-breakpoints.png" alt=""><p class="caption">Screenshot</p>
+<img src="figures/bootstrap3-breakpoints.png" alt=""><p class="caption">Screenshot</p>
 </div>
 <p>We can see what names imola expects for each of these using either <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code> or checking the option directly with <code>getOption("imola.breakpoints")$bootstrap</code></p>
 <p>In out case, we want to target small devices, so we target these via <code>xs</code>, and build our grid argument as a named list instead.</p>

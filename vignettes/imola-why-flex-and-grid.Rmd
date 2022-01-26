@@ -38,7 +38,7 @@ Around this time (as well as during the reign of tables for layout purposes) the
 
 Early HTML specs state that "The elements within the BODY element are in the order in which they should be presented to the reader".
 
-![](../reference/figures/nostalgia.jpg)
+![](figures/nostalgia.jpg)
 
 ---
 

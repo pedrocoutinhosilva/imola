@@ -45,7 +45,7 @@ This grid contains 3 areas (`area1`, `area2`, `area3`), with `area2` clearly ser
 
 As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint system, that contains a few different breakpoints:
 
-![Screenshot](../reference/figures/bootstrap3-breakpoints.png)
+![Screenshot](figures/bootstrap3-breakpoints.png)
 
 We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap`
 
@@ -69,7 +69,7 @@ areas = list(
 
 By default, the bootstrap 3 breakpoint system is active and returned when `activeBreakpoints()` is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be ("xs" "sm" "md" "lg" "xl"):
 
-![](../reference/figures/bootstrap3-breakpoints.png)
+![](figures/bootstrap3-breakpoints.png)
 
 You can list available breakpoints, in the active breakpoint system using:
 

@@ -123,7 +123,7 @@ Any listed template name can then be used as a value, regardless if built in or 
 ```R
 flexPanel(template = "two-three-alternate")
 ```
-![](../reference/figures/two-three-alternate-preview.png)
+![](figures/two-three-alternate-preview.png)
 
 Visit https://sparktuga.shinyapps.io/imolatemplates/ for a full list of imola's built in templates.
 
@@ -140,7 +140,7 @@ Accepts a valid css `flex-direction` value (row | row-reverse | column | column-
 htmltools::includeHTML("static/flexbox-direction.html")
 ```
 
-![](../reference/figures/flex-direction.svg)
+![](figures/flex-direction.svg)
 
 By default the `row` value is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -155,7 +155,7 @@ Accepts a valid css `flex-wrap` value (nowrap | wrap | wrap-reverse).
 htmltools::includeHTML("static/flexbox-wrap.html")
 ```
 
-![](../reference/figures/flex-wrap.svg)
+![](figures/flex-wrap.svg)
 
 By default the value `wrap` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -170,7 +170,7 @@ Accepts a valid css `justify-content` value (flex-start | flex-end | center | sp
 htmltools::includeHTML("static/flexbox-justify-content.html")
 ```
 
-![](../reference/figures/justify-content.svg)
+![](figures/justify-content.svg)
 
 By default the value `flex-start` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -187,7 +187,7 @@ Accepts a valid css `align-items` value (stretch | flex-start | flex-end | cente
 htmltools::includeHTML("static/flexbox-align.html")
 ```
 
-![](../reference/figures/align-items.svg)
+![](figures/align-items.svg)
 
 By default the value `stretch` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -202,7 +202,7 @@ Accepts a valid css `align-content` value (flex-start | flex-end | center | spac
 htmltools::includeHTML("static/flexbox-align-content.html")
 ```
 
-![](../reference/figures/align-content.svg)
+![](figures/align-content.svg)
 
 By default the value `flex-start` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -217,7 +217,7 @@ The gap argument controls both the row gap and the column gap at the same time, 
 
 Accepts a valid value in css values (`"0"`, `"10px"`, `"20%"`, `"0.5rem"`), or a pair of values separated by space (`"10px 20px"`, `"5% 10%"`, `"10px 5%"`).
 
-![](../reference/figures/gap.svg)
+![](figures/gap.svg)
 
 By default the value `0` is used. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
 
@@ -254,7 +254,7 @@ If all items have flex-grow set to 1, the remaining space in the container will 
 htmltools::includeHTML("static/flexbox-grow.html")
 ```
 
-![](../reference/figures/flex-grow.svg)
+![](figures/flex-grow.svg)
 
 By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `1` for each element.
 
@@ -269,7 +269,7 @@ If all items have flex-shrink set to 1, all elements will shrink at an equal rat
 htmltools::includeHTML("static/flexbox-shrink.html")
 ```
 
-![](../reference/figures/flex-shrink.svg)
+![](figures/flex-shrink.svg)
 
 By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `1` for each element.
 
@@ -282,7 +282,7 @@ Defines the default size of an element before the remaining space is distributed
 
 The `auto` keyword means “look at my width or height property to use as a basis value for calculations”
 
-![](../reference/figures/flex-basis.svg)
+![](figures/flex-basis.svg)
 
 By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, meaning `0%` for each element.
 
