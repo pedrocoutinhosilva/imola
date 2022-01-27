@@ -8,13 +8,7 @@ or page function of that specific type. Templates are collections of
 arguments that can be grouped and stored for later usage via the "template"
 argument of panel and page functions.}
 \usage{
-registerTemplate(
-  type,
-  name,
-  ...,
-  breakpoint_system = activeBreakpoints(),
-  export = NULL
-)
+registerTemplate(type, name, ..., breakpoint_system = activeBreakpoints())
 }
 \arguments{
 \item{type}{The type of css grid for which the template can be used}
@@ -29,9 +23,6 @@ the given type (see gridPanel() and FlexPanel() for all options)}
 by default it will simply use the current active system but a built in
 or custom system can also be passed. You ca find built in breakpoint
 systems under getOption("imola.breakpoints")}
-
-\item{export}{A file name to export the template to. Allows exporting
-templates as a yaml file for future usage.}
 }
 \value{
 No return value, called for side effects

@@ -39,9 +39,11 @@ articles:
   contents:
   - imola-demos
 - title: Templates
+  navbar: ~
   contents:
   - imola-templates
 - title: Breakpoint systems
+  navbar: ~
   contents:
   - imola-breakpoints
 

@@ -5,7 +5,7 @@
 \title{Converts non named list attributes into a named list.
 Does nothing if the attribute is already a list in the correct format.}
 \usage{
-normalizeAttribute(attribute, simplify = TRUE)
+normalizeAttribute(attribute, simplify = FALSE)
 }
 \arguments{
 \item{attribute}{The value to process}
