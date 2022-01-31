@@ -146,7 +146,7 @@ generateFlexChildrenCSS <- function(attributes,
       rule_wrapper <- ifelse(
         breakpoint == "default",
         "{rules}",
-        mediaRuleTemplate(breakpoint_system[[breakpoint]])
+        mediaRuleTemplate(breakpoint_system$breakpoints[[breakpoint]])
       )
 
       for (rule_index in seq_len(number_children)) {
@@ -189,7 +189,7 @@ generateCSSPropertyStyles <- function(value, property, id, breakpoint_system) {
   styles <- c()
   for (breakpoint in names(value)) {
     styles %<>% c(stringTemplate(
-      mediaRuleTemplate(breakpoint_system[[breakpoint]]),
+      mediaRuleTemplate(breakpoint_system$breakpoints[[breakpoint]]),
       rules = stringCSSRule("grid_parent",
         id = id,
         attribute = property,

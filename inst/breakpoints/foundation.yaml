@@ -1,0 +1,19 @@
+name: foundation
+description: ~
+breakpoints:
+  tablet:
+    name: tablet
+    min: 769.0
+    max: ~
+  desktop:
+    name: desktop
+    min: 1024.0
+    max: ~
+  widescreen:
+    name: widescreen
+    min: 1216.0
+    max: ~
+  fullhd:
+    name: fullhd
+    min: 1408.0
+    max: ~

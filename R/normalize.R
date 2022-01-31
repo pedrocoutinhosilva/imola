@@ -36,11 +36,11 @@ normalizeAttribute <- function(attribute, simplify = FALSE) {
 
   sapply(attribute, function(breakpoint) {
     if (is.vector(breakpoint) && is.atomic(breakpoint)) {
-        lapply(breakpoint, . %>% {
-            strsplit(., split = " ")[[1]]
-        })
+      lapply(breakpoint, . %>% {
+          strsplit(., split = " ")[[1]]
+      })
     } else {
-        breakpoint
+      breakpoint
     }
   }, simplify = simplify)
 }

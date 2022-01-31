@@ -6,7 +6,21 @@ if (getRversion() >= "2.15.1")  utils::globalVariables(c("."))
   options(imola.settings = readSettingsFile("config"))
 
   # Full list of default mediarules breakpoint systems
-  options(imola.breakpoints = readSettingsFile("breakpoints"))
+  breakpoint_files <- list.files(
+    system.file("breakpoints/", package = "imola"),
+    pattern = "\\.yaml$"
+  )
+  breakpoint_systems <- list()
+  for (file_name in breakpoint_files) {
+    system <- importBreakpointSystem(
+      paste0(system.file("breakpoints", package = "imola"), "/", file_name)
+    )
+
+    breakpoint_systems[[system$name]] <- system
+  }
+  options(imola.breakpoints = breakpoint_systems)
+
+
 
   # Default mediarules breakpoints (Based on bootstrap rules)
   default_system <- getOption("imola.settings")$default_system

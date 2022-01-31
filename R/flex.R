@@ -139,11 +139,11 @@
 #'   arguments a named list can be passed instead of a single value.
 #'
 #'   The names in the list can be any of the registered breakpoints available in
-#'   `activeBreakpoints()`, of on the provided `breakpoint_system` argument.
-#'   Current global `activeBreakpoints()` can be changed using
-#'   `setBreakpointSystem()`.
+#'   `getBreakpointSystem()`, of on the provided `breakpoint_system` argument.
+#'   Current global `getBreakpointSystem()` can be changed using
+#'   `setActiveBreakpointSystem()`.
 #'
-#'   In a similar fashion, the current `activeBreakpoints()` can also be
+#'   In a similar fashion, the current `getBreakpointSystem()` can also be
 #'   modified with the `registerBreakpoint()` and `unregisterBreakpoint()`.
 #'
 #'   It is recomended to define the breakpoint system for the application
@@ -187,7 +187,7 @@ flexPanel <- function(...,
                       grow = NULL,
                       shrink = NULL,
                       basis = NULL,
-                      breakpoint_system = activeBreakpoints(),
+                      breakpoint_system = getBreakpointSystem(),
                       id = generateID()) {
   # Children tags are non named tags passed as extra arguments
   number_children <- ifelse(

@@ -8,7 +8,7 @@ or page function of that specific type. Templates are collections of
 arguments that can be grouped and stored for later usage via the "template"
 argument of panel and page functions.}
 \usage{
-registerTemplate(type, name, ..., breakpoint_system = activeBreakpoints())
+registerTemplate(type, name, ..., breakpoint_system = getBreakpointSystem())
 }
 \arguments{
 \item{type}{The type of css grid for which the template can be used}

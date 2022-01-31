@@ -96,7 +96,7 @@ As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint 
 
 ![Screenshot](figures/bootstrap3-breakpoints.png)
 
-We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap`
+We can see what names imola expects for each of these using either `getBreakpointSystem()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap`
 
 In out case, we want to target small devices, so we target these via `xs`, and build our grid argument as a named list instead.
 

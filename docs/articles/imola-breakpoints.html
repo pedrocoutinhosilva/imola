@@ -159,7 +159,7 @@
 <p>This grid contains 3 areas (<code>area1</code>, <code>area2</code>, <code>area3</code>), with <code>area2</code> serving a sidebar. Viewing this grid on a small screen could lead to a very small sidebar, so one solution is to modify this grid specifically for a breakpoint that targets mobile.</p>
 <p>As mentioned before, shiny and imola, by default, use the bootstrap 3 breakpoint system, that contains a few different breakpoints:</p>
 <p><img src="figures/bootstrap3-breakpoints.png"></p>
-<p>We can see what names imola expects for each of these using either <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code> or checking the option directly with <code>getOption("imola.breakpoints")$bootstrap3</code></p>
+<p>We can see what names imola expects for each of these using either <code><a href="../reference/activeBreakpoints.html">getBreakpointSystem()</a></code> or checking the option directly with <code>getOption("imola.breakpoints")$bootstrap3</code></p>
 <p>Back to our case, we want to target small devices, we target these via <code>xs</code>, and build our grid argument as a named list instead.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># as a gridPanel() argument</span>
@@ -176,7 +176,7 @@
   <span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>All <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/flexPanel.html">flexPanel()</a></code> arguments that affect the styling of the panel allow this behavior for the use of breakpoints. See each function documentation for more details.</p>
-<p>By default, the bootstrap 3 breakpoint system is active and returned when <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code> is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be (“xs” “sm” “md” “lg” “xl”)</p>
+<p>By default, the bootstrap 3 breakpoint system is active and returned when <code><a href="../reference/activeBreakpoints.html">getBreakpointSystem()</a></code> is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be (“xs” “sm” “md” “lg” “xl”)</p>
 <p>You can manually list available breakpoints, in the active breakpoint system using:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">activeBreakpoints</span>())</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"xs"</span> <span class="st">"sm"</span> <span class="st">"md"</span> <span class="st">"lg"</span> <span class="st">"xl"</span></span>
@@ -198,8 +198,8 @@
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># foundation system</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">getOption</span>(<span class="st">"imola.breakpoints"</span>)[[<span class="st">"foundation"</span>]])</span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"tablet"</span>     <span class="st">"desktop"</span>    <span class="st">"widescreen"</span> <span class="st">"fullhd"</span></span></code></pre></div>
-<p>The active system can be changed using <code><a href="../reference/setBreakpointSystem.html">setBreakpointSystem()</a></code>.</p>
-<p>It is also possible to extend the currently active system (<code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code>) with additional breakpoints with the <code><a href="../reference/registerBreakpoint.html">registerBreakpoint()</a></code> and <code><a href="../reference/unregisterBreakpoint.html">unregisterBreakpoint()</a></code>.</p>
+<p>The active system can be changed using <code><a href="../reference/setActiveBreakpointSystem.html">setActiveBreakpointSystem()</a></code>.</p>
+<p>It is also possible to extend the currently active system (<code><a href="../reference/activeBreakpoints.html">getBreakpointSystem()</a></code>) with additional breakpoints with the <code><a href="../reference/registerBreakpoint.html">registerBreakpoint()</a></code> and <code><a href="../reference/unregisterBreakpoint.html">unregisterBreakpoint()</a></code>.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a new breakpoint</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">registerBreakpoint</span>(<span class="st">"mycustombreakpoint"</span>, <span class="at">min =</span> <span class="dv">300</span>, <span class="at">max =</span> <span class="dv">500</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>

@@ -85,7 +85,7 @@ As mentioned before, shiny and imola, by default, use the bootstrap 3 breakpoint
 
 ![](figures/bootstrap3-breakpoints.png)
 
-We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap3`
+We can see what names imola expects for each of these using either `getBreakpointSystem()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap3`
 
 Back to our case, we want to target small devices, we target these via `xs`, and build our grid argument as a named list instead.
 
@@ -107,16 +107,16 @@ areas = list(
 
 All `gridPanel()` and `flexPanel()` arguments that affect the styling of the panel allow this behavior for the use of breakpoints. See each function documentation for more details.
 
-By default, the bootstrap 3 breakpoint system is active and returned when `activeBreakpoints()` is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be ("xs" "sm" "md" "lg" "xl")
+By default, the bootstrap 3 breakpoint system is active and returned when `getBreakpointSystem()` is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be ("xs" "sm" "md" "lg" "xl")
 
 You can manually list available breakpoints, in the active breakpoint system using:
 
 ```R
-names(activeBreakpoints())
+names(getBreakpointSystem())
 [1] "xs" "sm" "md" "lg" "xl"
 
 # or explore the full details of the system with
-activeBreakpoints()
+getBreakpointSystem()
 ```
 
 If you would like to switch to a diferent breakpoint system, imola comes with a few diferent built in systems based on popular css frameworks:
@@ -139,14 +139,14 @@ names(getOption("imola.breakpoints")[["bulma"]])
 names(getOption("imola.breakpoints")[["foundation"]])
 [1] "tablet"     "desktop"    "widescreen" "fullhd"
 ```
-The active system can be changed using `setBreakpointSystem()`.
+The active system can be changed using `setActiveBreakpointSystem()`.
 
-It is also possible to extend the currently active system (`activeBreakpoints()`) with additional breakpoints with the `registerBreakpoint()` and `unregisterBreakpoint()`.
+It is also possible to extend the currently active system (`getBreakpointSystem()`) with additional breakpoints with the `registerBreakpoint()` and `unregisterBreakpoint()`.
 ```R
 # add a new breakpoint
 registerBreakpoint("mycustombreakpoint", min = 300, max = 500)
 
-names(activeBreakpoints())
+names(getBreakpointSystem())
 [1] "xs" "sm" "md" "lg" "xl" "mycustombreakpoint"
 ```
 

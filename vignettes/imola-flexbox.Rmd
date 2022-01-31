@@ -46,7 +46,7 @@ flexPanel(
   grow = NULL,
   shrink = NULL,
   basis = NULL,
-  breakpoint_system = activeBreakpoints(),
+  breakpoint_system = getBreakpointSystem(),
   id = generateID()
 )
 ```
@@ -293,7 +293,7 @@ Optional Media breakpoints to use. Will default to the current active breakpoint
 
 For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.
 
-The names used in that list can be any of the registered breakpoints available in the provided `breakpoint_system` argument (defaults to `activeBreakpoints()`), as well as the reserved keyord `default`.
+The names used in that list can be any of the registered breakpoints available in the provided `breakpoint_system` argument (defaults to `getBreakpointSystem()`), as well as the reserved keyord `default`.
 
 See `vignette("imola-breakpoints")` for more details on breakpoints.
 

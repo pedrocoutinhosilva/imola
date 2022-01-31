@@ -14,7 +14,7 @@ gridPanel(
   align_items = "stretch",
   justify_items = "stretch",
   auto_fill = TRUE,
-  breakpoint_system = activeBreakpoints(),
+  breakpoint_system = getBreakpointSystem(),
   id = generateID()
 )
 }
@@ -104,7 +104,7 @@ with the same name as the named area.
 \note{
 When creating responsive layouts based on media rules, for arguments
 a named list can be passed instead of a single value. The names in the list
-can be any of the registered breakpoints available in activeBreakpoints().
+can be any of the registered breakpoints available in getBreakpointSystem().
 Breakpoints can also be modified with the registerBreakpoint() and
 unregisterBreakpoint() functions. Arguments that allow this are: areas |
 rows | columns | gap.

@@ -40,7 +40,7 @@ listTemplates <- function(type = NULL) {
 #' @return No return value, called for side effects
 #' @keywords templates
 #' @export
-registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints()) {
+registerTemplate <- function(type, name, ..., breakpoint_system = getBreakpointSystem()) {
   listTemplates <- listTemplates()
   listTemplates[[type]][[name]] <- modifyList(
     list(...),
@@ -63,16 +63,13 @@ registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoi
 #'   by default it will simply use the current active system but a built in
 #'   or custom system can also be passed. You ca find built in breakpoint
 #'   systems under getOption("imola.breakpoints")
-#' @param export A path ending in a file name with a .yaml extension to export
-#'   the template to. Allows exporting templates as a yaml file for
-#'   future usage.
 #'
 #' @importFrom utils modifyList
 #'
-#' @return No return value, called for side effects
+#' @return A list with template details
 #' @keywords templates
 #' @export
-makeTemplate <- function(type, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
+makeTemplate <- function(type, ..., breakpoint_system = getBreakpointSystem()) {
   template <- modifyList(
     list(...),
     list(
@@ -81,11 +78,23 @@ makeTemplate <- function(type, ..., breakpoint_system = activeBreakpoints(), exp
     )
   )
 
-  if (!is.null(export)) {
-    yaml::write_yaml(template, export)
+  template
+}
+
+#' @param template A string with the template name if the template is registered
+#'   or the return of calling makeTemplate(). If using a string with a name, the
+#'   type argument must also be provided.
+#' @param type The type of css grid for which the template can be used. Optional
+#'   when exporting a registered template.
+#' @param path A path ending in a file name with a .yaml extension to export
+#'   the template to. Allows exporting templates as a yaml file for
+#'   future usage.
+exportTemplate <- function(template, type = NULL, path) {
+  if (!is.list(template)) {
+    template <- listTemplates()[[type]][[template]]
   }
 
-  template
+  yaml::write_yaml(template, path)
 }
 
 #' Deletes an existing css template from the available list of templates for the
@@ -121,7 +130,6 @@ unregisterTemplate <- function(type, name) {
 #' @return A named list of css attributes that can be used to generate a html
 #'   element style rules of the given type.
 #' @keywords templates
-#' @export
 applyTemplate <- function(attributes, template, defaults, type) {
   if (is.null(template)) {
     return(attributes)

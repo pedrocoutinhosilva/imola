@@ -17,7 +17,7 @@ flexPanel(
   grow = NULL,
   shrink = NULL,
   basis = NULL,
-  breakpoint_system = activeBreakpoints(),
+  breakpoint_system = getBreakpointSystem(),
   id = generateID()
 )
 }
@@ -184,11 +184,11 @@ When creating responsive layouts based on media rules, for most css
 arguments a named list can be passed instead of a single value.
 
 The names in the list can be any of the registered breakpoints available in
-\code{activeBreakpoints()}, of on the provided \code{breakpoint_system} argument.
-Current global \code{activeBreakpoints()} can be changed using
-\code{setBreakpointSystem()}.
+\code{getBreakpointSystem()}, of on the provided \code{breakpoint_system} argument.
+Current global \code{getBreakpointSystem()} can be changed using
+\code{setActiveBreakpointSystem()}.
 
-In a similar fashion, the current \code{activeBreakpoints()} can also be
+In a similar fashion, the current \code{getBreakpointSystem()} can also be
 modified with the \code{registerBreakpoint()} and \code{unregisterBreakpoint()}.
 
 It is recomended to define the breakpoint system for the application

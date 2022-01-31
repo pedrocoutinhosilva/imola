@@ -224,10 +224,10 @@ arguments that simplify the way flexbox css can be created from shiny.</p>
     <p>When creating responsive layouts based on media rules, for most css
 arguments a named list can be passed instead of a single value.</p>
 <p>The names in the list can be any of the registered breakpoints available in
-<code><a href="activeBreakpoints.html">activeBreakpoints()</a></code>, of on the provided <code>breakpoint_system</code> argument.
-Current global <code><a href="activeBreakpoints.html">activeBreakpoints()</a></code> can be changed using
-<code><a href="setBreakpointSystem.html">setBreakpointSystem()</a></code>.</p>
-<p>In a similar fashion, the current <code><a href="activeBreakpoints.html">activeBreakpoints()</a></code> can also be
+<code><a href="activeBreakpoints.html">getBreakpointSystem()</a></code>, of on the provided <code>breakpoint_system</code> argument.
+Current global <code><a href="activeBreakpoints.html">getBreakpointSystem()</a></code> can be changed using
+<code><a href="setActiveBreakpointSystem.html">setActiveBreakpointSystem()</a></code>.</p>
+<p>In a similar fashion, the current <code><a href="activeBreakpoints.html">getBreakpointSystem()</a></code> can also be
 modified with the <code><a href="registerBreakpoint.html">registerBreakpoint()</a></code> and <code><a href="unregisterBreakpoint.html">unregisterBreakpoint()</a></code>.</p>
 <p>It is recomended to define the breakpoint system for the application
 globally before UI definitions, but the <code>breakpoint_system</code> in panel
