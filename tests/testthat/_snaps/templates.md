@@ -1,4 +1,4 @@
-# test template functions
+# listTemplates retuns all available templates
 
     Code
       listTemplates()
@@ -840,7 +840,7 @@
       
       
 
----
+# listTemplates retuns all available flex templates
 
     Code
       listTemplates("flex")
@@ -1161,7 +1161,7 @@
       
       
 
----
+# listTemplates retuns all available grid templates
 
     Code
       listTemplates("grid")
@@ -1684,47 +1684,10 @@
       
       
 
----
+# gridTemplate retuns a valid template object
 
     Code
-      registerTemplate("flex", "test-template", direction = "row")
-      listTemplates("flex")$`test-template`
-    Output
-      $direction
-      [1] "row"
-      
-      $breakpoint_system
-      $breakpoint_system$xs
-      $breakpoint_system$xs$max
-      [1] 575
-      
-      
-      $breakpoint_system$sm
-      $breakpoint_system$sm$max
-      [1] 767
-      
-      
-      $breakpoint_system$md
-      $breakpoint_system$md$max
-      [1] 991
-      
-      
-      $breakpoint_system$lg
-      $breakpoint_system$lg$max
-      [1] 1199
-      
-      
-      $breakpoint_system$xl
-      $breakpoint_system$xl$max
-      [1] 1200
-      
-      
-      
-
----
-
-    Code
-      makeTemplate("flex", direction = "row")
+      gridTemplate("flex", direction = "row")
     Output
       $direction
       [1] "row"
@@ -1733,34 +1696,21 @@
       [1] "flex"
       
       $breakpoint_system
-      $breakpoint_system$xs
-      $breakpoint_system$xs$max
-      [1] 575
+      Imola Breakpoint System
+      Name:  bulma 
+      description:  No description 
       
       
-      $breakpoint_system$sm
-      $breakpoint_system$sm$max
-      [1] 767
-      
-      
-      $breakpoint_system$md
-      $breakpoint_system$md$max
-      [1] 991
-      
-      
-      $breakpoint_system$lg
-      $breakpoint_system$lg$max
-      [1] 1199
-      
-      
-      $breakpoint_system$xl
-      $breakpoint_system$xl$max
-      [1] 1200
-      
-      
+      Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px) 
+      -----------------------------  -------------------------  -------------------------
+      tablet                         769                        NULL                     
+      desktop                        1024                       NULL                     
+      widescreen                     1216                       NULL                     
+      fullhd                         1408                       NULL                     
+      -----------------------------
       
 
----
+# applyTemplate applies an existing template sucessully to a list of attributes
 
     Code
       applyTemplate(list(), "two-three-alternate", list(), "flex")
@@ -1799,40 +1749,27 @@
       
       
 
----
+# applyTemplate applies an existing template sucessully using default values when needed
 
     Code
-      applyTemplate(list(), makeTemplate("flex", direction = "row"), list(direction = "column"),
+      applyTemplate(list(), gridTemplate("flex", direction = "row"), list(direction = "column"),
       "flex")
     Output
       $type
       [1] "flex"
       
       $breakpoint_system
-      $breakpoint_system$xs
-      $breakpoint_system$xs$max
-      [1] 575
+      Imola Breakpoint System
+      Name:  bulma 
+      description:  No description 
       
       
-      $breakpoint_system$sm
-      $breakpoint_system$sm$max
-      [1] 767
-      
-      
-      $breakpoint_system$md
-      $breakpoint_system$md$max
-      [1] 991
-      
-      
-      $breakpoint_system$lg
-      $breakpoint_system$lg$max
-      [1] 1199
-      
-      
-      $breakpoint_system$xl
-      $breakpoint_system$xl$max
-      [1] 1200
-      
-      
+      Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px) 
+      -----------------------------  -------------------------  -------------------------
+      tablet                         769                        NULL                     
+      desktop                        1024                       NULL                     
+      widescreen                     1216                       NULL                     
+      fullhd                         1408                       NULL                     
+      -----------------------------
       
 

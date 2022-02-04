@@ -122,7 +122,7 @@
   align_items <span class="op">=</span> <span class="st">"stretch"</span>,
   justify_items <span class="op">=</span> <span class="st">"stretch"</span>,
   auto_fill <span class="op">=</span> <span class="cn">TRUE</span>,
-  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/activeBreakpoints.html">activeBreakpoints</a></span><span class="op">(</span><span class="op">)</span>,
+  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/getBreakpointSystem.html">getBreakpointSystem</a></span><span class="op">(</span><span class="op">)</span>,
   id <span class="op">=</span> <span class="fu"><a href="../reference/generateID.html">generateID</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -201,7 +201,7 @@ You can define an explicit grid with grid layout. The Grid Layout specification 
 <div class="section level2">
 <h2 id="template">template<a class="anchor" aria-label="anchor" href="#template"></a>
 </h2>
-<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> to generate a template object.</p>
+<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> to generate a template object.</p>
 <p>When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>.</p>
 <p>A quick way to see all registered templates (for flex functions) is to use <code>names(listTemplates("flex"))</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("grid"))</span></span>
@@ -289,7 +289,7 @@ You can define an explicit grid with grid layout. The Grid Layout specification 
 <h2 id="rows">rows<a class="anchor" aria-label="anchor" href="#rows"></a>
 </h2>
 <p>Defines the rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.</p>
-<p>In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as <code>repeat()</code>, the single string css notation is recomended.</p>
+<p>In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as <code>repeat()</code>, the single string css notation is recommended.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># both notations produce the same results</span>
 <span class="co"># css notation</span>
@@ -304,7 +304,7 @@ You can define an explicit grid with grid layout. The Grid Layout specification 
 <h2 id="columns">columns<a class="anchor" aria-label="anchor" href="#columns"></a>
 </h2>
 <p>Defines the columns of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.</p>
-<p>In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as <code>repeat()</code>, the single string css notation is recomended.</p>
+<p>In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as <code>repeat()</code>, the single string css notation is recommended.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># both notations produce the same results</span>
 <span class="co"># css notation</span>
@@ -355,7 +355,7 @@ You can define an explicit grid with grid layout. The Grid Layout specification 
 </h2>
 <p>Optional Media breakpoints to use. Will default to the current active breakpoint system.</p>
 <p>For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.</p>
-<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/activeBreakpoints.html">getBreakpointSystem()</a></code>), as well as the reserved keyord <code>default</code>.</p>
+<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/getBreakpointSystem.html">getBreakpointSystem()</a></code>), as well as the reserved keyord <code>default</code>.</p>
 <p>See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more details on breakpoints.</p>
 <hr>
 </div>
@@ -383,7 +383,7 @@ You can define an explicit grid with grid layout. The Grid Layout specification 
 <div class="section level2">
 <h2 id="dependency">dependency<a class="anchor" aria-label="anchor" href="#dependency"></a>
 </h2>
-<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)</p>
+<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)</p>
 <hr>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

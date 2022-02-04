@@ -148,9 +148,9 @@
 <h2 id="template-objects">Template Objects<a class="anchor" aria-label="anchor" href="#template-objects"></a>
 </h2>
 <p>You can also create templates as R objects and feed that object to the <code>template</code> argument instead, this can be useful if you do not want to make a template globally accesible (For example for usage only in a single module, or for generating this programatically based on other factors).</p>
-<p>In that case, you can use the <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> function in a similar way to <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>, but assign it to an R object (or invoke it directly on the <code>template</code> argument).</p>
+<p>In that case, you can use the <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> function in a similar way to <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>, but assign it to an R object (or invoke it directly on the <code>template</code> argument).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">templateObject</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeTemplate.html">makeTemplate</a></span><span class="op">(</span><span class="st">"grid"</span>,
+<code class="sourceCode R"><span class="va">templateObject</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/gridTemplate.html">gridTemplate</a></span><span class="op">(</span><span class="st">"grid"</span>,
   areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
     default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
       <span class="st">"area1 area1 area1"</span>,

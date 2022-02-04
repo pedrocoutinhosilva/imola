@@ -5,7 +5,7 @@ library(magrittr)
 registerTemplate("flex", "mycustom",
                  direction = "column")
 
-custom_template <- makeTemplate("grid", direction = "column")
+custom_template <- gridTemplate("grid", direction = "column")
 
 exampleDiv <- function(color, border, ...) {
   div(

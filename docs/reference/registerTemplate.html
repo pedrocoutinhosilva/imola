@@ -3,7 +3,10 @@
 the template will then be available to be passed as an argument to a panel
 or page function of that specific type. Templates are collections of
 arguments that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.'><title>Registers a new css template for future use. Depending on the given type,
+argument of panel and page functions.
+Registers a template object to make it available globally in
+getOption("imola.templates"). After registered it can be retrieved
+anywhere using getTemplate().'><title>Registers a new css template for future use. Depending on the given type,
 the template will then be available to be passed as an argument to a panel
 or page function of that specific type. Templates are collections of
 arguments that can be grouped and stored for later usage via the "template"
@@ -14,7 +17,10 @@ arguments that can be grouped and stored for later usage via the " template argu
 the template will then be available to be passed as an argument to a panel
 or page function of that specific type. Templates are collections of
 arguments that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.'><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
+argument of panel and page functions.
+Registers a template object to make it available globally in
+getOption("imola.templates"). After registered it can be retrieved
+anywhere using getTemplate().'><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--></head><body>
@@ -91,16 +97,23 @@ the template will then be available to be passed as an argument to a panel
 or page function of that specific type. Templates are collections of
 arguments that can be grouped and stored for later usage via the "template"
 argument of panel and page functions.</p>
+<p>Registers a template object to make it available globally in
+getOption("imola.templates"). After registered it can be retrieved
+anywhere using getTemplate().</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">registerTemplate</span><span class="op">(</span><span class="va">type</span>, <span class="va">name</span>, <span class="va">...</span>, breakpoint_system <span class="op">=</span> <span class="fu"><a href="activeBreakpoints.html">activeBreakpoints</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">registerTemplate</span><span class="op">(</span><span class="va">template</span><span class="op">)</span>
+
+<span class="fu">registerTemplate</span><span class="op">(</span><span class="va">template</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>type</dt>
+    <dl><dt>template</dt>
+<dd><p>A template object generated with gridTemplate().</p></dd>
+<dt>type</dt>
 <dd><p>The type of css grid for which the template can be used</p></dd>
 <dt>name</dt>
 <dd><p>A unique name for the template. If a template with the same type
@@ -112,11 +125,12 @@ the given type (see gridPanel() and FlexPanel() for all options)</p></dd>
 <dd><p>Optional breakpoint system to use in the template.
 by default it will simply use the current active system but a built in
 or custom system can also be passed. You ca find built in breakpoint
-systems under getOption("imola.breakpoints")</p></dd>
+systems under getOption("imola.breakpoint.systems")</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>No return value, called for side effects</p>
+    <p>No return value, called for side effects
+No return value, called for side effects.</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

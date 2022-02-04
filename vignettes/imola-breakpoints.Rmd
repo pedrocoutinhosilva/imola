@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 ## What is a breakpoint?
 When designing for the web, it is important to keep in mind what diferent users will reach you in diferent devices with diferent screen sizes and orientations.
 
-In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scrollbars to overly long line lengths, and poor use of space.
+In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scroll bars to overly long line lengths, and poor use of space.
 
 As more diverse screen sizes became available, the concept of responsive web design (RWD) appeared, a set of practices that allows web pages to alter their layout and appearance to suit different screen widths, resolutions, etc.
 
@@ -85,7 +85,7 @@ As mentioned before, shiny and imola, by default, use the bootstrap 3 breakpoint
 
 ![](figures/bootstrap3-breakpoints.png)
 
-We can see what names imola expects for each of these using either `getBreakpointSystem()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap3`
+We can see what names imola expects for each of these using either `getBreakpointSystem()` or checking the option directly with `getOption("imola.breakpoint.systems")$bootstrap3`
 
 Back to our case, we want to target small devices, we target these via `xs`, and build our grid argument as a named list instead.
 
@@ -121,22 +121,22 @@ getBreakpointSystem()
 
 If you would like to switch to a diferent breakpoint system, imola comes with a few diferent built in systems based on popular css frameworks:
 ```R
-names(getOption("imola.breakpoints"))
+names(getOption("imola.breakpoint.systems"))
 [1] "bootstrap3" "bootstrap5" "bulma"      "foundation"
 ```
 
 Each system has its own breakpoint naming, based on the framework they originate in:
 ```R
 # Bootstrap 5 system
-names(getOption("imola.breakpoints")[["bootstrap5"]])
+names(getOption("imola.breakpoint.systems")[["bootstrap5"]])
 [1] "sm"  "md"  "lg"  "xl"  "xxl"
 
 # bulma system
-names(getOption("imola.breakpoints")[["bulma"]])
+names(getOption("imola.breakpoint.systems")[["bulma"]])
 [1] "tablet"     "desktop"    "widescreen" "fullhd"
 
 # foundation system
-names(getOption("imola.breakpoints")[["foundation"]])
+names(getOption("imola.breakpoint.systems")[["foundation"]])
 [1] "tablet"     "desktop"    "widescreen" "fullhd"
 ```
 The active system can be changed using `setActiveBreakpointSystem()`.
@@ -150,7 +150,7 @@ names(getBreakpointSystem())
 [1] "xs" "sm" "md" "lg" "xl" "mycustombreakpoint"
 ```
 
-It is recomended to define the breakpoint system for the application globally before UI definitions, but the `breakpoint_system` argument in panel functions allows for more flexibility when it comes to reuse components from other projects.
+It is recommended to define the breakpoint system for the application globally before UI definitions, but the `breakpoint_system` argument in panel functions allows for more flexibility when it comes to reuse components from other projects.
 
 NOTE: Imola reserves the special `default` name for values that are used by default, outside of any given breakpoint boundaries (`default` is the rule, breakpoints overwrite `default` for specific screen sizes).
 
@@ -159,7 +159,7 @@ NOTE: Imola reserves the special `default` name for values that are used by defa
 
 - Develop for mobile-first – By developing and designing mobile-first content, the developer and designer receive multiple benefits. It is more difficult to simplify a desktop experience for mobile screens than it is to expand a mobile view for desktop screens. When a design is mobile-first, developers address what is most necessary, and can then make additions to match the preferences of desktop users.
 
-- Always keep major breakpoints in mind. THis usually means common screen sizes (480px, 768px, 1024px, and 1280px).
+- Always keep major breakpoints in mind. This usually means common screen sizes (480px, 768px, 1024px, and 1280px).
 
 - Before choosing major breakpoints, use website analytics to discern the most commonly used devices from which your site is accessed. Add breakpoints for those screen sizes first.
 

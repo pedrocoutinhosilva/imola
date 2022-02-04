@@ -124,7 +124,7 @@
   grow <span class="op">=</span> <span class="cn">NULL</span>,
   shrink <span class="op">=</span> <span class="cn">NULL</span>,
   basis <span class="op">=</span> <span class="cn">NULL</span>,
-  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/activeBreakpoints.html">activeBreakpoints</a></span><span class="op">(</span><span class="op">)</span>,
+  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/getBreakpointSystem.html">getBreakpointSystem</a></span><span class="op">(</span><span class="op">)</span>,
   id <span class="op">=</span> <span class="fu"><a href="../reference/generateID.html">generateID</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -162,7 +162,7 @@
 <div class="section level2">
 <h2 id="template">template<a class="anchor" aria-label="anchor" href="#template"></a>
 </h2>
-<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> to generate a template object.</p>
+<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> to generate a template object.</p>
 <p>When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>.</p>
 <p>A quick way to see all registered templates (for flex functions) is to use <code>names(listTemplates("flex"))</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("flex"))</span></span>
@@ -433,7 +433,7 @@
 <p>A vector of valid css ‘flex’ values for the child elements. Shorthand for <code>grow</code>, <code>shrink</code> and <code>basis</code>, with the second and third parameters being optional. This means that any compination of 1, 2 or 3 css values for <code>grow</code>, <code>shrink</code> and <code>basis</code> are valid.</p>
 <p>Arguments that target child elements individually require a vector of values instead of a single value, with each entry of the vector affecting the nth child element. As an example <code>c(1, 2, 1)</code> will set the flex value of the first child to <code>1</code>, the second to <code>2</code> and the thrid to <code>1</code>.</p>
 <p>If the given vector has less entries that the number of child elements, the values will be repeated until the pattern affects all elements in the panel. If the number of entries given is more that the number of child elements, exceeding entries will be ignored. NA can also be used as a entry to skip adding a rule to a specific nth element.</p>
-<p>It is usually recomended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.</p>
+<p>It is usually recommended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.</p>
 <p>An example of this is using a flex value of <code>1</code> is actually equivalent to <code>1 1 0%</code> (<code>grow = 1</code>, <code>shrink = 1</code>, <code>basis = 0%</code>).</p>
 <div class="flex-example">
   <div class="control">
@@ -574,7 +574,7 @@
 </h2>
 <p>Optional Media breakpoints to use. Will default to the current active breakpoint system.</p>
 <p>For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.</p>
-<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/activeBreakpoints.html">getBreakpointSystem()</a></code>), as well as the reserved keyord <code>default</code>.</p>
+<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/getBreakpointSystem.html">getBreakpointSystem()</a></code>), as well as the reserved keyord <code>default</code>.</p>
 <p>See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more details on breakpoints.</p>
 <hr>
 </div>
@@ -602,7 +602,7 @@
 <div class="section level2">
 <h2 id="dependency">dependency<a class="anchor" aria-label="anchor" href="#dependency"></a>
 </h2>
-<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)</p>
+<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)</p>
 <hr>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

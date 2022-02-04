@@ -1,7 +1,7 @@
 test_that("test generator functions", {
   # generateGridCSS
   expect_identical(
-    generateGridCSS(list(areas = c("a", "b")), "test-id", c("a", "b"), getBreakpointSystem()),
+    generateGridCSS(list(areas = c("a", "b")), "test-id", c("a", "b"), getBreakpointSystem("bootstrap3")),
     HTML(" .test-id > .a { grid-area: a; }  .test-id > .b { grid-area: b; }")
   )
 
@@ -13,13 +13,13 @@ test_that("test generator functions", {
 
   # generateFlexCSS
   expect_identical(
-    generateFlexCSS(list(direction = list(default = "row")), "test-id", 2, getBreakpointSystem()),
+    generateFlexCSS(list(direction = list(default = "row")), "test-id", 2, getBreakpointSystem("bootstrap3")),
     HTML(" #test-id { flex-direction: row; } ")
   )
 
   # generateFlexChildrenCSS
   expect_identical(
-    generateFlexChildrenCSS(list(direction = list(default = "row", xs = "column")), "test-id", 1, getBreakpointSystem()),
+    generateFlexChildrenCSS(list(direction = list(default = "row", xs = "column")), "test-id", 1, getBreakpointSystem("bootstrap3")),
     c("",
       " .test-id > *:nth-child(1) { flex-direction: row; }" ,
       " @media all  and (max-width: 575px)   .test-id > *:nth-child(1) { flex-direction: column; }"
@@ -27,7 +27,7 @@ test_that("test generator functions", {
   )
   # generateCSSPropertyStyles
   expect_identical(
-    generateCSSPropertyStyles(list(default = "value"), "property", "test-id", getBreakpointSystem()),
+    generateCSSPropertyStyles(list(default = "value"), "property", "test-id", getBreakpointSystem("bootstrap3")),
     c(" #test-id { property: value; }")
   )
 })

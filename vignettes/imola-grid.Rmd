@@ -130,7 +130,7 @@ If you defined named areas in the `areas` argument, you can also pass named argu
 ---
 
 ## template
-The name of the template to use as a base for the grid, or the resulting value from using `makeTemplate()` to generate a template object.
+The name of the template to use as a base for the grid, or the resulting value from using `gridTemplate()` to generate a template object.
 
 When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using `registerTemplate()`.
 
@@ -239,7 +239,7 @@ When used together with `rows` and `columns`, `areas` provides the names of the 
 ## rows
 Defines the rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.
 
-In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as `repeat()`, the single string css notation is recomended.
+In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as `repeat()`, the single string css notation is recommended.
 
 ```R
 # both notations produce the same results
@@ -257,7 +257,7 @@ rows = c("50px", "50px", "2fr", "1fr")
 ## columns
 Defines the columns of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.
 
-In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as `repeat()`, the single string css notation is recomended.
+In imola, you can use either the css notation (a string with values separated by a space) or a vector notation (a vector where each element is a value). Both notations are valid, but if you plan on using specific css functions such as `repeat()`, the single string css notation is recommended.
 
 ```R
 # both notations produce the same results
@@ -296,7 +296,7 @@ Possible values for this property include:
 
 ![](figures/grid-align-items.svg)
 
-Note: Together, `align_items` and `justify_items` completely cover the `place-items` css property, making direct coverage from imola for `place-items` redundact and therefore not provided in the `grid` functions.
+Note: Together, `align_items` and `justify_items` completely cover the `place-items` css property, making direct coverage from imola for `place-items` redundant and therefore not provided in the `grid` functions.
 
 ---
 
@@ -311,7 +311,7 @@ Possible values for this property include:
 
 ![](figures/justify-items.svg)
 
-Note: Together, `align_items` and `justify_items` completely cover the `place-items` css property, making direct coverage from imola for `place-items` redundact and therefore not provided in the `grid` functions.
+Note: Together, `align_items` and `justify_items` completely cover the `place-items` css property, making direct coverage from imola for `place-items` redundant and therefore not provided in the `grid` functions.
 
 ---
 
@@ -355,6 +355,6 @@ When set to true this will force the grid to be at least as tall as the availabl
 ---
 
 ## dependency
-The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)
+The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a [tagList] with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)
 
 ---

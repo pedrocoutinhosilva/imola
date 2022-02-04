@@ -94,7 +94,7 @@ will generate the following HTML:
 ---
 
 ## template
-The name of the template to use as a base for the grid, or the resulting value from using `makeTemplate()` to generate a template object.
+The name of the template to use as a base for the grid, or the resulting value from using `gridTemplate()` to generate a template object.
 
 When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using `registerTemplate()`.
 
@@ -226,11 +226,11 @@ By default the value `0` is used. Supports named list for breakpoints. See `vign
 ## flex
 A vector of valid css 'flex' values for the child elements. Shorthand for `grow`, `shrink` and `basis`, with the second and third parameters being optional. This means that any compination of 1, 2 or 3 css values for `grow`, `shrink` and `basis` are valid.
 
-Arguments that target child elements individually require a vector of values instead of a single value, with each entry of the vector affecting the nth child element. As an example `c(1, 2, 1)` will set the flex value of the first child to `1`, the second to `2` and the thrid to `1`.
+Arguments that target child elements individually require a vector of values instead of a single value, with each entry of the vector affecting the nth child element. As an example `c(1, 2, 1)` will set the flex value of the first child to `1`, the second to `2` and the third to `1`.
 
 If the given vector has less entries that the number of child elements, the values will be repeated until the pattern affects all elements in the panel. If the number of entries given is more that the number of child elements, exceeding entries will be ignored. NA can also be used as a entry to skip adding a rule to a specific nth element.
 
-It is usually recomended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.
+It is usually recommended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.
 
 An example of this is using a flex value of `1` is actually equivalent to `1 1 0%` (`grow = 1`, `shrink = 1`, `basis = 0%`).
 
@@ -322,6 +322,6 @@ When set to true this will force the grid to be at least as tall as the availabl
 ---
 
 ## dependency
-The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)
+The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a [tagList] with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)
 
 ---

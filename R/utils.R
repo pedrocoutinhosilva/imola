@@ -132,18 +132,34 @@ mediaRuleTemplate <- function(options) {
   )
 }
 
-#' Reads the content of a YAML settings file from the package directory.
+#' Reads the content of a yaml settings file from the package directory.
 #'
 #' @param file The file name to read. Settings files are stored in the package
 #'   installation directory and include diferent settings and options.
 
 #' @importFrom yaml read_yaml
 #'
-#' @return A list object containing the content of the settings YAML file
+#' @return A list object containing the content of the settings yaml file
 #' @keywords internal utils
 readSettingsFile <- function(file) {
   file %>%
     paste0("settings/", ., ".yml") %>%
     system.file(package = "imola") %>%
     yaml::read_yaml()
+}
+
+#' Adds a class to a object
+#'
+#' @param object Any R object.
+#' @param class A string representing a object class.
+#' @importFrom yaml read_yaml
+#'
+#' @return The given R object with the additional class.
+#' @keywords internal utils
+addClass <- function(object, class) {
+  object %>% {
+    class(.) %<>%
+      append(class)
+    .
+  }
 }

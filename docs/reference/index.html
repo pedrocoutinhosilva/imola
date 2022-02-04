@@ -79,12 +79,12 @@
           
           <code><a href="flexPage.html">flexPage()</a></code> 
         </dt>
-        <dd>Create a flexbox based page</dd>
+        <dd>Create a css flexbox based page</dd>
       </dl><dl><dt>
           
           <code><a href="flexPanel.html">flexPanel()</a></code> 
         </dt>
-        <dd>Create a flexbox based panel</dd>
+        <dd>Create a css flexbox based HTML tag</dd>
       </dl></div><div class="section level2">
       <h2 id="grid">Grid<a class="anchor" aria-label="anchor" href="#grid"></a></h2>
       
@@ -100,12 +100,12 @@
           
           <code><a href="gridPage.html">gridPage()</a></code> 
         </dt>
-        <dd>Create a page a with CSS grid layout</dd>
+        <dd>Create a css grid based page</dd>
       </dl><dl><dt>
           
           <code><a href="gridPanel.html">gridPanel()</a></code> 
         </dt>
-        <dd>Create a panel with a CSS grid layout</dd>
+        <dd>Create a css grid based HTML tag</dd>
       </dl></div><div class="section level2">
       <h2 id="templates">Templates<a class="anchor" aria-label="anchor" href="#templates"></a></h2>
       
@@ -127,15 +127,12 @@ of the specific panel creation callback formals) is used to validate the
 need of the argument value in the final list.</dd>
       </dl><dl><dt>
           
-          <code><a href="listTemplates.html">listTemplates()</a></code> 
+          <code><a href="getTemplate.html">getTemplate()</a></code> 
         </dt>
-        <dd>Lists all available grid and flex templates. If type is given, returns only
-templates for the given grid type. Templates are collections of
-arguments that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.</dd>
+        <dd>Returns a object form of a registered template by its name and type.</dd>
       </dl><dl><dt>
           
-          <code><a href="makeTemplate.html">makeTemplate()</a></code> 
+          <code><a href="gridTemplate.html">gridTemplate()</a></code> 
         </dt>
         <dd>Returns a imola template as an object for future use. Depending on the
 given type, the template will then be available to be passed as an
@@ -144,7 +141,29 @@ collections of arguments that can be grouped and stored for later usage
 via the "template" argument of panel and page functions.</dd>
       </dl><dl><dt>
           
-          <code><a href="registerTemplate.html">registerTemplate()</a></code> 
+          <code><a href="listTemplates.html">listTemplates()</a></code> 
+        </dt>
+        <dd>Lists all available grid and flex templates. If type is given, returns only
+templates for the given grid type. Templates are collections of
+arguments that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.</dd>
+      </dl><dl><dt>
+          
+          <code><a href="gridTemplate.html">gridTemplate()</a></code> 
+        </dt>
+        <dd>Returns a imola template as an object for future use. Depending on the
+given type, the template will then be available to be passed as an
+argument to a panel or page function of that specific type. Templates are
+collections of arguments that can be grouped and stored for later usage
+via the "template" argument of panel and page functions.</dd>
+      </dl><dl><dt>
+          
+          <code><a href="print.imola.template.html">print(<i>&lt;imola.template&gt;</i>)</a></code> 
+        </dt>
+        <dd>Custom print function for a template object.</dd>
+      </dl><dl><dt>
+          
+          <code><a href="registerTemplate.html">registerTemplate()</a></code> <code><a href="registerTemplate.html">registerTemplate()</a></code> 
         </dt>
         <dd>Registers a new css template for future use. Depending on the given type,
 the template will then be available to be passed as an argument to a panel
@@ -172,28 +191,78 @@ argument of panel and page functions.</dd>
 
       <dl><dt>
           
-          <code><a href="activeBreakpoints.html">getBreakpointSystem()</a></code> 
+          <code><a href="addBreakpoint.html">addBreakpoint()</a></code> 
         </dt>
-        <dd>Current active media breakpoints. By default the default_system
-setting values are used, but the list can be customized by using the
-registerBreakpoint() and unregisterBreakpoint() functions.</dd>
+        <dd>Add a breakpoint to a breakpoint system</dd>
       </dl><dl><dt>
           
-          <code><a href="registerBreakpoint.html">registerBreakpoint()</a></code> 
+          <code><a href="breakpoint.html">breakpoint()</a></code> 
         </dt>
-        <dd>Adds a new breakpoint entry to the current active media breakpoints.</dd>
+        <dd>Create a breakpoint</dd>
+      </dl><dl><dt>
+          
+          <code><a href="breakpointSystem.html">breakpointSystem()</a></code> 
+        </dt>
+        <dd>Create a breakpoint system</dd>
+      </dl><dl><dt>
+          
+          <code><a href="exportBreakpointSystem.html">exportBreakpointSystem()</a></code> 
+        </dt>
+        <dd>Export a breakpoint system</dd>
+      </dl><dl><dt>
+          
+          <code><a href="exportTemplate.html">exportTemplate()</a></code> <code><a href="exportTemplate.html">exportTemplate()</a></code> 
+        </dt>
+        <dd>Exports a breakpoint system into a file for storage and later usage.
+Exported files can be retrieved from thier file form by using
+importBreakpointSystem()</dd>
+      </dl><dl><dt>
+          
+          <code><a href="getBreakpointSystem.html">getBreakpointSystem()</a></code> 
+        </dt>
+        <dd>Get a registered breakpoint system</dd>
+      </dl><dl><dt>
+          
+          <code><a href="importBreakpointSystem.html">importBreakpointSystem()</a></code> 
+        </dt>
+        <dd>Import a breakpoint system</dd>
+      </dl><dl><dt>
+          
+          <code><a href="importTemplate.html">importTemplate()</a></code> 
+        </dt>
+        <dd>Imports a breakpoint system from a file.
+Breakpoint systems can be exported into a file format by using
+exportBreakpointSystem()</dd>
+      </dl><dl><dt>
+          
+          <code><a href="print.imola.breakpoint.html">print(<i>&lt;imola.breakpoint&gt;</i>)</a></code> 
+        </dt>
+        <dd>Custom print function for a breakpoint object.</dd>
+      </dl><dl><dt>
+          
+          <code><a href="print.imola.breakpoint.system.html">print(<i>&lt;imola.breakpoint.system&gt;</i>)</a></code> 
+        </dt>
+        <dd>Custom print function for a breakpoint system object.</dd>
+      </dl><dl><dt>
+          
+          <code><a href="registerBreakpointSystem.html">registerBreakpointSystem()</a></code> 
+        </dt>
+        <dd>Register a breakpoint system</dd>
+      </dl><dl><dt>
+          
+          <code><a href="removeBreakpoint.html">removeBreakpoint()</a></code> 
+        </dt>
+        <dd>Remove a breakpoint from a breakpoint system</dd>
       </dl><dl><dt>
           
           <code><a href="setActiveBreakpointSystem.html">setActiveBreakpointSystem()</a></code> 
         </dt>
-        <dd>Sets the current active media breakpoints. By default the default_system
-setting values are used, but the list can be customized by using the
-registerBreakpoint() and unregisterBreakpoint() functions.</dd>
+        <dd>Set the active breakpoint system</dd>
       </dl><dl><dt>
           
-          <code><a href="unregisterBreakpoint.html">unregisterBreakpoint()</a></code> 
+          <code><a href="unregisterBreakpointSystem.html">unregisterBreakpointSystem()</a></code> 
         </dt>
-        <dd>Allows removing an entry from the current activeBreakpoints.</dd>
+        <dd>Unregister a breakpoint system</dd>
       </dl></div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

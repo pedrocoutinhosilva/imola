@@ -72,9 +72,9 @@ By default imola also includes some ready to use templates these will also be li
 
 You can also create templates as R objects and feed that object to the `template` argument instead, this can be useful if you do not want to make a template globally accesible (For example for usage only in a single module, or for generating this programatically based on other factors).
 
-In that case, you can use the `makeTemplate()` function in a similar way to `registerTemplate()`, but assign it to an R object (or invoke it directly on the `template` argument).
+In that case, you can use the `gridTemplate()` function in a similar way to `registerTemplate()`, but assign it to an R object (or invoke it directly on the `template` argument).
 ``` r
-templateObject <- makeTemplate("grid",
+templateObject <- gridTemplate("grid",
   areas = list(
     default = c(
       "area1 area1 area1",

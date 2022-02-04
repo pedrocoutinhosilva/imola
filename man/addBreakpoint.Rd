@@ -2,14 +2,14 @@
 % Please edit documentation in R/breakpoints.R
 \name{addBreakpoint}
 \alias{addBreakpoint}
-\title{Adds a breakpoint to a breakpoint system object.}
+\title{Add a breakpoint to a breakpoint system}
 \usage{
 addBreakpoint(system, breakpoint)
 }
 \arguments{
-\item{system}{A breakpoint system object generated with breakpointSystem().}
+\item{system}{A breakpoint system object created with \link{breakpointSystem}.}
 
-\item{breakpoint}{A valid breakpoint generated with breakpoint().}
+\item{breakpoint}{A breakpoint created with \link{breakpoint}.}
 }
 \value{
 A breakpoint system object.
@@ -17,4 +17,5 @@ A breakpoint system object.
 \description{
 Adds a breakpoint to a breakpoint system object.
 }
+\keyword{breakpoint}
 \keyword{breakpoints}

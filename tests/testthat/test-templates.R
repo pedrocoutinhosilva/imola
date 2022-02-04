@@ -17,13 +17,13 @@ test_that("registerTemplate registers a new template in the options", {
   })
 })
 
-test_that("makeTemplate retuns a valid template object", {
-  expect_snapshot(makeTemplate("flex", direction = "row"))
+test_that("gridTemplate retuns a valid template object", {
+  expect_snapshot(gridTemplate("flex", direction = "row"))
 })
 
-test_that("makeTemplate exports a fiel template when requested", {
+test_that("gridTemplate exports a fiel template when requested", {
   expect_true({
-    makeTemplate("flex", direction = "row", export = paste0(tempdir(), "/test.yaml"))
+    gridTemplate("flex", direction = "row", export = paste0(tempdir(), "/test.yaml"))
     file.exists(paste0(tempdir(), "/test.yaml"))
   })
 })
@@ -43,11 +43,11 @@ test_that("applyTemplate applies an existing template sucessully to a list of at
 })
 
 test_that("applyTemplate applies an existing template sucessully using default values when needed", {
-  expect_snapshot(applyTemplate(list(), makeTemplate("flex", direction = "row"), list(direction = "column"), "flex"))
+  expect_snapshot(applyTemplate(list(), gridTemplate("flex", direction = "row"), list(direction = "column"), "flex"))
 })
 
 test_that("applyTemplate errors out correctly", {
   expect_error(applyTemplate(list(), "two-three-alternate", list(), "grid"))
   expect_error(applyTemplate(list(), "error-template", list(), "flex"))
-  expect_error(applyTemplate(list(), makeTemplate("flex", direction = "row"), list(direction = "column"), "grid"))
+  expect_error(applyTemplate(list(), gridTemplate("flex", direction = "row"), list(direction = "column"), "grid"))
 })

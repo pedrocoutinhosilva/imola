@@ -1,4 +1,4 @@
-# test utils functions
+# processContent works when no areas are given
 
     Code
       processContent(list(`area-1` = div(), `area-2` = div()), NULL)
@@ -10,7 +10,7 @@
       <div></div>
       
 
----
+# processContent works when no areas are empty
 
     Code
       processContent(list(`area-1` = div(), `area-2` = div()), c())
@@ -22,7 +22,7 @@
       <div></div>
       
 
----
+# processContent works when only some areas are given
 
     Code
       processContent(list(`area-1` = div(), `area-2` = div()), c("area-1"))
@@ -34,7 +34,7 @@
       <div></div>
       
 
----
+# processContent works when only all areas are given
 
     Code
       processContent(list(`area-1` = div(), `area-2` = div()), c("area-1", "area-2"))
@@ -46,7 +46,7 @@
       <div class="area-2"></div>
       
 
----
+# readSettingsFile loads a file successfully
 
     Code
       readSettingsFile("config")
@@ -93,7 +93,7 @@
       
       $string_templates$messages
       $string_templates$messages$wrong_template_type
-      [1] " Given template has the wrong type for the panel. Expected {{type}} but provided template is {{template_type}}. (Have you used makeTemplate() to create your template?) "
+      [1] " Given template has the wrong type for the panel. Expected {{type}} but provided template is {{template_type}}. (Have you used gridTemplate() to create your template?) "
       
       $string_templates$messages$missing_template
       [1] " The grid template {{template}} for {{type}} does not exist. Check listTemplates() to see available templates. (Is the template you're looking for registered for {{type}} panels?) "

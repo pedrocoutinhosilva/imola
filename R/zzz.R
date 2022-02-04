@@ -18,13 +18,13 @@ if (getRversion() >= "2.15.1")  utils::globalVariables(c("."))
 
     breakpoint_systems[[system$name]] <- system
   }
-  options(imola.breakpoints = breakpoint_systems)
+  options(imola.breakpoint.systems = breakpoint_systems)
 
 
 
   # Default mediarules breakpoints (Based on bootstrap rules)
   default_system <- getOption("imola.settings")$default_system
-  options(imola.mediarules = getOption("imola.breakpoints")[[default_system]])
+  options(imola.mediarules = getOption("imola.breakpoint.systems")[[default_system]])
 
 
 

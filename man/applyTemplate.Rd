@@ -2,10 +2,7 @@
 % Please edit documentation in R/templates.R
 \name{applyTemplate}
 \alias{applyTemplate}
-\title{Merges a set of attributes with a given template. To avoid redundanct
-attributes being added to the final list, a list of default values (based
-of the specific panel creation callback formals) is used to validate the
-need of the argument value in the final list.}
+\title{Apply a template to a attribute list}
 \usage{
 applyTemplate(attributes, template, defaults, type)
 }
@@ -13,10 +10,9 @@ applyTemplate(attributes, template, defaults, type)
 \item{attributes}{The manually given attribute values that will take priority
 during the merge.}
 
-\item{template}{The name of the template to merge, or the resulting value
-from using makeTemplate() to generate a template object.}
+\item{template}{The name of the template to merge, or a template object.}
 
-\item{defaults}{The default values of the grid callback.}
+\item{defaults}{Default attribute values to ignore from attributes.}
 
 \item{type}{The type of css grid of the template.}
 }
@@ -25,9 +21,9 @@ A named list of css attributes that can be used to generate a html
 element style rules of the given type.
 }
 \description{
-Merges a set of attributes with a given template. To avoid redundanct
+Merges a set of attributes with a given template. To avoid redundant
 attributes being added to the final list, a list of default values (based
 of the specific panel creation callback formals) is used to validate the
-need of the argument value in the final list.
+need of a argument value in the final list.
 }
 \keyword{templates}

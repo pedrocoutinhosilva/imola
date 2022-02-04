@@ -2,7 +2,7 @@
 % Please edit documentation in R/grid.R
 \name{gridPanel}
 \alias{gridPanel}
-\title{Create a panel with a CSS grid layout}
+\title{Create a css grid based HTML tag}
 \usage{
 gridPanel(
   ...,
@@ -19,119 +19,121 @@ gridPanel(
 )
 }
 \arguments{
-\item{...}{Elements to include within the panel. If areas are used, named
-named arguments using the grid area name will be added to that grid area.
-If no named arguments or areas are used, non attribute elements will be
-added to existing grid cells based on their order.}
+\item{...}{Tag attributes (named arguments) and child elements (unnamed
+arguments or with names used in areas).
 
-\item{template}{The name of the template to use as a base for the grid, or
-the resulting value from using makeTemplate() to generate a template
-object. See listTemplates() and registerTemplate() for more information.}
+Named arguments are treated as additional html attribute
+values to the parent tag, unless that name is used in the areas attribute
+as a grid area name.
+
+Child elements may include any combination of other tags objects, \link{HTML}
+strings, and \link{htmlDependency}s.}
+
+\item{template}{The name of a registered template to use as a base for the
+grid, or a template object from \link{gridTemplate}.}
 
 \item{areas}{A list of vectors with area names, or a vector or strings
 representing each row of the grid. Each element should contain
-the names, per row, of each area of the grid. Expected values follow the
-convension for the grid-template-areas css attribute.
-for example c("area-1 area-1", "area-2 area-3") and
-list(c("area-1", "area-1"), c(area-2", "area-3")) are both valid
+the names, per row, of each area of the grid.
+
+Expected values follow the
+convension for the \code{grid-template-areas} css attribute.
+
+for example \code{c("area-1 area-1", "area-2 area-3")} and
+\verb{list(c("area-1", "area-1"), c(area-2", "area-3"))} are both valid
 representations of a 2x2 grid with 3 named areas.
-If using breakpoints, a named list of valid values where each name is a
-valid breakpoint can be used as well.
-For example list( default = c("area-1", "area-2"),
-xs = list(c("area-1"), c("area-2"))) would be a valid value
-for breakpoints}
+
+Supports breakpoints.}
 
 \item{rows}{A string of css valid sizes separated by a space. or a vector of
-sizes. For example both "1fr 2fr" or c("1fr", "2fr") are valid
+sizes. For example both \code{"1fr 2fr"} or \code{c("1fr", "2fr")} are valid
 representations of the same 2 rows grid sizes.
-Follows the convension for the grid-template-rows css attribute.
+
+Follows the convension for the \code{grid-template-rows} css attribute.
+
 If not provided the existing space will be split equally acording to the
 areas defined in areas.
-Supports named list for breakpoints.}
+
+Supports breakpoints.}
 
 \item{columns}{A string of css valid sizes separated by a space. or a vector
-of sizes. For example both "1fr 2fr" or c("1fr", "2fr") are valid
+of sizes. For example both \code{"1fr 2fr"} or \code{c("1fr", "2fr") }are valid
 representations of the same 2 columns grid sizes.
-Follows the convension for the grid-template-columns css attribute.
+
+Follows the convension for the \code{grid-template-columns} css attribute.
+
 If not provided the existing space will be split equally acording to the
 areas defined in areas.
-Supports named list for breakpoints.}
 
-\item{gap}{The space (in a valid css size) between each grid cell.
-Supports named list for breakpoints.}
+Supports breakpoints.}
 
-\item{align_items}{The cell behavior according to the align-items css
+\item{gap}{The space between elements in the panel. Controls both the
+space between rows and columns.
+
+Accepts a css valid value, or 2 values separated by a space (if using
+diferent values for row and column spacing).
+
+Supports breakpoints.}
+
+\item{align_items}{The cell behavior according to the \code{align-items} css
 property. Aligns grid items along the block (column) axis.
 
 Accepts a valid css \code{align-items} value
-(\code{start} | \code{end} | \code{center} | \code{stretch})
+(\code{start} | \code{end} | \code{center} | \code{stretch}).
 
-By default the \code{stretch} value is used. Supports breakpoints.}
+Supports breakpoints.}
 
-\item{justify_items}{The cell behavior according to the justify-items css
+\item{justify_items}{The cell behavior according to the \code{justify-items} css
 property. Aligns grid items along the inline (row) axis.
 
 Accepts a valid css \code{justify-items} value
-(\code{start} | \code{end} | \code{center} | \code{stretch})
+(\code{start} | \code{end} | \code{center} | \code{stretch}).
 
-By default the \code{stretch} value is used. Supports breakpoints.}
+Supports breakpoints.}
 
 \item{auto_fill}{Should the panel stretch to fit its parent size (TRUE), or
 should its size be based on its children element sizes (FALSE).
-Supports named list for breakpoints.}
 
-\item{breakpoint_system}{Optional Media breakpoints to use. Will default to
-the current active breakpoint system.}
+Supports breakpoints.}
 
-\item{id}{The html id of the panel container.}
+\item{breakpoint_system}{Breakpoint system to use.}
+
+\item{id}{The parent element id.}
 }
 \value{
-An HTML tagList.
+An HTML \link{tagList}.
 }
 \description{
-Create a panel with a CSS grid layout
+Creates a HTML tag and automatically generates css style rules based on css
+grid, depending on the given arguments. Functionality acts as a way to
+generate css grid based HTML containers directly from R without the need
+to write any additional css rules directly.
 }
 \details{
-Behaves similar to normal HTML div tags, but simplifies
-the way css grid can be used via the arguments area, rows and columns.
-Only areas is required, when not used rows and columns will simply split
-the existing space equaly between each row / column.
-Internally the function creates the styles for the grid positions by
-generating the rules for positioning the children via their classes.
-To position a child element simply make sure that it includes a class
-with the same name as the named area.
+Behaves similar to a normal HTML tag, but provides helping
+arguments that simplify the way grid css can be created from shiny.
 }
 \note{
-When creating responsive layouts based on media rules, for arguments
-a named list can be passed instead of a single value. The names in the list
-can be any of the registered breakpoints available in getBreakpointSystem().
-Breakpoints can also be modified with the registerBreakpoint() and
-unregisterBreakpoint() functions. Arguments that allow this are: areas |
-rows | columns | gap.
+When creating responsive layouts based on css media rules, some
+arguments allow a named list can be passed instead of a single value.
+
+The names in that list can be any of the breakpoints available in
+the \code{breakpoint_system} argument.
+
+It is recommended to define the breakpoint system for the application
+globally before UI definitions, but the \code{breakpoint_system} in panel
+functions allows for more flexibility when reusing components
+from other projects.
 
 See \url{https://css-tricks.com/snippets/css/complete-guide-grid/}
-for additional details on using css grids
-}
-\examples{
-if (interactive()) {
-library(imola)
-gridPanel(
-  areas = c("area-1 area-1", "area-2 area-3"),
-  rows = "1fr 2fr",
-  columns = "2fr 100px",
-  div(class = "area-1"),
-  div(class = "area-2"),
-  div(class = "area-3")
-)
-}
+for additional details on using css grids.
 
+For a full list of valid HTML attributes check visit
+\url{https://www.w3schools.com/tags/ref_attributes.asp}.
 }
 \seealso{
-\code{\link[=gridPage]{gridPage()}}
-
-Other grid functions: 
-\code{\link{gridPage}()}
+\link{gridPage}
 }
-\concept{grid functions}
+\concept{grid}
 \keyword{grid}
 \keyword{panel}

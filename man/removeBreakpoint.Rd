@@ -2,14 +2,14 @@
 % Please edit documentation in R/breakpoints.R
 \name{removeBreakpoint}
 \alias{removeBreakpoint}
-\title{Removes a breakpoint from a breakpoint system object by name.}
+\title{Remove a breakpoint from a breakpoint system}
 \usage{
-removeBreakpoint(system, breakpoint)
+removeBreakpoint(system, name)
 }
 \arguments{
-\item{system}{A breakpoint system object generated with breakpointSystem().}
+\item{system}{A breakpoint system object created with \link{breakpointSystem}.}
 
-\item{breakpoint}{The name of a breakpoint in the given system.}
+\item{name}{A string with the name of a breakpoint in the given system.}
 }
 \value{
 A breakpoint system object.
@@ -17,4 +17,5 @@ A breakpoint system object.
 \description{
 Removes a breakpoint from a breakpoint system object by name.
 }
+\keyword{breakpoint}
 \keyword{breakpoints}

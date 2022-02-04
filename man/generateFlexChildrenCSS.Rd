@@ -2,27 +2,26 @@
 % Please edit documentation in R/generators.R
 \name{generateFlexChildrenCSS}
 \alias{generateFlexChildrenCSS}
-\title{Generates all required css for a set of children attributes,
-for a flex wrapper.}
+\title{Creates styles for the children of a css flex element.}
 \usage{
-generateFlexChildrenCSS(attributes, id, number_children, breakpoint_system)
+generateFlexChildrenCSS(attributes, id, number_children, system)
 }
 \arguments{
-\item{attributes}{Normalized attribute list to generate css from.}
+\item{attributes}{Normalized attribute list.}
 
 \item{id}{The id of the parent wrapper element.}
 
 \item{number_children}{Number of child elements in the wrapper. Required to
 generate rules for flex elements.}
 
-\item{breakpoint_system}{Media breakpoints to use.}
+\item{system}{A breakpoint system object to use.}
 }
 \value{
-A string with all placeholders replaced.
+A vector of valid css strings.
 }
 \description{
-Generates all required css for a set of children attributes,
-for a flex wrapper.
+Creates css required to position each child
+element into the flex element.
 }
 \keyword{generators}
 \keyword{internal}

@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 ## Introduction
 If you're been around web development since the 90s, you might remember how different web design used to look.
 
-Solutions were often complicated, hacky and unintuitive work arounds were common place, and often considered best practices.
+Solutions were often not intuitive, over complicated, with hacky work arounds often considered best practices.
 
 As the web evolved, so did the layout (and styling) options available, maturing and changing to make what used to be convoluted solutions into simpler and more straightforward approaches.
 
@@ -43,7 +43,7 @@ Early HTML specs state that "The elements within the BODY element are in the ord
 ---
 
 ## HTML Tables
-In 1991 ViolaWWW grew into the most sophisticated of the early Web browsers. It is claimed to have been the first browser with support for style sheets, tables, and nest-able HTML elements.
+In 1991 `ViolaWWW` grew into the most sophisticated of the early Web browsers. It is claimed to have been the first browser with support for style sheets, tables, and nest-able HTML elements.
 Followed in 1993 a proposal was made for "columns" in a presentation language for the web. This proposal did not directly turn into CSS. "The styles defined specify the recommended behaviour of HTML objects in terms of: .... page layout ... column ....".
 
 These were the initial works of tables in HMTL, and finally in 1997, HTML 3.2 was finally released as a W3C Recommendation. It stated that tables "can be used to markup tabular material or for layout purposes"... And oh boy did people took it literally. Tables became the base for most web pages and considered the go to when structuring content. It was a wild time of invisible gifs used for spacing, convoluted markup and many more terrifying things.
@@ -125,7 +125,7 @@ This was the true first CSS property to be 100% developed to be focused on layou
 
 It is specially powerful for page layouts that can defined primarily in terms of either columns or rows. for instance, if we want to align a few elements in a single row, display: flex; provide us with a modern and easy way to do so.
 
-Not only that, flex has built in control of other properties such as alignment and viual order of the elements without having to change the HTML markup directly. As HTML becomes more and more semantic based, specially with the release of HTML 5, this becomes even more important since it allows us to fully decomple the presentation layer from the content.
+Not only that, flex has built in control of other properties such as alignment and visual order of the elements without having to change the HTML markup directly. As HTML becomes more and more semantic based, specially with the release of HTML 5, this becomes even more important since it allows us to fully decomple the presentation layer from the content.
 
 ```html
 <!-- html -->

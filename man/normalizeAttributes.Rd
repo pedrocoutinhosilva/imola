@@ -2,18 +2,19 @@
 % Please edit documentation in R/normalize.R
 \name{normalizeAttributes}
 \alias{normalizeAttributes}
-\title{Applies the normalizeAttribute() function to a full attribute list.}
+\title{Mormalize a list of attributes}
 \usage{
 normalizeAttributes(attributes)
 }
 \arguments{
-\item{attributes}{The values to process}
+\item{attributes}{A named list of attribute values.}
 }
 \value{
 A named list.
 }
 \description{
-Applies the normalizeAttribute() function to a full attribute list.
+Iterates through the list of attributes and applies \link{normalizeAttribute} to
+each of them.
 }
 \keyword{internal}
 \keyword{normalizer}

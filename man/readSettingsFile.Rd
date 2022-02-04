@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{readSettingsFile}
 \alias{readSettingsFile}
-\title{Reads the content of a YAML settings file from the package directory.}
+\title{Reads the content of a yaml settings file from the package directory.}
 \usage{
 readSettingsFile(file)
 }
@@ -11,10 +11,10 @@ readSettingsFile(file)
 installation directory and include diferent settings and options.}
 }
 \value{
-A list object containing the content of the settings YAML file
+A list object containing the content of the settings yaml file
 }
 \description{
-Reads the content of a YAML settings file from the package directory.
+Reads the content of a yaml settings file from the package directory.
 }
 \keyword{internal}
 \keyword{utils}

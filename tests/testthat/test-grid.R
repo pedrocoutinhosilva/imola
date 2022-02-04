@@ -202,8 +202,8 @@ test_that("UI generation tests", {
 
   # Tests combinations of columns rows gaps test cases
   lapply(names(test_cases$gap), function(case_gap) {
-    case_rows = "three-rows-string"
-    case_columns = "three-columns-string"
+    case_rows <- "three-rows-string"
+    case_columns <- "three-columns-string"
 
     test_snapshots(
       paste0("gridPanel-", case_columns, "-", case_rows, "-", case_gap),
