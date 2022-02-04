@@ -77,7 +77,7 @@ Supports breakpoints.}
 space between rows and columns.
 
 Accepts a css valid value, or 2 values separated by a space (if using
-diferent values for row and column spacing).
+different values for row and column spacing).
 
 Supports breakpoints.}
 

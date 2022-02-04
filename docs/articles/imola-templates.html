@@ -106,8 +106,8 @@
 <h2 id="registering-templates">Registering templates<a class="anchor" aria-label="anchor" href="#registering-templates"></a>
 </h2>
 <p>In order to save a template you can use the <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> function. This function requires a ‘type’ of template (grid or flex), a name to identify the template later, any named arguments that can be passed to the gridPanel or flexPanel function (depending on the type) and, optionally, a breakpoint_system to use if you plan on adding any responsive attributes to the template (If no breakpoint_system is given, the current active system is used to register the template).</p>
-<p>After a template being registered, you can then simple fill in the <code>template</code> argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be orewriten by the named argument on the function call.</p>
-<p>Lets say we would like to save our previous areas as a template, and use it. We could use registerTemplate():</p>
+<p>After a template being registered, you can then simple fill in the <code>template</code> argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be overwritten by the named argument on the function call.</p>
+<p>Lets say we would like to save our previous areas as a template, and use it. We could use <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/registerTemplate.html">registerTemplate</a></span><span class="op">(</span><span class="st">"grid"</span>, <span class="st">"mytemplate"</span>,
   areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
@@ -129,17 +129,17 @@
 <span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="st">"somePanel"</span>,
   template <span class="op">=</span> <span class="st">"mytemplate"</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 3 content"</span><span class="op">)</span>,
+  area1 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"area 1 content"</span><span class="op">)</span>,
+  area2 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"area 2 content"</span><span class="op">)</span>,
+  area3 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"area 3 content"</span><span class="op">)</span>,
 <span class="op">)</span>
 
 <span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="st">"anotherPanel"</span>,
   template <span class="op">=</span> <span class="st">"mytemplate"</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 3 content"</span><span class="op">)</span>,
+  area1 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"different area 1 content"</span><span class="op">)</span>,
+  area2 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"different area 2 content"</span><span class="op">)</span>,
+  area3 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"different area 3 content"</span><span class="op">)</span>,
 <span class="op">)</span></code></pre></div>
 <p>You can register as many templates as you want, but keep in mind that each type + name combo must be unique. You can also remove templates using <code><a href="../reference/unregisterTemplate.html">unregisterTemplate()</a></code> if needed. For a full list of registered templates, you can use <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
 <p>By default imola also includes some ready to use templates these will also be listed under <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
@@ -147,7 +147,7 @@
 <div class="section level2">
 <h2 id="template-objects">Template Objects<a class="anchor" aria-label="anchor" href="#template-objects"></a>
 </h2>
-<p>You can also create templates as R objects and feed that object to the <code>template</code> argument instead, this can be useful if you do not want to make a template globally accesible (For example for usage only in a single module, or for generating this programatically based on other factors).</p>
+<p>You can also create templates as R objects and feed that object to the <code>template</code> argument instead, this can be useful if you do not want to make a template globally accessible (For example for usage only in a single module, or for generating this programmatically based on other factors).</p>
 <p>In that case, you can use the <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> function in a similar way to <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>, but assign it to an R object (or invoke it directly on the <code>template</code> argument).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">templateObject</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/gridTemplate.html">gridTemplate</a></span><span class="op">(</span><span class="st">"grid"</span>,
@@ -169,17 +169,17 @@
 <span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="st">"somePanel"</span>,
   template <span class="op">=</span> <span class="va">templateObject</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 3 content"</span><span class="op">)</span>,
+  area1 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"area 1 content"</span><span class="op">)</span>,
+  area2 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"area 2 content"</span><span class="op">)</span>,
+  area3 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"area 3 content"</span><span class="op">)</span>,
 <span class="op">)</span>
 
 <span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="st">"anotherPanel"</span>,
   template <span class="op">=</span> <span class="va">templateObject</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 3 content"</span><span class="op">)</span>,
+  area1 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"different area 1 content"</span><span class="op">)</span>,
+  area2 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"different area 2 content"</span><span class="op">)</span>,
+  area3 <span class="op">=</span> <span class="fu">div</span><span class="op">(</span><span class="st">"different area 3 content"</span><span class="op">)</span>,
 <span class="op">)</span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -16,7 +16,7 @@ match the browser window height.}
 
 \item{dependency}{A set of web dependencies. This value can be a
 \link{htmlDependency}, for example the shiny bootstrap dependency (default
-value) or a \link{tagList} with diferent dependencies.}
+value) or a \link{tagList} with different dependencies.}
 }
 \value{
 A UI definition that can be passed to the \link{shinyUI} function.

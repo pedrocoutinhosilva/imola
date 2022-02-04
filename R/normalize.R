@@ -1,4 +1,4 @@
-#' Mormalize a list of attributes
+#' Normalize a list of attributes
 #'
 #' @description
 #' Iterates through the list of attributes and applies [normalizeAttribute] to
@@ -16,7 +16,7 @@ normalizeAttributes <- function(attributes) {
   attributes
 }
 
-#' Mormalize a attribute
+#' Normalize a attribute
 #'
 #' @description
 #' Converts the values of an attribute passed to a grid or flex function into

@@ -54,7 +54,7 @@
 #'   space between rows and columns.
 #'
 #'   Accepts a css valid value, or 2 values separated by a space (if using
-#'   diferent values for row and column spacing).
+#'   different values for row and column spacing).
 #'
 #'   Supports breakpoints.
 #' @param flex A vector of valid css 'flex' values.
@@ -220,7 +220,7 @@ flexPanel <- function(...,
 #'   match the browser window height.
 #' @param dependency A set of web dependencies. This value can be a
 #'   [htmlDependency], for example the shiny bootstrap dependency (default
-#'   value) or a [tagList] with diferent dependencies.
+#'   value) or a [tagList] with different dependencies.
 #'
 #' @note See
 #'   \url{https://css-tricks.com/snippets/css/a-guide-to-flexbox/}

@@ -105,7 +105,7 @@
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <p>If you’re been around web development since the 90s, you might remember how different web design used to look.</p>
-<p>Solutions were often complicated, hacky and unintuitive work arounds were common place, and often considered best practices.</p>
+<p>Solutions were often not intuitive, over complicated, with hacky workarounds often considered best practices.</p>
 <p>As the web evolved, so did the layout (and styling) options available, maturing and changing to make what used to be convoluted solutions into simpler and more straightforward approaches.</p>
 <p>So how was life before CSS we know now came to be? How were page layouts setup? Why is grid and flexbox considered so much better than the previous solutions, and why are both currently used side by side instead of one over the other?</p>
 <p>Join me for a trip though memory lane as we look into how web layouts evolved since the beginning of the web into the current solutions we now use.</p>
@@ -114,9 +114,9 @@
 <div class="section level2">
 <h2 id="the-early-days-of-html">The early days of HTML<a class="anchor" aria-label="anchor" href="#the-early-days-of-html"></a>
 </h2>
-<p>The original proposals for HTML started in 1989, and lasted until about February 1997, the practical realisation of HTML was about presentation on screens. This included published recommendations, browsers &amp; development tools, and actual web sites.</p>
+<p>The original proposals for HTML started in 1989, and lasted until about February 1997, the practical realization of HTML was about presentation on screens. This included published recommendations, browsers &amp; development tools, and actual web sites.</p>
 <p>At this point web developers where mostly focused on document sharing, so elements focused much more on document requirements such as headers, fonts and paragraphs. In 1993, some style sheet control of layout was proposed, but it would still take some time for it to become mainstream.</p>
-<p>Around this time (as well as during the reign of tables for layout purposes) the HTML document structure dictated the page layout, and the though that you would need more that sequencial content, was barely even considered.</p>
+<p>Around this time (as well as during the reign of tables for layout purposes) the HTML document structure dictated the page layout, and the though that you would need more that sequential content, was barely even considered.</p>
 <p>Early HTML specs state that “The elements within the BODY element are in the order in which they should be presented to the reader”.</p>
 <p><img src="figures/nostalgia.jpg"></p>
 <hr>
@@ -124,8 +124,8 @@
 <div class="section level2">
 <h2 id="html-tables">HTML Tables<a class="anchor" aria-label="anchor" href="#html-tables"></a>
 </h2>
-<p>In 1991 ViolaWWW grew into the most sophisticated of the early Web browsers. It is claimed to have been the first browser with support for style sheets, tables, and nest-able HTML elements. Followed in 1993 a proposal was made for “columns” in a presentation language for the web. This proposal did not directly turn into CSS. “The styles defined specify the recommended behaviour of HTML objects in terms of: …. page layout … column ….”.</p>
-<p>These were the initial works of tables in HMTL, and finally in 1997, HTML 3.2 was finally released as a W3C Recommendation. It stated that tables “can be used to markup tabular material or for layout purposes”… And oh boy did people took it literally. Tables became the base for most web pages and considered the go to when structuring content. It was a wild time of invisible gifs used for spacing, convoluted markup and many more terrifying things.</p>
+<p>In 1991 <code>ViolaWWW</code> grew into the most sophisticated of the early Web browsers. It is claimed to have been the first browser with support for style sheets, tables, and nest-able HTML elements. Followed in 1993 a proposal was made for “columns” in a presentation language for the web. This proposal did not directly turn into CSS. “The styles defined specify the recommended behavior of HTML objects in terms of: …. page layout … column ….”.</p>
+<p>These were the initial works of tables in HTML, and finally in 1997, HTML 3.2 was finally released as a W3C Recommendation. It stated that tables “can be used to markup tabular material or for layout purposes”… And oh boy did people took it literally. Tables became the base for most web pages and considered the go to when structuring content. It was a wild time of invisible gifs used for spacing, convoluted markup and many more terrifying things.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tr&gt;</span></span>
@@ -183,7 +183,7 @@
 <h2 id="floats-and-the-first-layout-frameworks">Floats and the first layout frameworks<a class="anchor" aria-label="anchor" href="#floats-and-the-first-layout-frameworks"></a>
 </h2>
 <p>Eventually a new CSS property made its way to the top, <code>float</code>. The idea of float was simply, you have an element and need text to wrap around it, float that element and you get exactly that! Simple right? Well…</p>
-<p>If you couple this with fixed size for each floated element, a large dose of space clearing techniques, and the CSS position property one could achieve A LOT. This was the conclusion that some clever developers reached in the early 2000’s, allowing multi-column layouts to be created and becoming the go to for these times. Eventually even frameworks started poping out that would hide these hacks behind a css classes and HTML structures, making life even easier. Bootstrap 3 is a great example of such framework that, even now, can be found in millions of websites (even though its newest iteration, bootstrap 4, no longer uses this approach and instead relies on flexbox for its layout system).</p>
+<p>If you couple this with fixed size for each floated element, a large dose of space clearing techniques, and the CSS position property one could achieve A LOT. This was the conclusion that some clever developers reached in the early 2000’s, allowing multi-column layouts to be created and becoming the go to for these times. Eventually frameworks started gaining popularity that would hide these hacks behind a css classes and HTML structures, making life even easier. Bootstrap 3 is a great example of such framework that, even now, can be found in millions of websites (even though its newest iteration, bootstrap 4, no longer uses this approach and instead relies on flexbox for its layout system).</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;main&gt;</span>Main article<span class="kw">&lt;/main&gt;</span></span>
@@ -243,7 +243,7 @@
 <p>The introduction of the display: flex; property around 2012 was a real step forward, solving many existing layout problems and making web developers and designers generally quite happy.</p>
 <p>This was the true first CSS property to be 100% developed to be focused on layouts, making its way into modern web development quite fast.</p>
 <p>It is specially powerful for page layouts that can defined primarily in terms of either columns or rows. for instance, if we want to align a few elements in a single row, display: flex; provide us with a modern and easy way to do so.</p>
-<p>Not only that, flex has built in control of other properties such as alignment and viual order of the elements without having to change the HTML markup directly. As HTML becomes more and more semantic based, specially with the release of HTML 5, this becomes even more important since it allows us to fully decomple the presentation layer from the content.</p>
+<p>Not only that, flex has built in control of other properties such as alignment and visual order of the elements without having to change the HTML markup directly. As HTML becomes more and more semantic based, specially with the release of HTML 5, this becomes even more important since it allows us to fully decouple the presentation layer from the content.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- html --&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"main"</span><span class="kw">&gt;</span></span>

@@ -104,8 +104,8 @@
 <div class="section level2">
 <h2 id="what-is-a-breakpoint">What is a breakpoint?<a class="anchor" aria-label="anchor" href="#what-is-a-breakpoint"></a>
 </h2>
-<p>When designing for the web, it is important to keep in mind what diferent users will reach you in diferent devices with diferent screen sizes and orientations.</p>
-<p>In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scrollbars to overly long line lengths, and poor use of space.</p>
+<p>When designing for the web, it is important to keep in mind what different users will reach you in different devices with different screen sizes and orientations.</p>
+<p>In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scroll bars to overly long line lengths, and poor use of space.</p>
 <p>As more diverse screen sizes became available, the concept of responsive web design (RWD) appeared, a set of practices that allows web pages to alter their layout and appearance to suit different screen widths, resolutions, etc.</p>
 </div>
 <div class="section level2">
@@ -127,7 +127,7 @@
 <div class="section level2">
 <h2 id="breakpoints">Breakpoints<a class="anchor" aria-label="anchor" href="#breakpoints"></a>
 </h2>
-<p>By defining a set “points” where these Media Queries will apply its diferent rules, we are effectively creating breakpoints where the styling and layout of the page changes. Many frontend frameworks reuse a set of tested and tried breakpoints, making that set of breakpoints its <code>breakpoint system</code>.</p>
+<p>By defining a set “points” where these Media Queries will apply its different rules, we are effectively creating breakpoints where the styling and layout of the page changes. Many frontend frameworks reuse a set of tested and tried breakpoints, making that set of breakpoints its <code>breakpoint system</code>.</p>
 <p>Example bootstrap 5 breakpoints: - xs: Screen width from 0 to 576px - sm: Screen width above 576px - md: Screen width above 768px - lg: Screen width above 992px - xl: Screen width above 1200px - xxl: Screen width above 1400px</p>
 <p>Keep in mind that users expect any website to be perfectly complementary with every single device they own – desktop, tablet, or mobile. If a website’s responsive design does not align with a certain device resolution (especially a commonly used device), the site is at risk of missing out on a segment of its target audience. Avoid this by investing time and research into defining breakpoints at the beginning of a project.</p>
 <p>The amount of effort that goes into defining responsive breakpoints is directly proportional to the experience of the end-user.</p>
@@ -135,8 +135,8 @@
 <div class="section level2">
 <h2 id="breakpoints-in-shiny">Breakpoints in Shiny<a class="anchor" aria-label="anchor" href="#breakpoints-in-shiny"></a>
 </h2>
-<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> function. <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
-<p>While the <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow()</a></code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. For complex enough layouts, you might even need to write additional CSS to add new behavior or specific elements or screen sizes.</p>
+<p>Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the <code>fluidRow()</code> function. <code>fluidRow()</code> will trigger layout changes to your <code>columns</code> at specific screen sizes, based on <a href="https://shiny.rstudio.com/articles/layout-guide.html" class="external-link">bootstrap 3</a> breakpoints (The base CSS framework in shiny).</p>
+<p>While the <code>fluidRow()</code> solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. For complex enough layouts, you might even need to write additional CSS to add new behavior or specific elements or screen sizes.</p>
 </div>
 <div class="section level2">
 <h2 id="breakpoints-with-imola">Breakpoints with imola<a class="anchor" aria-label="anchor" href="#breakpoints-with-imola"></a>
@@ -183,7 +183,7 @@
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or explore the full details of the system with</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">getBreakpointSystem</span>()</span></code></pre></div>
-<p>If you would like to switch to a diferent breakpoint system, imola comes with a few diferent built in systems based on popular css frameworks:</p>
+<p>If you would like to switch to a different breakpoint system, imola comes with a few different built in systems based on popular css frameworks:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">getOption</span>(<span class="st">"imola.breakpoint.systems"</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"bootstrap3"</span> <span class="st">"bootstrap5"</span> <span class="st">"bulma"</span>      <span class="st">"foundation"</span></span></code></pre></div>
 <p>Each system has its own breakpoint naming, based on the framework they originate in:</p>
@@ -213,7 +213,7 @@
 </h2>
 <ul>
 <li><p>Develop for mobile-first – By developing and designing mobile-first content, the developer and designer receive multiple benefits. It is more difficult to simplify a desktop experience for mobile screens than it is to expand a mobile view for desktop screens. When a design is mobile-first, developers address what is most necessary, and can then make additions to match the preferences of desktop users.</p></li>
-<li><p>Always keep major breakpoints in mind. THis usually means common screen sizes (480px, 768px, 1024px, and 1280px).</p></li>
+<li><p>Always keep major breakpoints in mind. This usually means common screen sizes (480px, 768px, 1024px, and 1280px).</p></li>
 <li><p>Before choosing major breakpoints, use website analytics to discern the most commonly used devices from which your site is accessed. Add breakpoints for those screen sizes first.</p></li>
 <li><p>An intelligent method is to hide or display elements at certain breakpoints. If necessary, switch content or features at breakpoints. For example, consider implementing off-canvas navigation for smaller screens and a typical navigation bar for larger ones.</p></li>
 <li><p>Don’t define standard breakpoints for responsive design on the basis of device size. The primary objective of responsive design breakpoints is to display content in the best possible way. So, let the content be the guide. Add a breakpoint when the content and design requires it.</p></li>

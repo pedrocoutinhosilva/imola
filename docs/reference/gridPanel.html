@@ -101,70 +101,66 @@ to write any additional css rules directly.</p>
     <dl><dt>...</dt>
 <dd><p>Tag attributes (named arguments) and child elements (unnamed
 arguments or with names used in areas).</p>
-<p>Named arguments can be used to
-provide additional attribute values to the HTML parent tag. Arguments with
-a <code>NA</code> value are rendered as boolean attributes.</p>
-<p>For a full list of valid HTML attributes check visit
-<a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link">https://www.w3schools.com/tags/ref_attributes.asp</a>.</p>
-<p>Child elements may include any combination of other tags objects, <code><a href="https://rdrr.io/pkg/htmltools/man/HTML.html" class="external-link">HTML()</a></code>,
-strings, and <code>htmlDependency()</code>s.</p></dd>
+<p>Named arguments are treated as additional html attribute
+values to the parent tag, unless that name is used in the areas attribute
+as a grid area name.</p>
+<p>Child elements may include any combination of other tags objects, HTML
+strings, and htmlDependencys.</p></dd>
 <dt>template</dt>
-<dd><p>The name of the template to use as a base for the grid, or
-the resulting value from using gridTemplate() to generate a template
-object. See listTemplates() and registerTemplate() for more information.</p></dd>
+<dd><p>The name of a registered template to use as a base for the
+grid, or a template object from <a href="gridTemplate.html">gridTemplate</a>.</p></dd>
 <dt>areas</dt>
 <dd><p>A list of vectors with area names, or a vector or strings
 representing each row of the grid. Each element should contain
-the names, per row, of each area of the grid. Expected values follow the
-convension for the grid-template-areas css attribute.
-for example c("area-1 area-1", "area-2 area-3") and
-list(c("area-1", "area-1"), c(area-2", "area-3")) are both valid
-representations of a 2x2 grid with 3 named areas.
-If using breakpoints, a named list of valid values where each name is a
-valid breakpoint can be used as well.
-For example list( default = c("area-1", "area-2"),
-xs = list(c("area-1"), c("area-2"))) would be a valid value
-for breakpoints</p></dd>
+the names, per row, of each area of the grid.</p>
+<p>Expected values follow the
+convention for the <code>grid-template-areas</code> css attribute.</p>
+<p>for example <code>c("area-1 area-1", "area-2 area-3")</code> and
+<code>list(c("area-1", "area-1"), c(area-2", "area-3"))</code> are both valid
+representations of a 2x2 grid with 3 named areas.</p>
+<p>Supports breakpoints.</p></dd>
 <dt>rows</dt>
 <dd><p>A string of css valid sizes separated by a space. or a vector of
-sizes. For example both "1fr 2fr" or c("1fr", "2fr") are valid
-representations of the same 2 rows grid sizes.
-Follows the convension for the grid-template-rows css attribute.
-If not provided the existing space will be split equally acording to the
-areas defined in areas.
-Supports named list for breakpoints.</p></dd>
+sizes. For example both <code>"1fr 2fr"</code> or <code>c("1fr", "2fr")</code> are valid
+representations of the same 2 rows grid sizes.</p>
+<p>Follows the convention for the <code>grid-template-rows</code> css attribute.</p>
+<p>If not provided the existing space will be split equally accordingly to the
+areas defined in areas.</p>
+<p>Supports breakpoints.</p></dd>
 <dt>columns</dt>
 <dd><p>A string of css valid sizes separated by a space. or a vector
-of sizes. For example both "1fr 2fr" or c("1fr", "2fr") are valid
-representations of the same 2 columns grid sizes.
-Follows the convension for the grid-template-columns css attribute.
-If not provided the existing space will be split equally acording to the
-areas defined in areas.
-Supports named list for breakpoints.</p></dd>
+of sizes. For example both <code>"1fr 2fr"</code> or <code>c("1fr", "2fr") </code>are valid
+representations of the same 2 columns grid sizes.</p>
+<p>Follows the convention for the <code>grid-template-columns</code> css attribute.</p>
+<p>If not provided the existing space will be split equally accordingly to the
+areas defined in areas.</p>
+<p>Supports breakpoints.</p></dd>
 <dt>gap</dt>
-<dd><p>The space (in a valid css size) between each grid cell.
-Supports named list for breakpoints.</p></dd>
+<dd><p>The space between elements in the panel. Controls both the
+space between rows and columns.</p>
+<p>Accepts a css valid value, or 2 values separated by a space (if using
+different values for row and column spacing).</p>
+<p>Supports breakpoints.</p></dd>
 <dt>align_items</dt>
-<dd><p>The cell behavior according to the align-items css
+<dd><p>The cell behavior according to the <code>align-items</code> css
 property. Aligns grid items along the block (column) axis.</p>
 <p>Accepts a valid css <code>align-items</code> value
-(<code>start</code> | <code>end</code> | <code>center</code> | <code>stretch</code>)</p>
-<p>By default the <code>stretch</code> value is used. Supports breakpoints.</p></dd>
+(<code>start</code> | <code>end</code> | <code>center</code> | <code>stretch</code>).</p>
+<p>Supports breakpoints.</p></dd>
 <dt>justify_items</dt>
-<dd><p>The cell behavior according to the justify-items css
+<dd><p>The cell behavior according to the <code>justify-items</code> css
 property. Aligns grid items along the inline (row) axis.</p>
 <p>Accepts a valid css <code>justify-items</code> value
-(<code>start</code> | <code>end</code> | <code>center</code> | <code>stretch</code>)</p>
-<p>By default the <code>stretch</code> value is used. Supports breakpoints.</p></dd>
+(<code>start</code> | <code>end</code> | <code>center</code> | <code>stretch</code>).</p>
+<p>Supports breakpoints.</p></dd>
 <dt>auto_fill</dt>
 <dd><p>Should the panel stretch to fit its parent size (TRUE), or
-should its size be based on its children element sizes (FALSE).
-Supports named list for breakpoints.</p></dd>
+should its size be based on its children element sizes (FALSE).</p>
+<p>Supports breakpoints.</p></dd>
 <dt>breakpoint_system</dt>
-<dd><p>Optional Media breakpoints to use. Will default to
-the current active breakpoint system.</p></dd>
+<dd><p>Breakpoint system to use.</p></dd>
 <dt>id</dt>
-<dd><p>The html id of the panel container.</p></dd>
+<dd><p>The parent element id.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -172,49 +168,29 @@ the current active breakpoint system.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Behaves similar to normal HTML div tags, but simplifies
-the way css grid can be used via the arguments area, rows and columns.
-Only areas is required, when not used rows and columns will simply split
-the existing space equaly between each row / column.
-Internally the function creates the styles for the grid positions by
-generating the rules for positioning the children via their classes.
-To position a child element simply make sure that it includes a class
-with the same name as the named area.</p>
+    <p>Behaves similar to a normal HTML tag, but provides helping
+arguments that simplify the way grid css can be created from shiny.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>When creating responsive layouts based on media rules, for arguments
-a named list can be passed instead of a single value. The names in the list
-can be any of the registered breakpoints available in getBreakpointSystem().
-Breakpoints can also be modified with the registerBreakpoint() and
-unregisterBreakpoint() functions. Arguments that allow this are: areas |
-rows | columns | gap.</p>
+    <p>When creating responsive layouts based on css media rules, some
+arguments allow a named list can be passed instead of a single value.</p>
+<p>The names in that list can be any of the breakpoints available in
+the <code>breakpoint_system</code> argument.</p>
+<p>It is recommended to define the breakpoint system for the application
+globally before UI definitions, but the <code>breakpoint_system</code> in panel
+functions allows for more flexibility when reusing components
+from other projects.</p>
 <p>See <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="external-link">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
-for additional details on using css grids</p>
+for additional details on using css grids.</p>
+<p>For a full list of valid HTML attributes check visit
+<a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link">https://www.w3schools.com/tags/ref_attributes.asp</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="gridPage.html">gridPage()</a></code></p>
-<p>Other grid functions: 
-<code><a href="gridPage.html">gridPage</a>()</code></p></div>
+    <div class="dont-index"><p><a href="gridPage.html">gridPage</a></p></div>
     </div>
 
-    <div class="section level2">
-    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/pedrocoutinhosilva/imola" class="external-link">imola</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">gridPanel</span><span class="op">(</span></span>
-<span class="r-in">  areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"area-1 area-1"</span>, <span class="st">"area-2 area-3"</span><span class="op">)</span>,</span>
-<span class="r-in">  rows <span class="op">=</span> <span class="st">"1fr 2fr"</span>,</span>
-<span class="r-in">  columns <span class="op">=</span> <span class="st">"2fr 100px"</span>,</span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">"area-1"</span><span class="op">)</span>,</span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">"area-2"</span><span class="op">)</span>,</span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">"area-3"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-in"></span>
-</code></pre></div>
-    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

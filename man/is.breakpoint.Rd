@@ -10,7 +10,7 @@ is.breakpoint(object)
 \item{object}{Any R object.}
 }
 \value{
-TRUE or FALSE depending ig the object is a imola breakpoint.
+TRUE or FALSE depending if the object is a imola breakpoint.
 }
 \description{
 Tests whether the object is an instance of a imola breakpoint.

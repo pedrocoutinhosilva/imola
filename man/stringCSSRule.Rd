@@ -2,19 +2,13 @@
 % Please edit documentation in R/utils.R
 \name{stringCSSRule}
 \alias{stringCSSRule}
-\title{Applies a CSS statement template stored in the package settings. These
-templates use the htmlTemplate format, meaning placeholders are marked
-using the {{placeholder}} convention.
-Each placeholder value should be
-passed as a named argument to the function using the placeholder value
-as a name.
-Used primarily as a shorthand to stringTemplate() for stored templates.}
+\title{Evaluate a css template}
 \usage{
 stringCSSRule(template, ...)
 }
 \arguments{
 \item{template}{The template name to use. Available templates are saved in
-options, under getOption("imola.settings")$string_templates.}
+options, under \code{getOption("imola.settings")$string_templates}.}
 
 \item{...}{Named arguments to use in the template string. All placeholders
 in the template must have a corresponding named argument.}
@@ -24,12 +18,11 @@ A valid CSS string.
 }
 \description{
 Applies a CSS statement template stored in the package settings. These
-templates use the htmlTemplate format, meaning placeholders are marked
+templates use the \link{htmlTemplate} format, meaning placeholders are marked
 using the {{placeholder}} convention.
-Each placeholder value should be
-passed as a named argument to the function using the placeholder value
-as a name.
-Used primarily as a shorthand to stringTemplate() for stored templates.
+Each placeholder value should be passed as a named argument to the function
+using the placeholder value as a name.
+Used primarily as a shorthand to \link{stringTemplate} for stored templates.
 }
 \keyword{internal}
 \keyword{utils}

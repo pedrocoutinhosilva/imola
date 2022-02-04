@@ -2,7 +2,7 @@
 #'
 #' @param object Any R object.
 #'
-#' @return TRUE or FALSE depending ig the object is a imola breakpoint.
+#' @return TRUE or FALSE depending if the object is a imola breakpoint.
 #' @keywords validators
 is.breakpoint <- function(object) {
   is(object, "imola.breakpoint")
@@ -12,7 +12,7 @@ is.breakpoint <- function(object) {
 #'
 #' @param object Any R object.
 #'
-#' @return TRUE or FALSE depending ig the object is a imola breakpoint system.
+#' @return TRUE or FALSE depending if the object is a imola breakpoint system.
 #' @keywords validators
 is.breakpointSystem <- function(object) {
   is(object, "imola.breakpoint.system")
@@ -22,7 +22,7 @@ is.breakpointSystem <- function(object) {
 #'
 #' @param object Any R object.
 #'
-#' @return TRUE or FALSE depending ig the object is a imola template.
+#' @return TRUE or FALSE depending if the object is a imola template.
 #' @keywords validators
 is.template <- function(object) {
   is(object, "imola.template")

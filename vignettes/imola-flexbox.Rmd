@@ -213,7 +213,7 @@ NOTE: Since `imola` uses `flex = c("1")` as a default value for flex, you might 
 ## gap
 Controls the space between items. It applies that spacing only between items not on the outer edges. The behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow (because of something like justify-content: space-between;) then the gap will only take effect if that space would end up smaller.
 
-The gap argument controls both the row gap and the column gap at the same time, making its css equivalent `gap`, `row-gap` and `column-gap`. If a single value is given it is used for both row and column gap, but a pair of values separated by a space can also be used for controling these independently.
+The gap argument controls both the row gap and the column gap at the same time, making its css equivalent `gap`, `row-gap` and `column-gap`. If a single value is given it is used for both row and column gap, but a pair of values separated by a space can also be used for controlling these independently.
 
 Accepts a valid value in css values (`"0"`, `"10px"`, `"20%"`, `"0.5rem"`), or a pair of values separated by space (`"10px 20px"`, `"5% 10%"`, `"10px 5%"`).
 
@@ -224,13 +224,13 @@ By default the value `0` is used. Supports named list for breakpoints. See `vign
 ---
 
 ## flex
-A vector of valid css 'flex' values for the child elements. Shorthand for `grow`, `shrink` and `basis`, with the second and third parameters being optional. This means that any compination of 1, 2 or 3 css values for `grow`, `shrink` and `basis` are valid.
+A vector of valid css 'flex' values for the child elements. Shorthand for `grow`, `shrink` and `basis`, with the second and third parameters being optional. This means that any combination of 1, 2 or 3 css values for `grow`, `shrink` and `basis` are valid.
 
 Arguments that target child elements individually require a vector of values instead of a single value, with each entry of the vector affecting the nth child element. As an example `c(1, 2, 1)` will set the flex value of the first child to `1`, the second to `2` and the third to `1`.
 
 If the given vector has less entries that the number of child elements, the values will be repeated until the pattern affects all elements in the panel. If the number of entries given is more that the number of child elements, exceeding entries will be ignored. NA can also be used as a entry to skip adding a rule to a specific nth element.
 
-It is usually recommended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.
+It is usually recommended to use flex instead of the individual parameters, this is because when omitting some of them, flex will actually set the other values intelligently.
 
 An example of this is using a flex value of `1` is actually equivalent to `1 1 0%` (`grow = 1`, `shrink = 1`, `basis = 0%`).
 
@@ -238,7 +238,7 @@ An example of this is using a flex value of `1` is actually equivalent to `1 1 0
 htmltools::includeHTML("static/flex.html")
 ```
 
-By default the value `c(1)` is used, meaning a value of `1` for every child. You might notice that this is diferent from the pure css default, but makes more sense in the context of shiny dashboards.
+By default the value `c(1)` is used, meaning a value of `1` for every child. You might notice that this is different from the pure css default, but makes more sense in the context of shiny dashboards.
 To recover the default css behavior, use `c("0 1 auto")` as a value.
 
 Check the following sections for `grow`, `shrink` and `basis` for more details. Supports named list for breakpoints. See `vignette("imola-breakpoints")` for more on breakpoints.
@@ -256,14 +256,14 @@ htmltools::includeHTML("static/flexbox-grow.html")
 
 ![](figures/flex-grow.svg)
 
-By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `1` for each element.
+By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallback to `1` for each element.
 
 ---
 
 ## shrink
 This defines the ability for a flex item to shrink if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
 
-If all items have flex-shrink set to 1, all elements will shrink at an equal rate. If one element has a larged shrink value, it will shrink at a faster rate that the other elements (depending on the diference between the given values).
+If all items have flex-shrink set to 1, all elements will shrink at an equal rate. If one element has a larger shrink value, it will shrink at a faster rate that the other elements (depending on the difference between the given values).
 
 ```{r echo = FALSE}
 htmltools::includeHTML("static/flexbox-shrink.html")
@@ -271,7 +271,7 @@ htmltools::includeHTML("static/flexbox-shrink.html")
 
 ![](figures/flex-shrink.svg)
 
-By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallsback to `1` for each element.
+By default the value NULL is used, meaning it defaults to the value provided in the `flex` argument, which fallback to `1` for each element.
 
 Note: For `shrink` to have any effect, it requires some size (either `width` or `basis`) to be set on the children elements.
 
@@ -293,7 +293,7 @@ Optional Media breakpoints to use. Will default to the current active breakpoint
 
 For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.
 
-The names used in that list can be any of the registered breakpoints available in the provided `breakpoint_system` argument (defaults to `getBreakpointSystem()`), as well as the reserved keyord `default`.
+The names used in that list can be any of the registered breakpoints available in the provided `breakpoint_system` argument (defaults to `getBreakpointSystem()`), as well as the reserved keyword `default`.
 
 See `vignette("imola-breakpoints")` for more details on breakpoints.
 
@@ -317,11 +317,11 @@ The browser window title (defaults to the host URL of the page). This is the nam
 
 Flag to tell the page if it should adjust the page to adjust and fill the browser window size.
 
-When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow behond the height of the viewport if necessary.
+When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow beyond the height of the viewport if necessary.
 
 ---
 
 ## dependency
-The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a [tagList] with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)
+The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a [tagList] with different dependencies. Useful if you are using a different UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)
 
 ---

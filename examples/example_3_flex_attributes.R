@@ -117,7 +117,7 @@ ui <- gridPage(
       direction = "column",
       flex = c("auto", 1),
 
-      exampleTitle("Diferent basis per element (150px, 100px, 50px)"),
+      exampleTitle("different basis per element (150px, 100px, 50px)"),
       flexPanel(
         gap = "10px",
 

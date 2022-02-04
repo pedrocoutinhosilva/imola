@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 ## What is a breakpoint?
-When designing for the web, it is important to keep in mind what diferent users will reach you in diferent devices with diferent screen sizes and orientations.
+When designing for the web, it is important to keep in mind what different users will reach you in different devices with different screen sizes and orientations.
 
 In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scroll bars to overly long line lengths, and poor use of space.
 
@@ -38,7 +38,7 @@ Responsive design was only able to emerge due to the media query. The Media Quer
 Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
 ## Breakpoints
-By defining a set "points" where these Media Queries will apply its diferent rules, we are effectively creating breakpoints where the styling and layout of the page changes. Many frontend frameworks reuse a set of tested and tried breakpoints, making that set of breakpoints its `breakpoint system`.
+By defining a set "points" where these Media Queries will apply its different rules, we are effectively creating breakpoints where the styling and layout of the page changes. Many frontend frameworks reuse a set of tested and tried breakpoints, making that set of breakpoints its `breakpoint system`.
 
 Example bootstrap 5 breakpoints:
 - xs: Screen width from 0 to 576px
@@ -119,7 +119,7 @@ names(getBreakpointSystem())
 getBreakpointSystem()
 ```
 
-If you would like to switch to a diferent breakpoint system, imola comes with a few diferent built in systems based on popular css frameworks:
+If you would like to switch to a different breakpoint system, imola comes with a few different built in systems based on popular css frameworks:
 ```R
 names(getOption("imola.breakpoint.systems"))
 [1] "bootstrap3" "bootstrap5" "bulma"      "foundation"

@@ -17,7 +17,7 @@ sectionDiv <- function(title, type, code, minimal, extended = NULL) {
     tabPanel("Preview (Mininum content)", minimal)
   )
   if (!is.null(extended)) {
-    tabs <- c(tabs, list(tabPanel("Preview (Aditional content)", extended)))
+    tabs <- c(tabs, list(tabPanel("Preview (additional content)", extended)))
   }
   tabs <- c(tabs, list(tabPanel("See Code Examples",
     tags$pre(tags$code(class = "language-r", code))

@@ -10,7 +10,7 @@ is.template(object)
 \item{object}{Any R object.}
 }
 \value{
-TRUE or FALSE depending ig the object is a imola template.
+TRUE or FALSE depending if the object is a imola template.
 }
 \description{
 Tests whether the object is an instance of a imola template.

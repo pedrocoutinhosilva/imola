@@ -24,7 +24,7 @@ the given type (see \link{gridPanel} and \link{FlexPanel} for all options)}
 \item{breakpoint_system}{Breakpoint system to use.}
 
 \item{description}{Optional description with information.
-about the template. Can be used to pass on any aditional relevant
+about the template. Can be used to pass on any additional relevant
 information (For example its origin or connected frameworks).}
 }
 \value{

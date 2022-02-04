@@ -37,7 +37,7 @@ representing each row of the grid. Each element should contain
 the names, per row, of each area of the grid.
 
 Expected values follow the
-convension for the \code{grid-template-areas} css attribute.
+convention for the \code{grid-template-areas} css attribute.
 
 for example \code{c("area-1 area-1", "area-2 area-3")} and
 \verb{list(c("area-1", "area-1"), c(area-2", "area-3"))} are both valid
@@ -49,9 +49,9 @@ Supports breakpoints.}
 sizes. For example both \code{"1fr 2fr"} or \code{c("1fr", "2fr")} are valid
 representations of the same 2 rows grid sizes.
 
-Follows the convension for the \code{grid-template-rows} css attribute.
+Follows the convention for the \code{grid-template-rows} css attribute.
 
-If not provided the existing space will be split equally acording to the
+If not provided the existing space will be split equally accordingly to the
 areas defined in areas.
 
 Supports breakpoints.}
@@ -60,9 +60,9 @@ Supports breakpoints.}
 of sizes. For example both \code{"1fr 2fr"} or \code{c("1fr", "2fr") }are valid
 representations of the same 2 columns grid sizes.
 
-Follows the convension for the \code{grid-template-columns} css attribute.
+Follows the convention for the \code{grid-template-columns} css attribute.
 
-If not provided the existing space will be split equally acording to the
+If not provided the existing space will be split equally accordingly to the
 areas defined in areas.
 
 Supports breakpoints.}
@@ -71,7 +71,7 @@ Supports breakpoints.}
 space between rows and columns.
 
 Accepts a css valid value, or 2 values separated by a space (if using
-diferent values for row and column spacing).
+different values for row and column spacing).
 
 Supports breakpoints.}
 

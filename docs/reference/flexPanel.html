@@ -104,40 +104,35 @@ to write any additional css rules directly.</p>
     <dl><dt>...</dt>
 <dd><p>Tag attributes (named arguments) and child elements (unnamed
 arguments).</p>
-<p>Named arguments can be used to provide additional attribute
-values to the HTML parent tag. Arguments with a <code>NA</code> value are rendered as
-boolean attributes.</p>
-<p>For a full list of valid HTML attributes check visit
-<a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link">https://www.w3schools.com/tags/ref_attributes.asp</a>.</p>
-<p>Child elements may include any combination of other tags objects, <code><a href="https://rdrr.io/pkg/htmltools/man/HTML.html" class="external-link">HTML()</a></code>,
-strings, and <code>htmlDependency()</code>s.</p></dd>
+<p>Named arguments are treated as additional html attribute
+values to the parent tag.</p>
+<p>Child elements may include any combination of other tags objects, HTML
+strings, and htmlDependencys.</p></dd>
 <dt>template</dt>
 <dd><p>The name of a registered template to use as a base for the
-grid, or the resulting value from using gridTemplate() to generate a
-template object.</p>
-<p>See <code><a href="listTemplates.html">listTemplates()</a></code> and <code><a href="registerTemplate.html">registerTemplate()</a></code> for more information.</p></dd>
+grid, or a template object from <a href="gridTemplate.html">gridTemplate</a>.</p></dd>
 <dt>direction</dt>
 <dd><p>Direction of the flow of elements in the panel.</p>
 <p>Accepts a valid css <code>flex-direction</code> value (<code>row</code> | <code>row-reverse</code> |
 <code>column</code> | <code>column-reverse</code>).</p>
-<p>By default the <code>row</code> value is used. Supports breakpoints.</p></dd>
+<p>Default value of <code>row</code> value is used. Supports breakpoints.</p></dd>
 <dt>wrap</dt>
 <dd><p>Should elements be allowed to wrap into multiple lines.</p>
 <p>Accepts a valid css <code>flex-wrap</code> value (<code>nowrap</code> | <code>wrap</code> | <code>wrap-reverse</code>).</p>
-<p>By default the value <code>wrap</code> is used. Supports breakpoints.</p></dd>
+<p>Supports breakpoints.</p></dd>
 <dt>justify_content</dt>
 <dd><p>The alignment along the main axis. Accepts a
 valid css <code>justify-content</code> value (<code>flex-start</code> | <code>flex-end</code> | <code>center</code> |
 <code>space-between</code> | <code>space-around</code> | <code>space-evenly</code> | <code>start</code> |
 <code>end</code> | <code>left</code> | <code>right</code>).</p>
-<p>By default the value <code>flex-start</code> is used. Supports breakpoints.</p></dd>
+<p>Supports breakpoints.</p></dd>
 <dt>align_items</dt>
 <dd><p>Defines the default behavior for how flex items are laid
 out along the cross axis on the current line.</p>
 <p>Accepts a valid css <code>align-items</code> value (<code>stretch</code> | <code>flex-start</code> |
 <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>first baseline</code> | <code>last baseline</code> |
 <code>start</code> | <code>end</code> | <code>self-start</code> | <code>self-end</code>).</p>
-<p>By default the value <code>stretch</code> is used. Supports breakpoints.</p></dd>
+<p>Supports breakpoints.</p></dd>
 <dt>align_content</dt>
 <dd><p>Aligns a flex container’s lines within when there is
 extra space in the cross-axis.</p>
@@ -145,77 +140,75 @@ extra space in the cross-axis.</p>
 (flex-start | flex-end | center | space-between | space-around |
 space-evenly | stretch | start | end | baseline | first baseline |
 last baseline).</p>
-<p>By default the value 'flex-start' is used. Supports breakpoints.</p></dd>
+<p>Supports breakpoints.</p></dd>
 <dt>gap</dt>
 <dd><p>The space between elements in the panel. Controls both the
 space between rows and columns.</p>
 <p>Accepts a css valid value, or 2 values separated by a space (if using
-diferent values for row and column spacing).</p>
-<p>By default the value <code>0</code> is used. Supports breakpoints.</p></dd>
+different values for row and column spacing).</p>
+<p>Supports breakpoints.</p></dd>
 <dt>flex</dt>
-<dd><p>A vector of valid css 'flex' values for the child elements.
-Defines how elements in the panel can grow, shrink and their initial size.</p>
-<p>Arguments that target child elements individually require a vector of
+<dd><p>A vector of valid css 'flex' values.
+Defines how child elements in the panel can grow, shrink and their
+initial size.</p>
+<p>Arguments that target child elements require a vector of
 values instead of a single value, with each entry of the vector affecting
 the nth child element.</p>
-<p>If the given vector has less entries that the number
+<p>If the vector has less entries that the total number
 of child elements, the values will be repeated until the pattern affects
-all elements in the panel. If the number of entries given is more that the
+all elements in the panel. If the vector as more entries that the
 number of child elements, exceeding entries will be ignored. NA can also be
-used as a entry to skip adding a rule to a specific nth element.</p>
+used as a entry to skip adding a rule to a specific child element.</p>
 <p>Accepts a valid css <code>flex</code> value vector of values.</p>
 <p>By default c(1) is used, meaning all elements can grow and shrink as
 required, at the same rate. Supports breakpoints.</p></dd>
 <dt>grow</dt>
 <dd><p>A vector of valid css 'flex-grow' values. Defines the rate of
-how elements can grow. Entries will overwrite the nth 'flex' value,
-and can be used make more targeted rules.</p>
+how elements can grow.</p>
 <p>Entries will overwrite the 'flex' values, and can
 be used make more targeted rules.</p>
-<p>Arguments that target child elements individually require a vector of
+<p>Arguments that target child elements require a vector of
 values instead of a single value, with each entry of the vector affecting
 the nth child element.</p>
-<p>If the given vector has less entries that the number
+<p>If the vector has less entries that the total number
 of child elements, the values will be repeated until the pattern affects
-all elements in the panel. If the number of entries given is more that the
+all elements in the panel. If the vector as more entries that the
 number of child elements, exceeding entries will be ignored. NA can also be
-used as a entry to skip adding a rule to a specific nth element.</p>
+used as a entry to skip adding a rule to a specific child element.</p>
 <p>By default NULL is used, meaning values from the flex argument will be
 used instead. Supports breakpoints.</p></dd>
 <dt>shrink</dt>
 <dd><p>A vector of valid css 'flex-shrink' values. Defines the rate
 of how elements can shrink. Entries will overwrite the nth 'flex' value,
 and can be used make more targeted rules.</p>
-<p>Arguments that target child elements individually require a vector of
+<p>Arguments that target child elements require a vector of
 values instead of a single value, with each entry of the vector affecting
 the nth child element.</p>
-<p>If the given vector has less entries that the number
+<p>If the vector has less entries that the total number
 of child elements, the values will be repeated until the pattern affects
-all elements in the panel. If the number of entries given is more that the
+all elements in the panel. If the vector as more entries that the
 number of child elements, exceeding entries will be ignored. NA can also be
-used as a entry to skip adding a rule to a specific nth element.</p>
+used as a entry to skip adding a rule to a specific child element.</p>
 <p>By default NULL is used, meaning values from the flex argument will be
 used instead. Supports breakpoints.</p></dd>
 <dt>basis</dt>
 <dd><p>A vector of valid css 'flex-basis' values. Defines the base
 size of elements. Entries will overwrite the nth 'flex' value,
 and can be used make more targeted rules.</p>
-<p>Arguments that target child elements individually require a vector of
+<p>Arguments that target child elements require a vector of
 values instead of a single value, with each entry of the vector affecting
 the nth child element.</p>
-<p>If the given vector has less entries that the number
+<p>If the vector has less entries that the total number
 of child elements, the values will be repeated until the pattern affects
-all elements in the panel. If the number of entries given is more that the
+all elements in the panel. If the vector as more entries that the
 number of child elements, exceeding entries will be ignored. NA can also be
-used as a entry to skip adding a rule to a specific nth element.</p>
+used as a entry to skip adding a rule to a specific child element.</p>
 <p>By default NULL is used, meaning values from the flex argument will be
 used instead. Supports breakpoints.</p></dd>
 <dt>breakpoint_system</dt>
-<dd><p>Optional Media breakpoints to use. Will default to
-the current active breakpoint system.</p></dd>
+<dd><p>Breakpoint system to use.</p></dd>
 <dt>id</dt>
-<dd><p>The panel id. A randomly generated one is used by default.
-You cannot have more than one element with the same id in an HTML document.</p></dd>
+<dd><p>The parent element id.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -228,41 +221,24 @@ arguments that simplify the way flexbox css can be created from shiny.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>When creating responsive layouts based on media rules, for most css
-arguments a named list can be passed instead of a single value.</p>
-<p>The names in the list can be any of the registered breakpoints available in
-<code><a href="getBreakpointSystem.html">getBreakpointSystem()</a></code>, of on the provided <code>breakpoint_system</code> argument.
-Current global <code><a href="getBreakpointSystem.html">getBreakpointSystem()</a></code> can be changed using
-<code><a href="setActiveBreakpointSystem.html">setActiveBreakpointSystem()</a></code>.</p>
-<p>In a similar fashion, the current <code><a href="getBreakpointSystem.html">getBreakpointSystem()</a></code> can also be
-modified with the <code>registerBreakpoint()</code> and <code>unregisterBreakpoint()</code>.</p>
+    <p>When creating responsive layouts based on css media rules, some
+arguments allow a named list can be passed instead of a single value.</p>
+<p>The names in that list can be any of the breakpoints available in
+the <code>breakpoint_system</code> argument.</p>
 <p>It is recommended to define the breakpoint system for the application
 globally before UI definitions, but the <code>breakpoint_system</code> in panel
-functions allows for more flexibility when it comes to reuse components
+functions allows for more flexibility when reusing components
 from other projects.</p>
-<p>See
-<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="external-link">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
-for additional details on using css flexbox</p>
+<p>See <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="external-link">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+for additional details on using css flexbox.</p>
+<p>For a full list of valid HTML attributes check visit
+<a href="https://www.w3schools.com/tags/ref_attributes.asp" class="external-link">https://www.w3schools.com/tags/ref_attributes.asp</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="flexPage.html">flexPage()</a></code></p></div>
+    <div class="dont-index"><p><a href="flexPage.html">flexPage</a></p></div>
     </div>
 
-    <div class="section level2">
-    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shiny.rstudio.com/" class="external-link">shiny</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/pedrocoutinhosilva/imola" class="external-link">imola</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">flexPanel</span><span class="op">(</span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"example content"</span><span class="op">)</span>,</span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"example content"</span><span class="op">)</span>,</span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"example content"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-in"></span>
-</code></pre></div>
-    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

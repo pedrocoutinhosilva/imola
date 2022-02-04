@@ -35,7 +35,7 @@ listTemplates <- function(type = NULL) {
 #'   the given type (see [gridPanel] and [FlexPanel] for all options)
 #' @param breakpoint_system Breakpoint system to use.
 #' @param description Optional description with information.
-#'   about the template. Can be used to pass on any aditional relevant
+#'   about the template. Can be used to pass on any additional relevant
 #'   information (For example its origin or connected frameworks).
 #'
 #' @importFrom utils modifyList

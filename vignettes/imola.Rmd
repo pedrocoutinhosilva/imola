@@ -65,7 +65,7 @@ For more on flex with imola, check `vignette("imola-flex")`.
 
 ## Breakpoints
 
-Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things dont appear broken or out of place.
+Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things don't appear broken or out of place.
 
 Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the `fluidRow()` function. `fluidRow()` will trigger layout changes to your `columns` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
 
@@ -126,9 +126,9 @@ Very often during development it is also common that multiple elements share the
 
 In order to save a template you can use the `registerTemplate()` function. This function requires a 'type' of template (grid or flex), a name to identify the template later, any named arguments that can be passed to the gridPanel or flexPanel function (depending on the type) and, optionally, a breakpoint_system to use if you plan on adding any responsive attributes to the template (If no breakpoint_system is given, the current active system is used to register the template).
 
-After a template being registered, you can then simple fill in the `template` argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be orewriten by the named argument on the function call.
+After a template being registered, you can then simple fill in the `template` argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be overwritten by the named argument on the function call.
 
-Lets say we would like to save our previous areas as a template, and use it. We could use registerTemplate():
+Lets say we would like to save our previous areas as a template, and use it. We could use `registerTemplate()`:
 
 ``` r
 #in global.R

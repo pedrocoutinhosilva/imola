@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{addClass}
 \alias{addClass}
-\title{Adds a class to a object}
+\title{Add object class}
 \usage{
 addClass(object, class)
 }

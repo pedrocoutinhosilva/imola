@@ -66,7 +66,7 @@ ui <- gridPage(
       ),
       `subarea-2` = div(
         style = divStyle("#cacaca", "gray"),
-        tags$label("I dont have the right area class, but im called as a named argument so its fine")
+        tags$label("I don't have the right area class, but im called as a named argument so its fine")
       ),
       gridPanel(
         class = "subarea-3",

@@ -22,7 +22,7 @@
 #'   the names, per row, of each area of the grid.
 #'
 #'   Expected values follow the
-#'   convension for the `grid-template-areas` css attribute.
+#'   convention for the `grid-template-areas` css attribute.
 #'
 #'   for example `c("area-1 area-1", "area-2 area-3")` and
 #'   `list(c("area-1", "area-1"), c(area-2", "area-3"))` are both valid
@@ -33,9 +33,9 @@
 #'   sizes. For example both `"1fr 2fr"` or `c("1fr", "2fr")` are valid
 #'   representations of the same 2 rows grid sizes.
 #'
-#'   Follows the convension for the `grid-template-rows` css attribute.
+#'   Follows the convention for the `grid-template-rows` css attribute.
 #'
-#'   If not provided the existing space will be split equally acording to the
+#'   If not provided the existing space will be split equally accordingly to the
 #'   areas defined in areas.
 #'
 #'   Supports breakpoints.
@@ -43,9 +43,9 @@
 #'   of sizes. For example both `"1fr 2fr"` or `c("1fr", "2fr") `are valid
 #'   representations of the same 2 columns grid sizes.
 #'
-#'   Follows the convension for the `grid-template-columns` css attribute.
+#'   Follows the convention for the `grid-template-columns` css attribute.
 #'
-#'   If not provided the existing space will be split equally acording to the
+#'   If not provided the existing space will be split equally accordingly to the
 #'   areas defined in areas.
 #'
 #'   Supports breakpoints.
@@ -53,7 +53,7 @@
 #'   space between rows and columns.
 #'
 #'   Accepts a css valid value, or 2 values separated by a space (if using
-#'   diferent values for row and column spacing).
+#'   different values for row and column spacing).
 #'
 #'   Supports breakpoints.
 #' @param align_items The cell behavior according to the `align-items` css
@@ -163,7 +163,7 @@ gridPanel <- function(...,
 #'   match the browser window height.
 #' @param dependency A set of web dependencies. This value can be a
 #'   [htmlDependency], for example the shiny bootstrap dependency (default
-#'   value) or a [tagList] with diferent dependencies.
+#'   value) or a [tagList] with different dependencies.
 #'
 #' @note See
 #'   \url{https://css-tricks.com/snippets/css/complete-guide-grid/}

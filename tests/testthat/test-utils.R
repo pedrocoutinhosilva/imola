@@ -41,7 +41,7 @@ test_that("valueToCSS are converted correctly to valid css strings", {
   expect_equal(valueToCSS(c("foo", "bar"), "property"), "foo bar")
 })
 
-test_that("mediaRuleTemplate generates rules for diferent min max values", {
+test_that("mediaRuleTemplate generates rules for different min max values", {
   expect_equal(
     mediaRuleTemplate(list(min = 0, max = 1)),
     " @media all and (min-width: 0px)  and (max-width: 1px)  { {{rules}} }"

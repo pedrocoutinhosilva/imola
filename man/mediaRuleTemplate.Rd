@@ -2,8 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{mediaRuleTemplate}
 \alias{mediaRuleTemplate}
-\title{Generates a valid glue::glue string template for a css media query.
-Used internally to generate a breakpoint specific wrapper.}
+\title{Create media rule template}
 \usage{
 mediaRuleTemplate(options)
 }
@@ -15,7 +14,7 @@ values are given, a non media query template is created instead.}
 A valid glue::glue template string to be processed later.
 }
 \description{
-Generates a valid glue::glue string template for a css media query.
+Creates a valid glue::glue string template for a css media query.
 Used internally to generate a breakpoint specific wrapper.
 }
 \keyword{internal}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/normalize.R
 \name{normalizeAttribute}
 \alias{normalizeAttribute}
-\title{Mormalize a attribute}
+\title{Normalize a attribute}
 \usage{
 normalizeAttribute(attribute, simplify = FALSE)
 }
