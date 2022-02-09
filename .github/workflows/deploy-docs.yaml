@@ -7,6 +7,12 @@ on:
       - master
     paths:
       - docs/**
+  pull_request:
+    branches:
+      - main
+      - master
+    paths:
+      - docs/**
 
 jobs:
   deploy:
