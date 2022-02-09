@@ -4,7 +4,7 @@
 #' @param ... Additional arguments.
 #'
 #' @return No return value, called for side effects.
-#' @keywords breakpoints
+#' @keywords printer
 #' @export
 print.imola.breakpoint <- function(x, ...) {
   cat("Imola Breakpoint\n")
@@ -21,7 +21,7 @@ print.imola.breakpoint <- function(x, ...) {
 #' @param ... Additional arguments.
 #'
 #' @return No return value, called for side effects.
-#' @keywords breakpoints
+#' @keywords printer
 #' @export
 print.imola.breakpoint.system <- function(x, ...) {
   output <- do.call(
@@ -53,7 +53,7 @@ print.imola.breakpoint.system <- function(x, ...) {
 #' @param ... Additional arguments.
 #'
 #' @return No return value, called for side effects.
-#' @keywords templates
+#' @keywords printer
 #' @export
 print.imola.template <- function(x, ...) {
   cat("Imola Template\n")
