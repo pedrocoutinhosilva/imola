@@ -290,16 +290,3 @@ input[type=number]{ width:40px; margin-right:.5em;}
 .flex-default .item {
   flex: 1;
 }
-
-p img {
-  padding: 20px;
-  background: #f8f9fa;
-  margin-top: 20px;
-  border: 2px solid #e9e9ea;
-  border-radius: 10px;
-}
-
-/* main p {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-} */

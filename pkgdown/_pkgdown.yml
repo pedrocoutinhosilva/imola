@@ -4,8 +4,8 @@ home:
 template:
   assets: vignettes/assets
   bootstrap: 5
-  bootswatch: superhero
-  theme: arrow-dark
+  # bootswatch: superhero
+  # theme: arrow-dark
   bslib:
     primary: "#a56e3d"
     border-radius: 0.5rem
@@ -32,12 +32,8 @@ articles:
   navbar: ~
   contents:
   - imola
-  - imola-why-flex-and-grid
   - imola-flexbox
   - imola-grid
-- title: Demos
-  contents:
-  - imola-demos
 - title: Templates
   navbar: ~
   contents:
@@ -46,21 +42,27 @@ articles:
   navbar: ~
   contents:
   - imola-breakpoints
+- title: Demos
+  contents:
+  - imola-demos
+- title: Other reads
+  contents:
+  - imola-why-flex-and-grid
 
 reference:
 - title: Flex
-  desc:  Flex.
+  desc:  Flex related functions.
   contents:
   - has_keyword("flex")
 - title: Grid
-  desc:  Grid.
+  desc:  Grid related functions.
   contents:
   - has_keyword("grid")
 - title: Templates
-  desc:  Templates.
+  desc:  Template related functions.
   contents:
   - has_keyword("templates")
 - title: Breakpoints
-  desc:  Breakpoints.
+  desc:  Breakpoint and breakpoint systems related functions.
   contents:
   - has_keyword("breakpoints")

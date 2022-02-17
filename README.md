@@ -7,20 +7,32 @@
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/imola)](https://CRAN.R-project.org/package=imola)
 <!-- badges: end -->
 
-An interface to create grid and flexbox CSS layouts for your R/Shiny dashboards, directly from R.
+CSS Grid and flexbox layouts for your R/Shiny dashboards, directly from R.
 
-Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving you more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.
+Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.
 
-##### CSS Layouts in shiny, made simple
-You can now easily leverage typical CSS layouts (grid and Flexbox) directly in your UI functions, including support for media breakpoints to fit different screen sizes and devices.
+---
 
-##### Built in templates, or create your own
-Save your favorite layouts for later use via the existing templating system and simply use it in as many elements as you need.
+### CSS Layouts in shiny, made simple
+Leverage typical CSS layout techniques (grid and Flexbox) directly in your UI functions, including support for media breakpoints to fit different screen sizes and devices.
 
-If layout creation isn't your thing, imola also comes with a built in collection of templates for traditionally used web layouts, making it even easier to spice up your dashboards!
+![](reference/figures/write-less.png)
 
-##### Demos to get you started
-You can find a few deployed demos showcasing some of the power of imola:
+---
+
+### Use built in templates, or create your own
+Save your favorite layouts for later use via the templating system and reuse them as many times as you need.
+
+If layout creation isn't your thing, imola comes with a built in collection of templates for traditionally used web layouts, making it even easier to spice up your dashboards!
+
+![](reference/figures/easy-templates.png)
+
+---
+
+### Demos to get you started
+Example applications showcasing some of the power of imola:
+
+![](reference/figures/templatesdemo.png)
 
 -   Built in template layouts: https://sparktuga.shinyapps.io/imolatemplates/
 
@@ -37,7 +49,7 @@ install.packages('imola')
 devtools::install_github('pedrocoutinhosilva/imola')
 ```
 
-###### 2 - Include the library in your project:
+###### 2 - Include it in your project:
 ```R
 # global.R
 library(imola)
@@ -50,9 +62,9 @@ Looking for help on how to start? Make sure to check the built in examples and v
 
 ## Usage
 
-Check `vignette("imola")` on how to get started, and other follow up vignettes for even more information regarding css flexbox and grid and their imola counterparts.
+Check `vignette("imola")` on how to get started, and other follow up vignettes for even more information regarding CSS flexbox and grid and their imola equivalents.
 
-Looking for a specific topic to jump into? Use the following vignettes for a quick start:
+Looking for a specific topic? Use the following vignettes for a quick start:
 
 -   `vignette("imola-flexbox")` for details on `flexPanel()` and `flexPage()`.
 -   `vignette("imola-grid")` for details on `gridPanel()` and `gridPage()`.

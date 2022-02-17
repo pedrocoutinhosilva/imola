@@ -15,7 +15,7 @@ A template object.
 }
 \description{
 Imports a template from a file.
-Breakpoint systems can be exported into a file format by using
+Templates can be exported into a file format by using
 \link{exportTemplate}
 }
-\keyword{breakpoints}
+\keyword{templates}

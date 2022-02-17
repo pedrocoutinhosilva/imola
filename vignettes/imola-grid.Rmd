@@ -1,5 +1,5 @@
 ---
-title: "Grid and imola"
+title: "Grid functions"
 output: rmarkdown::html_vignette
 description: >
   Getting started with CSS grid and imola.
@@ -20,13 +20,19 @@ knitr::opts_chunk$set(
 htmltools::tags$link(rel = "stylesheet", type = "text/css", href = "static/flexbox.css")
 ```
 
-The imola grid functions family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. `gridPanel()` and `gridPage()`.
+![](figures/cssgrid.jpg)
+
+The imola grid functions family focuses on providing support for the CSS Grid standard.
+
+In imola you can find 2 functions that allow you to create a new grid component. `gridPanel()` and `gridPage()`.
 
 Similar to what happens in the flex family, `gridPage()` is simply a wrapper for `gridPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
 
 Grid is a powerful spec that, when combined with other parts of CSS such as flexbox, can help you create layouts that were previously impossible to build in CSS.
 
 If you're interested in more information about the full array of options in the CSS grid standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/complete-guide-grid/) to get you started.
+
+I also recomend [gridbyexample](https://gridbyexample.com/examples/) if you're looking for inspiration on layouts, examples and general information about CSS grid.
 
 ---
 

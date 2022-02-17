@@ -47,8 +47,8 @@ main .section.level5:before {
 }
 
 main h2 {
-  border-bottom: 3px solid;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 main hr {
@@ -59,4 +59,16 @@ main hr {
 .template-home main > p:nth-of-type(1),
 .template-home main > .section > p:nth-of-type(1) {
   font-size: 150%;
+}
+
+p img {
+  padding: 20px;
+  background: #f8f9fa;
+  margin-top: 20px;
+  border: 2px solid #e9e9ea;
+  border-radius: 10px;
+}
+
+h6 {
+  margin-top: 40px;
 }

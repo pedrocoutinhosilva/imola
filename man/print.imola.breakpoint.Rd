@@ -17,4 +17,4 @@ No return value, called for side effects.
 \description{
 Custom print function for a breakpoint object.
 }
-\keyword{breakpoints}
+\keyword{printer}

@@ -1,7 +1,7 @@
 # processContent works when no areas are given
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), NULL)
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), NULL)
     Output
       $`area-1`
       <div></div>
@@ -13,7 +13,7 @@
 # processContent works when no areas are empty
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), c())
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), c())
     Output
       $`area-1`
       <div></div>
@@ -25,7 +25,7 @@
 # processContent works when only some areas are given
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), c("area-1"))
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), c("area-1"))
     Output
       [[1]]
       <div class="area-1"></div>
@@ -37,7 +37,8 @@
 # processContent works when only all areas are given
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), c("area-1", "area-2"))
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), c("area-1",
+        "area-2"))
     Output
       [[1]]
       <div class="area-1"></div>
@@ -49,7 +50,7 @@
 # readSettingsFile loads a file successfully
 
     Code
-      readSettingsFile("config")
+      imola:::readSettingsFile("config")
     Output
       $default_system
       [1] "bootstrap3"

@@ -1,10 +1,10 @@
 ---
-title: "A short history on web layouts"
+title: "Web layout history: How we got to grid and flex"
 output: rmarkdown::html_vignette
 description: >
   As the web evolved, so did its layout solutions. This article explores what came before and why flexbox and grid became the current defacto solutions for layout generation.
 vignette: >
-  %\VignetteIndexEntry{A short history on web layouts}
+  %\VignetteIndexEntry{Web layout history: How we got to grid and flex}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

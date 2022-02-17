@@ -64,29 +64,29 @@ gridTemplate <- function(name,
 #'
 #' @description
 #' Imports a template from a file.
-#' Breakpoint systems can be exported into a file format by using
+#' Templates can be exported into a file format by using
 #' [exportTemplate]
 #'
 #' @param path The file path of the file to import, including the file
 #'   name and extension. The file name must end with a `.yaml` extension.
 #'
 #' @return A template object.
-#' @keywords breakpoints
+#' @keywords templates
 #' @export
 importTemplate <- function(path) {
   options <- yaml::read_yaml(path)
 
-  if (is.null(options$name)) {
-    stop("Wrong file format")
-  }
-
-  if (is.null(options$attributes)) {
-    stop("No attributes information")
-  }
-
-  if (is.null(options$breakpoint_system)) {
-    stop("No breakpoint system information")
-  }
+  stopifnot(
+    "Wrong file format" = {
+      !is.null(options$name)
+    },
+    "No attributes information" = {
+      !is.null(options$attributes)
+    },
+    "No breakpoint system information" = {
+      !is.null(options$breakpoint_system)
+    }
+  )
 
   for (single in names(options$breakpoint_system$breakpoints)) {
     options$breakpoint_system$breakpoints[[single]] <- do.call(
@@ -106,12 +106,17 @@ importTemplate <- function(path) {
     )
   )
 
-  gridTemplate(
-    name = options$name,
-    type = options$type,
-    description = options$description,
-    breakpoint_system = normalized_system,
-    attributes = options$attributes
+  do.call(
+    gridTemplate,
+    modifyList(
+      list(
+        name = options$name,
+        type = options$type,
+        description = options$description,
+        breakpoint_system = normalized_system
+      ),
+      options$attributes
+    )
   )
 }
 
@@ -122,28 +127,28 @@ importTemplate <- function(path) {
 #' Exported template can be retrieved from their file form by using
 #' [importTemplate].
 #'
-#' @param system The name of a registered template, or a template
+#' @param template A template
 #'   object generated with [gridTemplate].
 #' @param path The file path where to export the system to, including the file
 #'   name and extension. The file name must end with a `.yaml` extension.
 #'
 #' @return No return value, called for side effects.
-#' @keywords breakpoints
+#' @keywords templates
 #' @export
 exportTemplate <- function(template, path) {
-  if (is.character(template)) {
-    output <- getOption("imola.templates")[[template]]
-  }
+  stopifnot(
+    "No valid template to export" = {
+      !is.character(template)
+    },
+    "No valid template to export" = {
+      !is.null(template)
+    },
+    "No attributes information. (Why are you saving a empty template?)" = {
+      !is.null(template$attributes)
+    }
+  )
 
-  if (is.null(output$attributes)) {
-    stop("No attributes information. (Why are you saving a empty template?)")
-  }
-
-  if (is.null(output)) {
-    stop("No valid template to export")
-  }
-
-  message("Exported ", output$name, " template to ", path, ".")
+  message("Exported ", template$name, " template to ", path, ".")
   yaml::write_yaml(template, path)
 }
 
@@ -159,13 +164,14 @@ exportTemplate <- function(template, path) {
 #' @keywords templates
 #' @export
 getTemplate <- function(name, type) {
-  if (!(type %in% getOption("imola.templates")[[type]])) {
-    stop("Type is not supported")
-  }
-
-  if (!(name %in% getOption("imola.templates")[[type]][[name]])) {
-    stop("No registered template with given name")
-  }
+  stopifnot(
+    "Type is not supported" = {
+      type %in% names(getOption("imola.templates"))
+    },
+    "No registered template with given name" = {
+      name %in% names(getOption("imola.templates")[[type]])
+    }
+  )
 
   getOption("imola.templates")[[type]][[name]]
 }
@@ -183,9 +189,11 @@ getTemplate <- function(name, type) {
 #' @keywords templates
 #' @export
 registerTemplate <- function(template) {
-  if (!is(template, "imola.template")) {
-    stop("template is not a valid gridTemplate()")
-  }
+  stopifnot(
+    "Template is not a valid gridTemplate()" = {
+      is(template, "imola.template")
+    }
+  )
 
   registered_templates <- getOption("imola.templates")
   registered_templates[[template$type]][[template$name]] <- template
@@ -261,9 +269,9 @@ applyTemplate <- function(attributes, template, defaults, type) {
     options <- getOption("imola.templates")[[type]][[template]]
   }
 
-  for (name in names(options)) {
+  for (name in names(options$attributes)) {
     manual_value <- attributes[[name]]
-    template_value <- options[[name]]
+    template_value <- options$attributes[[name]]
     default_value <- defaults[[name]]
 
     if (!is.null(template_value) && identical(manual_value, default_value)) {

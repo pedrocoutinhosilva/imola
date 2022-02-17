@@ -1,3 +1,15 @@
+#' List registered breakpoint systems
+#'
+#' @description
+#' Lists all available breakpoint systems.
+#'
+#' @return A named list of css templates and specific values.
+#' @keywords templates
+#' @export
+listBreakpointSystems <- function() {
+  getOption("imola.breakpoint.systems")
+}
+
 #' Create a breakpoint system
 #'
 #' @description

@@ -58,7 +58,7 @@ print.imola.breakpoint.system <- function(x, ...) {
 print.imola.template <- function(x, ...) {
   cat("Imola Template\n")
   cat("Name: ", x$name, "\n")
-  cat("Name: ", x$type, "\n")
+  cat("Type: ", x$type, "\n")
   cat("description: ", ifelse(!is.null(x$description), x$description, "No description"), "\n")
   cat("\n")
   cat("Attribute values:\n")

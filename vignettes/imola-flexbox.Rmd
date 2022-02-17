@@ -1,5 +1,5 @@
 ---
-title: "Flexbox and imola"
+title: "Flex functions"
 output: rmarkdown::html_vignette
 description: >
   Getting started with CSS Flexbox and imola.
@@ -21,9 +21,13 @@ htmltools::tags$script(src = "static/flexbox.js")
 htmltools::tags$link(rel = "stylesheet", type = "text/css", href = "static/flexbox.css")
 ```
 
-The imola flex functions family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. `flexPanel()` and `flexPage()`.
+![](figures/cssflexbox.jpg)
 
-Similar to what happens in the grid family, `flexPage()` is simply a wrapper for `flexPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
+The imola flex functions family focuses on providing support for the CSS flexbox standard.
+
+In imola you can find 2 functions that allow you to create a new flex component. `flexPanel()` and `flexPage()`.
+
+Similar to what happens in the grid family, `flexPage()` is simply a wrapper for `flexPanel()`, allowing you to create a page UI element without the need of using any of the built in shiny functions.
 
 If you're interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to get you started.
 

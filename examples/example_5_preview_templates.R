@@ -40,7 +40,7 @@ sectionDiv <- function(title, type, code, minimal, extended = NULL) {
 
 # Generate the UI for all the default imola flex templates
 flex_templates <- lapply(names(listTemplates("flex")), function(template) {
-  minimum_cells <- getOption("imola.templates")$flex[[template]]$basis
+  minimum_cells <- getOption("imola.templates")$flex[[template]]$attributes$basis$default
   display_cells <- length(minimum_cells)
 
   children <- list()
@@ -80,7 +80,7 @@ flex_templates <- lapply(names(listTemplates("flex")), function(template) {
 grid_templates <- lapply(names(listTemplates("grid")), function(template) {
 
   unique_areas <- unique(unlist(
-    getOption("imola.templates")$grid[[template]]$areas
+    getOption("imola.templates")$grid[[template]]$attributes$areas
   ))
 
   children <- list()
