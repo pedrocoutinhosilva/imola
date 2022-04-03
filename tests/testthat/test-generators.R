@@ -21,7 +21,7 @@ test_that("test generator functions", {
   expect_identical(
     imola:::generateFlexChildrenCSS(list(direction = list(default = "row", xs = "column")), "test-id", 1, getBreakpointSystem("bootstrap3")),
     c("",
-      " .test-id > *:nth-child(1) { flex-direction: row; }" ,
+      " .test-id > *:nth-child(1) { flex-direction: row; }",
       " @media all  and (max-width: 575px)   .test-id > *:nth-child(1) { flex-direction: column; }"
     )
   )

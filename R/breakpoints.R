@@ -11,6 +11,8 @@
 #' @param max Optional numeric maximum value (in pixels) of the screen width
 #'   where the breakpoint is active.
 #'
+#' @importFrom magrittr "%>%"
+#'
 #' @return A breakpoint object.
 #' @keywords breakpoints breakpoint
 #' @export

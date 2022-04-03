@@ -156,8 +156,9 @@ mediaRuleTemplate <- function(options) {
 #'
 #' @param file The file name to read. Settings files are stored in the package
 #'   installation directory and include different settings and options.
-
+#'
 #' @importFrom yaml read_yaml
+#' @importFrom magrittr "%>%"
 #'
 #' @return A list object containing the content of the settings yaml file
 #' @keywords utils internal
@@ -176,6 +177,8 @@ readSettingsFile <- function(file) {
 #' @param object Any R object.
 #' @param class A string representing a object class.
 #' @importFrom yaml read_yaml
+#'
+#' @importFrom magrittr "%<>%"
 #'
 #' @return The given R object with the additional class.
 #' @keywords utils internal

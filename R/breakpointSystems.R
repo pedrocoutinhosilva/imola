@@ -117,11 +117,13 @@ unregisterBreakpointSystem <- function(name) {
 #' @param path The file path of the file to import, including the file
 #'   name and extension. The file name must end with a `.yaml` extension.
 #'
+#' @importFrom yaml read_yaml
+#'
 #' @return A breakpoint system object.
 #' @keywords breakpoints breakpoint_system
 #' @export
 importBreakpointSystem <- function(path) {
-  options <- yaml::read_yaml(path)
+  options <- read_yaml(path)
 
   stopifnot(
     "Wrong file format" = {
@@ -165,6 +167,8 @@ importBreakpointSystem <- function(path) {
 #' @param path The file path where to export the system to, including the file
 #'   name and extension. The file name must end with a `.yaml` extension.
 #'
+#' @importFrom yaml write_yaml
+#'
 #' @return No return value, called for side effects.
 #' @keywords breakpoints breakpoint_system
 #' @export
@@ -184,7 +188,7 @@ exportBreakpointSystem <- function(system, path) {
   )
 
   message("Exported ", output$name, " breakpoint system to ", path, ".")
-  yaml::write_yaml(output, path)
+  write_yaml(output, path)
 }
 
 #' Set the active breakpoint system
