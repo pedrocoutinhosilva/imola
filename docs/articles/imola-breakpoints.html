@@ -177,7 +177,7 @@ img {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>lg                             <span class="cn">NULL</span>                       <span class="dv">1199</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>xl                             <span class="dv">1200</span>                       <span class="cn">NULL</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="sc">-----------------------------</span></span></code></pre></div>
-<p>Using <code><a href="../reference/getBreakpointSystem.html">getBreakpointSystem()</a></code> with a name also allows us to get a specific registered breakpoint system, <code>getBreakpointSystem("bulma")</code> returns a diferent breakpoint system that comes bundled with imola:</p>
+<p>Using <code><a href="../reference/getBreakpointSystem.html">getBreakpointSystem()</a></code> with a name also allows us to get a specific registered breakpoint system, <code>getBreakpointSystem("bulma")</code> returns a different breakpoint system that comes bundled with imola:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Imola Breakpoint System</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Name<span class="sc">:</span>  bulma</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>description<span class="sc">:</span>  No description</span>
@@ -221,10 +221,10 @@ img {
   <span class="op">)</span>,
   <span class="va">...</span>
 <span class="op">)</span></code></pre></div>
-<p>Switching to a diferent breakpoint system would change this syntax slightly.</p>
+<p>Switching to a different breakpoint system would change this syntax slightly.</p>
 <p>We can either change the default global system with <code>setActiveBreakpointSystem(name)</code> or change it for this specific <code><a href="../reference/gridPanel.html">gridPanel()</a></code>.</p>
 <p>Changing the global system would affect all panels that are currently using breakpoints, so picking a global system should be something you do before adding breakpoints to your arguments.</p>
-<p>As a workaround we can define a diferent system for this panel only:</p>
+<p>As a workaround we can define a different system for this panel only:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
   areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
@@ -260,7 +260,7 @@ img {
 <div class="section level2">
 <h2 id="extending-breakpoint-systems">Extending breakpoint systems<a class="anchor" aria-label="anchor" href="#extending-breakpoint-systems"></a>
 </h2>
-<p>It is also possible to edit a breakpoint system and add or remove breakpoints. To do this we must first retrive a registered system using <code>getBreakpointSystem(name)</code>.</p>
+<p>It is also possible to edit a breakpoint system and add or remove breakpoints. To do this we must first retrieve a registered system using <code>getBreakpointSystem(name)</code>.</p>
 <p>This returns a object version of that system,</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> obj <span class="ot">&lt;-</span> <span class="fu">getBreakpointSystem</span>()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> obj</span>
@@ -355,9 +355,9 @@ img {
 <div class="section level2">
 <h2 id="importing-and-exporting">Importing and Exporting<a class="anchor" aria-label="anchor" href="#importing-and-exporting"></a>
 </h2>
-<p>It is also possible to import and export breakpoint system objects for future usage in diferent projects. In this case you can make use of <code><a href="../reference/exportBreakpointSystem.html">exportBreakpointSystem()</a></code> and <code><a href="../reference/importBreakpointSystem.html">importBreakpointSystem()</a></code>.</p>
+<p>It is also possible to import and export breakpoint system objects for future usage in different projects. In this case you can make use of <code><a href="../reference/exportBreakpointSystem.html">exportBreakpointSystem()</a></code> and <code><a href="../reference/importBreakpointSystem.html">importBreakpointSystem()</a></code>.</p>
 <p><code><a href="../reference/exportBreakpointSystem.html">exportBreakpointSystem()</a></code> allows you to export a system object into a specific file.</p>
-<p>This file will contain all the necessary information to rebuild the system, even in a diferent project, and can be turned back into a template object using <code><a href="../reference/importBreakpointSystem.html">importBreakpointSystem()</a></code>.</p>
+<p>This file will contain all the necessary information to rebuild the system, even in a different project, and can be turned back into a template object using <code><a href="../reference/importBreakpointSystem.html">importBreakpointSystem()</a></code>.</p>
 <p>After importing all functionality to add or remove breakpoints, register and unregister the system, using it as a argument value can also be used with this object.</p>
 <hr>
 </div>

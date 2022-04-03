@@ -112,14 +112,14 @@ img {
   max-width: 100%;
 }
 </style>
-<p>Templates are a quick way of reusing the same layouts between diferent components and even projects. To accomodate this process imola introduces a simple template engine.</p>
+<p>Templates are a quick way of reusing the same layouts between different components and even projects. To accommodate this process imola introduces a simple template engine.</p>
 <hr>
 <div class="section level2">
 <h2 id="creating-templates">Creating templates<a class="anchor" aria-label="anchor" href="#creating-templates"></a>
 </h2>
 <p>Templates can be created via <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code>.</p>
 <p>They are collections of arguments that can be passed to a <code>grid</code> or <code>flex</code> function.</p>
-<p>In practive this means they share all the properties of those arguments, including:</p>
+<p>In practice this means they share all the properties of those arguments, including:</p>
 <ul>
 <li>Support for breakpoints</li>
 <li>Allowing both css notation (a string with values separated by a space) or vector notation (a vector where each element is a value).</li>
@@ -201,7 +201,7 @@ img {
 <h2 id="bundled-templates">Bundled templates<a class="anchor" aria-label="anchor" href="#bundled-templates"></a>
 </h2>
 <p>By default imola also includes some ready to use templates. Similar to manually registered templates these are also listed under <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
-<p>These can be used just like registered templates, with the diference that they do not require manually registering them:</p>
+<p>These can be used just like registered templates, with the difference that they do not require manually registering them:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#in ui.R</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gridPanel</span>(</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">template =</span> <span class="st">"header-sidebar-right"</span></span>
@@ -215,9 +215,9 @@ img {
 <div class="section level2">
 <h2 id="importing-and-exporting">Importing and Exporting<a class="anchor" aria-label="anchor" href="#importing-and-exporting"></a>
 </h2>
-<p>It is also possible to import and export template objects for future usage in diferent projects. In this case you can make use of <code><a href="../reference/exportTemplate.html">exportTemplate()</a></code> and <code><a href="../reference/importTemplate.html">importTemplate()</a></code>.</p>
+<p>It is also possible to import and export template objects for future usage in different projects. In this case you can make use of <code><a href="../reference/exportTemplate.html">exportTemplate()</a></code> and <code><a href="../reference/importTemplate.html">importTemplate()</a></code>.</p>
 <p><code><a href="../reference/exportTemplate.html">exportTemplate()</a></code> allows you to export a template object into a specific file.</p>
-<p>This file will contain all the necessary information to rebuild the template, even in a diferent project, and can be turned back into a template object using <code><a href="../reference/importTemplate.html">importTemplate()</a></code>.</p>
+<p>This file will contain all the necessary information to rebuild the template, even in a different project, and can be turned back into a template object using <code><a href="../reference/importTemplate.html">importTemplate()</a></code>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

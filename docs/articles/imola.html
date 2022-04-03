@@ -114,15 +114,15 @@ img {
 </style>
 <p>Imola’s main goal it to give you the tools to work with CSS Flex and CSS Grid directly from R as an alternative to columns and rows.</p>
 <p><img src="figures/write-less.png"></p>
-<p>Using imola can be as simple as using a template in your dashboard, or as deep as building a fully custom layout, complete with diferent views for diferent screen sizes.</p>
-<p>In addition to the convenient wrapper functions for CSS Flex and CSS Grid, imola also includes support for dealing with diferent screen sizes as well as saving and reusing layouts via the concept of <code>breakpoint systems</code> and <code>templates</code>.</p>
+<p>Using imola can be as simple as using a template in your dashboard, or as deep as building a fully custom layout, complete with different views for different screen sizes.</p>
+<p>In addition to the convenient wrapper functions for CSS Flex and CSS Grid, imola also includes support for dealing with different screen sizes as well as saving and reusing layouts via the concept of <code>breakpoint systems</code> and <code>templates</code>.</p>
 <hr>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <p>The bread and butter of imola are the <code><a href="../reference/gridPanel.html">gridPanel()</a></code> and <code><a href="../reference/flexPanel.html">flexPanel()</a></code> functions.</p>
 <p>They allow you to replace any HTML tag that serves as a container (<code>div</code>, <code>section</code>, <code>main</code>, <code>nav</code>, …) with a tag using one of the CSS layout systems (grid or flex).</p>
-<p>While in depth knowledge of CSS Flexbox and CSS Grid is not required to get started, it is recomended to at least be somewhat familiar with them. I recommend <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout" class="external-link">this article</a> to get you up to speed.</p>
+<p>While in depth knowledge of CSS Flexbox and CSS Grid is not required to get started, it is recommended to at least be somewhat familiar with them. I recommend <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout" class="external-link">this article</a> to get you up to speed.</p>
 <p>If you are looking for more information on a specific system in imola, make sure to check the following vignettes for an in depth view:</p>
 <ul>
 <li>
@@ -140,7 +140,7 @@ img {
 <h2 id="using-grid-vs-flex">Using grid vs flex<a class="anchor" aria-label="anchor" href="#using-grid-vs-flex"></a>
 </h2>
 <p><img src="figures/gridvsflex.jpeg"></p>
-<p>Picking between grid and flex might seem tricky. In general flex and Grid serve different purposes and are both incredibly useful. Picking between them tipically depends on your use case:</p>
+<p>Picking between grid and flex might seem tricky. In general flex and Grid serve different purposes and are both incredibly useful. Picking between them typically depends on your use case:</p>
 <div class="section level4">
 <h4 id="use-flex-when">Use Flex when:<a class="anchor" aria-label="anchor" href="#use-flex-when"></a>
 </h4>
@@ -281,7 +281,7 @@ img {
 <p>Registered templates are templates that are either bundled with imola, or have been added to the global template list by using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> on a template object.</p>
 <p>You can view all registered templates by using <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
 <p>Similar to <code>grid</code> and <code>flex</code> functions, <code>templates</code> also support breakpoint systems.</p>
-<p>Lets say we would like to save our previous areas as a template, and use it in diferent components. We could use <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> to generate a template object:</p>
+<p>Lets say we would like to save our previous areas as a template, and use it in different components. We could use <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> to generate a template object:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#in global.R</span>
 <span class="co"># create a template object</span>
