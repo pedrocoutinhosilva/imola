@@ -63,7 +63,7 @@
       
       $css$flexbox
       $css$flexbox$fill_page
-      [1] " html, body { min-height: 100vh; width: 100%; margin: 0; padding: 0; } #grid-page-wrapper { min-height: 100vh; }"
+      [1] " html, body { min-height: 100vh; width: 100%; margin: 0; padding: 0; } .grid-page-wrapper { min-height: 100vh; }"
       
       
       
@@ -75,19 +75,19 @@
       [1] " @media all {{min}} {{max}} { {{rules}} }"
       
       $string_templates$grid_base
-      [1] "#{{id}} {width: 100%; display: grid;}"
+      [1] ".{{id}} {width: 100%; display: grid;}"
       
       $string_templates$grid_auto_fill
-      [1] "#{{id}} {height: 100%;}"
+      [1] ".{{id}} {height: 100%;}"
       
       $string_templates$grid_parent
-      [1] " #{{id}} { {{attribute}}: {{value}}; }"
+      [1] " .{{id}} { {{attribute}}: {{value}}; }"
       
       $string_templates$grid_cell
       [1] " .{{id}} > .{{child_id}} { {{attribute}}: {{value}}; }"
       
       $string_templates$flex_base
-      [1] "#{{id}} {height: 100%; width: 100%; display: flex;}"
+      [1] ".{{id}} {height: 100%; width: 100%; display: flex;}"
       
       $string_templates$flex_cell
       [1] " .{{id}} > *:nth-child({{child_index}}) { {{attribute}}: {{value}}; }"
