@@ -13,7 +13,7 @@ css:
       html, body {
         min-height: 100vh; width: 100%; margin: 0; padding: 0;
       }
-      #grid-page-wrapper {
+      .grid-page-wrapper {
         min-height: 100vh;
       }"
 
@@ -27,10 +27,10 @@ string_templates:
     }"
 
   # CSS templates
-  grid_base: "#{{id}} {width: 100%; display: grid;}"
-  grid_auto_fill: "#{{id}} {height: 100%;}"
+  grid_base: ".{{id}} {width: 100%; display: grid;}"
+  grid_auto_fill: ".{{id}} {height: 100%;}"
   grid_parent: "
-    #{{id}} {
+    .{{id}} {
       {{attribute}}: {{value}};
     }"
   grid_cell: "
@@ -38,7 +38,7 @@ string_templates:
       {{attribute}}: {{value}};
     }"
 
-  flex_base: "#{{id}} {height: 100%; width: 100%; display: flex;}"
+  flex_base: ".{{id}} {height: 100%; width: 100%; display: flex;}"
   flex_cell: "
     .{{id}} > *:nth-child({{child_index}}) {
       {{attribute}}: {{value}};
