@@ -26,9 +26,9 @@ Imola's main goal it to give you the tools to work with CSS Flex and CSS Grid di
 
 ![](figures/write-less.png)
 
-Using imola can be as simple as using a template in your dashboard, or as deep as building a fully custom layout, complete with diferent views for diferent screen sizes.
+Using imola can be as simple as using a template in your dashboard, or as deep as building a fully custom layout, complete with different views for different screen sizes.
 
-In addition to the convenient wrapper functions for CSS Flex and CSS Grid, imola also includes support for dealing with diferent screen sizes as well as saving and reusing layouts via the concept of `breakpoint systems` and `templates`.
+In addition to the convenient wrapper functions for CSS Flex and CSS Grid, imola also includes support for dealing with different screen sizes as well as saving and reusing layouts via the concept of `breakpoint systems` and `templates`.
 
 ---
 
@@ -38,7 +38,7 @@ The bread and butter of imola are the `gridPanel()` and `flexPanel()` functions.
 
 They allow you to replace any HTML tag that serves as a container (`div`, `section`, `main`, `nav`, ...) with a tag using one of the CSS layout systems (grid or flex).
 
-While in depth knowledge of CSS Flexbox and CSS Grid is not required to get started, it is recomended to at least be somewhat familiar with them. I recommend [this article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to get you up to speed.
+While in depth knowledge of CSS Flexbox and CSS Grid is not required to get started, it is recommended to at least be somewhat familiar with them. I recommend [this article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to get you up to speed.
 
 If you are looking for more information on a specific system in imola, make sure to check the following vignettes for an in depth view:
 
@@ -53,7 +53,7 @@ If you are looking for more information on a specific system in imola, make sure
 
 ![](figures/gridvsflex.jpeg)
 
-Picking between grid and flex might seem tricky. In general flex and Grid serve different purposes and are both incredibly useful. Picking between them tipically depends on your use case:
+Picking between grid and flex might seem tricky. In general flex and Grid serve different purposes and are both incredibly useful. Picking between them typically depends on your use case:
 
 #### Use Flex when:
 -   Content sets the size
@@ -224,7 +224,7 @@ You can view all registered templates by using `listTemplates()`.
 
 Similar to `grid` and `flex` functions, `templates` also support breakpoint systems.
 
-Lets say we would like to save our previous areas as a template, and use it in diferent components. We could use `gridTemplate()` to generate a template object:
+Lets say we would like to save our previous areas as a template, and use it in different components. We could use `gridTemplate()` to generate a template object:
 
 ``` r
 #in global.R

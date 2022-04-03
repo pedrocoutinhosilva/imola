@@ -38,7 +38,7 @@ Grid is a powerful spec that, when combined with other parts of CSS such as flex
 
 If you're interested in more information about the full array of options in the CSS grid standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/complete-guide-grid/) to get you started.
 
-I also recomend [gridbyexample](https://gridbyexample.com/examples/) if you're looking for inspiration on layouts, examples and general information about CSS grid.
+I also recommend [gridbyexample](https://gridbyexample.com/examples/) if you're looking for inspiration on layouts, examples and general information about CSS grid.
 
 ---
 

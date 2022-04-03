@@ -22,7 +22,7 @@ img {
 }
 ```
 
-Templates are a quick way of reusing the same layouts between diferent components and even projects. To accomodate this process imola introduces a simple template engine.
+Templates are a quick way of reusing the same layouts between different components and even projects. To accommodate this process imola introduces a simple template engine.
 
 ---
 
@@ -32,7 +32,7 @@ Templates can be created via `gridTemplate()`.
 
 They are collections of arguments that can be passed to a `grid` or `flex` function.
 
-In practive this means they share all the properties of those arguments, including:
+In practice this means they share all the properties of those arguments, including:
 
  -   Support for breakpoints
  -   Allowing both css notation (a string with values separated by a space) or vector notation (a vector where each element is a value).
@@ -136,7 +136,7 @@ Registered templates can also be turned back into a template object using `getTe
 
 By default imola also includes some ready to use templates. Similar to manually registered templates these are also listed under `listTemplates()`.
 
-These can be used just like registered templates, with the diference that they do not require manually registering them:
+These can be used just like registered templates, with the difference that they do not require manually registering them:
 
 ``` r
 #in ui.R
@@ -154,8 +154,8 @@ For a demo on all templates bundled with imola, [click here](https://sparktuga.s
 
 ## Importing and Exporting
 
-It is also possible to import and export template objects for future usage in diferent projects. In this case you can make use of `exportTemplate()` and `importTemplate()`.
+It is also possible to import and export template objects for future usage in different projects. In this case you can make use of `exportTemplate()` and `importTemplate()`.
 
 `exportTemplate()` allows you to export a template object into a specific file.
 
-This file will contain all the necessary information to rebuild the template, even in a diferent project, and can be turned back into a template object using `importTemplate()`.
+This file will contain all the necessary information to rebuild the template, even in a different project, and can be turned back into a template object using `importTemplate()`.

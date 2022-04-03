@@ -107,7 +107,7 @@ xl                             1200                       NULL
 -----------------------------
 ```
 
-Using `getBreakpointSystem()` with a name also allows us to get a specific registered breakpoint system, `getBreakpointSystem("bulma")` returns a diferent breakpoint system that comes bundled with imola:
+Using `getBreakpointSystem()` with a name also allows us to get a specific registered breakpoint system, `getBreakpointSystem("bulma")` returns a different breakpoint system that comes bundled with imola:
 ``` r
 Imola Breakpoint System
 Name:  bulma
@@ -165,13 +165,13 @@ gridPanel(
 
 ```
 
-Switching to a diferent breakpoint system would change this syntax slightly.
+Switching to a different breakpoint system would change this syntax slightly.
 
 We can either change the default global system with `setActiveBreakpointSystem(name)` or change it for this specific `gridPanel()`.
 
 Changing the global system would affect all panels that are currently using breakpoints, so picking a global system should be something you do before adding breakpoints to your arguments.
 
-As a workaround we can define a diferent system for this panel only:
+As a workaround we can define a different system for this panel only:
 ``` r
 gridPanel(
   areas = c(
@@ -212,7 +212,7 @@ All `gridPanel()` and `flexPanel()` arguments that affect the styling of the pan
 
 ## Extending breakpoint systems
 
-It is also possible to edit a breakpoint system and add or remove breakpoints. To do this we must first retrive a registered system using `getBreakpointSystem(name)`.
+It is also possible to edit a breakpoint system and add or remove breakpoints. To do this we must first retrieve a registered system using `getBreakpointSystem(name)`.
 
 This returns a object version of that system,
 
@@ -331,11 +331,11 @@ All functionality to add or remove breakpoints, register and unregister the syst
 
 ## Importing and Exporting
 
-It is also possible to import and export breakpoint system objects for future usage in diferent projects. In this case you can make use of `exportBreakpointSystem()` and `importBreakpointSystem()`.
+It is also possible to import and export breakpoint system objects for future usage in different projects. In this case you can make use of `exportBreakpointSystem()` and `importBreakpointSystem()`.
 
 `exportBreakpointSystem()` allows you to export a system object into a specific file.
 
-This file will contain all the necessary information to rebuild the system, even in a diferent project, and can be turned back into a template object using `importBreakpointSystem()`.
+This file will contain all the necessary information to rebuild the system, even in a different project, and can be turned back into a template object using `importBreakpointSystem()`.
 
 After importing all functionality to add or remove breakpoints, register and unregister the system, using it as a argument value can also be used with this object.
 
