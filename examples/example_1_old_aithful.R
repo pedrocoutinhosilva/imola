@@ -3,33 +3,31 @@ library(imola)
 
 ui <- gridPage(
     title = "Grid page example",
-    rows = "100px 1fr 1fr",
+
+    rows = "100px minmax(0, 1fr) minmax(0, 1fr)",
+    columns = "minmax(200px, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
+
     areas = list(
       c("header", "header", "header"),
       c("sidebar", "main", "main"),
       c("sidebar", "main", "main")
     ),
 
-    gridPanel(
-      class = "header",
+    header = gridPanel(
       areas = list(c("...", "title", "...")),
       div(
         class = "title",
         titlePanel("Old Faithful Geyser Data in a grid")
       )
     ),
-    div(
-      class = "sidebar",
+    sidebar = div(
       sliderInput("bins",
                   "Number of bins:",
                   min = 1,
                   max = 50,
                   value = 30)
     ),
-    gridPanel(
-      class = "main",
-      plotOutput("distPlot", height = "100%")
-    )
+    main = plotOutput("distPlot", height = "100%")
 )
 
 server <- function(input, output) {
