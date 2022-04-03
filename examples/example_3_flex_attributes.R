@@ -2,10 +2,7 @@ library(shiny)
 library(imola)
 library(magrittr)
 
-registerTemplate("flex", "mycustom",
-                 direction = "column")
-
-custom_template <- gridTemplate("grid", direction = "column")
+custom_template <- gridTemplate("custom_template", "flex", direction = "column")
 
 exampleDiv <- function(color, border, ...) {
   div(

@@ -1,8 +1,17 @@
 library(shiny)
 library(imola)
 
-registerBreakpoint("medium", max = 1000)
-registerBreakpoint("small", max = 500)
+breakpoint_system <- getBreakpointSystem()
+
+breakpoint_system <- addBreakpoint(
+  breakpoint_system,
+  breakpoint("medium", max = 1000)
+)
+
+breakpoint_system <- addBreakpoint(
+  breakpoint_system,
+  breakpoint("small", max = 500)
+)
 
 divStyle <- function(color, border) {
   paste0(
@@ -13,6 +22,7 @@ divStyle <- function(color, border) {
 
 ui <- gridPage(
     title = "Grid page example",
+    breakpoint_system = breakpoint_system,
 
     areas = list(
       default = list(
