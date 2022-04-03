@@ -32,7 +32,7 @@ listTemplates <- function(type = NULL) {
 #' @param type The type of css grid for which the template can be used.
 #'   Value must be either "grid" or "flex".
 #' @param ... Collection of valid arguments that can be passed to a panel of
-#'   the given type (see [gridPanel] and [FlexPanel] for all options)
+#'   the given type (see [gridPanel] and [flexPanel] for all options)
 #' @param breakpoint_system Breakpoint system to use.
 #' @param description Optional description with information.
 #'   about the template. Can be used to pass on any additional relevant
@@ -191,7 +191,7 @@ getTemplate <- function(name, type) {
 registerTemplate <- function(template) {
   stopifnot(
     "Template is not a valid gridTemplate()" = {
-      is(template, "imola.template")
+      is.template(template)
     }
   )
 
@@ -243,7 +243,7 @@ unregisterTemplate <- function(name, type) {
 #'
 #' @return A named list of css attributes that can be used to generate a html
 #'   element style rules of the given type.
-#' @keywords templates
+#' @keywords utils internal
 applyTemplate <- function(attributes, template, defaults, type) {
   if (is.null(template)) {
     return(attributes)

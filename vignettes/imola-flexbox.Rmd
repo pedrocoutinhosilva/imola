@@ -21,6 +21,12 @@ htmltools::tags$script(src = "static/flexbox.js")
 htmltools::tags$link(rel = "stylesheet", type = "text/css", href = "static/flexbox.css")
 ```
 
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
+
 ![](figures/cssflexbox.jpg)
 
 The imola flex functions family focuses on providing support for the CSS flexbox standard.

@@ -1,5 +1,9 @@
 /*flex-direction: row | row-reverse | column | column-reverse;*/
 
+img {
+  max-width: 100%;
+}
+
 .flex-container.row {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;

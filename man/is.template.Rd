@@ -15,4 +15,5 @@ TRUE or FALSE depending if the object is a imola template.
 \description{
 Tests whether the object is an instance of a imola template.
 }
+\keyword{internal}
 \keyword{validators}

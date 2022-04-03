@@ -15,4 +15,5 @@ TRUE or FALSE depending if the object is a imola breakpoint system.
 \description{
 Tests whether the object is an instance of a imola breakpoint system.
 }
+\keyword{internal}
 \keyword{validators}

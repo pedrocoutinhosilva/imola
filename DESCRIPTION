@@ -23,7 +23,9 @@ Suggests:
     testthat (>= 3.0.0),
     rvest,
     devtools,
-    covr
+    covr,
+    rmarkdown,
+    knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Config/testthat/edition: 3

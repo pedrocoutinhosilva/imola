@@ -17,3 +17,5 @@ knitr::opts_chunk$set(
 ```
 
 -   Built in template layouts: https://sparktuga.shinyapps.io/imolatemplates/
+
+-   UA Migration Tracker (Full dashboard): https://github.com/pedrocoutinhosilva/UA-Refugee-Migration-Tracker/

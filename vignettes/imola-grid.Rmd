@@ -20,6 +20,12 @@ knitr::opts_chunk$set(
 htmltools::tags$link(rel = "stylesheet", type = "text/css", href = "static/flexbox.css")
 ```
 
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
+
 ![](figures/cssgrid.jpg)
 
 The imola grid functions family focuses on providing support for the CSS Grid standard.

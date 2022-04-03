@@ -15,6 +15,13 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
+
 Imola's main goal it to give you the tools to work with CSS Flex and CSS Grid directly from R as an alternative to columns and rows.
 
 ![](figures/write-less.png)

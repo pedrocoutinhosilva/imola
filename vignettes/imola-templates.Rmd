@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
+
 Templates are a quick way of reusing the same layouts between diferent components and even projects. To accomodate this process imola introduces a simple template engine.
 
 ---

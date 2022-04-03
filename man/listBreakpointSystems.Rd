@@ -12,4 +12,5 @@ A named list of css templates and specific values.
 \description{
 Lists all available breakpoint systems.
 }
-\keyword{templates}
+\keyword{breakpoint_system}
+\keyword{breakpoints}

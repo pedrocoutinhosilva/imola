@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
+
 ![](figures/responsivedesign.png)
 
 When designing for the web, it is important to keep in mind what different users will reach you in different devices with different screen sizes and orientations.

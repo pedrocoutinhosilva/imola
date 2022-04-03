@@ -26,4 +26,5 @@ attributes being added to the final list, a list of default values (based
 of the specific panel creation callback formals) is used to validate the
 need of a argument value in the final list.
 }
-\keyword{templates}
+\keyword{internal}
+\keyword{utils}

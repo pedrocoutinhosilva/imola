@@ -4,7 +4,7 @@
 #' Lists all available breakpoint systems.
 #'
 #' @return A named list of css templates and specific values.
-#' @keywords templates
+#' @keywords breakpoints breakpoint_system
 #' @export
 listBreakpointSystems <- function() {
   getOption("imola.breakpoint.systems")
@@ -206,7 +206,7 @@ setActiveBreakpointSystem <- function(system) {
     output <- getOption("imola.breakpoint.systems")[[system]]
   }
 
-  if (is(system, "imola.breakpoint.system")) {
+  if (is.breakpointSystem(system)) {
     output <- system
     registerBreakpointSystem(system)
   }

@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
+
 ## Introduction
 If you're been around web development since the 90s, you might remember how different web design used to look.
 

@@ -19,7 +19,7 @@ gridTemplate(
 Value must be either "grid" or "flex".}
 
 \item{...}{Collection of valid arguments that can be passed to a panel of
-the given type (see \link{gridPanel} and \link{FlexPanel} for all options)}
+the given type (see \link{gridPanel} and \link{flexPanel} for all options)}
 
 \item{breakpoint_system}{Breakpoint system to use.}
 

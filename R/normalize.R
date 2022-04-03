@@ -6,7 +6,7 @@
 #'
 #' @param attributes A named list of attribute values.
 #'
-#' @keywords internal normalizer
+#' @keywords normalizer internal
 #' @return A named list.
 normalizeAttributes <- function(attributes) {
   for (attribute in names(attributes)) {
@@ -27,7 +27,7 @@ normalizeAttributes <- function(attributes) {
 #' @param simplify Should each attribute value be simplified into a single
 #'   string.
 #'
-#' @keywords internal normalizer
+#' @keywords normalizer internal
 #' @return A named list.
 normalizeAttribute <- function(attribute, simplify = FALSE) {
   if (is.null(attribute)) {

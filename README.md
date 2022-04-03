@@ -27,6 +27,8 @@ If layout creation isn't your thing, imola comes with a built in collection of t
 
 ![](reference/figures/easy-templates.png)
 
+Browse all available templates here: https://sparktuga.shinyapps.io/imolatemplates/
+
 ---
 
 ### Demos to get you started
@@ -35,6 +37,8 @@ Example applications showcasing some of the power of imola:
 ![](reference/figures/templatesdemo.png)
 
 -   Built in template layouts: https://sparktuga.shinyapps.io/imolatemplates/
+
+-   UA Migration Tracker (Full dashboard): https://github.com/pedrocoutinhosilva/UA-Refugee-Migration-Tracker/
 
 ---
 

@@ -7,7 +7,7 @@
 #'
 #' @importFrom magrittr "%>%" "%<>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
 generateGridCSS <- function(attributes, id, areas, system) {
   mapping <- getOption("imola.settings")$property_mapping
@@ -43,7 +43,7 @@ generateGridCSS <- function(attributes, id, areas, system) {
 #'
 #' @importFrom magrittr "%>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
 generateGridAreaCSS <- function(areas, id) {
   styles <- c()
@@ -76,7 +76,7 @@ generateGridAreaCSS <- function(areas, id) {
 #'
 #' @importFrom magrittr "%>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
 generateFlexCSS <- function(attributes,
                             id,
@@ -129,7 +129,7 @@ generateFlexCSS <- function(attributes,
 #'
 #' @importFrom magrittr "%<>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
 generateFlexChildrenCSS <- function(attributes,
                                     id,
@@ -190,7 +190,7 @@ generateFlexChildrenCSS <- function(attributes,
 #'
 #' @importFrom magrittr "%<>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
 generateCSSPropertyStyles <- function(value, property, id, system) {
   if (is.null(value)) {
