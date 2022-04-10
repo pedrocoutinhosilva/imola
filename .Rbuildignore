@@ -12,7 +12,8 @@ tests
 ^docs$
 ^pkgdown$
 ^doc$
-^Meta$
 ^codecov\.yml$
 .covrignore
 ^\.github$
+^revdep$
+^cran-comments\.md$
