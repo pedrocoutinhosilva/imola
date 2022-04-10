@@ -7,7 +7,7 @@
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/imola)](https://CRAN.R-project.org/package=imola)
 <!-- badges: end -->
 
-CSS Grid and flexbox layouts for your R/Shiny dashboards, directly from R.
+CSS Grid and flexbox layouts for R/Shiny
 
 Imola (named after the first city ever to be given a technical blueprint by Leonardo da Vinci) aims at giving more layout creation options directly in R/shiny, without the hassle of having to create custom CSS every time.
 
@@ -31,14 +31,15 @@ Browse all available templates here: https://sparktuga.shinyapps.io/imolatemplat
 
 ---
 
-### Demos to get you started
+### Examples to get you started
 Example applications showcasing some of the power of imola:
 
 ![](reference/figures/templatesdemo.png)
+![](reference/figures/ua-tracker.png)
 
--   Built in template layouts: https://sparktuga.shinyapps.io/imolatemplates/
-
--   UA Migration Tracker (Full dashboard): https://github.com/pedrocoutinhosilva/UA-Refugee-Migration-Tracker/
+-   Usage examples: https://sparktuga.shinyapps.io/imola-examples/
+-   Built in templates preview: https://sparktuga.shinyapps.io/imolatemplates/
+-   UA Migration Tracker (Full code available): http://uaborder.com/
 
 ---
 
@@ -65,6 +66,8 @@ Looking for help on how to start? Make sure to check the built in examples and v
 ---
 
 ## Usage
+
+Online documentation available at: https://www.anatomyofcode.com/imola
 
 Check `vignette("imola")` on how to get started, and other follow up vignettes for even more information regarding CSS flexbox and grid and their imola equivalents.
 

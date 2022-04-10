@@ -51,8 +51,11 @@ example_page <- function(name, ui, server) {
     ui <- tagList(
       brochure_page_overwrites,
       h2("Examples from the imola package"),
-      h3("Explore the code in https://github.com/pedrocoutinhosilva/imola/tree/main/examples"),
       ui,
+      a(
+        href = "https://github.com/pedrocoutinhosilva/imola/tree/main/examples",
+        h3("Explore the code at https://github.com/pedrocoutinhosilva/imola/tree/main/examples")
+      ),
       tags$style("
         .container-fluid {
           display: flex;

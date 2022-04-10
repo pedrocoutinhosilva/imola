@@ -22,7 +22,7 @@ img {
 }
 ```
 
-Imola's main goal it to give you the tools to work with CSS Flex and CSS Grid directly from R as an alternative to columns and rows.
+Imola's main goal it to give you the tools to work with CSS Flex and CSS Grid directly from R as an alternative to bootstrap's `columns` and `rows`.
 
 ![](figures/write-less.png)
 
