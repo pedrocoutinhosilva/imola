@@ -168,6 +168,6 @@ ui <- fixedPage(
   grid_templates
 )
 
-server <- function(input, output) {}
+server <- function(input, output, session) {}
 
 shinyApp(ui = ui, server = server)

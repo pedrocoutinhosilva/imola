@@ -15,29 +15,27 @@ ui <- gridPage(
 
     header = gridPanel(
       areas = list(c("...", "title", "...")),
-      div(
-        class = "title",
-        titlePanel("Old Faithful Geyser Data in a grid")
+      title = div(
+        titlePanel("Old Faithful Geyser with grid")
       )
     ),
-    sidebar = div(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
+
+    sidebar = sliderInput("bins",
+      "Number of bins:",
+      min = 1,
+      max = 50,
+      value = 30
     ),
+
     main = plotOutput("distPlot", height = "100%")
 )
 
-server <- function(input, output) {
+server <- function(input, output, server) {
   output$distPlot <- renderPlot({
-      test = 'darkgray'
-
       x    <- faithful[, 2]
       bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
-      hist(x, breaks = bins, col = test, border = 'white')
+      hist(x, breaks = bins, col = "darkgray", border = "white")
   })
 }
 
