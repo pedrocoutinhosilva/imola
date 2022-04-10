@@ -1,0 +1,82 @@
+<div class="grid-layout-example">
+  <div class="page-wrap">
+    <header class="page-header">
+      Header
+    </header>
+    <nav class="page-nav">
+      Nav
+    </nav>
+    <main class="page-main">
+      <article>
+        <p>Article</p>
+      </article>
+    </main>
+    <aside class="page-sidebar">
+      Aside
+    </aside>
+    <footer class="page-footer">
+      Footer
+    </footer>
+  </div>
+</div>
+
+<style>
+  .grid-layout-example * {
+    box-sizing: border-box;
+  }
+
+  .grid-layout-example .page-wrap {
+    background: white;
+    height: calc(300px - 10px);
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+    grid-template-rows: min-content min-content 1fr min-content;
+    gap: 1px;
+  }
+  .grid-layout-example .page-wrap > * {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+  @media (max-width: 600px) {
+    .grid-layout-example .page-wrap {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+    }
+    .grid-layout-example .page-wrap > * {
+      grid-column: 1/-1 !important;
+      grid-row: auto !important;
+    }
+  }
+
+  .grid-layout-example .page-header {
+    grid-column: 1/-1;
+    background: #acb3b9;
+  }
+
+  .grid-layout-example .page-sidebar {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    background: #d4d7dc;
+  }
+
+  .grid-layout-example .page-nav {
+    grid-column: 2/3;
+    background: #f2f2f2;
+  }
+
+  .grid-layout-example .page-main {
+    grid-column: 2/3;
+    background: white;
+  }
+
+  .grid-layout-example .page-footer {
+    grid-column: 1/-1;
+    background: #acb3b9;
+  }
+
+  .grid-layout-example details p {
+    text-transform: none;
+    text-align: left;
+  }
+</style>

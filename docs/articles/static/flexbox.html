@@ -1,0 +1,226 @@
+<div class="principal">
+<h2>Properties for the flex container</h2>
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-direction.php">flex-direction</a> <small>( property of the flex container  )</small></h4><!--flex-direction: row | row-reverse | column | column-reverse;-->
+<div class="radio">
+<input name="flex-direction" type="radio"  class="flex-direction" id="R11" value="row" checked><label for="R11">row:</label>
+<input name="flex-direction"  type="radio" class="flex-direction" id="R12" value="row-reverse"><label for="R12">row-reverse:</label>
+<input name="flex-direction"  type="radio" class="flex-direction" id="R13" value="column"><label for="R13">column:</label>
+<input name="flex-direction"  type="radio" class="flex-direction" id="R14" value="column-reverse"><label for="R14">column-reverse:</label>
+</div></div>
+<div class="flex-container" id="direction">
+<div class="item" data-color="2a80b9"><p>1</p></div>
+<div class="item" data-color="8f44ad"><p>2</p></div>
+<div class="item" data-color="16a086"><p>3</p></div>
+<div class="item" data-color="f1c40f"><p>4</p></div>
+<div class="item" data-color="e77e23"><p>5</p></div>
+</div>
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-wrap.php">flex-wrap</a> <small>( property of the flex container  )</small></h4><!--nowrap | wrap | wrap-reverse;-->
+<div class="radio">
+<input name="flex-wrap" type="radio"  class="flex-wrap" id="R21" value="nowrap" checked><label for="R21">nowrap:</label>
+<input name="flex-wrap" type="radio"  class="flex-wrap" id="R22" value="wrap"><label for="R22">wrap:</label>
+<input name="flex-wrap" type="radio"  class="flex-wrap" id="R23" value="wrap-reverse"><label for="R23">wrap-reverse:</label>
+</div></div>
+<div class="flex-container" id="wrap">
+<div class="item" data-color="2a80b9"><p>1</p></div>
+<div class="item" data-color="8f44ad"><p>2</p></div>
+<div class="item" data-color="16a086"><p>3</p></div>
+<div class="item" data-color="f1c40f"><p>4</p></div>
+<div class="item" data-color="e77e23"><p>5</p></div>
+</div>
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-align-items.php">align-items</a> <small>( property of the flex container  )</small></h4><!-- flex-start | flex-end | center | baseline | stretch;-->
+<div class="radio">
+<input name="flex-align-items" type="radio"  class="flex-align-items" id="R31" value="align-items-start" ><label for="R31">flex-start:</label>
+<input name="flex-align-items" type="radio"  class="flex-align-items" id="R32" value="align-items-end"><label for="R32">flex-end:</label>
+<input name="flex-align-items" type="radio"  class="flex-align-items" id="R33" value="align-items-center"><label for="R33">center:</label>
+<input name="flex-align-items" type="radio"  class="flex-align-items" id="R34" value="align-items-baseline"><label for="R34">baseline:</label>
+<input name="flex-align-items" type="radio"  class="flex-align-items" id="R35" value="align-items-stretch" checked><label for="R35">stretch:</label>
+</div></div>
+<div class="flex-container" id="align">
+<div class="item" data-color="2a80b9"><p>1</p></div>
+<div class="item" data-color="8f44ad"><p>2</p></div>
+<div class="item" data-color="16a086"><p style="font-size:50px;">3</p></div>
+<div class="item" data-color="f1c40f"><p>4</p></div>
+<div class="item" data-color="e77e23"><p>5</p></div>
+</div>
+
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-justify-content.php">justify-content</a> <small>( property of the flex container )</small></h4> <!--justify-content: flex-start | flex-end | center | space-between | space-around; -->
+<div class="radio">
+<input name="justify-content" type="radio"  class="justify-content" id="R41" value="justify-start" checked ><label for="R41">flex-start:</label>
+<input name="justify-content" type="radio"  class="justify-content" id="R42" value="justify-end" ><label for="R42">flex-end:</label>
+<input name="justify-content" type="radio"  class="justify-content" id="R43" value="justify-space-between" ><label for="R43">space-between:</label>
+<input name="justify-content" type="radio"  class="justify-content" id="R44" value="justify-center" ><label for="R44">center:</label>
+<input name="justify-content" type="radio"  class="justify-content" id="R45" value="justify-space-around" ><label for="R45">space-around:</label>
+</div></div>
+<div class="flex-container" id="justify">
+<div class="item" data-color="2a80b9"><p>1</p></div>
+<div class="item" data-color="8f44ad"><p>2</p></div>
+<div class="item" data-color="16a086"><p>3</p></div>
+<div class="item" data-color="f1c40f"><p>4</p></div>
+<div class="item" data-color="e77e23"><p>5</p></div>
+
+</div>
+
+<!--<p>En <strong>Google Chrome</strong> y <strong>Opera</strong>: problemas al cambiar dinamicamente entre <code>justify-content:space-between</code> y <code>justify-content:space-around</code> </p>-->
+
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-align-content.php">align-content</a> <small>( property of the flex container  )</small></h4> <!--justify-content: flex-start | flex-end | center | space-between | space-around; -->
+<div class="radio">
+<input name="align-content" type="radio"  class="align-content" id="R51" value="align-content-start" ><label for="R51">flex-start:</label>
+<input name="align-content" type="radio"  class="align-content" id="R52" value="align-content-end" ><label for="R52">flex-end:</label>
+<input name="align-content" type="radio"  class="align-content" id="R53" value="align-content-center" ><label for="R53">center:</label>
+<input name="align-content" type="radio"  class="align-content" id="R54" value="align-content-space-between" ><label for="R54">space-between:</label>
+<input name="align-content" type="radio"  class="align-content" id="R55" value="align-content-space-around" ><label for="R55">space-around:</label>
+<input name="align-content" type="radio"  class="align-content" id="R56" value="align-content-stretch"  checked><label for="R56">stretch:</label>
+</div></div>
+<div class="flex-container" id="alignContent">
+
+<div class="item" data-color="1bbc9d"><p>1</p></div>
+<div class="item" data-color="2fcc71"><p>2</p></div>
+<div class="item" data-color="3598dc"><p>3</p></div>
+<div class="item" data-color="9c59b8"><p>4</p></div>
+<div class="item" data-color="34495e"><p>5</p></div>
+<div class="item" data-color="16a086"><p>6</p></div>
+<div class="item" data-color="27ae61"><p>7</p></div>
+<div class="item" data-color="2a80b9"><p>8</p></div>
+<div class="item" data-color="8f44ad"><p>9</p></div>
+<div class="item" data-color="2d3e50"><p>10</p></div>
+<div class="item" data-color="f1c40f"><p>11</p></div>
+<div class="item" data-color="e77e23"><p>12</p></div>
+<div class="item" data-color="e84c3d"><p>13</p></div>
+<div class="item" data-color="ecf0f1"><p>14</p></div>
+<div class="item" data-color="96a6a6"><p>15</p></div>
+<div class="item" data-color="f49c14"><p>16</p></div>
+<div class="item" data-color="d55401"><p>17</p></div>
+<div class="item" data-color="c1392b"><p>18</p></div>
+<div class="item" data-color="bec3c7"><p>19</p></div>
+<div class="item" data-color="808b8d"><p>20</p></div>
+
+</div>
+
+
+
+</div>
+
+<!-- propiedades de los items -->
+
+<div class="principal">
+<h2>Properties for the flex items </h2>
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-align-self.php">align-self</a> <small>( property for flex items  )</small></h4> <!--auto | flex-start | flex-end | center | baseline | stretch -->
+<div class="radio">
+<input name="align-self" type="radio"  class="align-self" id="R61" value="align-self-auto"  checked ><label for="R61">auto:</label>
+<input name="align-self" type="radio"  class="align-self" id="R62" value="align-self-start" ><label for="R62">flex-start:</label>
+<input name="align-self" type="radio"  class="align-self" id="R63" value="align-self-end" ><label for="R63">flex-end:</label>
+<input name="align-self" type="radio"  class="align-self" id="R64" value="align-self-center" ><label for="R64">center:</label>
+<input name="align-self" type="radio"  class="align-self" id="R65" value="align-self-baseline" ><label for="R65">baseline:</label>
+<input name="align-self" type="radio"  class="align-self" id="R66" value="align-self-stretch"><label for="R66">stretch:</label>
+</div>
+
+</div>
+<div class="flex-container align-items-center" id="FCI1">
+
+<div class="item" data-color="f49c14"><p>1</p></div>
+<div class="item" data-color="d55401"><p>2</p></div>
+<div class="item" data-color="c1392b"  id="alignSelf"><p style="font-size:50px;">3</p></div>
+<div class="item" data-color="bec3c7"><p>4</p></div>
+<div class="item" data-color="808b8d"><p>5</p></div>
+
+</div>
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-abreviado.php#flexGrow">flex-grow</a> <small>( property for flex items )</small></h4> <!--auto | flex-start | flex-end | center | baseline | stretch -->
+<div class="radio">
+<span class="nbsp"><label for="R71">elemento 1: </label><input type="number"  class="flex-grow" id="R71" min="0" ></span>
+<span class="nbsp"><label for="R72">elemento 2: </label><input type="number"  class="flex-grow" id="R72" min="0" ></span>
+<span class="nbsp"><label for="R73">elemento 3: </label><input type="number"  class="flex-grow" id="R73" min="0" ></span>
+<span class="nbsp"><label for="R74">elemento 4: </label><input type="number"  class="flex-grow" id="R74" min="0" ></span>
+<span class="nbsp"><label for="R75">elemento 5: </label><input type="number"  class="flex-grow" id="R75" min="0" ></span>
+</div>
+
+</div>
+<div class="flex-container align-items-center" id="FCI2">
+
+<div class="item" id="itemR71" data-color="f49c14"><p>1</p></div>
+<div class="item" id="itemR72" data-color="d55401"><p>2</p></div>
+<div class="item" id="itemR73" data-color="c1392b"><p>3</p></div>
+<div class="item" id="itemR74" data-color="bec3c7"><p>4</p></div>
+<div class="item" id="itemR75" data-color="808b8d"><p>5</p></div>
+
+</div>
+
+
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-abreviado.php#flexShrink">flex-shrink</a> <small>( property for flex items )</small></h4> <!--auto | flex-start | flex-end | center | baseline | stretch -->
+<div class="radio">
+<span class="nbsp"><label for="R81">elemento 1: </label><input type="number"  class="flex-shrink" id="R81" min="0" ></span>
+<span class="nbsp"><label for="R82">elemento 2: </label><input type="number"  class="flex-shrink" id="R82" min="0" ></span>
+<span class="nbsp"><label for="R83">elemento 3: </label><input type="number"  class="flex-shrink" id="R83" min="0" ></span>
+<span class="nbsp"><label for="R84">elemento 4: </label><input type="number"  class="flex-shrink" id="R84" min="0" ></span>
+<span class="nbsp"><label for="R85">elemento 5: </label><input type="number"  class="flex-shrink" id="R85" min="0" ></span>
+</div>
+
+</div>
+<div class="flex-container align-items-center" id="FCI3">
+
+<div class="item" id="itemR81" data-color="f49c14"><p>1</p></div>
+<div class="item" id="itemR82" data-color="d55401"><p>2</p></div>
+<div class="item" id="itemR83" data-color="c1392b"><p>3</p></div>
+<div class="item" id="itemR84" data-color="bec3c7"><p>4</p></div>
+<div class="item" id="itemR85" data-color="808b8d"><p>5</p></div>
+
+</div>
+
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-abreviado.php">flex</a> <small>( property for flex items )</small></h4> <!--auto | flex-start | flex-end | center | baseline | stretch -->
+<p>.item { flex: flex-grow [flex-shrink] [flex-basis]; } </p>
+<table id="flexBasis">
+<tr><td>elemento 1</td><td>elemento 2</td></tr>
+<tr><td><input type="number" class="flex-basis" id="B1" min="0" value="50" ><label for="B1">flex-basis %</label></td><td><input type="number" class="flex-basis" id="B2" min="0" value="50" ><label for="B2">flex-basis %</label></td></tr>
+<tr><td><input type="number" class="flex-basis-grow" id="G1" min="0" value="0" ><label for="G1">flex-grow</label></td><td><input type="number" class="flex-basis-grow" id="G2" min="0" value="0" ><label for="G2">flex-grow</label></td></tr>
+<tr><td><input type="number" class="flex-basis-shrink" id="S1" min="0" value="0" ><label for="S1">flex-shrink</label></td><td><input type="number" class="flex-basis-shrink" id="S2" min="0" value="0" ><label for="S2">flex-shrink</label></td></tr>
+</table>
+</div>
+
+
+<div class="flex-container align-items-center" id="FCI4">
+
+<div class="item" id="item1" data-color="f49c14"><p>1</p></div>
+<div class="item" id="item2" data-color="d55401"><p>2</p></div>
+
+</div>
+
+
+<div class="control">
+<h4><a href="http://w3.unpocodetodo.info/css3/flex-order.php">order</a> <small>( property for flex items )</small></h4> <!--auto | flex-start | flex-end | center | baseline | stretch -->
+<div class="radio">
+<span class="nbsp"><label for="R91">elemento 1: </label><input type="number"  class="flex-order" id="R91" min="0" ></span>
+<span class="nbsp"><label for="R92">elemento 2: </label><input type="number"  class="flex-order" id="R92" min="0" ></span>
+<span class="nbsp"><label for="R93">elemento 3: </label><input type="number"  class="flex-order" id="R93" min="0" ></span>
+<span class="nbsp"><label for="R94">elemento 4: </label><input type="number"  class="flex-order" id="R94" min="0" ></span>
+<span class="nbsp"><label for="R95">elemento 5: </label><input type="number"  class="flex-order" id="R95" min="0" ></span>
+</div>
+
+</div>
+<div class="flex-container align-items-center" id="FCI5">
+
+
+<div class="item" id="orderR91" data-color="f49c14"><p>1</p></div>
+<div class="item" id="orderR92" data-color="d55401"><p>2</p></div>
+<div class="item" id="orderR93" data-color="c1392b"><p>3</p></div>
+<div class="item" id="orderR94" data-color="bec3c7"><p>4</p></div>
+<div class="item" id="orderR95" data-color="808b8d"><p>5</p></div>
+
+</div>
+
+
+</div>

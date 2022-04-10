@@ -11,3 +11,8 @@ tests
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^doc$
+^Meta$
+^codecov\.yml$
+.covrignore
+^\.github$

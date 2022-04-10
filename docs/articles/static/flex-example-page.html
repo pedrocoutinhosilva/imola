@@ -1,0 +1,49 @@
+<style>
+  .flex-layout-example-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .flex-layout-example-wrapper #main {
+    display: flex;
+    flex: 1;
+    min-height: 270px;
+  }
+  .flex-layout-example-wrapper #main > article {
+    flex: 1;
+    order: 1;
+  }
+  .flex-layout-example-wrapper #main > nav,
+  .flex-layout-example-wrapper #main > aside {
+    flex: 0 0 20%;
+  }
+  .flex-layout-example-wrapper #main > nav {
+    background: #f2f2f2;
+    order: 3;
+  }
+  .flex-layout-example-wrapper #main > aside {
+    background: #d4d7dc;
+    order: 2;
+  }
+  .flex-layout-example-wrapper header, .flex-layout-example-wrapper footer {
+    background: #acb3b9;
+    height: 60px;
+  }
+  .flex-layout-example-wrapper header,
+  .flex-layout-example-wrapper footer,
+  .flex-layout-example-wrapper article,
+  .flex-layout-example-wrapper nav,
+  .flex-layout-example-wrapper aside {
+    padding: 1em;
+    margin: 0;
+  }
+</style>
+<div class = "flex-layout-example-wrapper">
+  <header>Header</header>
+  <div id="main">
+    <article>Article</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</div>

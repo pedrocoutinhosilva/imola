@@ -3,9 +3,9 @@
 \name{processContent}
 \alias{processContent}
 \title{Adds a css class to any HTML elements from the content that are named and
-  which name is in the areas vector for names. This allows content to be
-  assigned to the grid areas via named argument while still allowing other
-  generic HTML tag attributes to be used.}
+which name is in the areas vector for names. This allows content to be
+assigned to the grid areas via named argument while still allowing other
+generic HTML tag attributes to be used.}
 \usage{
 processContent(content, areas)
 }
@@ -19,7 +19,9 @@ A list of HTML elements.
 }
 \description{
 Adds a css class to any HTML elements from the content that are named and
-  which name is in the areas vector for names. This allows content to be
-  assigned to the grid areas via named argument while still allowing other
-  generic HTML tag attributes to be used.
+which name is in the areas vector for names. This allows content to be
+assigned to the grid areas via named argument while still allowing other
+generic HTML tag attributes to be used.
 }
+\keyword{internal}
+\keyword{utils}

@@ -15,3 +15,5 @@ A named list.
 \description{
 Applies the normalizeAttribute() function to a full attribute list.
 }
+\keyword{internal}
+\keyword{normalizer}

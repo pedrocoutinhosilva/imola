@@ -6,6 +6,7 @@
 #'   systems can be found under getOption("imola.breakpoints")
 #'
 #' @return A named list of media breakpoints options.
+#' @keywords breakpoints
 #' @export
 setBreakpointSystem <- function(system) {
   options(imola.mediarules = getOption("imola.breakpoints")[[system]])
@@ -16,18 +17,20 @@ setBreakpointSystem <- function(system) {
 #'   registerBreakpoint() and unregisterBreakpoint() functions.
 #'
 #' @return A named list of media breakpoints options.
+#' @keywords breakpoints
 #' @export
 activeBreakpoints <- function() {
   getOption("imola.mediarules")
 }
 
-#' Adds a new breakpoint entry to the currelty active media breakpoints.
+#' Adds a new breakpoint entry to the current active media breakpoints.
 #'
 #' @param name The name of the entry to remove
 #' @param min The minimum screen width (in pixels) when the rule is active
 #' @param max The maximum screen width (in pixels) when the rule is active
 #'
 #' @return No return value, called for side effects
+#' @keywords breakpoints
 #' @export
 registerBreakpoint <- function(name, min = NULL, max = NULL) {
   rules <- getOption("imola.mediarules")
@@ -41,6 +44,7 @@ registerBreakpoint <- function(name, min = NULL, max = NULL) {
 #' @param name The name of the entry to remove
 #'
 #' @return No return value, called for side effects
+#' @keywords breakpoints
 #' @export
 unregisterBreakpoint <- function(name) {
   rules <- getOption("imola.mediarules")

@@ -3,9 +3,9 @@
 \name{unregisterTemplate}
 \alias{unregisterTemplate}
 \title{Deletes an existing css template from the available list of templates for the
-  given grid type. Templates are collections of arguments
-  that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.}
+given grid type. Templates are collections of arguments
+that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.}
 \usage{
 unregisterTemplate(type, name)
 }
@@ -19,7 +19,8 @@ No return value, called for side effects
 }
 \description{
 Deletes an existing css template from the available list of templates for the
-  given grid type. Templates are collections of arguments
-  that can be grouped and stored for later usage via the "template"
-  argument of panel and page functions.
+given grid type. Templates are collections of arguments
+that can be grouped and stored for later usage via the "template"
+argument of panel and page functions.
 }
+\keyword{templates}

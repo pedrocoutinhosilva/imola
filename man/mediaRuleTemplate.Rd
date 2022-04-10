@@ -3,7 +3,7 @@
 \name{mediaRuleTemplate}
 \alias{mediaRuleTemplate}
 \title{Generates a valid glue::glue string template for a css media query.
-  Used internally to generate a breakpoint specific wrapper.}
+Used internally to generate a breakpoint specific wrapper.}
 \usage{
 mediaRuleTemplate(options)
 }
@@ -16,5 +16,7 @@ A valid glue::glue template string to be processed later.
 }
 \description{
 Generates a valid glue::glue string template for a css media query.
-  Used internally to generate a breakpoint specific wrapper.
+Used internally to generate a breakpoint specific wrapper.
 }
+\keyword{internal}
+\keyword{utils}

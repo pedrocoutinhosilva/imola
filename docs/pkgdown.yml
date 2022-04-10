@@ -1,0 +1,13 @@
+pandoc: 2.14.0.3
+pkgdown: 2.0.1
+pkgdown_sha: ~
+articles:
+  imola-breakpoints: imola-breakpoints.html
+  imola-demos: imola-demos.html
+  imola-flexbox: imola-flexbox.html
+  imola-grid: imola-grid.html
+  imola-templates: imola-templates.html
+  imola-why-flex-and-grid: imola-why-flex-and-grid.html
+  imola: imola.html
+last_built: 2022-01-27T15:24Z
+

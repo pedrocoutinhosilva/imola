@@ -1,0 +1,62 @@
+main h5 {
+  margin-top: 3rem;
+  position: relative;
+}
+
+main h5 {
+  position: relative;
+  padding-left: 0.5em;
+  margin: 1em;
+}
+main h5:after {
+  content: '';
+  flex: 1;
+  width: 1px;
+  height: 100%;
+  background-color: #8d268a;
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+}
+main h5:before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  /* background-color: #8d268a; */
+  position: absolute;
+  bottom: -0.5em;
+  left: -1em;
+  right: 0;
+}
+
+main .section.level5 {
+  margin-bottom: 3rem;
+  margin-top: 2em;
+  position: relative;
+}
+
+main .section.level5:before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  /* background-color: #8d268a; */
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+  right: 80%;
+}
+
+main h2 {
+  border-bottom: 3px solid;
+  margin-top: 3rem;
+}
+
+main hr {
+  height: 2px !important;
+  margin: 3rem 5rem;
+}
+
+.template-home main > p:nth-of-type(1),
+.template-home main > .section > p:nth-of-type(1) {
+  font-size: 150%;
+}

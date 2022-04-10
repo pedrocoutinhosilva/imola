@@ -19,15 +19,15 @@ htmlDependency, for example the shiny bootstrap one (the default)
 or a tagList with diferent dependencies}
 }
 \value{
-A UI definition that can be passed to the [shinyUI] function.
+A UI definition that can be passed to the \link{shinyUI} function.
 }
 \description{
 Create a page a with CSS grid layout
 }
 \note{
 See
-  \url{https://css-tricks.com/snippets/css/complete-guide-grid/}
-  for additional details on using css grids
+\url{https://css-tricks.com/snippets/css/complete-guide-grid/}
+for additional details on using css grids
 }
 \examples{
 if (interactive()) {
@@ -43,9 +43,11 @@ gridPage(
 
 }
 \seealso{
-[gridPanel()]
+\code{\link[=gridPanel]{gridPanel()}}
 
 Other grid functions: 
 \code{\link{gridPanel}()}
 }
 \concept{grid functions}
+\keyword{grid}
+\keyword{page}

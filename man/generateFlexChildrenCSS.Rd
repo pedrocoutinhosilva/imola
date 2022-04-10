@@ -3,7 +3,7 @@
 \name{generateFlexChildrenCSS}
 \alias{generateFlexChildrenCSS}
 \title{Generates all required css for a set of children attributes,
-  for a flex wrapper.}
+for a flex wrapper.}
 \usage{
 generateFlexChildrenCSS(attributes, id, number_children, breakpoint_system)
 }
@@ -22,5 +22,7 @@ A string with all placeholders replaced.
 }
 \description{
 Generates all required css for a set of children attributes,
-  for a flex wrapper.
+for a flex wrapper.
 }
+\keyword{generators}
+\keyword{internal}

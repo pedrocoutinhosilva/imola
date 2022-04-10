@@ -21,3 +21,5 @@ A string with all placeholders replaced.
 \description{
 Generates all required css for a set of attributes, for a grid wrapper.
 }
+\keyword{generators}
+\keyword{internal}

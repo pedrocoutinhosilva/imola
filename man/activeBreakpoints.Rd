@@ -3,8 +3,8 @@
 \name{activeBreakpoints}
 \alias{activeBreakpoints}
 \title{Current active media breakpoints. By default the default_system
-  setting values are used, but the list can be customized by using the
-  registerBreakpoint() and unregisterBreakpoint() functions.}
+setting values are used, but the list can be customized by using the
+registerBreakpoint() and unregisterBreakpoint() functions.}
 \usage{
 activeBreakpoints()
 }
@@ -13,6 +13,7 @@ A named list of media breakpoints options.
 }
 \description{
 Current active media breakpoints. By default the default_system
-  setting values are used, but the list can be customized by using the
-  registerBreakpoint() and unregisterBreakpoint() functions.
+setting values are used, but the list can be customized by using the
+registerBreakpoint() and unregisterBreakpoint() functions.
 }
+\keyword{breakpoints}

@@ -16,3 +16,5 @@ A list object containing the content of the settings YAML file
 \description{
 Reads the content of a YAML settings file from the package directory.
 }
+\keyword{internal}
+\keyword{utils}

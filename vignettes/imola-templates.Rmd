@@ -1,0 +1,111 @@
+---
+title: "Using Templates"
+output: rmarkdown::html_vignette
+description: >
+  Getting started with imola's layout templates.
+vignette: >
+  %\VignetteIndexEntry{Using Templates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Very often during development it is also common that multiple elements share the same layout. In order to easily reuse any layout you create, imola also includes a simple template engine.
+
+## Registering templates
+
+In order to save a template you can use the `registerTemplate()` function. This function requires a 'type' of template (grid or flex), a name to identify the template later, any named arguments that can be passed to the gridPanel or flexPanel function (depending on the type) and, optionally, a breakpoint_system to use if you plan on adding any responsive attributes to the template (If no breakpoint_system is given, the current active system is used to register the template).
+
+After a template being registered, you can then simple fill in the `template` argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be orewriten by the named argument on the function call.
+
+Lets say we would like to save our previous areas as a template, and use it. We could use registerTemplate():
+
+``` r
+registerTemplate("grid", "mytemplate",
+  areas = list(
+    default = c(
+      "area1 area1 area1",
+      "area2 area3 area3",
+      "area2 area3 area3"
+    ),
+    xs = c(
+      "area1",
+      "area2",
+      "area3"
+    )
+  )
+)
+```
+
+We can then use this template to create multiple grid panels in our application:
+
+``` r
+#in ui
+gridPanel(
+  id = "somePanel",
+  template = "mytemplate",
+  area1 = div("area 1 content"),
+  area2 = div("area 2 content"),
+  area3 = div("area 3 content"),
+)
+
+gridPanel(
+  id = "anotherPanel",
+  template = "mytemplate",
+  area1 = div("different area 1 content"),
+  area2 = div("different area 2 content"),
+  area3 = div("different area 3 content"),
+)
+```
+
+You can register as many templates as you want, but keep in mind that each type + name combo must be unique. You can also remove templates using `unregisterTemplate()` if needed. For a full list of registered templates, you can use `listTemplates()`.
+
+By default imola also includes some ready to use templates these will also be listed under `listTemplates()`.
+
+## Template Objects
+
+You can also create templates as R objects and feed that object to the `template` argument instead, this can be useful if you do not want to make a template globally accesible (For example for usage only in a single module, or for generating this programatically based on other factors).
+
+In that case, you can use the `makeTemplate()` function in a similar way to `registerTemplate()`, but assign it to an R object (or invoke it directly on the `template` argument).
+``` r
+templateObject <- makeTemplate("grid",
+  areas = list(
+    default = c(
+      "area1 area1 area1",
+      "area2 area3 area3",
+      "area2 area3 area3"
+    ),
+    xs = c(
+      "area1",
+      "area2",
+      "area3"
+    )
+  )
+)
+```
+
+
+``` r
+# in ui
+gridPanel(
+  id = "somePanel",
+  template = templateObject,
+  area1 = div("area 1 content"),
+  area2 = div("area 2 content"),
+  area3 = div("area 3 content"),
+)
+
+gridPanel(
+  id = "anotherPanel",
+  template = templateObject,
+  area1 = div("different area 1 content"),
+  area2 = div("different area 2 content"),
+  area3 = div("different area 3 content"),
+)
+```

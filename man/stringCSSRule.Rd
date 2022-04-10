@@ -3,12 +3,12 @@
 \name{stringCSSRule}
 \alias{stringCSSRule}
 \title{Applies a CSS statement template stored in the package settings. These
-  templates use the htmlTemplate format, meaning placeholders are marked
-  using the {{placeholder}} convention.
-  Each placeholder value should be
-  passed as a named argument to the function using the placeholder value
-  as a name.
-  Used primarily as a shorthand to stringTemplate() for stored templates.}
+templates use the htmlTemplate format, meaning placeholders are marked
+using the {{placeholder}} convention.
+Each placeholder value should be
+passed as a named argument to the function using the placeholder value
+as a name.
+Used primarily as a shorthand to stringTemplate() for stored templates.}
 \usage{
 stringCSSRule(template, ...)
 }
@@ -24,10 +24,12 @@ A valid CSS string.
 }
 \description{
 Applies a CSS statement template stored in the package settings. These
-  templates use the htmlTemplate format, meaning placeholders are marked
-  using the {{placeholder}} convention.
-  Each placeholder value should be
-  passed as a named argument to the function using the placeholder value
-  as a name.
-  Used primarily as a shorthand to stringTemplate() for stored templates.
+templates use the htmlTemplate format, meaning placeholders are marked
+using the {{placeholder}} convention.
+Each placeholder value should be
+passed as a named argument to the function using the placeholder value
+as a name.
+Used primarily as a shorthand to stringTemplate() for stored templates.
 }
+\keyword{internal}
+\keyword{utils}

@@ -9,6 +9,7 @@
 #' @importFrom stringi stri_rand_strings
 #'
 #' @return A valid CSS id.
+#' @keywords internal utils
 generateID <- function() {
   generated_id <- Sys.time() %>%
     as.integer() %>%
@@ -32,6 +33,7 @@ generateID <- function() {
 #' @importFrom shiny htmlTemplate
 #'
 #' @return A string with all placeholders replaced.
+#' @keywords internal utils
 stringTemplate <- function(string, ...) {
   string %>%
     htmlTemplate(text_ = ., ...) %>%
@@ -54,6 +56,7 @@ stringTemplate <- function(string, ...) {
 #' @importFrom magrittr "%>%"
 #'
 #' @return A valid CSS string.
+#' @keywords internal utils
 stringCSSRule <- function(template, ...) {
   getOption("imola.settings")$string_templates[[template]] %>%
     stringTemplate(...)
@@ -72,6 +75,7 @@ stringCSSRule <- function(template, ...) {
 #' @importFrom shiny tagAppendAttributes
 #'
 #' @return A list of HTML elements.
+#' @keywords internal utils
 processContent <- function(content, areas) {
   for (name in stri_remove_empty(names(content))) {
     if (name %in% areas) {
@@ -89,6 +93,7 @@ processContent <- function(content, areas) {
 #' @param property The target css property for which the value will be used.
 #'
 #' @return  string containing a valid css value.
+#' @keywords internal utils
 valueToCSS <- function(value, property) {
   if (property == "grid-template-areas") {
     value %<>%
@@ -109,6 +114,7 @@ valueToCSS <- function(value, property) {
 #' @importFrom glue glue
 #'
 #' @return A valid glue::glue template string to be processed later.
+#' @keywords internal utils
 mediaRuleTemplate <- function(options) {
   if (is.null(options$min) && is.null(options$max)) {
     return("{{rules}}")
@@ -134,6 +140,7 @@ mediaRuleTemplate <- function(options) {
 #' @importFrom yaml read_yaml
 #'
 #' @return A list object containing the content of the settings YAML file
+#' @keywords internal utils
 readSettingsFile <- function(file) {
   file %>%
     paste0("settings/", ., ".yml") %>%

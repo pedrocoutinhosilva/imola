@@ -4,8 +4,9 @@
 #'   named arguments using the grid area name will be added to that grid area.
 #'   If no named arguments or areas are used, non attribute elements will be
 #'   added to existing grid cells based on their order.
-#' @param template The name of the template to use as a base for the grid.
-#'   See listTemplates() and registerTemplate() for more information.
+#' @param template The name of the template to use as a base for the grid, or
+#'   the resulting value from using makeTemplate() to generate a template
+#'   object. See listTemplates() and registerTemplate() for more information.
 #' @param areas A list of vectors with area names, or a vector or strings
 #'   representing each row of the grid. Each element should contain
 #'   the names, per row, of each area of the grid. Expected values follow the
@@ -35,12 +36,21 @@
 #' @param gap The space (in a valid css size) between each grid cell.
 #'   Supports named list for breakpoints.
 #' @param align_items The cell behavior according to the align-items css
-#'   property. Defaults to stretch.
-#'   Supports named list for breakpoints.
+#'   property. Aligns grid items along the block (column) axis.
+#'
+#'   Accepts a valid css `align-items` value
+#'   (`start` | `end` | `center` | `stretch`)
+#'
+#'   By default the `stretch` value is used. Supports breakpoints.
+#' @param justify_items The cell behavior according to the justify-items css
+#'   property. Aligns grid items along the inline (row) axis.
+#'
+#'   Accepts a valid css `justify-items` value
+#'   (`start` | `end` | `center` | `stretch`)
+#'
+#'   By default the `stretch` value is used. Supports breakpoints.
 #' @param auto_fill Should the panel stretch to fit its parent size (TRUE), or
 #'    should its size be based on its children element sizes (FALSE).
-#' @param justify_items The cell behavior according to the justify-items css
-#'   property. Defaults to stretch.
 #'   Supports named list for breakpoints.
 #' @param breakpoint_system Optional Media breakpoints to use. Will default to
 #'   the current active breakpoint system.
@@ -85,6 +95,7 @@
 #' @importFrom shiny tagAppendAttributes tagAppendChild
 #'
 #' @return An HTML tagList.
+#' @keywords grid panel
 #' @export
 gridPanel <- function(...,
                       template = NULL,
@@ -163,6 +174,7 @@ gridPanel <- function(...,
 #' @importFrom magrittr "%>%"
 #'
 #' @return A UI definition that can be passed to the [shinyUI] function.
+#' @keywords grid page
 #' @export
 gridPage <- function(...,
                      title = NULL,

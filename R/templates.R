@@ -8,6 +8,7 @@
 #'   of all types are returned,
 #'
 #' @return A named list of css templates and specific values.
+#' @keywords templates
 #' @export
 listTemplates <- function(type = NULL) {
   if (is.null(type)) {
@@ -32,26 +33,59 @@ listTemplates <- function(type = NULL) {
 #'   by default it will simply use the current active system but a built in
 #'   or custom system can also be passed. You ca find built in breakpoint
 #'   systems under getOption("imola.breakpoints")
-#' @param export A file name to export the template to. Allows exporting
-#'   templates as a yaml file for future usage.
 #'
 #' @importFrom utils modifyList
 #' @importFrom yaml write_yaml
 #'
 #' @return No return value, called for side effects
+#' @keywords templates
 #' @export
-registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
+registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoints()) {
   listTemplates <- listTemplates()
   listTemplates[[type]][[name]] <- modifyList(
     list(...),
     list(breakpoint_system = breakpoint_system)
   )
 
+  options(imola.templates = listTemplates)
+}
+
+#' Returns a imola template as an object for future use. Depending on the
+#'   given type, the template will then be available to be passed as an
+#'   argument to a panel or page function of that specific type. Templates are
+#'   collections of arguments that can be grouped and stored for later usage
+#'   via the "template" argument of panel and page functions.
+#'
+#' @param type The type of css grid for which the template can be used
+#' @param ... Collection of valid arguments that can be passed to a panel of
+#'   the given type (see gridPanel() and FlexPanel() for all options)
+#' @param breakpoint_system Optional breakpoint system to use in the template.
+#'   by default it will simply use the current active system but a built in
+#'   or custom system can also be passed. You ca find built in breakpoint
+#'   systems under getOption("imola.breakpoints")
+#' @param export A path ending in a file name with a .yaml extension to export
+#'   the template to. Allows exporting templates as a yaml file for
+#'   future usage.
+#'
+#' @importFrom utils modifyList
+#'
+#' @return No return value, called for side effects
+#' @keywords templates
+#' @export
+makeTemplate <- function(type, ..., breakpoint_system = activeBreakpoints(), export = NULL) {
+  template <- modifyList(
+    list(...),
+    list(
+      type = type,
+      breakpoint_system = breakpoint_system
+    )
+  )
+
   if (!is.null(export)) {
-    yaml::write_yaml(listTemplates[[type]][[name]], paste0(export, ".yaml"))
+    yaml::write_yaml(template, export)
   }
 
-  options(imola.templates = listTemplates)
+  template
 }
 
 #' Deletes an existing css template from the available list of templates for the
@@ -63,6 +97,7 @@ registerTemplate <- function(type, name, ..., breakpoint_system = activeBreakpoi
 #' @param name The name of the tempalte to remove.
 #'
 #' @return No return value, called for side effects
+#' @keywords templates
 #' @export
 unregisterTemplate <- function(type, name) {
   listTemplates <- listTemplates()
@@ -78,25 +113,39 @@ unregisterTemplate <- function(type, name) {
 #'
 #' @param attributes The manually given attribute values that will take priority
 #'   during the merge.
-#' @param template The name of the template to merge.
+#' @param template The name of the template to merge, or the resulting value
+#'   from using makeTemplate() to generate a template object.
 #' @param defaults The default values of the grid callback.
 #' @param type The type of css grid of the template.
 #'
 #' @return A named list of css attributes that can be used to generate a html
 #'   element style rules of the given type.
+#' @keywords templates
 #' @export
 applyTemplate <- function(attributes, template, defaults, type) {
   if (is.null(template)) {
     return(attributes)
   }
 
-  if (is.null(getOption("imola.templates")[[type]][[template]])) {
+  if (!is.list(template) &&
+      is.null(getOption("imola.templates")[[type]][[template]])) {
+
     messages <- getOption("imola.settings")$string_templates$messages
     stop(messages$missing_template %>%
       stringTemplate(template = template, type = type))
   }
 
-  options <- getOption("imola.templates")[[type]][[template]]
+  if (is.list(template)) {
+    if(!identical(template$type, type)) {
+      messages <- getOption("imola.settings")$string_templates$messages
+      stop(messages$wrong_template_type %>%
+        stringTemplate(template_type = template$type, type = type))
+    }
+
+    options <- template
+  } else {
+    options <- getOption("imola.templates")[[type]][[template]]
+  }
 
   for (name in names(options)) {
     manual_value <- attributes[[name]]
