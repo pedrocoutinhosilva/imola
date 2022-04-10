@@ -14,7 +14,7 @@ test_that("test generator functions", {
   # generateFlexCSS
   expect_identical(
     imola:::generateFlexCSS(list(direction = list(default = "row")), "test-id", 2, getBreakpointSystem("bootstrap3")),
-    HTML(" #test-id { flex-direction: row; } ")
+    HTML(" .test-id { flex-direction: row; } ")
   )
 
   # generateFlexChildrenCSS
@@ -28,6 +28,6 @@ test_that("test generator functions", {
   # generateCSSPropertyStyles
   expect_identical(
     imola:::generateCSSPropertyStyles(list(default = "value"), "property", "test-id", getBreakpointSystem("bootstrap3")),
-    c(" #test-id { property: value; }")
+    c(" .test-id { property: value; }")
   )
 })

@@ -4,9 +4,13 @@ The test battery includes unit, snapshot and UI testing. To run all tests make s
 testthat (>= 3.0.0),
 rvest,
 devtools,
-webshot2,
 covr
 ```
+As well as `webshot2` from github (currently not on CRAN):
+```
+remotes::install_github("rstudio/webshot2")
+```
+Check the `Running tests` section if you would prefer to disable UI tests.
 
 # Running tests
 Tests can be run using `devtools`
