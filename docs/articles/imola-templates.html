@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Getting started with imola's layout templates.
 ">
-<title>Using Templates • imola</title>
+<title>Templates • imola</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -19,23 +19,30 @@
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<meta property="og:title" content="Using Templates">
+<meta property="og:title" content="Templates">
 <meta property="og:description" content="Getting started with imola's layout templates.
 ">
+<meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G2PX1LC0P4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2PX1LC0P4');
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">imola</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +60,10 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flexbox and imola</a>
-    <a class="dropdown-item" href="../articles/imola-grid.html">Grid and imola</a>
-    <a class="dropdown-item" href="../articles/imola-templates.html">Using Templates</a>
-    <a class="dropdown-item" href="../articles/imola-breakpoints.html">Using Breakpoint Systems</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flex functions</a>
+    <a class="dropdown-item" href="../articles/imola-grid.html">Grid functions</a>
+    <a class="dropdown-item" href="../articles/imola-templates.html">Templates</a>
+    <a class="dropdown-item" href="../articles/imola-breakpoints.html">Breakpoint Systems</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
   </div>
@@ -92,7 +98,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Using Templates</h1>
+      <img src="../logo.svg" class="logo" alt=""><h1>Templates</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola-templates.Rmd" class="external-link"><code>vignettes/imola-templates.Rmd</code></a></small>
@@ -101,15 +107,63 @@
 
     
     
-<p>Very often during development it is also common that multiple elements share the same layout. In order to easily reuse any layout you create, imola also includes a simple template engine.</p>
+<style type="text/css">
+img {
+  max-width: 100%;
+}
+</style>
+<p>Templates are a quick way of reusing the same layouts between different components and even projects. To accommodate this process imola introduces a simple template engine.</p>
+<hr>
+<div class="section level2">
+<h2 id="creating-templates">Creating templates<a class="anchor" aria-label="anchor" href="#creating-templates"></a>
+</h2>
+<p>Templates can be created via <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code>.</p>
+<p>They are collections of arguments that can be passed to a <code>grid</code> or <code>flex</code> function.</p>
+<p>In practice this means they share all the properties of those arguments, including:</p>
+<ul>
+<li>Support for breakpoints</li>
+<li>Allowing both css notation (a string with values separated by a space) or vector notation (a vector where each element is a value).</li>
+</ul>
+<p>It is important to note that templates require a name and a type.</p>
+<p>The name is simply an identifier for the template (useful later for registering templates) and the type defines what type of functions it can be used for (<code>grid</code> or <code>flex</code>).</p>
+<p>Trying to apply a template of the wrong type to a <code>panel</code> or page <code>function</code> is not possible.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">mytemplate</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/gridTemplate.html">gridTemplate</a></span><span class="op">(</span><span class="st">"myareas"</span>, <span class="st">"grid"</span>,
+  areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
+    default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+      <span class="st">"area1 area1 area1"</span>,
+      <span class="st">"area2 area3 area3"</span>,
+      <span class="st">"area2 area3 area3"</span>
+    <span class="op">)</span>,
+    xs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+      <span class="st">"area1"</span>,
+      <span class="st">"area2"</span>,
+      <span class="st">"area3"</span>
+    <span class="op">)</span>
+  <span class="op">)</span>,
+  gap <span class="op">=</span> <span class="st">"20px"</span>
+<span class="op">)</span></code></pre></div>
+<p>We can then use this template object as a value for the template argument in grid panels or pages:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#in ui.R</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gridPanel</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="st">"somePanel"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">template =</span> mytemplate</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">area1 =</span> <span class="fu">div</span>(<span class="st">"area 1 content"</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">area2 =</span> <span class="fu">div</span>(<span class="st">"area 2 content"</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">area3 =</span> <span class="fu">div</span>(<span class="st">"area 3 content"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<hr>
+</div>
 <div class="section level2">
 <h2 id="registering-templates">Registering templates<a class="anchor" aria-label="anchor" href="#registering-templates"></a>
 </h2>
-<p>In order to save a template you can use the <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> function. This function requires a ‘type’ of template (grid or flex), a name to identify the template later, any named arguments that can be passed to the gridPanel or flexPanel function (depending on the type) and, optionally, a breakpoint_system to use if you plan on adding any responsive attributes to the template (If no breakpoint_system is given, the current active system is used to register the template).</p>
-<p>After a template being registered, you can then simple fill in the <code>template</code> argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be orewriten by the named argument on the function call.</p>
-<p>Lets say we would like to save our previous areas as a template, and use it. We could use registerTemplate():</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/registerTemplate.html">registerTemplate</a></span><span class="op">(</span><span class="st">"grid"</span>, <span class="st">"mytemplate"</span>,
+<p>Registered templates are templates that are either bundled with imola, or added to the global template list by using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> on a template object.</p>
+<p>You can view all registered templates by using <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
+<p>By registering a template you are making it available outside of the scope where it is created, meaning it will be available to use even if the object itself was created somewhere else.</p>
+<p>This approach allows us to create and register templates before they are needed, making them easier to bundle and manage when a lot of templates are needed.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#in global.R</span>
+<span class="va">mytemplate</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/gridTemplate.html">gridTemplate</a></span><span class="op">(</span><span class="st">"myareas"</span>, <span class="st">"grid"</span>,
   areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
     default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
       <span class="st">"area1 area1 area1"</span>,
@@ -121,66 +175,49 @@
       <span class="st">"area2"</span>,
       <span class="st">"area3"</span>
     <span class="op">)</span>
-  <span class="op">)</span>
-<span class="op">)</span></code></pre></div>
-<p>We can then use this template to create multiple grid panels in our application:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">#in ui</span>
-<span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="st">"somePanel"</span>,
-  template <span class="op">=</span> <span class="st">"mytemplate"</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 3 content"</span><span class="op">)</span>,
+  <span class="op">)</span>,
+  gap <span class="op">=</span> <span class="st">"20px"</span>
 <span class="op">)</span>
 
-<span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="st">"anotherPanel"</span>,
-  template <span class="op">=</span> <span class="st">"mytemplate"</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 3 content"</span><span class="op">)</span>,
-<span class="op">)</span></code></pre></div>
-<p>You can register as many templates as you want, but keep in mind that each type + name combo must be unique. You can also remove templates using <code><a href="../reference/unregisterTemplate.html">unregisterTemplate()</a></code> if needed. For a full list of registered templates, you can use <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
-<p>By default imola also includes some ready to use templates these will also be listed under <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
+<span class="co"># register it globally</span>
+<span class="fu"><a href="../reference/registerTemplate.html">registerTemplate</a></span><span class="op">(</span><span class="va">mytemplate</span><span class="op">)</span></code></pre></div>
+<p>Calling <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code> on a <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> object adds that template available to use in any <code>page</code> or <code>panel</code> page directly by its <code>name</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#in ui.R</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gridPanel</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="st">"somePanel"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">template =</span> <span class="st">"myareas"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">area1 =</span> <span class="fu">div</span>(<span class="st">"area 1 content"</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">area2 =</span> <span class="fu">div</span>(<span class="st">"area 2 content"</span>),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">area3 =</span> <span class="fu">div</span>(<span class="st">"area 3 content"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>If needed you can also remove a template from the global list using <code>unregisterTemplate("name", "type")</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># unregister a template</span>
+<span class="fu"><a href="../reference/unregisterTemplate.html">unregisterTemplate</a></span><span class="op">(</span><span class="st">"myareas"</span>, <span class="st">"grid"</span><span class="op">)</span></code></pre></div>
+<p>Registered templates can also be turned back into a template object using <code><a href="../reference/getTemplate.html">getTemplate()</a></code>. This object can then be used and if created with <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code>.</p>
+<hr>
 </div>
 <div class="section level2">
-<h2 id="template-objects">Template Objects<a class="anchor" aria-label="anchor" href="#template-objects"></a>
+<h2 id="bundled-templates">Bundled templates<a class="anchor" aria-label="anchor" href="#bundled-templates"></a>
 </h2>
-<p>You can also create templates as R objects and feed that object to the <code>template</code> argument instead, this can be useful if you do not want to make a template globally accesible (For example for usage only in a single module, or for generating this programatically based on other factors).</p>
-<p>In that case, you can use the <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> function in a similar way to <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>, but assign it to an R object (or invoke it directly on the <code>template</code> argument).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">templateObject</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeTemplate.html">makeTemplate</a></span><span class="op">(</span><span class="st">"grid"</span>,
-  areas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
-    default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
-      <span class="st">"area1 area1 area1"</span>,
-      <span class="st">"area2 area3 area3"</span>,
-      <span class="st">"area2 area3 area3"</span>
-    <span class="op">)</span>,
-    xs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
-      <span class="st">"area1"</span>,
-      <span class="st">"area2"</span>,
-      <span class="st">"area3"</span>
-    <span class="op">)</span>
-  <span class="op">)</span>
-<span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># in ui</span>
-<span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="st">"somePanel"</span>,
-  template <span class="op">=</span> <span class="va">templateObject</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"area 3 content"</span><span class="op">)</span>,
-<span class="op">)</span>
-
-<span class="fu"><a href="../reference/gridPanel.html">gridPanel</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="st">"anotherPanel"</span>,
-  template <span class="op">=</span> <span class="va">templateObject</span>,
-  area1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 1 content"</span><span class="op">)</span>,
-  area2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 2 content"</span><span class="op">)</span>,
-  area3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div</a></span><span class="op">(</span><span class="st">"different area 3 content"</span><span class="op">)</span>,
-<span class="op">)</span></code></pre></div>
+<p>By default imola also includes some ready to use templates. Similar to manually registered templates these are also listed under <code><a href="../reference/listTemplates.html">listTemplates()</a></code>.</p>
+<p>These can be used just like registered templates, with the difference that they do not require manually registering them:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#in ui.R</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gridPanel</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">template =</span> <span class="st">"header-sidebar-right"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">header =</span> <span class="fu">div</span>(<span class="st">"header"</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">content =</span> <span class="fu">div</span>(<span class="st">"content"</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sidebar =</span> <span class="fu">div</span>(<span class="st">"sidebar"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>For a demo on all templates bundled with imola, <a href="https://sparktuga.shinyapps.io/imolatemplates/" class="external-link">click here</a></p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="importing-and-exporting">Importing and Exporting<a class="anchor" aria-label="anchor" href="#importing-and-exporting"></a>
+</h2>
+<p>It is also possible to import and export template objects for future usage in different projects. In this case you can make use of <code><a href="../reference/exportTemplate.html">exportTemplate()</a></code> and <code><a href="../reference/importTemplate.html">importTemplate()</a></code>.</p>
+<p><code><a href="../reference/exportTemplate.html">exportTemplate()</a></code> allows you to export a template object into a specific file.</p>
+<p>This file will contain all the necessary information to rebuild the template, even in a different project, and can be turned back into a template object using <code><a href="../reference/importTemplate.html">importTemplate()</a></code>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

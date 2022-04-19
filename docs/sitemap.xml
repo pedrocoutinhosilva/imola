@@ -91,16 +91,34 @@
     <loc>/reference/activeMediaRules.html</loc>
   </url>
   <url>
+    <loc>/reference/addBreakpoint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/addClass.html</loc>
+  </url>
+  <url>
     <loc>/reference/applyTemplate.html</loc>
   </url>
   <url>
     <loc>/reference/areaBasedRules.html</loc>
   </url>
   <url>
+    <loc>/reference/breakpoint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/breakpointSystem.html</loc>
+  </url>
+  <url>
     <loc>/reference/coalesceTypes.html</loc>
   </url>
   <url>
     <loc>/reference/collapseValues.html</loc>
+  </url>
+  <url>
+    <loc>/reference/exportBreakpointSystem.html</loc>
+  </url>
+  <url>
+    <loc>/reference/exportTemplate.html</loc>
   </url>
   <url>
     <loc>/reference/flexPage.html</loc>
@@ -139,13 +157,40 @@
     <loc>/reference/getAttributeStyle.html</loc>
   </url>
   <url>
+    <loc>/reference/getBreakpointSystem.html</loc>
+  </url>
+  <url>
+    <loc>/reference/getTemplate.html</loc>
+  </url>
+  <url>
     <loc>/reference/gridPage.html</loc>
   </url>
   <url>
     <loc>/reference/gridPanel.html</loc>
   </url>
   <url>
+    <loc>/reference/gridTemplate.html</loc>
+  </url>
+  <url>
+    <loc>/reference/importBreakpointSystem.html</loc>
+  </url>
+  <url>
+    <loc>/reference/importTemplate.html</loc>
+  </url>
+  <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is.breakpoint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is.breakpointSystem.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is.template.html</loc>
+  </url>
+  <url>
+    <loc>/reference/listBreakpointSystems.html</loc>
   </url>
   <url>
     <loc>/reference/listTemplates.html</loc>
@@ -172,6 +217,15 @@
     <loc>/reference/preprocessGridContent.html</loc>
   </url>
   <url>
+    <loc>/reference/print.imola.breakpoint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/print.imola.breakpoint.system.html</loc>
+  </url>
+  <url>
+    <loc>/reference/print.imola.template.html</loc>
+  </url>
+  <url>
     <loc>/reference/processContent.html</loc>
   </url>
   <url>
@@ -190,10 +244,19 @@
     <loc>/reference/registerBreakpoint.html</loc>
   </url>
   <url>
+    <loc>/reference/registerBreakpointSystem.html</loc>
+  </url>
+  <url>
     <loc>/reference/registerMediaRule.html</loc>
   </url>
   <url>
     <loc>/reference/registerTemplate.html</loc>
+  </url>
+  <url>
+    <loc>/reference/removeBreakpoint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/setActiveBreakpointSystem.html</loc>
   </url>
   <url>
     <loc>/reference/setBreakpointSystem.html</loc>
@@ -206,6 +269,9 @@
   </url>
   <url>
     <loc>/reference/unregisterBreakpoint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/unregisterBreakpointSystem.html</loc>
   </url>
   <url>
     <loc>/reference/unregisterMediaRule.html</loc>

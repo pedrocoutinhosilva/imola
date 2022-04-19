@@ -1,16 +1,15 @@
-#' Generates all required css for a set of attributes, for a grid wrapper.
+#' Creates styles for css grid attributes.
 #'
-#' @param attributes Normalized attribute list to generate css from.
+#' @param attributes Normalized attribute list.
 #' @param id The id of the parent wrapper element.
-#' @param unique_areas Unique names of areas that the grid contains.
-#' @param breakpoint_system Media breakpoints to use.
+#' @param areas Area names in the grid.
+#' @param system A breakpoint system object to use.
 #'
-#' @importFrom magrittr "%>%"
-#' @importFrom magrittr "%<>%"
+#' @importFrom magrittr "%>%" "%<>%"
 #'
-#' @keywords internal generators
-#' @return A string with all placeholders replaced.
-generateGridCSS <- function(attributes, id, unique_areas, breakpoint_system) {
+#' @keywords generators internal
+#' @return A vector of valid css strings.
+generateGridCSS <- function(attributes, id, areas, system) {
   mapping <- getOption("imola.settings")$property_mapping
 
   styles <- list()
@@ -19,29 +18,32 @@ generateGridCSS <- function(attributes, id, unique_areas, breakpoint_system) {
       attributes[[attribute]],
       mapping[[attribute]],
       id,
-      breakpoint_system
+      system
     )
   }
 
-  unique_areas %<>%
+  areas %<>%
     generateGridAreaCSS(id)
 
-  c(styles, unique_areas) %>%
+  c(styles, areas) %>%
     unlist() %>%
     paste0(collapse = " ") %>%
     HTML()
 }
 
-#' Generates the requires css statements for a specific set of grid areas. This
-#'   includes the css required to position each child element into each of the
-#'   named grid area.
+#' Creates styles for css grid areas.
 #'
-#' @param areas Unique names of areas for which css rules must be generated.
+#' @description
+#' Creates the requires css statements for a specific set of grid areas.
+#' This includes the css required to position each child element into
+#' each of the named grid area.
+#'
+#' @param areas Vector of strings with the area names.
 #' @param id The id of the parent wrapper element.
 #'
-#' @importFrom magrittr "%<>%"
+#' @importFrom magrittr "%>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
 generateGridAreaCSS <- function(areas, id) {
   styles <- c()
@@ -60,22 +62,26 @@ generateGridAreaCSS <- function(areas, id) {
     HTML()
 }
 
-#' Generates all required css for a set of attributes, for a flex wrapper.
+#' Creates styles for a css flex element.
 #'
-#' @param attributes Normalized attribute list to generate css from.
-#' @param id The id of the parent wrapper element.
-#' @param number_children Number of child elements in the wrapper. Required to
-#'   generate rules for flex elements.
-#' @param breakpoint_system Media breakpoints to use.
+#' @description
+#' Creates the requires css statements for a specific set of flex
+#' attributes. This includes the css required to position each child
+#' element into the flex element.
+#'
+#' @param attributes Normalized attribute list.
+#' @param id The id of the parent element.
+#' @param number_children Number of child elements.
+#' @param system A breakpoint system object to use.
 #'
 #' @importFrom magrittr "%>%"
 #'
-#' @keywords internal generators
-#' @return A string with all placeholders replaced.
+#' @keywords generators internal
+#' @return A vector of valid css strings.
 generateFlexCSS <- function(attributes,
                             id,
                             number_children,
-                            breakpoint_system) {
+                            system) {
   mapping <- getOption("imola.settings")$property_mapping
 
   wrapper_styles <- list(
@@ -92,7 +98,7 @@ generateFlexCSS <- function(attributes,
       attributes[[attribute]],
       mapping[[attribute]],
       id,
-      breakpoint_system
+      system
     )
   }
 
@@ -101,7 +107,7 @@ generateFlexCSS <- function(attributes,
     grow = attributes$grow,
     shrink = attributes$shrink,
     basis = attributes$basis
-  ) %>% generateFlexChildrenCSS(id, number_children, breakpoint_system)
+  ) %>% generateFlexChildrenCSS(id, number_children, system)
 
   c(wrapper_styles, children_styles) %>%
     unlist() %>%
@@ -109,24 +115,27 @@ generateFlexCSS <- function(attributes,
     HTML()
 }
 
-#' Generates all required css for a set of children attributes,
-#'   for a flex wrapper.
+#' Creates styles for the children of a css flex element.
 #'
-#' @param attributes Normalized attribute list to generate css from.
+#' @description
+#' Creates css required to position each child
+#' element into the flex element.
+#'
+#' @param attributes Normalized attribute list.
 #' @param id The id of the parent wrapper element.
 #' @param number_children Number of child elements in the wrapper. Required to
 #'   generate rules for flex elements.
-#' @param breakpoint_system Media breakpoints to use.
+#' @param system A breakpoint system object to use.
 #'
-#' @importFrom magrittr "%>%"
 #' @importFrom magrittr "%<>%"
 #'
-#' @keywords internal generators
-#' @return A string with all placeholders replaced.
+#' @keywords generators internal
+#' @return A vector of valid css strings.
 generateFlexChildrenCSS <- function(attributes,
                                     id,
                                     number_children,
-                                    breakpoint_system) {
+                                    system) {
+
   mapping <- getOption("imola.settings")$property_mapping
 
   css_rules <- ""
@@ -146,7 +155,7 @@ generateFlexChildrenCSS <- function(attributes,
       rule_wrapper <- ifelse(
         breakpoint == "default",
         "{rules}",
-        mediaRuleTemplate(breakpoint_system[[breakpoint]])
+        mediaRuleTemplate(system$breakpoints[[breakpoint]])
       )
 
       for (rule_index in seq_len(number_children)) {
@@ -168,20 +177,22 @@ generateFlexChildrenCSS <- function(attributes,
   css_rules
 }
 
-#' Generates the requires css statements for a specific css property. It will
-#'   iterated over all breakpoints in the given value and return all statements
-#'   for all breakpoints in a vector format.
+#' Creates styles for a css property.
 #'
-#' @param value Normalized attribute value list to generate css from.
-#' @param property The type of grid to generate css for.
-#' @param id The id of the parent wrapper element.
-#' @param breakpoint_system Media breakpoints to use.
+#' @description
+#' Creates the required css statements for a specific css property. This
+#' includes the rules for all breakpoints.
+#'
+#' @param value Normalized attribute value list.
+#' @param property The css attribute to generate rules for.
+#' @param id The id of the parent element.
+#' @param system A breakpoint system object to use.
 #'
 #' @importFrom magrittr "%<>%"
 #'
-#' @keywords internal generators
+#' @keywords generators internal
 #' @return A vector of valid css strings.
-generateCSSPropertyStyles <- function(value, property, id, breakpoint_system) {
+generateCSSPropertyStyles <- function(value, property, id, system) {
   if (is.null(value)) {
     return(NULL)
   }
@@ -189,7 +200,7 @@ generateCSSPropertyStyles <- function(value, property, id, breakpoint_system) {
   styles <- c()
   for (breakpoint in names(value)) {
     styles %<>% c(stringTemplate(
-      mediaRuleTemplate(breakpoint_system[[breakpoint]]),
+      mediaRuleTemplate(system$breakpoints[[breakpoint]]),
       rules = stringCSSRule("grid_parent",
         id = id,
         attribute = property,

@@ -2,51 +2,37 @@
 % Please edit documentation in R/grid.R
 \name{gridPage}
 \alias{gridPage}
-\title{Create a page a with CSS grid layout}
+\title{Create a css grid based page}
 \usage{
 gridPage(..., title = NULL, fill_page = TRUE, dependency = bootstrapLib())
 }
 \arguments{
-\item{...}{Elements to include within the page}
+\item{...}{Arguments to be passed to \link{gridPanel}.}
 
 \item{title}{The browser window title (defaults to the host URL of the page).}
 
-\item{fill_page}{Flag to tell the page if it should adjust the page to
-adjust and fill the browser window size.}
+\item{fill_page}{Boolean value if the page should automatically stretch to
+match the browser window height.}
 
-\item{dependency}{The set of web dependencies. This value can be a
-htmlDependency, for example the shiny bootstrap one (the default)
-or a tagList with diferent dependencies}
+\item{dependency}{A set of web dependencies. This value can be a
+\link{htmlDependency}, for example the shiny bootstrap dependency (default
+value) or a \link{tagList} with different dependencies.}
 }
 \value{
 A UI definition that can be passed to the \link{shinyUI} function.
 }
 \description{
-Create a page a with CSS grid layout
+Create a Shiny UI page using a \link{gridPanel} to wrap the page content.
+As other Shiny UI pages, it scaffolds the entire page and loads any required
+or registered dependencies.
 }
 \note{
 See
 \url{https://css-tricks.com/snippets/css/complete-guide-grid/}
-for additional details on using css grids
-}
-\examples{
-if (interactive()) {
-library(imola)
-gridPage(
-  title = "A grid page",
-  areas = c("area-1 area-1", "area-2 area-3"),
-  div(class = "area-1"),
-  div(class = "area-2"),
-  div(class = "area-3")
-)
-}
-
+for additional details on using css grids.
 }
 \seealso{
-\code{\link[=gridPanel]{gridPanel()}}
-
-Other grid functions: 
-\code{\link{gridPanel}()}
+\link{gridPanel}
 }
 \concept{grid functions}
 \keyword{grid}

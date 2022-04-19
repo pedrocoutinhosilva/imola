@@ -1,54 +1,85 @@
-#' Sets the current active media breakpoints. By default the default_system
-#'   setting values are used, but the list can be customized by using the
-#'   registerBreakpoint() and unregisterBreakpoint() functions.
+#' Create a breakpoint
 #'
-#' @param system The name of the media breakpoints system to use. Existing
-#'   systems can be found under getOption("imola.breakpoints")
+#' @description
+#' Creates a valid breakpoint object to use in a breakpoint system. While both
+#' the min and max arguments are optional, at least one of them must exist for
+#' the breakpoint to be considered valid.
 #'
-#' @return A named list of media breakpoints options.
-#' @keywords breakpoints
+#' @param name A string with the name that identifies the breakpoint.
+#' @param min Optional numeric minimum value (in pixels) of the screen width
+#'   where the breakpoint is active.
+#' @param max Optional numeric maximum value (in pixels) of the screen width
+#'   where the breakpoint is active.
+#'
+#' @importFrom magrittr "%>%"
+#'
+#' @return A breakpoint object.
+#' @keywords breakpoints breakpoint
 #' @export
-setBreakpointSystem <- function(system) {
-  options(imola.mediarules = getOption("imola.breakpoints")[[system]])
+breakpoint <- function(name, min = NULL, max = NULL) {
+  stopifnot(
+    "Name should be a character string" = {
+      is.character(name)
+    },
+    "Arguments min and max cannot both be NULL at the same time." = {
+      !(is.null(min) && is.null(max))
+    }
+  )
+
+  list(
+    name = name,
+    min = min,
+    max = max
+  ) %>%
+  addClass("imola.breakpoint")
 }
 
-#' Current active media breakpoints. By default the default_system
-#'   setting values are used, but the list can be customized by using the
-#'   registerBreakpoint() and unregisterBreakpoint() functions.
+#' Add a breakpoint to a breakpoint system
 #'
-#' @return A named list of media breakpoints options.
-#' @keywords breakpoints
+#' @description
+#' Adds a breakpoint to a breakpoint system object.
+#'
+#' @param system A breakpoint system object created with [breakpointSystem].
+#' @param breakpoint A breakpoint created with [breakpoint].
+#'
+#' @return A breakpoint system object.
+#' @keywords breakpoints breakpoint
 #' @export
-activeBreakpoints <- function() {
-  getOption("imola.mediarules")
+addBreakpoint <- function(system, breakpoint) {
+  stopifnot(
+    "Given breakpoint is not a valid breakpoint()" = {
+      is.breakpoint(breakpoint)
+    },
+
+    "Given system is not a valid breakpointSystem()" = {
+      is.breakpointSystem(system)
+    }
+  )
+
+  system$breakpoints[[breakpoint$name]] <- breakpoint
+
+  system
 }
 
-#' Adds a new breakpoint entry to the current active media breakpoints.
+#' Remove a breakpoint from a breakpoint system
 #'
-#' @param name The name of the entry to remove
-#' @param min The minimum screen width (in pixels) when the rule is active
-#' @param max The maximum screen width (in pixels) when the rule is active
+#' @description
+#' Removes a breakpoint from a breakpoint system object by name.
 #'
-#' @return No return value, called for side effects
-#' @keywords breakpoints
+#' @param system A breakpoint system object created with [breakpointSystem].
+#' @param name A string with the name of a breakpoint in the given system.
+#'
+#' @return A breakpoint system object.
+#' @keywords breakpoints breakpoint
 #' @export
-registerBreakpoint <- function(name, min = NULL, max = NULL) {
-  rules <- getOption("imola.mediarules")
-  rules[[name]] <- list(min = min, max = max)
+removeBreakpoint <- function(system, name) {
+  stopifnot(
+    "Given system is not a valid breakpointSystem()" = {
+      is.breakpointSystem(system)
+    }
+  )
 
-  options(imola.mediarules = rules)
-}
+  system$breakpoints[[name]] <- NULL
 
-#' Allows removing an entry from the current activeBreakpoints.
-#'
-#' @param name The name of the entry to remove
-#'
-#' @return No return value, called for side effects
-#' @keywords breakpoints
-#' @export
-unregisterBreakpoint <- function(name) {
-  rules <- getOption("imola.mediarules")
-  rules[[name]] <- NULL
-
-  options(imola.mediarules = rules)
+  system
 }

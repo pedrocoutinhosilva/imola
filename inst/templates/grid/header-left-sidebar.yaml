@@ -1,45 +1,62 @@
-areas:
-  default:
-  - - header
+name: header-left-sidebar
+type: grid
+description: no description
+attributes:
+  areas:
+    default:
+    - - header
+      - header
+    - - sidebar
+      - content
+    md:
+    - - header
+      - header
+    - - sidebar
+      - content
+    sm:
     - header
-  - - sidebar
+    - sidebar
     - content
-  md:
-  - - header
-    - header
-  - - sidebar
-    - content
-  sm:
-  - header
-  - sidebar
-  - content
-columns:
-  default:
-  - minmax(250px, 25%)
-  - 1fr
-  md:
-  - minmax(250px, 25%)
-  - 1fr
-  sm: 100%
-rows:
-  default:
-  - minmax(100px, auto)
-  - 1fr
-  md:
-  - minmax(100px, auto)
-  - 1fr
-  sm:
-  - minmax(100px, auto)
-  - auto
-  - 1fr
+  columns:
+    default:
+    - minmax(250px, 25%)
+    - 1fr
+    md:
+    - minmax(250px, 25%)
+    - 1fr
+    sm: 100%
+  rows:
+    default:
+    - minmax(100px, auto)
+    - 1fr
+    md:
+    - minmax(100px, auto)
+    - 1fr
+    sm:
+    - minmax(100px, auto)
+    - auto
+    - 1fr
 breakpoint_system:
-  xs:
-    max: 575
-  sm:
-    max: 767
-  md:
-    max: 991
-  lg:
-    max: 1199
-  xl:
-    max: 1200
+  name: bootstrap3
+  description: ~
+  breakpoints:
+    xs:
+      name: xs
+      min: ~
+      max: 575.0
+    sm:
+      name: sm
+      min: ~
+      max: 767.0
+    md:
+      name: md
+      min: ~
+      max: 991.0
+    lg:
+      name: lg
+      min: ~
+      max: 1199.0
+    xl:
+      name: xl
+      min: 1200.0
+      max: ~

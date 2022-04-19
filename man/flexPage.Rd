@@ -2,65 +2,38 @@
 % Please edit documentation in R/flex.R
 \name{flexPage}
 \alias{flexPage}
-\title{Create a flexbox based page}
+\title{Create a css flexbox based page}
 \usage{
 flexPage(..., title = NULL, fill_page = TRUE, dependency = bootstrapLib())
 }
 \arguments{
-\item{...}{Tag attributes (named arguments) and children (unnamed arguments).
-A named argument with an \code{NA} value is rendered as a boolean attributes.
-Named arguments can be used to provide additional values to the container
-of the grid.
+\item{...}{Arguments to be passed to \link{flexPanel}.}
 
-For a full list of valid HTML attributes check visit
-\url{https://www.w3schools.com/tags/ref_attributes.asp}.
+\item{title}{The browser window title (defaults to the host URL of the page).}
 
-Children may include any combination of:
-\itemize{
-\item Other tags objects
-\item \code{\link[=HTML]{HTML()}} strings
-\item \code{\link[=htmlDependency]{htmlDependency()}}s
-\item Single-element atomic vectors
-}}
+\item{fill_page}{Boolean value if the page should automatically stretch to
+match the browser window height.}
 
-\item{title}{The browser window title (defaults to the host URL of the page)}
-
-\item{fill_page}{Flag to tell the page if it should adjust the page to
-adjust and fill the browser window size}
-
-\item{dependency}{The set of web dependencies. This value can be a
-htmlDependency, for example the shiny bootstrap one (the default)
-or a tagList with diferent dependencies}
+\item{dependency}{A set of web dependencies. This value can be a
+\link{htmlDependency}, for example the shiny bootstrap dependency (default
+value) or a \link{tagList} with different dependencies.}
 }
 \value{
 A UI definition that can be passed to the \link{shinyUI} function.
 }
 \description{
-Create a flexbox based page
+Create a Shiny UI page using a \link{flexPanel} to wrap the page content.
+As other Shiny UI pages, it scaffolds the entire page and loads any required
+or registered dependencies.
 }
 \note{
 See
 \url{https://css-tricks.com/snippets/css/a-guide-to-flexbox/}
-for additional details on using css flexbox
-}
-\examples{
-if (interactive()) {
-library(shiny)
-library(imola)
-ui <- flexPage(
-  title = "A flex page",
-  div(class = "area-1", "Area 1 content"),
-  div(class = "area-2", "Area 2 content"),
-  div(class = "area-3", "Area 3 content")
-)
-
-server <- function(input, output) {}
-shinyApp(ui, server)
-}
+for additional details on using css flexbox.
 }
 \seealso{
-\code{\link[=flexPanel]{flexPanel()}}
+\link{flexPanel}
 }
-\concept{flex functions}
+\concept{flex}
 \keyword{flex}
 \keyword{page}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Getting started with CSS Flexbox and imola.
 ">
-<title>Flexbox and imola • imola</title>
+<title>Flex functions • imola</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -19,23 +19,30 @@
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<meta property="og:title" content="Flexbox and imola">
+<meta property="og:title" content="Flex functions">
 <meta property="og:description" content="Getting started with CSS Flexbox and imola.
 ">
+<meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G2PX1LC0P4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2PX1LC0P4');
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">imola</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +60,10 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/imola-why-flex-and-grid.html">A short history on web layouts</a>
-    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flexbox and imola</a>
-    <a class="dropdown-item" href="../articles/imola-grid.html">Grid and imola</a>
-    <a class="dropdown-item" href="../articles/imola-templates.html">Using Templates</a>
-    <a class="dropdown-item" href="../articles/imola-breakpoints.html">Using Breakpoint Systems</a>
+    <a class="dropdown-item" href="../articles/imola-flexbox.html">Flex functions</a>
+    <a class="dropdown-item" href="../articles/imola-grid.html">Grid functions</a>
+    <a class="dropdown-item" href="../articles/imola-templates.html">Templates</a>
+    <a class="dropdown-item" href="../articles/imola-breakpoints.html">Breakpoint Systems</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="../articles/index.html">More articles...</a>
   </div>
@@ -92,7 +98,7 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Flexbox and imola</h1>
+      <img src="../logo.svg" class="logo" alt=""><h1>Flex functions</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/pedrocoutinhosilva/imola/blob/HEAD/vignettes/imola-flexbox.Rmd" class="external-link"><code>vignettes/imola-flexbox.Rmd</code></a></small>
@@ -102,8 +108,15 @@
     
     
 <p><script src="static/flexbox.js"></script><link rel="stylesheet" type="text/css" href="static/flexbox.css"></p>
-<p>The imola flex functions family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>.</p>
-<p>Similar to what happens in the grid family, <code><a href="../reference/flexPage.html">flexPage()</a></code> is simply a wrapper for <code><a href="../reference/flexPanel.html">flexPanel()</a></code> that allows you to create a page UI element without the need of using any of the built in shiny functions.</p>
+<style type="text/css">
+img {
+  max-width: 100%;
+}
+</style>
+<p><img src="figures/cssflexbox.jpg"></p>
+<p>The imola flex functions family focuses on providing support for the CSS flexbox standard.</p>
+<p>In imola you can find 2 functions that allow you to create a new flex component. <code><a href="../reference/flexPanel.html">flexPanel()</a></code> and <code><a href="../reference/flexPage.html">flexPage()</a></code>.</p>
+<p>Similar to what happens in the grid family, <code><a href="../reference/flexPage.html">flexPage()</a></code> is simply a wrapper for <code><a href="../reference/flexPanel.html">flexPanel()</a></code>, allowing you to create a page UI element without the need of using any of the built in shiny functions.</p>
 <p>If you’re interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="external-link">this article</a> to get you started.</p>
 <hr>
 <div class="section level2">
@@ -124,7 +137,7 @@
   grow <span class="op">=</span> <span class="cn">NULL</span>,
   shrink <span class="op">=</span> <span class="cn">NULL</span>,
   basis <span class="op">=</span> <span class="cn">NULL</span>,
-  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/activeBreakpoints.html">activeBreakpoints</a></span><span class="op">(</span><span class="op">)</span>,
+  breakpoint_system <span class="op">=</span> <span class="fu"><a href="../reference/getBreakpointSystem.html">getBreakpointSystem</a></span><span class="op">(</span><span class="op">)</span>,
   id <span class="op">=</span> <span class="fu"><a href="../reference/generateID.html">generateID</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -132,7 +145,7 @@
   <span class="va">...</span>, <span class="co"># Any argument that can be passed to flexPanel()</span>
   title <span class="op">=</span> <span class="cn">NULL</span>,
   fill_page <span class="op">=</span> <span class="cn">TRUE</span>,
-  dependency <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/bootstrapLib.html" class="external-link">bootstrapLib</a></span><span class="op">(</span><span class="op">)</span>
+  dependency <span class="op">=</span> <span class="fu">bootstrapLib</span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <hr>
 </div>
@@ -149,10 +162,10 @@
 <li>[htmlDependency()]s</li>
 <li>Single-element atomic vectors</li>
 </ul>
-<p><code>...</code> main purpose is to add content to your panel, but it can also be used to tweak your HTML generation, allowing a very similar behavior to traditional HTML tag functions provided by <code>htmltools</code>, and letting you customize your HTML tag. By default using these functions behaves similar to using <code><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">div()</a></code>, with additional styles being added to meet our layout expectations.</p>
+<p><code>...</code> main purpose is to add content to your panel, but it can also be used to tweak your HTML generation, allowing a very similar behavior to traditional HTML tag functions provided by <code>htmltools</code>, and letting you customize your HTML tag. By default using these functions behaves similar to using <code>div()</code>, with additional styles being added to meet our layout expectations.</p>
 <p>This means if we ignore the extra styling created by imola, the following call:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/flexPanel.html">flexPanel</a></span><span class="op">(</span>attribute <span class="op">=</span> <span class="st">"foo"</span>, bar <span class="op">=</span> <span class="cn">NA</span>, <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html" class="external-link">p</a></span><span class="op">(</span><span class="st">"some content"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/flexPanel.html">flexPanel</a></span><span class="op">(</span>attribute <span class="op">=</span> <span class="st">"foo"</span>, bar <span class="op">=</span> <span class="cn">NA</span>, <span class="fu">p</span><span class="op">(</span><span class="st">"some content"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>will generate the following HTML:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">attribute</span><span class="ot">=</span><span class="st">"foo"</span> <span class="er">bar</span><span class="kw">&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>some content<span class="kw">&lt;/p&gt;</span></span>
@@ -162,7 +175,7 @@
 <div class="section level2">
 <h2 id="template">template<a class="anchor" aria-label="anchor" href="#template"></a>
 </h2>
-<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/makeTemplate.html">makeTemplate()</a></code> to generate a template object.</p>
+<p>The name of the template to use as a base for the grid, or the resulting value from using <code><a href="../reference/gridTemplate.html">gridTemplate()</a></code> to generate a template object.</p>
 <p>When passing a string as a value if the template is not registered you will get a error message. Valid template strings are either built in or created using <code><a href="../reference/registerTemplate.html">registerTemplate()</a></code>.</p>
 <p>A quick way to see all registered templates (for flex functions) is to use <code>names(listTemplates("flex"))</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># names(listTemplates("flex"))</span></span>
@@ -421,7 +434,7 @@
 <h2 id="gap">gap<a class="anchor" aria-label="anchor" href="#gap"></a>
 </h2>
 <p>Controls the space between items. It applies that spacing only between items not on the outer edges. The behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow (because of something like justify-content: space-between;) then the gap will only take effect if that space would end up smaller.</p>
-<p>The gap argument controls both the row gap and the column gap at the same time, making its css equivalent <code>gap</code>, <code>row-gap</code> and <code>column-gap</code>. If a single value is given it is used for both row and column gap, but a pair of values separated by a space can also be used for controling these independently.</p>
+<p>The gap argument controls both the row gap and the column gap at the same time, making its css equivalent <code>gap</code>, <code>row-gap</code> and <code>column-gap</code>. If a single value is given it is used for both row and column gap, but a pair of values separated by a space can also be used for controlling these independently.</p>
 <p>Accepts a valid value in css values (<code>"0"</code>, <code>"10px"</code>, <code>"20%"</code>, <code>"0.5rem"</code>), or a pair of values separated by space (<code>"10px 20px"</code>, <code>"5% 10%"</code>, <code>"10px 5%"</code>).</p>
 <p><img src="figures/gap.svg"></p>
 <p>By default the value <code>0</code> is used. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
@@ -430,10 +443,10 @@
 <div class="section level2">
 <h2 id="flex">flex<a class="anchor" aria-label="anchor" href="#flex"></a>
 </h2>
-<p>A vector of valid css ‘flex’ values for the child elements. Shorthand for <code>grow</code>, <code>shrink</code> and <code>basis</code>, with the second and third parameters being optional. This means that any compination of 1, 2 or 3 css values for <code>grow</code>, <code>shrink</code> and <code>basis</code> are valid.</p>
-<p>Arguments that target child elements individually require a vector of values instead of a single value, with each entry of the vector affecting the nth child element. As an example <code>c(1, 2, 1)</code> will set the flex value of the first child to <code>1</code>, the second to <code>2</code> and the thrid to <code>1</code>.</p>
+<p>A vector of valid css ‘flex’ values for the child elements. Shorthand for <code>grow</code>, <code>shrink</code> and <code>basis</code>, with the second and third parameters being optional. This means that any combination of 1, 2 or 3 css values for <code>grow</code>, <code>shrink</code> and <code>basis</code> are valid.</p>
+<p>Arguments that target child elements individually require a vector of values instead of a single value, with each entry of the vector affecting the nth child element. As an example <code>c(1, 2, 1)</code> will set the flex value of the first child to <code>1</code>, the second to <code>2</code> and the third to <code>1</code>.</p>
 <p>If the given vector has less entries that the number of child elements, the values will be repeated until the pattern affects all elements in the panel. If the number of entries given is more that the number of child elements, exceeding entries will be ignored. NA can also be used as a entry to skip adding a rule to a specific nth element.</p>
-<p>It is usually recomended to use flex instead of the individual parameters, this is because when omiting some of them, flex will actually set the other values intelligently.</p>
+<p>It is usually recommended to use flex instead of the individual parameters, this is because when omitting some of them, flex will actually set the other values intelligently.</p>
 <p>An example of this is using a flex value of <code>1</code> is actually equivalent to <code>1 1 0%</code> (<code>grow = 1</code>, <code>shrink = 1</code>, <code>basis = 0%</code>).</p>
 <div class="flex-example">
   <div class="control">
@@ -477,7 +490,7 @@
      </div>
   </div>
 </div>
-<p>By default the value <code>c(1)</code> is used, meaning a value of <code>1</code> for every child. You might notice that this is diferent from the pure css default, but makes more sense in the context of shiny dashboards. To recover the default css behavior, use <code>c("0 1 auto")</code> as a value.</p>
+<p>By default the value <code>c(1)</code> is used, meaning a value of <code>1</code> for every child. You might notice that this is different from the pure css default, but makes more sense in the context of shiny dashboards. To recover the default css behavior, use <code>c("0 1 auto")</code> as a value.</p>
 <p>Check the following sections for <code>grow</code>, <code>shrink</code> and <code>basis</code> for more details. Supports named list for breakpoints. See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more on breakpoints.</p>
 <hr>
 </div>
@@ -517,14 +530,14 @@
   </div>
 </div>
 <p><img src="figures/flex-grow.svg"></p>
-<p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>1</code> for each element.</p>
+<p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallback to <code>1</code> for each element.</p>
 <hr>
 </div>
 <div class="section level2">
 <h2 id="shrink">shrink<a class="anchor" aria-label="anchor" href="#shrink"></a>
 </h2>
 <p>This defines the ability for a flex item to shrink if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-<p>If all items have flex-shrink set to 1, all elements will shrink at an equal rate. If one element has a larged shrink value, it will shrink at a faster rate that the other elements (depending on the diference between the given values).</p>
+<p>If all items have flex-shrink set to 1, all elements will shrink at an equal rate. If one element has a larger shrink value, it will shrink at a faster rate that the other elements (depending on the difference between the given values).</p>
 <div class="flex-example">
   <div class="control">
     <div class="radio">
@@ -556,7 +569,7 @@
   </div>
 </div>
 <p><img src="figures/flex-shrink.svg"></p>
-<p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallsback to <code>1</code> for each element.</p>
+<p>By default the value NULL is used, meaning it defaults to the value provided in the <code>flex</code> argument, which fallback to <code>1</code> for each element.</p>
 <p>Note: For <code>shrink</code> to have any effect, it requires some size (either <code>width</code> or <code>basis</code>) to be set on the children elements.</p>
 <hr>
 </div>
@@ -574,7 +587,7 @@
 </h2>
 <p>Optional Media breakpoints to use. Will default to the current active breakpoint system.</p>
 <p>For other arguments that support breakpoints, instead of simply passing them a value, you can also provide a named list of valid values.</p>
-<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/activeBreakpoints.html">activeBreakpoints()</a></code>), as well as the reserved keyord <code>default</code>.</p>
+<p>The names used in that list can be any of the registered breakpoints available in the provided <code>breakpoint_system</code> argument (defaults to <code><a href="../reference/getBreakpointSystem.html">getBreakpointSystem()</a></code>), as well as the reserved keyword <code>default</code>.</p>
 <p>See <code><a href="../articles/imola-breakpoints.html">vignette("imola-breakpoints")</a></code> for more details on breakpoints.</p>
 <hr>
 </div>
@@ -596,13 +609,13 @@
 <h2 id="fill_page">fill_page<a class="anchor" aria-label="anchor" href="#fill_page"></a>
 </h2>
 <p>Flag to tell the page if it should adjust the page to adjust and fill the browser window size.</p>
-<p>When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow behond the height of the viewport if necessary.</p>
+<p>When set to true this will force the grid to be at least as tall as the available browser window. This makes the container stretch if the content is smaller, while still allowing it to grow beyond the height of the viewport if necessary.</p>
 <hr>
 </div>
 <div class="section level2">
 <h2 id="dependency">dependency<a class="anchor" aria-label="anchor" href="#dependency"></a>
 </h2>
-<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a tagList with diferent dependencies. Useful if you are using a diferent UI framework of package with its own required dependencies (or that requires you to supress bootstrap dependencies)</p>
+<p>The set of web dependencies. This value can be a htmlDependency, for example the shiny bootstrap one (the default) or a [tagList] with different dependencies. Useful if you are using a different UI framework of package with its own required dependencies (or that requires you to suppress bootstrap dependencies)</p>
 <hr>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

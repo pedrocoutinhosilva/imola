@@ -1,35 +1,52 @@
-areas:
-  default:
-  - - content
+name: sidebar-right
+type: grid
+description: no description
+attributes:
+  areas:
+    default:
+    - - content
+      - sidebar
+    md:
+    - - content
+      - sidebar
+    sm:
     - sidebar
-  md:
-  - - content
-    - sidebar
-  sm:
-  - sidebar
-  - content
-columns:
-  default:
-  - 1fr
-  - minmax(250px, 25%)
-  md:
-  - 1fr
-  - minmax(250px, 25%)
-  sm: 100%
-rows:
-  default: auto
-  md: auto
-  sm:
-  - auto
-  - 1fr
+    - content
+  columns:
+    default:
+    - 1fr
+    - minmax(250px, 25%)
+    md:
+    - 1fr
+    - minmax(250px, 25%)
+    sm: 100%
+  rows:
+    default: auto
+    md: auto
+    sm:
+    - auto
+    - 1fr
 breakpoint_system:
-  xs:
-    max: 575
-  sm:
-    max: 767
-  md:
-    max: 991
-  lg:
-    max: 1199
-  xl:
-    max: 1200
+  name: bootstrap3
+  description: ~
+  breakpoints:
+    xs:
+      name: xs
+      min: ~
+      max: 575.0
+    sm:
+      name: sm
+      min: ~
+      max: 767.0
+    md:
+      name: md
+      min: ~
+      max: 991.0
+    lg:
+      name: lg
+      min: ~
+      max: 1199.0
+    xl:
+      name: xl
+      min: 1200.0
+      max: ~

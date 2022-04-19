@@ -2,26 +2,24 @@
 % Please edit documentation in R/utils.R
 \name{stringTemplate}
 \alias{stringTemplate}
-\title{Processes a string template in the htmlTemplate format into a valid string
-with no placeholders. The string must use the htmlTemplate format, meaning
-placeholders are marked using the {{placeholder}} convention.}
+\title{Evaluate a string template}
 \usage{
 stringTemplate(string, ...)
 }
 \arguments{
-\item{string}{The string template. Uses the same format as the htmlTemplate()
+\item{string}{The string template. Uses the same format as the \link{htmlTemplate}
 function from shiny. placeholders in the template should use the
 {{placeholder}} format.}
 
 \item{...}{Named arguments to use in the template string. All placeholders
-in the template must have a corresponding named argument.}
+in the template string must have a corresponding named argument.}
 }
 \value{
-A string with all placeholders replaced.
+A string.
 }
 \description{
-Processes a string template in the htmlTemplate format into a valid string
-with no placeholders. The string must use the htmlTemplate format, meaning
+Processes a string template in the \link{htmlTemplate} format into a valid string
+with no placeholders. The string must use the \link{htmlTemplate} format, meaning
 placeholders are marked using the {{placeholder}} convention.
 }
 \keyword{internal}

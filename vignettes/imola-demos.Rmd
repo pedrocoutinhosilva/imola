@@ -16,4 +16,9 @@ knitr::opts_chunk$set(
 )
 ```
 
--   Built in template layouts: https://sparktuga.shinyapps.io/imolatemplates/
+![](figures/templatesdemo.png)
+![](figures/ua-tracker.png)
+
+-   Usage examples: https://sparktuga.shinyapps.io/imola-examples/
+-   Built in templates preview: https://sparktuga.shinyapps.io/imolatemplates/
+-   UA Migration Tracker (Full code available): http://uaborder.com/

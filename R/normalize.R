@@ -1,8 +1,12 @@
-#' Applies the normalizeAttribute() function to a full attribute list.
+#' Normalize a list of attributes
 #'
-#' @param attributes The values to process
+#' @description
+#' Iterates through the list of attributes and applies [normalizeAttribute] to
+#' each of them.
 #'
-#' @keywords internal normalizer
+#' @param attributes A named list of attribute values.
+#'
+#' @keywords normalizer internal
 #' @return A named list.
 normalizeAttributes <- function(attributes) {
   for (attribute in names(attributes)) {
@@ -12,14 +16,18 @@ normalizeAttributes <- function(attributes) {
   attributes
 }
 
-#' Converts non named list attributes into a named list.
-#' Does nothing if the attribute is already a list in the correct format.
+#' Normalize a attribute
 #'
-#' @param attribute The value to process
-#' @param simplify Boolean flag if the attribute should be simplified into
-#'   single strings.
+#' @description
+#' Converts the values of an attribute passed to a grid or flex function into
+#' a normalized named list.
+#' Does nothing if the attribute is already a named list in the correct format.
 #'
-#' @keywords internal normalizer
+#' @param attribute A attribute value.
+#' @param simplify Should each attribute value be simplified into a single
+#'   string.
+#'
+#' @keywords normalizer internal
 #' @return A named list.
 normalizeAttribute <- function(attribute, simplify = FALSE) {
   if (is.null(attribute)) {
@@ -36,11 +44,11 @@ normalizeAttribute <- function(attribute, simplify = FALSE) {
 
   sapply(attribute, function(breakpoint) {
     if (is.vector(breakpoint) && is.atomic(breakpoint)) {
-        lapply(breakpoint, . %>% {
-            strsplit(., split = " ")[[1]]
-        })
+      lapply(breakpoint, . %>% {
+          strsplit(., split = " ")[[1]]
+      })
     } else {
-        breakpoint
+      breakpoint
     }
   }, simplify = simplify)
 }

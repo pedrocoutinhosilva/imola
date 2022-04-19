@@ -4,12 +4,21 @@ home:
 template:
   assets: vignettes/assets
   bootstrap: 5
-  bootswatch: superhero
-  theme: arrow-dark
   bslib:
-    primary: "#a56e3d"
+    primary: "#0e7fc0"
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
+  includes:
+    in_header: |
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2PX1LC0P4"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-G2PX1LC0P4');
+      </script>
 
 authors:
   Pedro Silva:
@@ -32,12 +41,8 @@ articles:
   navbar: ~
   contents:
   - imola
-  - imola-why-flex-and-grid
   - imola-flexbox
   - imola-grid
-- title: Demos
-  contents:
-  - imola-demos
 - title: Templates
   navbar: ~
   contents:
@@ -46,21 +51,27 @@ articles:
   navbar: ~
   contents:
   - imola-breakpoints
+- title: Demos
+  contents:
+  - imola-demos
+- title: Other reads
+  contents:
+  - imola-why-flex-and-grid
 
 reference:
-- title: Flex
-  desc:  Flex.
+- title: Panels
+  desc:  Functions that can be used to create panels. Panels are HTML containers that behave similar to div elements with additional CSS grid or Flex behavior.
   contents:
-  - has_keyword("flex")
-- title: Grid
-  desc:  Grid.
+  - has_keyword("panel")
+- title: Pages
+  desc:  Page functions. Pages behave similar to panels but can be used to generate a full Shiny page instead of a simple panel.
   contents:
-  - has_keyword("grid")
+  - has_keyword("page")
 - title: Templates
-  desc:  Templates.
+  desc:  Template related functions. Templates are used to generate panels out of stored data.
   contents:
   - has_keyword("templates")
 - title: Breakpoints
-  desc:  Breakpoints.
+  desc:  Breakpoint and breakpoint systems related functions. Breakpoint systems extend panel and page functions arguments to allow values to be applied to specific screen sizes.
   contents:
   - has_keyword("breakpoints")

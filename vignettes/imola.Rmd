@@ -1,10 +1,10 @@
 ---
-title: "Tutorial: Getting started with imola"
+title: "Getting started with imola"
 output: rmarkdown::html_vignette
 description: >
   Learn how to get started with imola.
 vignette: >
-  %\VignetteIndexEntry{Tutorial: Getting started with imola}
+  %\VignetteIndexEntry{Getting started with imola}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,25 +16,31 @@ knitr::opts_chunk$set(
 )
 ```
 
-If you're familiar with CSS, you might have felt by now that layouts in shiny can be awkward to set up.
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
 
-While R/shiny does give you direct access to bootstrap's row and column system, these do have some limitation and changing layouts usually requires having to rebuild a large portion of the UI.
+Imola's main goal it to give you the tools to work with CSS Flex and CSS Grid directly from R as an alternative to bootstrap's `columns` and `rows`.
 
-As web development improved, this system also showed to not always be the most flexible, specially when trying to replicate a design or mockup not using this 12 column system, making it challenging to achieve without a lot of additional custom styling.
+![](figures/write-less.png)
+
+Using imola can be as simple as using a template in your dashboard, or as deep as building a fully custom layout, complete with different views for different screen sizes.
+
+In addition to the convenient wrapper functions for CSS Flex and CSS Grid, imola also includes support for dealing with different screen sizes as well as saving and reusing layouts via the concept of `breakpoint systems` and `templates`.
 
 ---
 
 ## Usage
 
-The bread and butter of imola are the `gridPanel()` and `flexPanel()` functions. These allow you to replace any HTML tag that serves as a container (`div`, `section`, `main`, `nav`, ...) with a tag that uses one of the specific css layout systems (grid or flexbox).
+The bread and butter of imola are the `gridPanel()` and `flexPanel()` functions.
 
-If you are not familiar with these layout systems, I definitely recommend [this article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to get you up to speed.
+They allow you to replace any HTML tag that serves as a container (`div`, `section`, `main`, `nav`, ...) with a tag using one of the CSS layout systems (grid or flex).
 
-The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
+While in depth knowledge of CSS Flexbox and CSS Grid is not required to get started, it is recommended to at least be somewhat familiar with them. I recommend [this article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to get you up to speed.
 
-This means if you want fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.
-
-If you are looking for more information on a specific system in imola, make sure to check the following for an in depth view:
+If you are looking for more information on a specific system in imola, make sure to check the following vignettes for an in depth view:
 
 -   `vignette("imola-flexbox")` for details on `flexPanel()` and `flexPage()`.
 -   `vignette("imola-grid")` for details on `gridPanel()` and `gridPage()`.
@@ -43,11 +49,54 @@ If you are looking for more information on a specific system in imola, make sure
 
 ---
 
+## Using grid vs flex
+
+![](figures/gridvsflex.jpeg)
+
+Picking between grid and flex might seem tricky. In general flex and Grid serve different purposes and are both incredibly useful. Picking between them typically depends on your use case:
+
+#### Use Flex when:
+-   Content sets the size
+-   Need horizontal or vertical alignment
+-   Layout is one-dimensional
+-   Need better older browser support
+
+#### Use Grid when:
+-   Things need a set width regardless of content
+-   Layout is two-dimensional
+-   Elements need to overlap
+
+A common rule of thumb is to use Grid for full page layouts and Flex for everything else, or to consider whether the component you plan to build is one-dimensional (Flex) or two-dimensional (Grid).
+
+This means if you are looking for fine control over columns and rows, you should aim at using grid, if you only care about one of the dimensions, flex will most likely work just fine.
+
+---
+
 ## Grid
 
-The grid family focuses on providing support for the CSS Grid standard. In imola you can find 2 functions that allow you to create a new grid component. `gridPanel()` and `gridPage()`. `gridPage()` is simply a wrapper for `gridPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
+![](figures/cssgrid.jpg)
 
-If you're interested in more information about the full array of options in the CSS grid standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/complete-guide-grid/) to get you started.
+The `grid` function family focuses on providing support for the CSS Grid standard.
+
+In imola you can find 2 functions that allow you to create a new grid component. `gridPanel()` and `gridPage()`. With `gridPage()` being a full page version of `gridPanel()` allowing you to create a full page UI to use with shiny.
+
+If you're interested in more information from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/complete-guide-grid/) to get you started.
+
+``` r
+gridPanel(
+  ...,
+  template = NULL,
+  areas = NULL,
+  rows = NULL,
+  columns = NULL,
+  gap = NULL,
+  align_items = "stretch",
+  justify_items = "stretch",
+  auto_fill = TRUE,
+  breakpoint_system = getBreakpointSystem(),
+  id = generateID()
+)
+```
 
 For more on grid with imola, check `vignette("imola-grid")`.
 
@@ -55,25 +104,80 @@ For more on grid with imola, check `vignette("imola-grid")`.
 
 ## Flex
 
-The flex family focuses on providing support for the CSS flexbox standard. In imola you can find 2 functions that allow you to create a new grid component. `flexPanel()` and `flexPage()`. Similar to what happens in the grid family, `flexPage()` is simply a wrapper for `flexPanel()` that allows you to create a page UI element without the need of using any of the built in shiny functions.
+![](figures/cssflexbox.jpg)
 
-If you're interested in more information about the full array of options in the CSS flexbox standard from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to get you started.
+The `flex` function family focuses on providing support for the CSS flex standard.
+
+In imola you can find 2 functions that allow you to create a new flex component. `flexPanel()` and `flexPage()`. With `flexPage()` being a full page version of `flexPanel()` allowing you to create a full page UI to use with shiny.
+
+If you're interested in more information from the CSS side, I recommend [this article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to get you started.
+
+``` r
+flexPanel(
+  ...,
+  template = NULL,
+  direction = "row",
+  wrap = "nowrap",
+  justify_content = "flex-start",
+  align_items = "stretch",
+  align_content = "flex-start",
+  gap = 0,
+  flex = c(1),
+  grow = NULL,
+  shrink = NULL,
+  basis = NULL,
+  breakpoint_system = getBreakpointSystem(),
+  id = generateID()
+)
+```
 
 For more on flex with imola, check `vignette("imola-flex")`.
 
 ---
 
-## Breakpoints
+## Breakpoint systems
 
-Breakpoints are a way to adjust your layouts to different screen sizes. As the screen size gets larger or smaller, it is often required to adjust the position or size of the different elements in a page to make sure things dont appear broken or out of place.
+CSS breakpoints are a way of assigning a website specific css style rules according to the device width, allowing you to show the best possible layout to the user no matter their screen size.
 
-Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the `fluidRow()` function. `fluidRow()` will trigger layout changes to your `columns` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
+![](figures/responsivedesign.png)
 
-While the `fluidRow()` solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. For complex enough layouts, you might even be required to write additional CSS to add new behavior for specific elements or screen sizes.
+CSS breakpoints are also often called media query breakpoints, as they are used with the `@media` css rule.
 
-Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.
+Different CSS frameworks usually have their own breakpoints baked in, these are usually hidden behind a css class or a name that identifies a specific screen size.
 
-As a practical example, lets say we have the following grid areas in a gridPanel():
+If you are familiar with base shiny or other css based frameworks, you might have even used these systems without realizing;
+
+For example, using the `fluidRow()` function will trigger layout changes to your `columns()` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
+
+While its great to have this done automatically, it also comes with many constrains and does not allow for fine control of these layout changes.
+
+Very often for more complex layouts, you may often find yourself writing additional CSS to add new behavior for specific elements or screen sizes.
+
+Imola takes a slightly different approach to breakpoints:
+
+-   Out of the box it uses the same breakpoint system as base shiny (bootstrap 3).
+-   You can change the default breakpoint system at the application level, but also at a component level.
+-   For each `grid` and `flex` function named attribute you are able to pass either a `value` for that attribute or a `named list of different values` for different breakpoints.
+
+Names that can be used in function attributes depend on what breakpoint names are available, we can use `getBreakpointSystem()` to see the active breakpoint system:
+
+``` R
+Imola Breakpoint System
+Name:  bootstrap3
+description:  No description
+
+
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+xs                             NULL                       575
+sm                             NULL                       767
+md                             NULL                       991
+lg                             NULL                       1199
+xl                             1200                       NULL
+-----------------------------
+```
+
+Lets say we have the following grid areas in a gridPanel():
 
 ``` r
 # as a gridPanel() argument
@@ -82,23 +186,13 @@ areas = c(
   "area2 area3 area3",
   "area2 area3 area3"
 )
-# or
-areas = list(
-  c("area1", "area1", "area1"),
-  c("area2", "area3", "area3"),
-  c("area2", "area3", "area3")
-)
 ```
 
-This grid contains 3 areas (`area1`, `area2`, `area3`), with `area2` clearly serving a sidebar. Viewing this grid on a small screen could lead to a very small sidebar, so one solution is to modify this grid specifically for a breakpoint that targets mobile.
+In out case, we want to use the default breakpoint system and target small devices, so we target these via `xs`, and build our `areas` argument as a named list instead.
 
-As mentioned before, shiny and imola, by default use the bootstrap 3 breakpoint system, that contains a few different breakpoints:
+We can use `default` as a name for our default value for the `areas` argument. Think of `default` as the value used for screen sizes where no other value can be applied.
 
-![Screenshot](figures/bootstrap3-breakpoints.png)
-
-We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap`
-
-In out case, we want to target small devices, so we target these via `xs`, and build our grid argument as a named list instead.
+`default` is a reserved keyword in imola, so keep in mind not to use it when editing or creating a custom breakpoint system.
 
 ``` r
 # as a gridPanel() argument
@@ -116,61 +210,73 @@ areas = list(
 )
 ```
 
-NOTE: Imola reserves the special `default` name for values that are used by default, outside of any given breakpoint boundaries (`default` is the rule, breakpoints overwrite `default` for specific screen sizes).
-
-For more about breakpoints systems with imola, check `vignette("imola-breakpoints")`.
+For more about breakpoints systems, including changing the active system and creating your own, check `vignette("imola-breakpoints")`.
 
 ## Templates
 
-Very often during development it is also common that multiple elements share the same layout. In order to easily reuse any layout you create, imola also includes a simple template engine.
+Often during development it is common that multiple elements share the same layout. In order to easily reuse any layout you create, imola also includes a simple template engine.
 
-In order to save a template you can use the `registerTemplate()` function. This function requires a 'type' of template (grid or flex), a name to identify the template later, any named arguments that can be passed to the gridPanel or flexPanel function (depending on the type) and, optionally, a breakpoint_system to use if you plan on adding any responsive attributes to the template (If no breakpoint_system is given, the current active system is used to register the template).
+Templates can be used via the `template` argument on any of the panel or page functions by providing either the name of a registered template, or a template object created with `gridTemplate()`.
 
-After a template being registered, you can then simple fill in the `template` argument on any of the panel or page functions with the name of the template. You can also adjust the template for a specific panel by providing any named arguments in addition to the template name. Any named argument that exists in the template will be orewriten by the named argument on the function call.
+Registered templates are templates that are either bundled with imola, or have been added to the global template list by using `registerTemplate()` on a template object.
 
-Lets say we would like to save our previous areas as a template, and use it. We could use registerTemplate():
+You can view all registered templates by using `listTemplates()`.
+
+Similar to `grid` and `flex` functions, `templates` also support breakpoint systems.
+
+Lets say we would like to save our previous areas as a template, and use it in different components. We could use `gridTemplate()` to generate a template object:
 
 ``` r
 #in global.R
-registerTemplate("grid", "mytemplate",
-  areas = list(
+# create a template object
+mytemplate <- gridTemplate("myareas", "grid", areas = list(
     default = c(
-      "area1 area1 area1",
-      "area2 area3 area3",
-      "area2 area3 area3"
+        "area1 area1 area1",
+        "area2 area3 area3",
+        "area2 area3 area3"
     ),
     xs = c(
-      "area1",
-      "area2",
-      "area3"
+        "area1",
+        "area2",
+        "area3"
     )
-  )
-)
+))
 ```
 
-We can then use this template to create multiple grid panels in our application:
+We can then use this template object as an argument in grid panels:
 
 ``` r
 #in ui.R
 gridPanel(
   id = "somePanel"
-  template = "mytemplate"
+  template = mytemplate
   area1 = div("area 1 content"),
   area2 = div("area 2 content"),
-  area3 = div("area 3 content"),
-)
-
-gridPanel(
-  id = "anotherPanel"
-  template = "mytemplate"
-  area1 = div("different area 1 content"),
-  area2 = div("different area 2 content"),
-  area3 = div("different area 3 content"),
+  area3 = div("area 3 content")
 )
 ```
 
-You can register as many templates as you want, but keep in mind that each type + name combo must be unique. You can also remove templates using `unregisterTemplate()` if needed. For a full list of registered templates, you can use `listTemplates()`.
+We can also register this template for global usage. In that case we need to register it after defining it:
+``` r
+#in global.R
+# register it globally
+registerTemplate(mytemplate)
+```
 
-By default imola also includes some ready to use templates these will also be listed under `listTemplates()`
+In this case we can simply use the name of the registered template instead of the object:
+``` r
+#in ui.R
+gridPanel(
+  id = "somePanel"
+  template = "myareas"
+  area1 = div("area 1 content"),
+  area2 = div("area 2 content"),
+  area3 = div("area 3 content")
+)
+```
+
+You can view all registered templates with `listTemplates()`. For a demo on all templates bundled with imola, you can view a demo [here](https://sparktuga.shinyapps.io/imolatemplates/)
+
+You can register as many templates as you want, but keep in mind that each type + name combo must be unique. You can also remove templates using `unregisterTemplate()` if needed.
 
 For more on templates with imola, check `vignette("imola-templates")`.

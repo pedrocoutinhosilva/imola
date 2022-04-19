@@ -2,25 +2,21 @@
 % Please edit documentation in R/templates.R
 \name{unregisterTemplate}
 \alias{unregisterTemplate}
-\title{Deletes an existing css template from the available list of templates for the
-given grid type. Templates are collections of arguments
-that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.}
+\title{Unregister a template}
 \usage{
-unregisterTemplate(type, name)
+unregisterTemplate(name, type)
 }
 \arguments{
-\item{type}{The type of css grid of the template to remove.}
+\item{name}{A string with the name of a registered template.
+Registered templates are available in \code{getOption("imola.templates")}.}
 
-\item{name}{The name of the tempalte to remove.}
+\item{type}{The type of css grid for which the template can be used.}
 }
 \value{
-No return value, called for side effects
+No return value, called for side effects.
 }
 \description{
-Deletes an existing css template from the available list of templates for the
-given grid type. Templates are collections of arguments
-that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.
+Removes a globally registered template from
+\code{getOption("imola.templates")}.
 }
 \keyword{templates}

@@ -1,0 +1,23 @@
+name: bootstrap5
+description: ~
+breakpoints:
+  sm:
+    name: sm
+    min: 576.0
+    max: ~
+  md:
+    name: md
+    min: 768.0
+    max: ~
+  lg:
+    name: lg
+    min: 992.0
+    max: ~
+  xl:
+    name: xl
+    min: 1200.0
+    max: ~
+  xxl:
+    name: xxl
+    min: 1400.0
+    max: ~

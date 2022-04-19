@@ -2,23 +2,23 @@
 % Please edit documentation in R/normalize.R
 \name{normalizeAttribute}
 \alias{normalizeAttribute}
-\title{Converts non named list attributes into a named list.
-Does nothing if the attribute is already a list in the correct format.}
+\title{Normalize a attribute}
 \usage{
 normalizeAttribute(attribute, simplify = FALSE)
 }
 \arguments{
-\item{attribute}{The value to process}
+\item{attribute}{A attribute value.}
 
-\item{simplify}{Boolean flag if the attribute should be simplified into
-single strings.}
+\item{simplify}{Should each attribute value be simplified into a single
+string.}
 }
 \value{
 A named list.
 }
 \description{
-Converts non named list attributes into a named list.
-Does nothing if the attribute is already a list in the correct format.
+Converts the values of an attribute passed to a grid or flex function into
+a normalized named list.
+Does nothing if the attribute is already a named list in the correct format.
 }
 \keyword{internal}
 \keyword{normalizer}

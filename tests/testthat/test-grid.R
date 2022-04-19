@@ -103,8 +103,8 @@ test_that("Test justify_items", {
 test_that("Test auto_fill", {
   # css is generated
   # string syntax
-  expect_match(gridPanel(id = "test-id", auto_fill = TRUE) %>% toString(), "#test-id \\{height: 100%;\\}")
-  expect_no_match(gridPanel(id = "test-id", auto_fill = FALSE) %>% toString(), "#test-id \\{height: 100%;\\}")
+  expect_match(gridPanel(id = "test-id", auto_fill = TRUE) %>% toString(), ".test-id \\{height: 100%;\\}")
+  expect_no_match(gridPanel(id = "test-id", auto_fill = FALSE) %>% toString(), ".test-id \\{height: 100%;\\}")
 })
 
 # Tests for the id argument
@@ -202,8 +202,8 @@ test_that("UI generation tests", {
 
   # Tests combinations of columns rows gaps test cases
   lapply(names(test_cases$gap), function(case_gap) {
-    case_rows = "three-rows-string"
-    case_columns = "three-columns-string"
+    case_rows <- "three-rows-string"
+    case_columns <- "three-columns-string"
 
     test_snapshots(
       paste0("gridPanel-", case_columns, "-", case_rows, "-", case_gap),

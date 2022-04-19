@@ -2,19 +2,19 @@
 % Please edit documentation in R/utils.R
 \name{readSettingsFile}
 \alias{readSettingsFile}
-\title{Reads the content of a YAML settings file from the package directory.}
+\title{Import a settings file}
 \usage{
 readSettingsFile(file)
 }
 \arguments{
 \item{file}{The file name to read. Settings files are stored in the package
-installation directory and include diferent settings and options.}
+installation directory and include different settings and options.}
 }
 \value{
-A list object containing the content of the settings YAML file
+A list object containing the content of the settings yaml file
 }
 \description{
-Reads the content of a YAML settings file from the package directory.
+Reads the content of a yaml settings file from the package directory.
 }
 \keyword{internal}
 \keyword{utils}

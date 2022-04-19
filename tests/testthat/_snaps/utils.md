@@ -1,7 +1,7 @@
-# test utils functions
+# processContent works when no areas are given
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), NULL)
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), NULL)
     Output
       $`area-1`
       <div></div>
@@ -10,10 +10,10 @@
       <div></div>
       
 
----
+# processContent works when no areas are empty
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), c())
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), c())
     Output
       $`area-1`
       <div></div>
@@ -22,10 +22,10 @@
       <div></div>
       
 
----
+# processContent works when only some areas are given
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), c("area-1"))
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), c("area-1"))
     Output
       [[1]]
       <div class="area-1"></div>
@@ -34,10 +34,11 @@
       <div></div>
       
 
----
+# processContent works when only all areas are given
 
     Code
-      processContent(list(`area-1` = div(), `area-2` = div()), c("area-1", "area-2"))
+      imola:::processContent(list(`area-1` = div(), `area-2` = div()), c("area-1",
+        "area-2"))
     Output
       [[1]]
       <div class="area-1"></div>
@@ -46,10 +47,10 @@
       <div class="area-2"></div>
       
 
----
+# readSettingsFile loads a file successfully
 
     Code
-      readSettingsFile("config")
+      imola:::readSettingsFile("config")
     Output
       $default_system
       [1] "bootstrap3"
@@ -62,7 +63,7 @@
       
       $css$flexbox
       $css$flexbox$fill_page
-      [1] " html, body { min-height: 100vh; width: 100%; margin: 0; padding: 0; } #grid-page-wrapper { min-height: 100vh; }"
+      [1] " html, body { min-height: 100vh; width: 100%; margin: 0; padding: 0; } .grid-page-wrapper { min-height: 100vh; }"
       
       
       
@@ -74,26 +75,26 @@
       [1] " @media all {{min}} {{max}} { {{rules}} }"
       
       $string_templates$grid_base
-      [1] "#{{id}} {width: 100%; display: grid;}"
+      [1] ".{{id}} {width: 100%; display: grid;}"
       
       $string_templates$grid_auto_fill
-      [1] "#{{id}} {height: 100%;}"
+      [1] ".{{id}} {height: 100%;}"
       
       $string_templates$grid_parent
-      [1] " #{{id}} { {{attribute}}: {{value}}; }"
+      [1] " .{{id}} { {{attribute}}: {{value}}; }"
       
       $string_templates$grid_cell
       [1] " .{{id}} > .{{child_id}} { {{attribute}}: {{value}}; }"
       
       $string_templates$flex_base
-      [1] "#{{id}} {height: 100%; width: 100%; display: flex;}"
+      [1] ".{{id}} {height: 100%; width: 100%; display: flex;}"
       
       $string_templates$flex_cell
       [1] " .{{id}} > *:nth-child({{child_index}}) { {{attribute}}: {{value}}; }"
       
       $string_templates$messages
       $string_templates$messages$wrong_template_type
-      [1] " Given template has the wrong type for the panel. Expected {{type}} but provided template is {{template_type}}. (Have you used makeTemplate() to create your template?) "
+      [1] " Given template has the wrong type for the panel. Expected {{type}} but provided template is {{template_type}}. (Have you used gridTemplate() to create your template?) "
       
       $string_templates$messages$missing_template
       [1] " The grid template {{template}} for {{type}} does not exist. Check listTemplates() to see available templates. (Is the template you're looking for registered for {{type}} panels?) "

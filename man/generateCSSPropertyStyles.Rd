@@ -2,28 +2,25 @@
 % Please edit documentation in R/generators.R
 \name{generateCSSPropertyStyles}
 \alias{generateCSSPropertyStyles}
-\title{Generates the requires css statements for a specific css property. It will
-iterated over all breakpoints in the given value and return all statements
-for all breakpoints in a vector format.}
+\title{Creates styles for a css property.}
 \usage{
-generateCSSPropertyStyles(value, property, id, breakpoint_system)
+generateCSSPropertyStyles(value, property, id, system)
 }
 \arguments{
-\item{value}{Normalized attribute value list to generate css from.}
+\item{value}{Normalized attribute value list.}
 
-\item{property}{The type of grid to generate css for.}
+\item{property}{The css attribute to generate rules for.}
 
-\item{id}{The id of the parent wrapper element.}
+\item{id}{The id of the parent element.}
 
-\item{breakpoint_system}{Media breakpoints to use.}
+\item{system}{A breakpoint system object to use.}
 }
 \value{
 A vector of valid css strings.
 }
 \description{
-Generates the requires css statements for a specific css property. It will
-iterated over all breakpoints in the given value and return all statements
-for all breakpoints in a vector format.
+Creates the required css statements for a specific css property. This
+includes the rules for all breakpoints.
 }
 \keyword{generators}
 \keyword{internal}

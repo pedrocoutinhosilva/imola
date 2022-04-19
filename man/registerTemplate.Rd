@@ -2,36 +2,19 @@
 % Please edit documentation in R/templates.R
 \name{registerTemplate}
 \alias{registerTemplate}
-\title{Registers a new css template for future use. Depending on the given type,
-the template will then be available to be passed as an argument to a panel
-or page function of that specific type. Templates are collections of
-arguments that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.}
+\title{Register a template}
 \usage{
-registerTemplate(type, name, ..., breakpoint_system = activeBreakpoints())
+registerTemplate(template)
 }
 \arguments{
-\item{type}{The type of css grid for which the template can be used}
-
-\item{name}{A unique name for the template. If a template with the same type
-and name exists, it will simply be overwritten.}
-
-\item{...}{Collection of valid arguments that can be passed to a panel of
-the given type (see gridPanel() and FlexPanel() for all options)}
-
-\item{breakpoint_system}{Optional breakpoint system to use in the template.
-by default it will simply use the current active system but a built in
-or custom system can also be passed. You ca find built in breakpoint
-systems under getOption("imola.breakpoints")}
+\item{template}{A template object generated with \link{gridTemplate}.}
 }
 \value{
-No return value, called for side effects
+No return value, called for side effects.
 }
 \description{
-Registers a new css template for future use. Depending on the given type,
-the template will then be available to be passed as an argument to a panel
-or page function of that specific type. Templates are collections of
-arguments that can be grouped and stored for later usage via the "template"
-argument of panel and page functions.
+Registers a template object to make it available globally in
+getOption("imola.templates"). After registered it can be retrieved
+anywhere using \link{getTemplate}.
 }
 \keyword{templates}

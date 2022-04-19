@@ -1,5 +1,5 @@
 ---
-title: "Using Breakpoint Systems"
+title: "Breakpoint Systems"
 output: rmarkdown::html_vignette
 description: >
   Getting started with imola's breakpoint systems.
@@ -16,12 +16,23 @@ knitr::opts_chunk$set(
 )
 ```
 
-## What is a breakpoint?
-When designing for the web, it is important to keep in mind what diferent users will reach you in diferent devices with diferent screen sizes and orientations.
+```{css, echo = FALSE}
+img {
+  max-width: 100%;
+}
+```
 
-In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scrollbars to overly long line lengths, and poor use of space.
+![](figures/responsivedesign.png)
+
+When designing for the web, it is important to keep in mind what different users will reach you in different devices with different screen sizes and orientations.
+
+In the early days of web design, pages were built to target a particular screen size.
+
+If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scroll bars to overly long line lengths, and poor use of space.
 
 As more diverse screen sizes became available, the concept of responsive web design (RWD) appeared, a set of practices that allows web pages to alter their layout and appearance to suit different screen widths, resolutions, etc.
+
+---
 
 ## Responsive design
 The term responsive design was coined by Ethan Marcotte in 2010 and described the use of multiple techniques:
@@ -32,13 +43,17 @@ The term responsive design was coined by Ethan Marcotte in 2010 and described th
 
 - The third key component was the media query. Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.
 
+---
+
 ## Media Queries
 Responsive design was only able to emerge due to the media query. The Media Queries Level 3 specification became a Candidate Recommendation in 2009, meaning that it was deemed ready for implementation in browsers.
 
 Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
+---
+
 ## Breakpoints
-By defining a set "points" where these Media Queries will apply its diferent rules, we are effectively creating breakpoints where the styling and layout of the page changes. Many frontend frameworks reuse a set of tested and tried breakpoints, making that set of breakpoints its `breakpoint system`.
+By defining a set "points" where these Media Queries will apply its different rules, we are effectively creating breakpoints where the styling and layout of the page changes. Many frontend frameworks reuse a set of tested and tried breakpoints, making that set of breakpoints its `breakpoint system`.
 
 Example bootstrap 5 breakpoints:
 - xs: Screen width from 0 to 576px
@@ -52,114 +67,285 @@ Keep in mind that users expect any website to be perfectly complementary with ev
 
 The amount of effort that goes into defining responsive breakpoints is directly proportional to the experience of the end-user.
 
+---
+
 ## Breakpoints in Shiny
 
-Depending on the CSS framework that is being used in your project, different systems are in place to allow this to be a bit more automated, if you are familiar with base shiny, you might have even used these systems without realizing, by using the `fluidRow()` function. `fluidRow()` will trigger layout changes to your `columns` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
+If you are familiar with base shiny or other css based frameworks, you might have even used these systems without realizing;
 
-While the `fluidRow()` solution is quite easy to use, it also comes with many constrains and does not allow for a very fine control of these layout changes. For complex enough layouts, you might even need to write additional CSS to add new behavior or specific elements or screen sizes.
+For example, using the `fluidRow()` function will trigger layout changes to your `columns()` at specific screen sizes, based on [bootstrap 3](https://shiny.rstudio.com/articles/layout-guide.html) breakpoints (The base CSS framework in shiny).
+
+While its great to have this done automatically, it also comes with many constrains and does not allow for fine control of these layout changes.
+
+Very often for more complex layouts, you may often find yourself writing additional CSS to add new behavior for specific elements or screen sizes.
+
+---
 
 ## Breakpoints with imola
 
-Imola takes a slightly different approach to breakpoints; Out of the box it uses the same breakpoints as base shiny (bootstrap 3) and for each function named attribute you are able to pass either a value for that attribute or a named list of different values for different breakpoints.
+Imola takes a slightly different approach to breakpoints:
 
-As a practical example, lets say we have the following grid areas in a gridPanel():
+-   Out of the box it uses the same breakpoint system as base shiny (bootstrap 3).
+-   You can change the default breakpoint system at the application level, but also at a component level.
+-   For each `grid` and `flex` function named attribute you are able to pass either a `value` for that attribute or a `named list of different values` for different breakpoints.
+
+Names that can be used in function attributes depend on what breakpoint names are available, we can use `getBreakpointSystem()` to see the active breakpoint system:
 
 ``` r
-# as a gridPanel() argument
-areas = c(
-  "area1 area1 area1",
-  "area2 area3 area3",
-  "area2 area3 area3"
-)
-# or
-areas = list(
-  c("area1", "area1", "area1"),
-  c("area2", "area3", "area3"),
-  c("area2", "area3", "area3")
-)
+Imola Breakpoint System
+Name:  bootstrap3
+description:  No description
+
+
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+xs                             NULL                       575
+sm                             NULL                       767
+md                             NULL                       991
+lg                             NULL                       1199
+xl                             1200                       NULL
+-----------------------------
 ```
 
-This grid contains 3 areas (`area1`, `area2`, `area3`), with `area2` serving a sidebar. Viewing this grid on a small screen could lead to a very small sidebar, so one solution is to modify this grid specifically for a breakpoint that targets mobile.
+Using `getBreakpointSystem()` with a name also allows us to get a specific registered breakpoint system, `getBreakpointSystem("bulma")` returns a different breakpoint system that comes bundled with imola:
+``` r
+Imola Breakpoint System
+Name:  bulma
+description:  No description
 
-As mentioned before, shiny and imola, by default, use the bootstrap 3 breakpoint system, that contains a few different breakpoints:
 
-![](figures/bootstrap3-breakpoints.png)
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+tablet                         769                        NULL
+desktop                        1024                       NULL
+widescreen                     1216                       NULL
+fullhd                         1408                       NULL
+-----------------------------
+```
 
-We can see what names imola expects for each of these using either `activeBreakpoints()` or checking the option directly with `getOption("imola.breakpoints")$bootstrap3`
+For a full list of all breakpoint systems we can use `listBreakpointSystems()`.
 
-Back to our case, we want to target small devices, we target these via `xs`, and build our grid argument as a named list instead.
+---
+
+But how can we use these? Lets say we have the following gridPanel():
 
 ``` r
-# as a gridPanel() argument
-areas = list(
-  default = c(
+gridPanel(
+  areas = c(
     "area1 area1 area1",
     "area2 area3 area3",
     "area2 area3 area3"
   ),
-  xs = c(
-    "area1",
-    "area2",
-    "area3"
-  )
+  ...
 )
 ```
 
+In out case, we want to use the default breakpoint system and target small devices, so we target these via `xs`, and build our `areas` argument as a named list instead.
+
+We can use `default` as a name for our default value for the `areas` argument. Think of `default` as the value used for screen sizes where no other value can be applied.
+
+`default` is a reserved keyword in imola, so keep in mind not to use it when editing or creating a custom breakpoint system.
+
+``` r
+gridPanel(
+  areas = list(
+    default = c(
+      "area1 area1 area1",
+      "area2 area3 area3",
+      "area2 area3 area3"
+    ),
+    xs = c(
+      "area1",
+      "area2",
+      "area3"
+    )
+  ),
+  ...
+)
+
+```
+
+Switching to a different breakpoint system would change this syntax slightly.
+
+We can either change the default global system with `setActiveBreakpointSystem(name)` or change it for this specific `gridPanel()`.
+
+Changing the global system would affect all panels that are currently using breakpoints, so picking a global system should be something you do before adding breakpoints to your arguments.
+
+As a workaround we can define a different system for this panel only:
+``` r
+gridPanel(
+  areas = c(
+    "area1 area1 area1",
+    "area2 area3 area3",
+    "area2 area3 area3"
+  ),
+  ...,
+  breakpoint_system = getBreakpointSystem("bulma")
+)
+```
+
+And use the available names in that system instead:
+``` r
+gridPanel(
+  areas = list(
+    tablet = c(
+      "area1 area1 area1",
+      "area2 area3 area3",
+      "area2 area3 area3"
+    ),
+    default = c(
+      "area1",
+      "area2",
+      "area3"
+    )
+  ),
+  ...,
+  breakpoint_system = getBreakpointSystem("bulma")
+)
+```
+
+In this case the bulma system is mobile first, meaning `default` will apply for mobile screen and `tablet` for any screen width above `769px`.
+
 All `gridPanel()` and `flexPanel()` arguments that affect the styling of the panel allow this behavior for the use of breakpoints. See each function documentation for more details.
 
-By default, the bootstrap 3 breakpoint system is active and returned when `activeBreakpoints()` is called. This means that with no configuration, the available names to use when using the breakpoint system in other arguments should be ("xs" "sm" "md" "lg" "xl")
+---
 
-You can manually list available breakpoints, in the active breakpoint system using:
+## Extending breakpoint systems
 
-```R
-names(activeBreakpoints())
-[1] "xs" "sm" "md" "lg" "xl"
+It is also possible to edit a breakpoint system and add or remove breakpoints. To do this we must first retrieve a registered system using `getBreakpointSystem(name)`.
 
-# or explore the full details of the system with
-activeBreakpoints()
+This returns a object version of that system,
+
+``` r
+> obj <- getBreakpointSystem()
+> obj
+
+Imola Breakpoint System
+Name:  bootstrap3
+description:  No description
+
+
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+xs                             NULL                       575
+sm                             NULL                       767
+md                             NULL                       991
+lg                             NULL                       1199
+xl                             1200                       NULL
+-----------------------------
 ```
 
-If you would like to switch to a diferent breakpoint system, imola comes with a few diferent built in systems based on popular css frameworks:
-```R
-names(getOption("imola.breakpoints"))
-[1] "bootstrap3" "bootstrap5" "bulma"      "foundation"
+We can now edit this system by adding or removing breakpoints. To create a new breakpoint lets call `breakpoint()`:
+
+``` r
+> breakpoint("mybreakpoint", min = 300, max = 400)
+Imola Breakpoint
+Name:  mybreakpoint
+
+Affect Screen Sizes:
+Minimum:  300 px
+Maximum:  400 px
 ```
 
-Each system has its own breakpoint naming, based on the framework they originate in:
-```R
-# Bootstrap 5 system
-names(getOption("imola.breakpoints")[["bootstrap5"]])
-[1] "sm"  "md"  "lg"  "xl"  "xxl"
+This creates a breakpoint that can than be added to our system with `addBreakpoint()`:
+``` r
+> obj <- addBreakpoint(obj, breakpoint("mybreakpoint", min = 300, max = 400))
+Imola Breakpoint System
+Name:  bootstrap3
+description:  No description
 
-# bulma system
-names(getOption("imola.breakpoints")[["bulma"]])
-[1] "tablet"     "desktop"    "widescreen" "fullhd"
 
-# foundation system
-names(getOption("imola.breakpoints")[["foundation"]])
-[1] "tablet"     "desktop"    "widescreen" "fullhd"
-```
-The active system can be changed using `setBreakpointSystem()`.
-
-It is also possible to extend the currently active system (`activeBreakpoints()`) with additional breakpoints with the `registerBreakpoint()` and `unregisterBreakpoint()`.
-```R
-# add a new breakpoint
-registerBreakpoint("mycustombreakpoint", min = 300, max = 500)
-
-names(activeBreakpoints())
-[1] "xs" "sm" "md" "lg" "xl" "mycustombreakpoint"
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+xs                             NULL                       575
+sm                             NULL                       767
+md                             NULL                       991
+lg                             NULL                       1199
+xl                             1200                       NULL
+mybreakpoint                   300                        400
+-----------------------------
 ```
 
-It is recomended to define the breakpoint system for the application globally before UI definitions, but the `breakpoint_system` argument in panel functions allows for more flexibility when it comes to reuse components from other projects.
+We can also remove a breakpoint by name using `removeBreakpoint()`
+This creates a breakpoint that can than be added to our system with `addBreakpoint()`:
+``` r
+> obj <- removeBreakpoint(obj, "xl")
+Imola Breakpoint System
+Name:  bootstrap3
+description:  No description
 
-NOTE: Imola reserves the special `default` name for values that are used by default, outside of any given breakpoint boundaries (`default` is the rule, breakpoints overwrite `default` for specific screen sizes).
 
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+xs                             NULL                       575
+sm                             NULL                       767
+md                             NULL                       991
+lg                             NULL                       1199
+mybreakpoint                   300                        400
+-----------------------------
+```
+
+After we finish editing our system we can now use it either in the object for as an argument:
+``` r
+gridPanel(
+  ...,
+  breakpoint_system = obj
+)
+```
+
+Or register it for global usage:
+``` r
+registerBreakpointSystem(obj)
+
+gridPanel(
+  ...,
+  breakpoint_system = getBreakpointSystem("bootstrap3")
+)
+```
+
+NOTE: Registering a breakpoint system will overwrite a system with the same name.
+
+If you would like to unregister a breakpoint system, you can also use `unregisterBreakpointSystem()`.
+
+---
+
+## Creating a new breakpoint system
+
+Breakpoint systems can also be created from scratch using `breakpointSystem()`
+``` r
+> breakpointSystem("mysystem", breakpoint("mybreakpoint", min = 300, max = 400))
+Imola Breakpoint System
+Name:  mysystem
+description:  No description
+
+
+Available Breakpoints (name)   Minimum screen size (px)   Maximum screen size (px)
+-----------------------------  -------------------------  -------------------------
+mybreakpoint                   300                        400
+-----------------------------
+```
+
+All functionality to add or remove breakpoints, register and unregister the system, using it as a argument value can also be used with this object.
+
+---
+
+## Importing and Exporting
+
+It is also possible to import and export breakpoint system objects for future usage in different projects. In this case you can make use of `exportBreakpointSystem()` and `importBreakpointSystem()`.
+
+`exportBreakpointSystem()` allows you to export a system object into a specific file.
+
+This file will contain all the necessary information to rebuild the system, even in a different project, and can be turned back into a template object using `importBreakpointSystem()`.
+
+After importing all functionality to add or remove breakpoints, register and unregister the system, using it as a argument value can also be used with this object.
+
+---
 
 ## Best Practices for adding Responsive Breakpoints
 
 - Develop for mobile-first – By developing and designing mobile-first content, the developer and designer receive multiple benefits. It is more difficult to simplify a desktop experience for mobile screens than it is to expand a mobile view for desktop screens. When a design is mobile-first, developers address what is most necessary, and can then make additions to match the preferences of desktop users.
 
-- Always keep major breakpoints in mind. THis usually means common screen sizes (480px, 768px, 1024px, and 1280px).
+- Always keep major breakpoints in mind. This usually means common screen sizes (480px, 768px, 1024px, and 1280px).
 
 - Before choosing major breakpoints, use website analytics to discern the most commonly used devices from which your site is accessed. Add breakpoints for those screen sizes first.
 

@@ -2,24 +2,24 @@
 % Please edit documentation in R/generators.R
 \name{generateGridCSS}
 \alias{generateGridCSS}
-\title{Generates all required css for a set of attributes, for a grid wrapper.}
+\title{Creates styles for css grid attributes.}
 \usage{
-generateGridCSS(attributes, id, unique_areas, breakpoint_system)
+generateGridCSS(attributes, id, areas, system)
 }
 \arguments{
-\item{attributes}{Normalized attribute list to generate css from.}
+\item{attributes}{Normalized attribute list.}
 
 \item{id}{The id of the parent wrapper element.}
 
-\item{unique_areas}{Unique names of areas that the grid contains.}
+\item{areas}{Area names in the grid.}
 
-\item{breakpoint_system}{Media breakpoints to use.}
+\item{system}{A breakpoint system object to use.}
 }
 \value{
-A string with all placeholders replaced.
+A vector of valid css strings.
 }
 \description{
-Generates all required css for a set of attributes, for a grid wrapper.
+Creates styles for css grid attributes.
 }
 \keyword{generators}
 \keyword{internal}

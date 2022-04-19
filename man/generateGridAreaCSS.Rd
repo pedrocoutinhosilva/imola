@@ -2,14 +2,12 @@
 % Please edit documentation in R/generators.R
 \name{generateGridAreaCSS}
 \alias{generateGridAreaCSS}
-\title{Generates the requires css statements for a specific set of grid areas. This
-includes the css required to position each child element into each of the
-named grid area.}
+\title{Creates styles for css grid areas.}
 \usage{
 generateGridAreaCSS(areas, id)
 }
 \arguments{
-\item{areas}{Unique names of areas for which css rules must be generated.}
+\item{areas}{Vector of strings with the area names.}
 
 \item{id}{The id of the parent wrapper element.}
 }
@@ -17,9 +15,9 @@ generateGridAreaCSS(areas, id)
 A vector of valid css strings.
 }
 \description{
-Generates the requires css statements for a specific set of grid areas. This
-includes the css required to position each child element into each of the
-named grid area.
+Creates the requires css statements for a specific set of grid areas.
+This includes the css required to position each child element into
+each of the named grid area.
 }
 \keyword{generators}
 \keyword{internal}

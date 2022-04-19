@@ -6,28 +6,48 @@ if (getRversion() >= "2.15.1")  utils::globalVariables(c("."))
   options(imola.settings = readSettingsFile("config"))
 
   # Full list of default mediarules breakpoint systems
-  options(imola.breakpoints = readSettingsFile("breakpoints"))
+  breakpoint_files <- list.files(
+    system.file("breakpoints/", package = "imola"),
+    pattern = "\\.yaml$"
+  )
+  breakpoint_systems <- list()
+  for (file_name in breakpoint_files) {
+    system <- importBreakpointSystem(
+      paste0(system.file("breakpoints", package = "imola"), "/", file_name)
+    )
+
+    breakpoint_systems[[system$name]] <- system
+  }
+  options(imola.breakpoint.systems = breakpoint_systems)
+
+
 
   # Default mediarules breakpoints (Based on bootstrap rules)
   default_system <- getOption("imola.settings")$default_system
-  options(imola.mediarules = getOption("imola.breakpoints")[[default_system]])
-
-
+  options(
+    imola.mediarules = getOption("imola.breakpoint.systems")[[default_system]]
+  )
 
   grid_templates <- list()
-  for (file in list.files(system.file("templates/grid/", package = "imola"))) {
-    grid_templates[[sub("\\.yaml$", "", file)]] <- file %>%
-      paste0("templates/grid/", .) %>%
-      system.file(package = "imola") %>%
-      yaml::read_yaml()
+  grid_templates_files <- list.files(
+    system.file("templates/grid/", package = "imola"),
+    pattern = "\\.yaml$"
+  )
+  for (file_name in grid_templates_files) {
+    grid_templates[[sub("\\.yaml$", "", file_name)]] <- importTemplate(
+      paste0(system.file("templates/grid/", package = "imola"), "/", file_name)
+    )
   }
 
   flex_templates <- list()
-  for (file in list.files(system.file("templates/flex/", package = "imola"))) {
-    flex_templates[[sub("\\.yaml$", "", file)]] <- file %>%
-      paste0("templates/flex/", .) %>%
-      system.file(package = "imola") %>%
-      yaml::read_yaml()
+  flex_templates_files <- list.files(
+    system.file("templates/flex/", package = "imola"),
+    pattern = "\\.yaml$"
+  )
+  for (file_name in flex_templates_files) {
+    flex_templates[[sub("\\.yaml$", "", file_name)]] <- importTemplate(
+      paste0(system.file("templates/flex/", package = "imola"), "/", file_name)
+    )
   }
 
   # Default templates
