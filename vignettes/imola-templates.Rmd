@@ -67,7 +67,7 @@ We can then use this template object as a value for the template argument in gri
 #in ui.R
 gridPanel(
   id = "somePanel"
-  template = mytemplate
+  template = mytemplate,
   area1 = div("area 1 content"),
   area2 = div("area 2 content"),
   area3 = div("area 3 content")
@@ -114,7 +114,7 @@ Calling `registerTemplate()` on a `gridTemplate()` object adds that template ava
 #in ui.R
 gridPanel(
   id = "somePanel"
-  template = "myareas"
+  template = "myareas",
   area1 = div("area 1 content"),
   area2 = div("area 2 content"),
   area3 = div("area 3 content")
@@ -141,7 +141,7 @@ These can be used just like registered templates, with the difference that they 
 ``` r
 #in ui.R
 gridPanel(
-  template = "header-sidebar-right"
+  template = "header-sidebar-right",
   header = div("header"),
   content = div("content"),
   sidebar = div("sidebar")
