@@ -84,13 +84,18 @@ stringCSSRule <- function(template, ...) {
 #' @importFrom stringi stri_remove_empty
 #' @importFrom magrittr "%<>%"
 #' @importFrom shiny tagAppendAttributes
+#' @importFrom htmltools tagQuery
 #'
 #' @return A list of HTML elements.
 #' @keywords utils internal
 processContent <- function(content, areas) {
   for (name in stri_remove_empty(names(content))) {
     if (name %in% areas) {
-      content[[name]] %<>% tagAppendAttributes(class = name)
+
+      tags <- content[[name]] %>% htmltools::tagQuery()
+      tags$addClass(name)
+
+      content[[name]] <- tags$allTags()
       names(content) <- replace(names(content), names(content) == name, "")
     }
   }
