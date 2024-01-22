@@ -2470,7 +2470,7 @@
 
     Code
       registerTemplate(gridTemplate("test-template", "flex", direction = "row"))
-    Message <simpleMessage>
+    Message
       Template has been registered for global usage
     Code
       listTemplates("flex")$`test-template`

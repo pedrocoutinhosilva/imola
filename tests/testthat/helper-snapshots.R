@@ -41,7 +41,7 @@ test_snapshots <- function(test_name,
     })
 
     expect_snapshot_file(snapshot(name,
-      do.call(callback,  modifyList(items, list(...))),
+      do.call(callback, modifyList(items, list(...))),
       vwidth = vwidth,
       vheight = vheight
     ))
